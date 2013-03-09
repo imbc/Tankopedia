@@ -42,7 +42,7 @@ class Tank
     private $nationality;
 
     /**
-     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="tank")
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="tank")
      */
     private $modules;
 

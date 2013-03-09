@@ -54,7 +54,7 @@ abstract class Module
     protected $weight;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="modules")
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="modules")
      * @ORM\JoinColumn(name="tank_id", referencedColumnName="id")
      **/
     protected $tank;
