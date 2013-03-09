@@ -1,0 +1,3 @@
+imbc_tankopedia:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing.yml"
+    prefix:   /tankopedia

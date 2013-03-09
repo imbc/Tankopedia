@@ -1,0 +1,30 @@
+tankopedia_gun:
+    pattern:  /
+    defaults: { _controller: "ImbcTankopediaBundle:Gun:index" }
+
+tankopedia_gun_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ImbcTankopediaBundle:Gun:show" }
+
+tankopedia_gun_new:
+    pattern:  /new
+    defaults: { _controller: "ImbcTankopediaBundle:Gun:new" }
+
+tankopedia_gun_create:
+    pattern:  /create
+    defaults: { _controller: "ImbcTankopediaBundle:Gun:create" }
+    requirements: { _method: post }
+
+tankopedia_gun_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ImbcTankopediaBundle:Gun:edit" }
+
+tankopedia_gun_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ImbcTankopediaBundle:Gun:update" }
+    requirements: { _method: post|put }
+
+tankopedia_gun_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ImbcTankopediaBundle:Gun:delete" }
+    requirements: { _method: post|delete }

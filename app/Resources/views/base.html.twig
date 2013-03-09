@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/imbctankopedia/css/bootstrap.css') }}" type="text/css" />
+            <link rel="stylesheet" href="{{ asset('bundles/imbctankopedia/css/bootstrap-responsive.min.css') }}" type="text/css" />
+            <style type="text/css">
+                body {
+                  padding-top: 60px;
+                  padding-bottom: 40px;
+                }
+            </style>
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    {% block subnavigation %}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">Tank'O'pedia</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li>
+                            <a href="{{ path( 'tankopedia_tank' ) }}">Tanks</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ path( 'tankopedia_engine' ) }}">Engine</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path( 'tankopedia_gun' ) }}">Gun</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path( 'tankopedia_radio' ) }}">Radio</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path( 'tankopedia_track' ) }}">Track</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path( 'tankopedia_turret' ) }}">Turret</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ path( 'tankopedia_tier' ) }}">Tier</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path( 'tankopedia_nationality' ) }}">Nationality</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path( 'tankopedia_type' ) }}">Type</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+        <div class="container">
+        {% block body %}{% endblock %}
+        </div>
+        {% block javascript %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script type="text/javascript" src="{{ asset('bundles/imbctankopedia/js/bootstrap.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

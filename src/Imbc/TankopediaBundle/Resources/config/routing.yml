@@ -1,0 +1,46 @@
+imbc_tankopedia_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ImbcTankopediaBundle:Default:index }
+
+tankopedia_tank:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/tank.yml"
+    prefix:   /tank
+
+tankopedia_module:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/module.yml"
+    prefix:   /module
+
+tankopedia_gun:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/gun.yml"
+    prefix:   /gun
+
+tankopedia_engine:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/engine.yml"
+    prefix:   /engine
+
+tankopedia_radio:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/radio.yml"
+    prefix:   /radio
+
+tankopedia_turret:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/turret.yml"
+    prefix:   /turret
+
+tankopedia_track:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/track.yml"
+    prefix:   /track
+
+tankopedia_tier:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/tier.yml"
+    prefix:   /tier
+
+tankopedia_nationality:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/nationality.yml"
+    prefix:   /nationality
+
+tankopedia_type:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/type.yml"
+    prefix:   /type
+
+
+

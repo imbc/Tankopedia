@@ -1,0 +1,30 @@
+tankopedia_track:
+    pattern:  /
+    defaults: { _controller: "ImbcTankopediaBundle:Track:index" }
+
+tankopedia_track_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ImbcTankopediaBundle:Track:show" }
+
+tankopedia_track_new:
+    pattern:  /new
+    defaults: { _controller: "ImbcTankopediaBundle:Track:new" }
+
+tankopedia_track_create:
+    pattern:  /create
+    defaults: { _controller: "ImbcTankopediaBundle:Track:create" }
+    requirements: { _method: post }
+
+tankopedia_track_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ImbcTankopediaBundle:Track:edit" }
+
+tankopedia_track_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ImbcTankopediaBundle:Track:update" }
+    requirements: { _method: post|put }
+
+tankopedia_track_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ImbcTankopediaBundle:Track:delete" }
+    requirements: { _method: post|delete }

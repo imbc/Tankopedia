@@ -1,0 +1,19 @@
+parameters:
+#    imbc_tankopedia.example.class: Imbc\TankopediaBundle\Example
+    imbc.twig.extensions.tankopedia_extension.class: Imbc\TankopediaBundle\Twig\TankopediaExtension
+
+services:
+#    imbc_tankopedia.example:
+#        class: %imbc_tankopedia.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    imbc.twig.tankopedia_extension:
+        class: %imbc.twig.extensions.tankopedia_extension.class%
+        arguments:
+            doctrine: "@doctrine"
+        tags:
+            - { name: twig.extension }
+
+
+
+

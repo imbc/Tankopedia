@@ -1,0 +1,77 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Gun list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Xp</th>
+                <th>Cost</th>
+                <th>Weight</th>
+                <th>Ammocapacity</th>
+                <th>Damageap</th>
+                <th>Damageapcr</th>
+                <th>Damagehe</th>
+                <th>Penetrationap</th>
+                <th>Penetrationapcr</th>
+                <th>Penetrationhe</th>
+                <th>Shell</th>
+                <th>Rateoffire</th>
+                <th>Accuratie</th>
+                <th>Aimtimemin</th>
+                <th>Aimtimemax</th>
+                <th>Elevationmin</th>
+                <th>Elevationmax</th>
+                <th>Requiresturret</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('tankopedia_gun_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.xp }}</td>
+                <td>{{ entity.cost }}</td>
+                <td>{{ entity.weight }}</td>
+                <td>{{ entity.ammoCapacity }}</td>
+                <td>{{ entity.damageAP }}</td>
+                <td>{{ entity.damageAPCR }}</td>
+                <td>{{ entity.damageHE }}</td>
+                <td>{{ entity.penetrationAP }}</td>
+                <td>{{ entity.penetrationAPCR }}</td>
+                <td>{{ entity.penetrationHE }}</td>
+                <td>{{ entity.shell }}</td>
+                <td>{{ entity.rateOfFire }}</td>
+                <td>{{ entity.accuratie }}</td>
+                <td>{{ entity.aimTimeMin }}</td>
+                <td>{{ entity.aimTimeMax }}</td>
+                <td>{{ entity.elevationMin }}</td>
+                <td>{{ entity.elevationMax }}</td>
+                <td>{{ entity.requiresTurret }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('tankopedia_gun_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('tankopedia_gun_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('tankopedia_gun_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

@@ -1,0 +1,30 @@
+tankopedia_radio:
+    pattern:  /
+    defaults: { _controller: "ImbcTankopediaBundle:Radio:index" }
+
+tankopedia_radio_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ImbcTankopediaBundle:Radio:show" }
+
+tankopedia_radio_new:
+    pattern:  /new
+    defaults: { _controller: "ImbcTankopediaBundle:Radio:new" }
+
+tankopedia_radio_create:
+    pattern:  /create
+    defaults: { _controller: "ImbcTankopediaBundle:Radio:create" }
+    requirements: { _method: post }
+
+tankopedia_radio_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ImbcTankopediaBundle:Radio:edit" }
+
+tankopedia_radio_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ImbcTankopediaBundle:Radio:update" }
+    requirements: { _method: post|put }
+
+tankopedia_radio_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ImbcTankopediaBundle:Radio:delete" }
+    requirements: { _method: post|delete }
