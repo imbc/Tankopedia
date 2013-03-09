@@ -16,6 +16,47 @@ class Radio extends Module
     private $signalRange;
 
     /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tanks = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add tanks
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @return Radio
+     */
+    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    {
+        $this->tanks[] = $tanks;
+
+        return $this;
+    }
+
+    /**
+     * Remove tanks
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     */
+    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    {
+        $this->tanks->removeElement($tanks);
+    }
+
+    /**
+     * Get tanks
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTanks()
+    {
+        return $this->tanks;
+    }
+
+    /**
      * Get id
      *
      * @return integer
@@ -161,29 +202,6 @@ class Radio extends Module
     public function getTier()
     {
         return $this->tier;
-    }
-
-    /**
-     * Set tank
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
-     * @return Radio
-     */
-    public function setTank( \Imbc\TankopediaBundle\Entity\Tank $tank = null )
-    {
-        $this->tank = $tank;
-
-        return $this;
-    }
-
-    /**
-     * Get tank
-     *
-     * @return \Imbc\TankopediaBundle\Entity\Tank
-     */
-    public function getTank()
-    {
-        return $this->tank;
     }
 
     /**

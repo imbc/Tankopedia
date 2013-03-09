@@ -5,20 +5,15 @@ namespace Imbc\TankopediaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Track")
- * @ORM\Table(name="tanks__moduletrack")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Radio")
+ * @ORM\Table(name="tanks__moduleradio")
  */
-class Track extends Module
+class Radio extends Module
 {
     /**
-     * @ORM\Column(name="loadLimit", type="integer")
+     * @ORM\Column(name="signalRange", type="integer")
      */
-    private $loadLimit;
-
-    /**
-     * @ORM\Column(name="traverseSpeed", type="integer")
-     */
-    private $traverseSpeed;
+    private $signalRange;
 
     /**
      * Get id
@@ -34,7 +29,7 @@ class Track extends Module
      * Set name
      *
      * @param string $name
-     * @return Track
+     * @return Radio
      */
     public function setName( $name )
     {
@@ -57,7 +52,7 @@ class Track extends Module
      * Set xp
      *
      * @param integer $xp
-     * @return Track
+     * @return Radio
      */
     public function setXp( $xp )
     {
@@ -80,7 +75,7 @@ class Track extends Module
      * Set cost
      *
      * @param integer $cost
-     * @return Track
+     * @return Radio
      */
     public function setCost( $cost )
     {
@@ -103,7 +98,7 @@ class Track extends Module
      * Set weight
      *
      * @param integer $weight
-     * @return Track
+     * @return Radio
      */
     public function setWeight( $weight )
     {
@@ -123,56 +118,33 @@ class Track extends Module
     }
 
     /**
-     * Set loadLimit
+     * Set signalRange
      *
-     * @param integer $loadLimit
-     * @return Track
+     * @param integer $signalRange
+     * @return Radio
      */
-    public function setLoadLimit( $loadLimit )
+    public function setSignalRange( $signalRange )
     {
-        $this->loadLimit = $loadLimit;
+        $this->signalRange = $signalRange;
 
         return $this;
     }
 
     /**
-     * Get loadLimit
+     * Get signalRange
      *
      * @return integer
      */
-    public function getLoadLimit()
+    public function getSignalRange()
     {
-        return $this->loadLimit;
-    }
-
-    /**
-     * Set traverseSpeed
-     *
-     * @param integer $traverseSpeed
-     * @return Track
-     */
-    public function setTraverseSpeed( $traverseSpeed )
-    {
-        $this->traverseSpeed = $traverseSpeed;
-
-        return $this;
-    }
-
-    /**
-     * Get traverseSpeed
-     *
-     * @return integer
-     */
-    public function getTraverseSpeed()
-    {
-        return $this->traverseSpeed;
+        return $this->signalRange;
     }
 
     /**
      * Set tier
      *
      * @param \Imbc\TankopediaBundle\Entity\Tier $tier
-     * @return Track
+     * @return Radio
      */
     public function setTier( \Imbc\TankopediaBundle\Entity\Tier $tier = null )
     {
@@ -195,7 +167,7 @@ class Track extends Module
      * Set tank
      *
      * @param \Imbc\TankopediaBundle\Entity\Tank $tank
-     * @return Track
+     * @return Radio
      */
     public function setTank( \Imbc\TankopediaBundle\Entity\Tank $tank = null )
     {
@@ -214,6 +186,9 @@ class Track extends Module
         return $this->tank;
     }
 
+    /**
+     * __toString overriding method
+     */
     public function __toString()
     {
         return $this->name;

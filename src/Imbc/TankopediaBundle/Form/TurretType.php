@@ -22,7 +22,7 @@ class TurretType extends AbstractType
             ->add('viewRange')
             ->add('tier')
             ->add('nationality')
-            ->add('tank')
+            ->add('tanks')
         ;
     }
 

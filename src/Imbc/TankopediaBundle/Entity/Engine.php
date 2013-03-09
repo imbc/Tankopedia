@@ -3,6 +3,7 @@
 namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Engine")
@@ -10,6 +11,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Engine extends Module
 {
+    const gazoline = 'Gasoline';
+    const diesel = 'Diesel';
+
     /**
      * @ORM\Column(name="power", type="integer")
      */
@@ -24,6 +28,47 @@ class Engine extends Module
      * @ORM\Column(name="fuelType", type="string")
      */
     private $fuelType;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tanks = new ArrayCollection();
+    }
+
+    /**
+     * Add tanks
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @return Engine
+     */
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
+    {
+        $this->tanks[] = $tanks;
+
+        return $this;
+    }
+
+    /**
+     * Remove tanks
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     */
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
+    {
+        $this->tanks->removeElement( $tanks );
+    }
+
+    /**
+     * Get tanks
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTanks()
+    {
+        return $this->tanks;
+    }
 
     /**
      * Get id
@@ -217,29 +262,6 @@ class Engine extends Module
     public function getTier()
     {
         return $this->tier;
-    }
-
-    /**
-     * Set tank
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
-     * @return Engine
-     */
-    public function setTank( \Imbc\TankopediaBundle\Entity\Tank $tank = null )
-    {
-        $this->tank = $tank;
-
-        return $this;
-    }
-
-    /**
-     * Get tank
-     *
-     * @return \Imbc\TankopediaBundle\Entity\Tank
-     */
-    public function getTank()
-    {
-        return $this->tank;
     }
 
     public function __toString()

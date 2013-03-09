@@ -219,26 +219,49 @@ class Engine extends Module
         return $this->tier;
     }
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     /**
-     * Set tank
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tanks = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
      * @return Engine
      */
-    public function setTank( \Imbc\TankopediaBundle\Entity\Tank $tank = null )
+    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
     {
-        $this->tank = $tank;
+        $this->tanks[] = $tanks;
 
         return $this;
     }
 
     /**
-     * Get tank
+     * Remove tanks
      *
-     * @return \Imbc\TankopediaBundle\Entity\Tank
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
      */
-    public function getTank()
+    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
     {
-        return $this->tank;
+        $this->tanks->removeElement($tanks);
+    }
+
+    /**
+     * Get tanks
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTanks()
+    {
+        return $this->tanks;
     }
 }

@@ -3,6 +3,7 @@
 namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Module")
@@ -21,7 +22,6 @@ abstract class Module
     protected $id;
 
     /**
-     *
      * @ORM\Column(name="name", type="string")
      */
     protected $name;
@@ -55,9 +55,17 @@ abstract class Module
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="modules")
-     * @ORM\JoinColumn(name="tank_id", referencedColumnName="id")
+     * @ORM\JoinTable(name="tanks__tanks_modules")
      **/
-    protected $tank;
+    protected $tanks;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tanks = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -90,29 +98,6 @@ abstract class Module
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set tank
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
-     * @return Module
-     */
-    public function setTank( \Imbc\TankopediaBundle\Entity\Tank $tank = null )
-    {
-        $this->tank = $tank;
-
-        return $this;
-    }
-
-    /**
-     * Get tank
-     *
-     * @return \Imbc\TankopediaBundle\Entity\Tank
-     */
-    public function getTank()
-    {
-        return $this->tank;
     }
 
     /**
@@ -228,5 +213,38 @@ abstract class Module
     public function getWeight()
     {
         return $this->weight;
+    }
+
+    /**
+     * Add tanks
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @return Module
+     */
+    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    {
+        $this->tanks[] = $tanks;
+
+        return $this;
+    }
+
+    /**
+     * Remove tanks
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     */
+    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    {
+        $this->tanks->removeElement($tanks);
+    }
+
+    /**
+     * Get tanks
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTanks()
+    {
+        return $this->tanks;
     }
 }

@@ -20,7 +20,7 @@ class EngineType extends AbstractType
             ->add('fuelType')
             ->add('tier')
             ->add('nationality')
-            ->add('tank')
+            ->add('tanks')
         ;
     }
 

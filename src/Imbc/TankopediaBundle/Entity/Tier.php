@@ -20,7 +20,7 @@ class Tier
 
     /**
      *
-     * @ORM\Column(name="value", type="integer")
+     * @ORM\Column(name="value", type="string")
      */
     private $value;
 
@@ -56,7 +56,7 @@ class Tier
     /**
      * Set value
      *
-     * @param integer $value
+     * @param string $value
      * @return Tier
      */
     public function setValue( $value )
@@ -69,7 +69,7 @@ class Tier
     /**
      * Get value
      *
-     * @return integer
+     * @return string
      */
     public function getValue()
     {

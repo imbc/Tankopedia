@@ -19,7 +19,7 @@ class TrackType extends AbstractType
             ->add('traverseSpeed')
             ->add('tier')
             ->add('nationality')
-            ->add('tank')
+            ->add('tanks')
         ;
     }
 

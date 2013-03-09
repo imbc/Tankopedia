@@ -18,7 +18,7 @@ class RadioType extends AbstractType
             ->add('signalRange')
             ->add('tier')
             ->add('nationality')
-            ->add('tank')
+            ->add('tanks')
         ;
     }
 

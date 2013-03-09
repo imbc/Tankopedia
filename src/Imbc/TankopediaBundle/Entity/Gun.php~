@@ -92,93 +92,6 @@ class Gun extends Module
     private $turret;
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->tanks = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Set requiresTurret
-     *
-     * @param boolean $requiresTurret
-     * @return Gun
-     */
-    public function setRequiresTurret($requiresTurret)
-    {
-        $this->requiresTurret = $requiresTurret;
-
-        return $this;
-    }
-
-    /**
-     * Get requiresTurret
-     *
-     * @return boolean
-     */
-    public function getRequiresTurret()
-    {
-        return $this->requiresTurret;
-    }
-
-    /**
-     * Set turret
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Turret $turret
-     * @return Gun
-     */
-    public function setTurret(\Imbc\TankopediaBundle\Entity\Turret $turret = null)
-    {
-        $this->turret = $turret;
-
-        return $this;
-    }
-
-    /**
-     * Get turret
-     *
-     * @return \Imbc\TankopediaBundle\Entity\Turret
-     */
-    public function getTurret()
-    {
-        return $this->turret;
-    }
-
-    /**
-     * Add tanks
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     * @return Gun
-     */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
-    {
-        $this->tanks[] = $tanks;
-
-        return $this;
-    }
-
-    /**
-     * Remove tanks
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
-    {
-        $this->tanks->removeElement($tanks);
-    }
-
-    /**
-     * Get tanks
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getTanks()
-    {
-        return $this->tanks;
-    }
-
-    /**
      * Get id
      *
      * @return integer
@@ -623,6 +536,29 @@ class Gun extends Module
     public function getTier()
     {
         return $this->tier;
+    }
+
+    /**
+     * Set tank
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
+     * @return Gun
+     */
+    public function setTank( \Imbc\TankopediaBundle\Entity\Tank $tank = null )
+    {
+        $this->tank = $tank;
+
+        return $this;
+    }
+
+    /**
+     * Get tank
+     *
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
+    public function getTank()
+    {
+        return $this->tank;
     }
 
     /**

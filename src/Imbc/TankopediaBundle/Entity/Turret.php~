@@ -3,22 +3,43 @@
 namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Track")
- * @ORM\Table(name="tanks__moduletrack")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Turret")
+ * @ORM\Table(name="tanks__moduleturret")
  */
-class Track extends Module
+class Turret extends Module
 {
     /**
-     * @ORM\Column(name="loadLimit", type="integer")
+     * @ORM\Column(name="armorFront", type="integer")
      */
-    private $loadLimit;
+    private $armorFront;
+
+    /**
+     * @ORM\Column(name="armorSide", type="integer")
+     */
+    private $armorSide;
+
+    /**
+     * @ORM\Column(name="armorRear", type="integer")
+     */
+    private $armorRear;
 
     /**
      * @ORM\Column(name="traverseSpeed", type="integer")
      */
     private $traverseSpeed;
+
+    /**
+     * @ORM\Column(name="viewRange", type="integer")
+     */
+    private $viewRange;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Gun", mappedBy="turret")
+     */
+    private $guns;
 
     /**
      * Get id
@@ -34,7 +55,7 @@ class Track extends Module
      * Set name
      *
      * @param string $name
-     * @return Track
+     * @return Turret
      */
     public function setName( $name )
     {
@@ -57,7 +78,7 @@ class Track extends Module
      * Set xp
      *
      * @param integer $xp
-     * @return Track
+     * @return Turret
      */
     public function setXp( $xp )
     {
@@ -80,7 +101,7 @@ class Track extends Module
      * Set cost
      *
      * @param integer $cost
-     * @return Track
+     * @return Turret
      */
     public function setCost( $cost )
     {
@@ -103,7 +124,7 @@ class Track extends Module
      * Set weight
      *
      * @param integer $weight
-     * @return Track
+     * @return Turret
      */
     public function setWeight( $weight )
     {
@@ -123,33 +144,79 @@ class Track extends Module
     }
 
     /**
-     * Set loadLimit
+     * Set armorFront
      *
-     * @param integer $loadLimit
-     * @return Track
+     * @param integer $armorFront
+     * @return Turret
      */
-    public function setLoadLimit( $loadLimit )
+    public function setArmorFront( $armorFront )
     {
-        $this->loadLimit = $loadLimit;
+        $this->armorFront = $armorFront;
 
         return $this;
     }
 
     /**
-     * Get loadLimit
+     * Get armorFront
      *
      * @return integer
      */
-    public function getLoadLimit()
+    public function getArmorFront()
     {
-        return $this->loadLimit;
+        return $this->armorFront;
+    }
+
+    /**
+     * Set armorSide
+     *
+     * @param integer $armorSide
+     * @return Turret
+     */
+    public function setArmorSide( $armorSide )
+    {
+        $this->armorSide = $armorSide;
+
+        return $this;
+    }
+
+    /**
+     * Get armorSide
+     *
+     * @return integer
+     */
+    public function getArmorSide()
+    {
+        return $this->armorSide;
+    }
+
+    /**
+     * Set armorRear
+     *
+     * @param integer $armorRear
+     * @return Turret
+     */
+    public function setArmorRear( $armorRear )
+    {
+        $this->armorRear = $armorRear;
+
+        return $this;
+    }
+
+    /**
+     * Get armorRear
+     *
+     * @return integer
+     */
+    public function getArmorRear()
+    {
+        return $this->armorRear;
     }
 
     /**
      * Set traverseSpeed
      *
      * @param integer $traverseSpeed
-     * @return Track
+     * @return Turret
      */
     public function setTraverseSpeed( $traverseSpeed )
     {
@@ -169,10 +236,33 @@ class Track extends Module
     }
 
     /**
+     * Set viewRange
+     *
+     * @param integer $viewRange
+     * @return Turret
+     */
+    public function setViewRange( $viewRange )
+    {
+        $this->viewRange = $viewRange;
+
+        return $this;
+    }
+
+    /**
+     * Get viewRange
+     *
+     * @return integer
+     */
+    public function getViewRange()
+    {
+        return $this->viewRange;
+    }
+
+    /**
      * Set tier
      *
      * @param \Imbc\TankopediaBundle\Entity\Tier $tier
-     * @return Track
+     * @return Turret
      */
     public function setTier( \Imbc\TankopediaBundle\Entity\Tier $tier = null )
     {
@@ -195,7 +285,7 @@ class Track extends Module
      * Set tank
      *
      * @param \Imbc\TankopediaBundle\Entity\Tank $tank
-     * @return Track
+     * @return Turret
      */
     public function setTank( \Imbc\TankopediaBundle\Entity\Tank $tank = null )
     {
@@ -214,6 +304,9 @@ class Track extends Module
         return $this->tank;
     }
 
+    /**
+     * __toString overriding method
+     */
     public function __toString()
     {
         return $this->name;

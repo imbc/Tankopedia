@@ -32,7 +32,7 @@ class GunType extends AbstractType
             ->add('requiresTurret')
             ->add('tier')
             ->add('nationality')
-            ->add('tank')
+            ->add('tanks')
             ->add('turret')
         ;
     }
