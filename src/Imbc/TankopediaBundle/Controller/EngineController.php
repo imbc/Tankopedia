@@ -39,7 +39,8 @@ class EngineController extends Controller
         $form = $this->createForm(new EngineType(), $entity);
         $form->bind($request);
 
-        if ($form->isValid()) {
+        if ($form->isValid())
+        {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();

@@ -19,14 +19,14 @@
                 <td>{{ entity.name }}</td>
                 <td>{{ entity.tanks | length }}</td>
                 <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('tankopedia_type_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('tankopedia_type_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
+                    <div class="btn-group">
+                        <button class="btn btn-mini">
+                            <a href="{{ path('tankopedia_type_show', { 'id': entity.id }) }}">show</a>
+                        </button>
+                        <button class="btn btn-mini">
+                            <a href="{{ path('tankopedia_type_edit', { 'id': entity.id }) }}">edit</a>
+                        </button>
+                    </div>
                 </td>
             </tr>
         {% endfor %}

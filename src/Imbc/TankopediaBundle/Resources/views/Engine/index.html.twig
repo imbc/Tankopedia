@@ -6,48 +6,50 @@
     <table class="table table-condensed table-hover table-striped records_list">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Tier</th>
                 <th>Name</th>
-                <th>Xp</th>
+                <th>XP required</th>
                 <th>Cost</th>
                 <th>Weight</th>
                 <th>Power</th>
-                <th>Firechance</th>
-                <th>Fueltype</th>
+                <th>Change of Fire</th>
+                <th>Fuel Type</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('tankopedia_engine_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.tier }}</td>
                 <td>{{ entity.name }}</td>
                 <td>{{ entity.xp }}</td>
                 <td>{{ entity.cost }}</td>
-                <td>{{ entity.weight }}</td>
-                <td>{{ entity.power }}</td>
-                <td>{{ entity.fireChance }}</td>
+                <td>{{ entity.weight }} Kg</td>
+                <td>{{ entity.power }} Hp</td>
+                <td>{{ entity.fireChance }} %</td>
                 <td>{{ entity.fuelType }}</td>
                 <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('tankopedia_engine_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('tankopedia_engine_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
+                    <div class="btn-group">
+                        <button class="btn btn-mini">
+                            <a href="{{ path('tankopedia_engine_show', { 'id': entity.id }) }}">show</a>
+                        </button>
+                        <button class="btn btn-mini">
+                            <a href="{{ path('tankopedia_engine_edit', { 'id': entity.id }) }}">edit</a>
+                        </button>
+                    </div>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-        <ul>
+    <ul>
         <li>
-            <a href="{{ path('tankopedia_engine_new') }}">
-                Create a new entry
-            </a>
+            <button class="btn btn-mini">
+                <a href="{{ path('tankopedia_engine_new') }}">
+                    Create a new entry
+                </a>
+            </button>
         </li>
     </ul>
     {% endblock %}

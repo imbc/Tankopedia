@@ -6,7 +6,7 @@
     <table class="table table-condensed table-hover table-striped records_list">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Tier</th>
                 <th>Name</th>
                 <th>Premium</th>
                 <th>Reward</th>
@@ -16,26 +16,26 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('tankopedia_tank_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td><a href="{{ path('tankopedia_tank_show', { 'id': entity.id }) }}">{{ entity.tier }}</a></td>
                 <td>{{ entity.name }}</td>
                 <td>{{ entity.premium }}</td>
                 <td>{{ entity.reward }}</td>
                 <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('tankopedia_tank_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('tankopedia_tank_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
+                    <div class="btn-group">
+                        <button class="btn btn-mini">
+                            <a href="{{ path('tankopedia_tank_show', { 'id': entity.id }) }}">show</a>
+                        </button>
+                        <button class="btn btn-mini">
+                            <a href="{{ path('tankopedia_tank_edit', { 'id': entity.id }) }}">edit</a>
+                        </button>
+                    </div>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-        <ul>
+    <ul>
         <li>
             <a href="{{ path('tankopedia_tank_new') }}">
                 Create a new entry
