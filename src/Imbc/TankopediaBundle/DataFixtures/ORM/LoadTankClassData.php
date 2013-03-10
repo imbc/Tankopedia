@@ -1,13 +1,13 @@
 <?php
 
-namespace Imbc\TankopediaBundle\DataFictures\ORM;
+namespace Imbc\TankopediaBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Imbc\TankopediaBundle\Entity\Type;
+use Imbc\TankopediaBundle\Entity\TankClass;
 
-class LoadTypeData extends AbstractFixture implements OrderedFixtureInterface
+class LoadTankClassData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function getOrder()
     {
@@ -16,24 +16,24 @@ class LoadTypeData extends AbstractFixture implements OrderedFixtureInterface
 
     public function load( ObjectManager $manager )
     {
-        $light = new Type();
+        $light = new TankClass();
         $light->setName( 'Light Tank' );
         $manager->persist( $light );
 
-        $medium = new Type();
+        $medium = new TankClass();
         $medium->setName( 'Medium Tank' );
         $manager->persist( $medium );
 
-        $heavy = new Type();
+        $heavy = new TankClass();
         $heavy->setName( 'Heavy Tank' );
         $manager->persist( $heavy );
 
-        $td = new Type();
+        $td = new TankClass();
         $td->setName( 'Tank Destroyer' );
         $manager->persist( $td );
 
-        $arty = new Type();
-        $arty->setName( 'Artillery' );
+        $arty = new TankClass();
+        $arty->setName( 'Self-Propelled Gun' );
         $manager->persist( $arty );
 
         $manager->flush();

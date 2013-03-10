@@ -4,7 +4,7 @@ namespace Imbc\TankopediaBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Imbc\TankopediaBundle\Entity\Tier;
-use Imbc\TankopediaBundle\Entity\Type;
+use Imbc\TankopediaBundle\Entity\TankClass;
 use Imbc\TankopediaBundle\Entity\Nationality;
 
 
@@ -32,13 +32,13 @@ class TankRepository extends EntityRepository
         return $qb->getQuery()->getResult();
     }
 
-    public function getTankByType( Type $type )
+    public function getTankByClass( TankClass $class )
     {
         $qb = $this->_em->createQueryBuilder();
         $qb->select( 't' );
         $qb->from( 'ImbcTankopedia:Tank', 't' );
-        $qb->where( $qb->expr()->eq( 't.type', ':type' ));
-        $qb->setParameter( 'type', $type );
+        $qb->where( $qb->expr()->eq( 't.class', ':class' ));
+        $qb->setParameter( 'class', $class );
 
         return $qb->getQuery()->getResult();
     }

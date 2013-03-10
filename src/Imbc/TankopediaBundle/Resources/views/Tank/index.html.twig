@@ -17,6 +17,7 @@
             <th>Nationality</th>
             <th>Premium</th>
             <th>Reward</th>
+            <th>modules compatible</th>
             <th></th>
         </tr>
     </thead>
@@ -25,10 +26,11 @@
         <tr>
             <td>{{ tank.tier }}</td>
             <td>{{ tank.name }}</td>
-            <td>{{ tank.type }}</td>
+            <td>{{ tank.class }}</td>
             <td>{{ tank.nationality }}</td>
             <td>{{ tank.premium }}</td>
             <td>{{ tank.reward }}</td>
+            <td>{{ tank.modules | length }}</td>
             <td style="white-space: nowrap;">
                 <div class="btn-group pull-right">
                     <a class="btn btn-mini" title="View"

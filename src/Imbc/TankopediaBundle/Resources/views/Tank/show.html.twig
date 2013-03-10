@@ -17,7 +17,7 @@
             <th>Nationality</th>
             <td>{{ tank.nationality }}</td>
             <th>Class</th>
-            <td>{{ tank.type }}</td>
+            <td>{{ tank.class }}</td>
         </tr>
         <tr>
             <th>Premium</th>
@@ -25,14 +25,17 @@
             <th>Reward / Gift</th>
             <td>{{ tank.reward }}</td>
         </tr>
+        {% for module in tank.modules %}
         <tr>
-            {% for module in tank.modules %}
-                {% for key, value in module %}
+                <td>{{ module.name }}</td>
+                <td>{{ module.xp }}</td>
+                <td>{{ module.cost }}</td>
+                {#% for key, value in module %}
                 <td>{{ key }}</td>
                 <td>{{ value }}</td>
-                {% endfor %}
-            {% endfor %}
+                {% endfor %#}
         </tr>
+        {% endfor %}
     </tbody>
 </table>
 {% endblock %}

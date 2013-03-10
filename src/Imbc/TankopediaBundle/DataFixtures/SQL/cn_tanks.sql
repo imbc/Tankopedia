@@ -1,5 +1,5 @@
 INSERT INTO `tanks__tank`
-	(type_id, tier_id, nationality_id, name, premium, reward)
+	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(1,1,6,"Renault NC-31",0,0),
 	(1,2,6,"Vickers Mk. E Type B",0,0),

@@ -24,10 +24,10 @@ class Tank
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Type", inversedBy="tanks")
-     * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\TankClass", inversedBy="tanks")
+     * @ORM\JoinColumn(name="class_id", referencedColumnName="id")
      */
-    private $type;
+    private $class;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
@@ -213,26 +213,26 @@ class Tank
     }
 
     /**
-     * Set type
+     * Set class
      *
-     * @param \Imbc\TankopediaBundle\Entity\Type $type
+     * @param \Imbc\TankopediaBundle\Entity\TankClass $class
      * @return Tank
      */
-    public function setType( \Imbc\TankopediaBundle\Entity\Type $type = null )
+    public function setClass( \Imbc\TankopediaBundle\Entity\TankClass $class = null )
     {
-        $this->type = $type;
+        $this->class = $class;
 
         return $this;
     }
 
     /**
-     * Get type
+     * Get class
      *
-     * @return \Imbc\TankopediaBundle\Entity\Type
+     * @return \Imbc\TankopediaBundle\Entity\TankClass
      */
-    public function getType()
+    public function getClass()
     {
-        return $this->type;
+        return $this->class;
     }
 
     /**

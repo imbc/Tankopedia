@@ -13,13 +13,13 @@ class TypeControllerTest extends WebTestCase
         $client = static::createClient();
 
         // Create a new entry in the database
-        $crawler = $client->request('GET', '/tankopedia_type/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /tankopedia_type/");
+        $crawler = $client->request('GET', '/tankopedia_class/');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /tankopedia_class/");
         $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'imbc_tankopediabundle_typetype[field_name]'  => 'Test',
+            'imbc_tankopediabundle_TankClass[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class TypeControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Edit')->form(array(
-            'imbc_tankopediabundle_typetype[field_name]'  => 'Foo',
+            'imbc_tankopediabundle_TankClass[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

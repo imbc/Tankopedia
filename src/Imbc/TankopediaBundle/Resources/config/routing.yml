@@ -38,8 +38,8 @@ tankopedia_nationality:
     resource: "@ImbcTankopediaBundle/Resources/config/routing/nationality.yml"
     prefix:   /nationality
 
-tankopedia_type:
-    resource: "@ImbcTankopediaBundle/Resources/config/routing/type.yml"
+tankopedia_class:
+    resource: "@ImbcTankopediaBundle/Resources/config/routing/tankclass.yml"
     prefix:   /type
 
 

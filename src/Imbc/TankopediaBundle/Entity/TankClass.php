@@ -6,10 +6,10 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TypeRepository")
- * @ORM\Table(name="tanks__type")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TankClassRepository")
+ * @ORM\Table(name="tanks__class")
  */
-class Type
+class TankClass
 {
     /**
      * @ORM\Id
@@ -25,7 +25,7 @@ class Type
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="type")
+     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="class")
      **/
     private $tanks;
 

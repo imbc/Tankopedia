@@ -23,13 +23,13 @@ class TankType extends AbstractType
             'required' => false,
         ));
 //        $builder->add( 'type' );
-        $builder->add( 'type', 'entity', array(
+        $builder->add( 'class', 'entity', array(
             'empty_data'    => null,
-            'empty_value'   => '(Choose a Type)',
+            'empty_value'   => '(Choose a Class)',
             'required'      => true,
-            'class'         => 'ImbcTankopediaBundle:Type',
+            'class'         => 'ImbcTankopediaBundle:TankClass',
             'property'      => 'name',
-            'label'         => 'Type',
+            'label'         => 'Class',
         ));
         $builder->add( 'tier', 'entity', array(
             'empty_data'    => null,
