@@ -26,10 +26,10 @@ class LoadNationalityData extends AbstractFixture implements OrderedFixtureInter
         $ussr->setName( 'Soviet Union' );
         $manager->persist( $ussr );
 
-        $gb = new Nationality();
-        $gb->setAbreviation( 'GB' );
-        $gb->setName( 'Great Britain' );
-        $manager->persist( $gb );
+        $uk = new Nationality();
+        $uk->setAbreviation( 'UK' );
+        $uk->setName( 'Great Britain' );
+        $manager->persist( $uk );
 
         $fr = new Nationality();
         $fr->setAbreviation( 'FR' );
@@ -50,7 +50,7 @@ class LoadNationalityData extends AbstractFixture implements OrderedFixtureInter
 
         $this->addReference( 'usa', $usa );
         $this->addReference( 'ussr', $ussr );
-        $this->addReference( 'gb', $gb );
+        $this->addReference( 'uk', $uk );
         $this->addReference( 'fr', $fr );
         $this->addReference( 'de', $de );
         $this->addReference( 'cn', $cn );
