@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Tank")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TankRepository")
  * @ORM\Table(name="tanks__tank")
  */
 class Tank
@@ -24,20 +24,20 @@ class Tank
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Type", inversedBy="tank")
+     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Type", inversedBy="tanks")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $type;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tank")
+     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
      * @ORM\JoinColumn(name="tier_id", referencedColumnName="id")
      */
     protected $tier;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Nationality", inversedBy="tank")
-     * @ORM\JoinColumn(name="tank_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Nationality", inversedBy="tanks")
+     * @ORM\JoinColumn(name="nationality_id", referencedColumnName="id")
      */
     private $nationality;
 
@@ -57,12 +57,16 @@ class Tank
     private $reward;
 
     /**
-     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="parent")
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="children")
      * */
     private $parents;
 
     /**
-     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="child")
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="parents")
+     * @ORM\JoinTable(name="tanks__parent_child",
+     *      joinColumns={@ORM\JoinColumn(name="parent_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="child_id", referencedColumnName="id")}
+     *      )
      * */
     private $children;
 

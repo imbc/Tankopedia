@@ -33,21 +33,24 @@ class TankController extends Controller
      * Creates a new Tank entity.
      *
      */
-    public function createAction(Request $request)
+    public function createAction( Request $request )
     {
         $entity  = new Tank();
-        $form = $this->createForm(new TankType(), $entity);
-        $form->bind($request);
+        $form = $this->createForm( new TankType(), $entity );
+        $form->bind( $request );
 
-        if ($form->isValid()) {
+        if ( $form->isValid() ) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($entity);
+            $em->persist( $entity );
             $em->flush();
 
-            return $this->redirect($this->generateUrl('tankopedia_tank_show', array('id' => $entity->getId())));
+            return $this->redirect( $this->generateUrl( 'tankopedia_tank_show', array(
+                    'id' => $entity->getId(),
+                )
+            ));
         }
 
-        return $this->render('ImbcTankopediaBundle:Tank:new.html.twig', array(
+        return $this->render( 'ImbcTankopediaBundle:Tank:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
         ));

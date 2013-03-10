@@ -5,7 +5,7 @@ namespace Imbc\TankopediaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Track")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TrackRepository")
  * @ORM\Table(name="tanks__moduletrack")
  */
 class Track extends Module

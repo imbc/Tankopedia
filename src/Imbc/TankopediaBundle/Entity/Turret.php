@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Turret")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TurretRepository")
  * @ORM\Table(name="tanks__moduleturret")
  */
 class Turret extends Module

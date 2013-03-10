@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Nationality")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\NationalityRepository")
  * @ORM\Table(name="tanks__nationality")
  */
 class Nationality

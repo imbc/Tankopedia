@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Module")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\ModuleRepository")
  * @ORM\Table(name="tanks__module")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="discriminator_column", type="string")
@@ -27,13 +27,13 @@ abstract class Module
     protected $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="module")
+     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="modules")
      * @ORM\JoinColumn(name="tier_id", referencedColumnName="id")
      */
     protected $tier;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Nationality", inversedBy="module")
+     * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Nationality", inversedBy="modules")
      * @ORM\JoinColumn(name="nationality_id", referencedColumnName="id")
      */
     private $nationality;

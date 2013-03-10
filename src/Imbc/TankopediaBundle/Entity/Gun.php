@@ -5,7 +5,7 @@ namespace Imbc\TankopediaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Gun")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\GunRepository")
  * @ORM\Table(name="tanks__modulegun")
  */
 class Gun extends Module

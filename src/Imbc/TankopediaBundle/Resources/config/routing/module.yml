@@ -1,4 +1,4 @@
-tankopedia_module_index:
+tankopedia_module:
     pattern:  /
     defaults: { _controller: "ImbcTankopediaBundle:Module:index" }
 

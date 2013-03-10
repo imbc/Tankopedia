@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Tier")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TierRepository")
  * @ORM\Table(name="tanks__tier")
  */
 class Tier

@@ -23,6 +23,8 @@ class TankType extends AbstractType
         $builder->add( 'type' );
         $builder->add( 'tier' );
         $builder->add( 'nationality' );
+        $builder->add( 'parents' );
+        $builder->add( 'children' );
     }
 
     public function setDefaultOptions( OptionsResolverInterface $resolver )

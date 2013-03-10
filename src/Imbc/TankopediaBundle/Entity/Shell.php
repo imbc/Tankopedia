@@ -5,7 +5,7 @@ namespace Imbc\TankopediaBundle\Entity;;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Shell")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\ShellRepository")
  * @ORM\Table(name="tanks__shell")
  */
 class Shell

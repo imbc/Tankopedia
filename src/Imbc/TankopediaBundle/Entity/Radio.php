@@ -5,7 +5,7 @@ namespace Imbc\TankopediaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\Radio")
+ * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\RadioRepository")
  * @ORM\Table(name="tanks__moduleradio")
  */
 class Radio extends Module
