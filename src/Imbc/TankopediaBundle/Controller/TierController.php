@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Imbc\TankopediaBundle\Entity\Tier;
-use Imbc\TankopediaBundle\Form\TierType;
+use Imbc\TankopediaBundle\Form\Type\TierType;
 
 /**
  * Tier controller.

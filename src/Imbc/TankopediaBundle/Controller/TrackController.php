@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Imbc\TankopediaBundle\Entity\Track;
-use Imbc\TankopediaBundle\Form\TrackType;
+use Imbc\TankopediaBundle\Form\Type\TrackType;
 
 /**
  * Track controller.

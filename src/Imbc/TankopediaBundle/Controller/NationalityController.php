@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Imbc\TankopediaBundle\Entity\Nationality;
-use Imbc\TankopediaBundle\Form\NationalityType;
+use Imbc\TankopediaBundle\Form\Type\NationalityType;
 
 /**
  * Nationality controller.

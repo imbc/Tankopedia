@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Imbc\TankopediaBundle\Entity\Gun;
-use Imbc\TankopediaBundle\Form\GunType;
+use Imbc\TankopediaBundle\Form\Type\GunType;
 
 /**
  * Gun controller.

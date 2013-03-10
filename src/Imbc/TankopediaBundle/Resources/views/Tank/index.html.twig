@@ -1,45 +1,59 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Tank list</h1>
+<h1>Tank list</h1>
+<div class="btn-group pull-right">
+    <a class="btn btn-mini" href="{{ path( 'tankopedia_tank_new' ) }}">
+        <i class="icon-plus"></i> Add a Tank
+    </a>
+</div>
 
-    <table class="table table-condensed table-hover table-striped records_list">
-        <thead>
-            <tr>
-                <th>Tier</th>
-                <th>Name</th>
-                <th>Nationality</th>
-                <th>Premium</th>
-                <th>Reward</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td>{{ entity.tier }}</td>
-                <td>{{ entity.name }}</td>
-                <td>{{ entity.nationality }}</td>
-                <td>{{ entity.premium }}</td>
-                <td>{{ entity.reward }}</td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_tank_show', { 'id': entity.id }) }}">show</a>
-                        </button>
-                        <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_tank_edit', { 'id': entity.id }) }}">edit</a>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <button class="btn btn-mini">
-        <a href="{{ path('tankopedia_tank_new') }}">
-            Create a new entry
-        </a>
-    </button>
-    {% endblock %}
+<table class="table table-condensed table-hover table-striped records_list">
+    <thead>
+        <tr>
+            <th>Tier</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Nationality</th>
+            <th>Premium</th>
+            <th>Reward</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for tank in tanks %}
+        <tr>
+            <td>{{ tank.tier }}</td>
+            <td>{{ tank.name }}</td>
+            <td>{{ tank.type }}</td>
+            <td>{{ tank.nationality }}</td>
+            <td>{{ tank.premium }}</td>
+            <td>{{ tank.reward }}</td>
+            <td style="white-space: nowrap;">
+                <div class="btn-group pull-right">
+                    <a class="btn btn-mini" title="View"
+                       href="{{ path('tankopedia_tank_show', { 'id': tank.id }) }}">
+                        <i class="icon-eye-open"></i>
+                    </a>
+                    <a class="btn btn-mini" title="Edit"
+                       href="{{ path('tankopedia_tank_edit', { 'id': tank.id }) }}">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-mini" title="Delete"
+                       href="#">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    {% else %}
+        <tr class="warning-empty">
+            <td colspan="4">
+                <i class="icon-warning-sign"></i>
+                No tanks in this selection.
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

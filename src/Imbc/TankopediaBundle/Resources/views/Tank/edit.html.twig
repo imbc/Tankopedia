@@ -1,28 +1,82 @@
 {% extends '::base.html.twig' %}
 
-{% block body -%}
-    <h1>Tank edit</h1>
-
-    <form action="{{ path('tankopedia_tank_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-        <input type="hidden" name="_method" value="PUT" />
-        {{ form_widget(edit_form) }}
-        <p>
-            <button type="submit">Edit</button>
-        </p>
-    </form>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('tankopedia_tank') }}">
-            Back to the list
+{% block body %}
+{% if edit == true %}
+    <h1>Editing existing Tank</h1>
+{% else %}
+    <h1>New Tank</h1>
+{% endif %}
+<form class="form-horizontal" method="POST" action="">
+    <div class="form-horizontal">
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( tank.name ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( tank.name ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( tank.premium ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( tank.premium ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( tank.reward ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( tank.reward ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( tank.type ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( tank.type ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( tank.tier ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( tank.tier ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( tank.nationality ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( tank.nationality ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( tank.parents ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( tank.parents ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( tank.children ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( tank.children ) }}
+            </div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <a type="submit" class="btn btn-mini">
+            <i class="icon-ok"></i> Save Form
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_tank_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+    </div>
+</form>
 {% endblock %}

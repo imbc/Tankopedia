@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Imbc\TankopediaBundle\Entity\Turret;
-use Imbc\TankopediaBundle\Form\TurretType;
+use Imbc\TankopediaBundle\Form\Type\TurretType;
 
 /**
  * Turret controller.

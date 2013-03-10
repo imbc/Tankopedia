@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Imbc\TankopediaBundle\Entity\Engine;
-use Imbc\TankopediaBundle\Form\EngineType;
+use Imbc\TankopediaBundle\Form\Type\EngineType;
 
 /**
  * Engine controller.

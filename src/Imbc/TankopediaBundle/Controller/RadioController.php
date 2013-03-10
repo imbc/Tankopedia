@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Imbc\TankopediaBundle\Entity\Radio;
-use Imbc\TankopediaBundle\Form\RadioType;
+use Imbc\TankopediaBundle\Form\Type\RadioType;
 
 /**
  * Radio controller.
@@ -154,11 +154,13 @@ class RadioController extends Controller
         $form = $this->createDeleteForm($id);
         $form->bind($request);
 
-        if ($form->isValid()) {
+        if ($form->isValid())
+        {
             $em = $this->getDoctrine()->getManager();
             $entity = $em->getRepository('ImbcTankopediaBundle:Radio')->find($id);
 
-            if (!$entity) {
+            if ( !$entity )
+            {
                 throw $this->createNotFoundException('Unable to find Radio entity.');
             }
 
@@ -178,7 +180,9 @@ class RadioController extends Controller
      */
     private function createDeleteForm($id)
     {
-        return $this->createFormBuilder(array('id' => $id))
+        return $this->createFormBuilder( array(
+            'id' => $id
+        ))
             ->add('id', 'hidden')
             ->getForm()
         ;
