@@ -15,7 +15,11 @@ VALUES
 	(1,3,5,"T-15",1,0),
 	(1,4,5,"PzKpfw 38 nA",0,0),
 	(1,5,5,"VK 1602 Leopard",0,0),
-	(1,6,5,"VK 2801",0,0),
+	(1,6,5,"VK 2801",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(2,3,5,"PzKpfw S35 739 (f)",1,0),
 	(2,4,5,"PzKpfw III",0,0),
 	(2,5,5,"PzKpfw III/IV",0,0),
@@ -33,7 +37,11 @@ VALUES
 	(2,7,5,"VK 3002 (DB)",0,0),
 	(2,8,5,"Panther II",0,0),
 	(2,9,5,"E-50",0,0),
-	(2,10,5,"E-50 Ausf. M",0,0),
+	(2,10,5,"E-50 Ausf. M",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(3,4,5,"PzKpfw B2 740 (f)",1,1),
 	(3,7,5,"PzKpfw VI Tiger",0,0),
 	(3,7,5,"PzKpfw VI Tiger (P)",0,0),
@@ -43,7 +51,11 @@ VALUES
 	(3,9,5,"E-75",0,0),
 	(3,9,5,"VK 4502 (P) Ausf. B",0,0),
 	(3,10,5,"E-100",0,0),
-	(3,10,5,"Maus",0,0),
+	(3,10,5,"Maus",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(4,2,5,"Panzerjäger I",0,0),
 	(4,3,5,"Marder II",0,0),
 	(4,4,5,"Hetzer",0,0),
@@ -55,7 +67,11 @@ VALUES
 	(4,8,5,"Ferdinand",0,0),
 	(4,8,5,"Jagdpanther II",0,0),
 	(4,9,5,"Jagdtiger",0,0),
-	(4,10,5,"JagdPz E-100",0,0),
+	(4,10,5,"JagdPz E-100",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(5,2,5,"Sturmpanzer I Bison",0,0),
 	(5,3,5,"Sturmpanzer II",0,0),
 	(5,3,5,"Wespe",0,0),

@@ -32,16 +32,16 @@ class LoadTankClassData extends AbstractFixture implements OrderedFixtureInterfa
         $td->setName( 'Tank Destroyer' );
         $manager->persist( $td );
 
-        $arty = new TankClass();
-        $arty->setName( 'Self-Propelled Gun' );
-        $manager->persist( $arty );
+        $spg = new TankClass();
+        $spg->setName( 'Self-Propelled Gun' );
+        $manager->persist( $spg );
 
         $manager->flush();
 
-        $this->addReference( 'light-tank', $light );
-        $this->addReference( 'medium-tank', $medium );
-        $this->addReference( 'heavy-tank', $heavy );
-        $this->addReference( 'tank-destroyer', $td );
-        $this->addReference( 'artillery', $arty );
+        $this->addReference( 'light', $light );
+        $this->addReference( 'medium', $medium );
+        $this->addReference( 'heavy', $heavy );
+        $this->addReference( 'td', $td );
+        $this->addReference( 'spg', $spg );
     }
 }

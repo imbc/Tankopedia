@@ -10,19 +10,19 @@ tankopedia_tank_new:
     pattern:  /new
     defaults: { _controller: "ImbcTankopediaBundle:Tank:edit" }
 
-tankopedia_tank_create:
-    pattern:  /create
-    defaults: { _controller: "ImbcTankopediaBundle:Tank:create" }
-    requirements: { _method: post }
+#tankopedia_tank_create:
+#    pattern:  /create
+#    defaults: { _controller: "ImbcTankopediaBundle:Tank:create" }
+#    requirements: { _method: post }
 
 tankopedia_tank_edit:
     pattern:  /{id}/edit
     defaults: { _controller: "ImbcTankopediaBundle:Tank:edit" }
 
-tankopedia_tank_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "ImbcTankopediaBundle:Tank:update" }
-    requirements: { _method: post|put }
+#tankopedia_tank_update:
+#    pattern:  /{id}/update
+#    defaults: { _controller: "ImbcTankopediaBundle:Tank:update" }
+#    requirements: { _method: post|put }
 
 tankopedia_tank_delete:
     pattern:  /{id}/delete

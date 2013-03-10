@@ -17,9 +17,9 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
     public function load( ObjectManager $manager )
     {
         // ref for tankclass
-        $light = $this->getReference( 'light-tank' );
-        $medium = $this->getReference( 'medium-tank' );
-        $heavy = $this->getReference( 'heavy-tank' );
+        $light = $this->getReference( 'light' );
+        $medium = $this->getReference( 'medium' );
+        $heavy = $this->getReference( 'heavy' );
         //ref for tier
         $tier1 = $this->getReference( 'tier-1' );
         $tier2 = $this->getReference( 'tier-2' );
