@@ -27,13 +27,10 @@
         </tr>
         {% for module in tank.modules %}
         <tr>
-                <td>{{ module.name }}</td>
-                <td>{{ module.xp }}</td>
-                <td>{{ module.cost }}</td>
-                {#% for key, value in module %}
-                <td>{{ key }}</td>
-                <td>{{ value }}</td>
-                {% endfor %#}
+            <td>{{ module.name }}</td>
+            <td>{{ module.xp }}</td>
+            <td>{{ module.cost }}</td>
+            <td>{{ module.type }}</td>
         </tr>
         {% endfor %}
     </tbody>

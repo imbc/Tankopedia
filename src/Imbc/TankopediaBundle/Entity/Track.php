@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TrackRepository")
- * @ORM\Table(name="tanks__moduletrack")
+ * @ORM\Table(name="tanks__module_track")
  */
 class Track extends Module
 {

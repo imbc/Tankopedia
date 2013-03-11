@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\ModuleRepository")
  * @ORM\Table(name="tanks__module")
  * @ORM\InheritanceType("JOINED")
- * @ORM\DiscriminatorColumn(name="discriminator_column", type="string")
+ * @ORM\DiscriminatorColumn(name="type", type="string")
  * @ORM\DiscriminatorMap({"engine" = "Engine", "gun" = "Gun", "radio" = "Radio", "track" = "Track", "turret" = "Turret"})
  */
 abstract class Module
