@@ -1,7 +1,3 @@
-imbc_tankopedia_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: ImbcTankopediaBundle:Default:index }
-
 tankopedia_tank:
     resource: "@ImbcTankopediaBundle/Resources/config/routing/tank.yml"
     prefix:   /tank
