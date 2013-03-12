@@ -18,23 +18,23 @@
             </tr>
         </thead>
         <tbody>
-        {% for entity in entities %}
+        {% for engine in engines %}
             <tr>
-                <td>{{ entity.tier }}</td>
-                <td>{{ entity.name }}</td>
-                <td>{{ entity.xp }}</td>
-                <td>{{ entity.cost }}</td>
-                <td>{{ entity.weight }} Kg</td>
-                <td>{{ entity.power }} Hp</td>
-                <td>{{ entity.fireChance }} %</td>
-                <td>{{ entity.fuelType }}</td>
+                <td>{{ engine.tier }}</td>
+                <td>{{ engine.name }}</td>
+                <td>{{ engine.xp }}</td>
+                <td>{{ engine.cost }}</td>
+                <td>{{ engine.weight }} Kg</td>
+                <td>{{ engine.power }} Hp</td>
+                <td>{{ engine.fireChance }} %</td>
+                <td>{{ engine.fuelType }}</td>
                 <td>
                     <div class="btn-group">
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_engine_show', { 'id': entity.id }) }}">show</a>
+                            <a href="{{ path('tankopedia_engine_show', { 'id': engine.id }) }}">show</a>
                         </button>
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_engine_edit', { 'id': entity.id }) }}">edit</a>
+                            <a href="{{ path('tankopedia_engine_edit', { 'id': engine.id }) }}">edit</a>
                         </button>
                     </div>
                 </td>

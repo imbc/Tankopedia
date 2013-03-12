@@ -8,7 +8,7 @@ tankopedia_engine_show:
 
 tankopedia_engine_new:
     pattern:  /new
-    defaults: { _controller: "ImbcTankopediaBundle:Engine:new" }
+    defaults: { _controller: "ImbcTankopediaBundle:Engine:edit" }
 
 tankopedia_engine_create:
     pattern:  /create

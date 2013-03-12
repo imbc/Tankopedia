@@ -10,7 +10,6 @@ use Imbc\TankopediaBundle\Form\Type\TankType;
 
 /**
  * Tank controller.
- *
  */
 class TankController extends Controller
 {

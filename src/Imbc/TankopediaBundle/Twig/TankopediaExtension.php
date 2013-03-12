@@ -18,7 +18,7 @@ class TankopediaExtension extends \Twig_Extension
         return 'tankopedia_extension';
     }
 
-    public function getFilters()
+    public function getFunctions()
     {
         return array(
             'get_tankByTier' => new \Twig_Function_Method( $this, 'getTankByTier' ),

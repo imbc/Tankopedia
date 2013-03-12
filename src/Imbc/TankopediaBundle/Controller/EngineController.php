@@ -10,139 +10,71 @@ use Imbc\TankopediaBundle\Form\Type\EngineType;
 
 /**
  * Engine controller.
- *
  */
 class EngineController extends Controller
 {
-    /**
-     * Lists all Engine entities.
-     *
-     */
-    public function indexAction()
+    public function indexAction( Request $request )
     {
         $em = $this->getDoctrine()->getManager();
-
-        $entities = $em->getRepository('ImbcTankopediaBundle:Engine')->findAll();
-
-        return $this->render('ImbcTankopediaBundle:Engine:index.html.twig', array(
-            'entities' => $entities,
-        ));
-    }
-
-    /**
-     * Creates a new Engine entity.
-     *
-     */
-    public function createAction(Request $request)
-    {
-        $entity  = new Engine();
-        $form = $this->createForm(new EngineType(), $entity);
-        $form->bind($request);
-
-        if ($form->isValid())
+        $repo = $em->getRepository( 'ImbcTankopediaBundle:Engine' );
+        $engines = $repo->findAll();
+        $newEngine = new Engine();
+        $engineForm = $this->createForm( new EngineType(), $newEngine );
+        if ( null !== $request->get( $engineForm->getName() ) )
         {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($entity);
-            $em->flush();
-
-            return $this->redirect($this->generateUrl('tankopedia_engine_show', array('id' => $entity->getId())));
+            $engineForm->bind( $request );
+            if ( $engineForm->isValid() )
+            {
+                $em->persist( $newEngine );
+                $em->flush();
+                return $this->redirect( $this->generateUrl( 'tankopedia_engine' ) );
+            }
         }
-
-        return $this->render('ImbcTankopediaBundle:Engine:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
+        return $this->render( 'ImbcTankopediaBundle:Engine:index.html.twig', array(
+            'engines' => $engines,
+            'form'  => $engineForm->createView(),
         ));
     }
 
-    /**
-     * Displays a form to create a new Engine entity.
-     *
-     */
-    public function newAction()
+    public function showAction( Request $request )
     {
-        $entity = new Engine();
-        $form   = $this->createForm(new EngineType(), $entity);
-
-        return $this->render('ImbcTankopediaBundle:Engine:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository( 'ImbcTankopediaBundle:Engine' );
+        if ( null === $engine = $repo->find( $request->get( 'id' ) ))
+        {
+            throw $this->createNotFoundException( 'Engine does not exist' );
+        }
+        return $this->render( 'ImbcTankopediaBundle:Engine:show.html.twig', array(
+            'engine' => $engine,
         ));
     }
 
-    /**
-     * Finds and displays a Engine entity.
-     *
-     */
-    public function showAction($id)
+    public function editAction( Request $request )
     {
+        $edit = false;
         $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ImbcTankopediaBundle:Engine')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Engine entity.');
+        $repo = $em->getRepository( 'ImbcTankopediaBundle:Engine' );
+        $engine = new Engine();
+        if ( $request->get( 'id' ) )
+        {
+            $edit = true;
+            $engine = $repo->find( $request->get( 'id' ));
+        }
+        $form = $this->createForm( new EngineType(), $engine );
+        if ( null !== $request->get( $form->getName() ))
+        {
+            $form->bind( $request );
+            if ( $form->isValid() )
+            {
+                $em->persist( $engine );
+                $em->flush();
+                return $this->redirect( $this->generateUrl( 'tankopedia_engine' ));
+            }
         }
 
-        $deleteForm = $this->createDeleteForm($id);
-
-        return $this->render('ImbcTankopediaBundle:Engine:show.html.twig', array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),        ));
-    }
-
-    /**
-     * Displays a form to edit an existing Engine entity.
-     *
-     */
-    public function editAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ImbcTankopediaBundle:Engine')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Engine entity.');
-        }
-
-        $editForm = $this->createForm(new EngineType(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
-
-        return $this->render('ImbcTankopediaBundle:Engine:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Edits an existing Engine entity.
-     *
-     */
-    public function updateAction(Request $request, $id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ImbcTankopediaBundle:Engine')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Engine entity.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-        $editForm = $this->createForm(new EngineType(), $entity);
-        $editForm->bind($request);
-
-        if ($editForm->isValid()) {
-            $em->persist($entity);
-            $em->flush();
-
-            return $this->redirect($this->generateUrl('tankopedia_engine_edit', array('id' => $id)));
-        }
-
-        return $this->render('ImbcTankopediaBundle:Engine:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+        return $this->render( 'ImbcTankopediaBundle:Engine:edit.html.twig', array(
+            'edit'  => $edit,
+            'engine'  => $form->createView(),
         ));
     }
 
@@ -152,36 +84,6 @@ class EngineController extends Controller
      */
     public function deleteAction(Request $request, $id)
     {
-        $form = $this->createDeleteForm($id);
-        $form->bind($request);
-
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('ImbcTankopediaBundle:Engine')->find($id);
-
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Engine entity.');
-            }
-
-            $em->remove($entity);
-            $em->flush();
-        }
-
-        return $this->redirect($this->generateUrl('tankopedia_engine'));
-    }
-
-    /**
-     * Creates a form to delete a Engine entity by id.
-     *
-     * @param mixed $id The entity id
-     *
-     * @return Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm($id)
-    {
-        return $this->createFormBuilder(array('id' => $id))
-            ->add('id', 'hidden')
-            ->getForm()
-        ;
+        // to be implemented
     }
 }
