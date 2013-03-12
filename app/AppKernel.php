@@ -22,13 +22,14 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new APY\DataGridBundle\APYDataGridBundle(),
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
+            new Lsw\VersionInformationBundle\LswVersionInformationBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-//            $bundles[] = new Elao\WebProfilerExtraBundle\WebProfilerExtraBundle();
+            $bundles[] = new Elao\WebProfilerExtraBundle\WebProfilerExtraBundle();
         }
 
         return $bundles;

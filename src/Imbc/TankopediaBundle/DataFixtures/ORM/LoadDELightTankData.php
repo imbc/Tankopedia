@@ -157,7 +157,7 @@ class LoadDELightTankData extends AbstractFixture implements OrderedFixtureInter
 
         $tank15 = new Tank();
         $tank15->setName( 'VK 2801' );
-        $tank15->setTier( $tier5 );
+        $tank15->setTier( $tier6 );
         $tank15->setNationality( $germany );
         $tank15->setClass( $light );
         $tank15->setPremium( 0 );
