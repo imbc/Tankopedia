@@ -18,21 +18,21 @@ class EngineController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository( 'ImbcTankopediaBundle:Engine' );
         $engines = $repo->findAll();
-        $newEngine = new Engine();
-        $engineForm = $this->createForm( new EngineType(), $newEngine );
-        if ( null !== $request->get( $engineForm->getName() ) )
+        $thisEngine = new Engine();
+        $form = $this->createForm( new EngineType(), $thisEngine );
+        if ( null !== $request->get( $form->getName() ) )
         {
-            $engineForm->bind( $request );
-            if ( $engineForm->isValid() )
+            $form->bind( $request );
+            if ( $form->isValid() )
             {
-                $em->persist( $newEngine );
+                $em->persist( $thisEngine );
                 $em->flush();
                 return $this->redirect( $this->generateUrl( 'tankopedia_engine' ) );
             }
         }
         return $this->render( 'ImbcTankopediaBundle:Engine:index.html.twig', array(
             'engines' => $engines,
-            'form'  => $engineForm->createView(),
+            'form'  => $form->createView(),
         ));
     }
 

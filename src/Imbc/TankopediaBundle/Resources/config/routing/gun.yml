@@ -8,7 +8,7 @@ tankopedia_gun_show:
 
 tankopedia_gun_new:
     pattern:  /new
-    defaults: { _controller: "ImbcTankopediaBundle:Gun:new" }
+    defaults: { _controller: "ImbcTankopediaBundle:Gun:edit" }
 
 tankopedia_gun_create:
     pattern:  /create

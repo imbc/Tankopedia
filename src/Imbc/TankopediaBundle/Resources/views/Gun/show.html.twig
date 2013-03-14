@@ -7,83 +7,83 @@
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ entity.id }}</td>
+                <td>{{ gun.id }}</td>
             </tr>
             <tr>
                 <th>Name</th>
-                <td>{{ entity.name }}</td>
+                <td>{{ gun.name }}</td>
             </tr>
             <tr>
                 <th>Xp</th>
-                <td>{{ entity.xp }}</td>
+                <td>{{ gun.xp }}</td>
             </tr>
             <tr>
                 <th>Cost</th>
-                <td>{{ entity.cost }}</td>
+                <td>{{ gun.cost }}</td>
             </tr>
             <tr>
                 <th>Weight</th>
-                <td>{{ entity.weight }}</td>
+                <td>{{ gun.weight }}</td>
             </tr>
             <tr>
                 <th>Ammocapacity</th>
-                <td>{{ entity.ammoCapacity }}</td>
+                <td>{{ gun.ammoCapacity }}</td>
             </tr>
             <tr>
                 <th>Damageap</th>
-                <td>{{ entity.damageAP }}</td>
+                <td>{{ gun.damageAP }}</td>
             </tr>
             <tr>
                 <th>Damageapcr</th>
-                <td>{{ entity.damageAPCR }}</td>
+                <td>{{ gun.damageAPCR }}</td>
             </tr>
             <tr>
                 <th>Damagehe</th>
-                <td>{{ entity.damageHE }}</td>
+                <td>{{ gun.damageHE }}</td>
             </tr>
             <tr>
                 <th>Penetrationap</th>
-                <td>{{ entity.penetrationAP }}</td>
+                <td>{{ gun.penetrationAP }}</td>
             </tr>
             <tr>
                 <th>Penetrationapcr</th>
-                <td>{{ entity.penetrationAPCR }}</td>
+                <td>{{ gun.penetrationAPCR }}</td>
             </tr>
             <tr>
                 <th>Penetrationhe</th>
-                <td>{{ entity.penetrationHE }}</td>
+                <td>{{ gun.penetrationHE }}</td>
             </tr>
             <tr>
                 <th>Shell</th>
-                <td>{{ entity.shell }}</td>
+                <td>{{ gun.shell }}</td>
             </tr>
             <tr>
                 <th>Rateoffire</th>
-                <td>{{ entity.rateOfFire }}</td>
+                <td>{{ gun.rateOfFire }}</td>
             </tr>
             <tr>
                 <th>Accuratie</th>
-                <td>{{ entity.accuratie }}</td>
+                <td>{{ gun.accuratie }}</td>
             </tr>
             <tr>
                 <th>Aimtimemin</th>
-                <td>{{ entity.aimTimeMin }}</td>
+                <td>{{ gun.aimTimeMin }}</td>
             </tr>
             <tr>
                 <th>Aimtimemax</th>
-                <td>{{ entity.aimTimeMax }}</td>
+                <td>{{ gun.aimTimeMax }}</td>
             </tr>
             <tr>
                 <th>Elevationmin</th>
-                <td>{{ entity.elevationMin }}</td>
+                <td>{{ gun.elevationMin }}</td>
             </tr>
             <tr>
                 <th>Elevationmax</th>
-                <td>{{ entity.elevationMax }}</td>
+                <td>{{ gun.elevationMax }}</td>
             </tr>
             <tr>
                 <th>Requiresturret</th>
-                <td>{{ entity.requiresTurret }}</td>
+                <td>{{ gun.requiresTurret }}</td>
             </tr>
         </tbody>
     </table>
@@ -95,12 +95,12 @@
         </a>
     </li>
     <li>
-        <a href="{{ path('tankopedia_gun_edit', { 'id': entity.id }) }}">
+        <a href="{{ path('tankopedia_gun_edit', { 'id': gun.id }) }}">
             Edit
         </a>
     </li>
     <li>
-        <form action="{{ path('tankopedia_gun_delete', { 'id': entity.id }) }}" method="post">
+        <form action="{{ path('tankopedia_gun_delete', { 'id': gun.id }) }}" method="post">
             <input type="hidden" name="_method" value="DELETE" />
             {{ form_widget(delete_form) }}
             <button type="submit">Delete</button>

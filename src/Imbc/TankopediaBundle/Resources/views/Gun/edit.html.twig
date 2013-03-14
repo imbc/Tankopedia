@@ -1,28 +1,202 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Gun edit</h1>
-
-    <form action="{{ path('tankopedia_gun_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-        <input type="hidden" name="_method" value="PUT" />
-        {{ form_widget(edit_form) }}
-        <p>
-            <button type="submit">Edit</button>
-        </p>
-    </form>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('tankopedia_gun') }}">
-            Back to the list
+{% if edit == true %}
+    <h1>Editing existing Gun</h1>
+{% else %}
+    <h1>New Gun</h1>
+{% endif %}
+<form class="form-horizontal" method="POST" action="">
+    <div class="form-horizontal">
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.name ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.name ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.xp ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.xp ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.cost ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.cost ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.weight ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.weight ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.ammoCapacity ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.ammoCapacity ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.damageAP ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.damageAP ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.damageAPCR ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.damageAPCR ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.damageHE ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.damageHE ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.penetrationAP ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.penetrationAP ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.penetrationAPCR ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.penetrationAPCR ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.penetrationHE ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.penetrationHE ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.shell ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.shell ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.rateOfFire ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.rateOfFire ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.accuratie ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.accuratie ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.aimTimeMin ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.aimTimeMin ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.aimTimeMax ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.aimTimeMax ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.elevationMin ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.elevationMin ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.elevationMax ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.elevationMax ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.requiresTurret ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.requiresTurret ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.turret ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.turret ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.tier ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.tier ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.nationality ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.nationality ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( gun.tanks ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( gun.tanks ) }}
+            </div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <a type="submit" class="btn btn-mini">
+            <i class="icon-ok"></i> Save Form
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_gun_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+    </div>
+</form>
 {% endblock %}
