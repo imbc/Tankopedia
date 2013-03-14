@@ -8,23 +8,9 @@ tankopedia_nationality_show:
 
 tankopedia_nationality_new:
     pattern:  /new
-    defaults: { _controller: "ImbcTankopediaBundle:Nationality:new" }
-
-tankopedia_nationality_create:
-    pattern:  /create
-    defaults: { _controller: "ImbcTankopediaBundle:Nationality:create" }
-    requirements: { _method: post }
+    defaults: { _controller: "ImbcTankopediaBundle:Nationality:edit" }
 
 tankopedia_nationality_edit:
     pattern:  /{id}/edit
     defaults: { _controller: "ImbcTankopediaBundle:Nationality:edit" }
 
-tankopedia_nationality_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "ImbcTankopediaBundle:Nationality:update" }
-    requirements: { _method: post|put }
-
-tankopedia_nationality_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "ImbcTankopediaBundle:Nationality:delete" }
-    requirements: { _method: post|delete }

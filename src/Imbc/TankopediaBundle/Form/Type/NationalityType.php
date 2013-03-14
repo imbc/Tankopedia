@@ -8,19 +8,17 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class NationalityType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm( FormBuilderInterface $builder, array $options )
     {
-        $builder
-            ->add('abreviation')
-            ->add('name')
-        ;
+        $builder->add( 'abreviation' );
+        $builder->add( 'name' );
     }
 
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function setDefaultOptions( OptionsResolverInterface $resolver )
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults( array(
             'data_class' => 'Imbc\TankopediaBundle\Entity\Nationality'
-        ));
+        ) );
     }
 
     public function getName()

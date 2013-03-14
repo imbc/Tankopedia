@@ -99,12 +99,5 @@
             Edit
         </a>
     </li>
-    <li>
-        <form action="{{ path('tankopedia_gun_delete', { 'id': gun.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
 </ul>
 {% endblock %}

@@ -1,28 +1,35 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Nationality edit</h1>
 
-    <form action="{{ path('tankopedia_nationality_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-        <input type="hidden" name="_method" value="PUT" />
-        {{ form_widget(edit_form) }}
-        <p>
-            <button type="submit">Edit</button>
-        </p>
-    </form>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('tankopedia_nationality') }}">
-            Back to the list
+{% if edit == true %}
+    <h1>Editing existing Nationality</h1>
+{% else %}
+    <h1>New Nationality</h1>
+{% endif %}
+<form class="form-horizontal" method="POST" action="">
+    <div class="form-horizontal">
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( nationality.abreviation ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( nationality.abreviation ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( nationality.name ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( nationality.name ) }}
+            </div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <a type="submit" class="btn btn-mini">
+            <i class="icon-ok"></i> Save Form
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_nationality_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+    </div>
+</form>
 {% endblock %}
