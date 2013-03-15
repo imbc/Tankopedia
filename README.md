@@ -13,3 +13,8 @@ TODO:
 4. continue with equipment
 5. display some chart for the different indexes
 6. investigate scrapping data directly from wot for player and save that to local db.
+7. refactor edit/new forms
+     - use chosen javascript library for multiselect
+     - use slider
+8.  add battle range for tanks
+9.  investigate need for hull entity (on tanks) with properties armor (front, side, rear)
