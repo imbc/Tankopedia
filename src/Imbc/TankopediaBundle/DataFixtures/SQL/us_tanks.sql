@@ -11,7 +11,11 @@ VALUES
 	(1,4,1,"M5 Stuart",0,0),
 	(1,5,1,"M24 Chaffee",0,0),
 	(1,6,1,"T21",0,0),
-	(1,7,1,"T71",0,0),
+	(1,7,1,"T71",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(2,2,1,"T2 Medium Tank",0,0),
 	(2,3,1,"M2 Medium Tank",0,0),
 	(2,4,1,"M3 Lee",0,0),
@@ -28,7 +32,11 @@ VALUES
 	(2,8,1,"T69",0,0),
 	(2,9,1,"M46 Patton",0,0),
 	(2,9,1,"T54E1",0,0),
-	(2,10,1,"M48A1",0,0),
+	(2,10,1,"M48A1",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(3,5,1,"T1 Heavy Tank",0,0),
 	(3,5,1,"T14",1,0),
 	(3,6,1,"M6",0,0),
@@ -38,7 +46,11 @@ VALUES
 	(3,8,1,"T34",1,0),
 	(3,9,1,"M103",0,0),
 	(3,10,1,"T110E5",0,0),
-	(3,10,1,"T57 Heavy Tank",0,0),
+	(3,10,1,"T57 Heavy Tank",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(4,2,1,"T18",0,0),
 	(4,3,1,"T82",0,0),
 	(4,4,1,"M8A1",0,0),
@@ -54,7 +66,11 @@ VALUES
 	(4,9,1,"T30",0,0),
 	(4,9,1,"T95",0,0),
 	(4,10,1,"T110E3",0,0),
-	(4,10,1,"T110E4",0,0),
+	(4,10,1,"T110E4",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(5,2,1,"T57",0,0),
 	(5,3,1,"M37",0,0),
 	(5,4,1,"M7 Priest",0,0),

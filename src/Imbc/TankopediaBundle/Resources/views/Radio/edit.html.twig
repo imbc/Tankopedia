@@ -1,28 +1,91 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Radio edit</h1>
 
-    <form action="{{ path('tankopedia_radio_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-        <input type="hidden" name="_method" value="PUT" />
-        {{ form_widget(edit_form) }}
-        <p>
-            <button type="submit">Edit</button>
-        </p>
-    </form>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('tankopedia_radio') }}">
-            Back to the list
+{% if edit == true %}
+    <h1>Editing existing Radio</h1>
+{% else %}
+    <h1>New Radio</h1>
+{% endif %}
+<form class="form-horizontal" method="POST" action="">
+    <div class="form-horizontal">
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.name ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.name ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.xp ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.xp ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.cost ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.cost ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.weight ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.weight ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.signalRange ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.signalRange ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.signalRange ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.signalRange ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.tier ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.tier ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.nationality ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.nationality ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( radio.tanks ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( radio.tanks ) }}
+            </div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <a type="submit" class="btn btn-mini">
+            <i class="icon-ok"></i> Save Form
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_radio_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+    </div>
+</form>
 {% endblock %}

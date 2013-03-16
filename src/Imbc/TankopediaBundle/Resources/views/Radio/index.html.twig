@@ -17,26 +17,26 @@
             </tr>
         </thead>
         <tbody>
-        {% for entity in entities %}
+        {% for radio in radios %}
             <tr>
-                <td>{{ entity.tier }}</a></td>
-                <td>{{ entity.name }}</td>
-                <td>{{ entity.xp }}</td>
-                <td>{{ entity.cost }}</td>
-                <td>{{ entity.weight }}</td>
-                <td>{{ entity.signalRange }}</td>
+                <td>{{ radio.tier }}</a></td>
+                <td>{{ radio.name }}</td>
+                <td>{{ radio.xp }}</td>
+                <td>{{ radio.cost }}</td>
+                <td>{{ radio.weight }}</td>
+                <td>{{ radio.signalRange }}</td>
                 <td>
-                    {% for tank in entity.tanks %}
+                    {% for tank in radio.tanks %}
                         {{ tank }}
                     {% endfor %}
                 </td>
                 <td>
                     <div class="btn-group">
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_radio_show', { 'id': entity.id }) }}">show</a>
+                            <a href="{{ path('tankopedia_radio_show', { 'id': radio.id }) }}">show</a>
                         </button>
                             <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_radio_edit', { 'id': entity.id }) }}">edit</a>
+                            <a href="{{ path('tankopedia_radio_edit', { 'id': radio.id }) }}">edit</a>
                         </button>
                     </div>
                 </td>

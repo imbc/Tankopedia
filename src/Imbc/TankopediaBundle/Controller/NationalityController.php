@@ -8,10 +8,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Imbc\TankopediaBundle\Entity\Nationality;
 use Imbc\TankopediaBundle\Form\Type\NationalityType;
 
-/**
- * Nationality controller.
- *
- */
 class NationalityController extends Controller
 {
     public function indexAction( Request $request )
@@ -78,5 +74,4 @@ class NationalityController extends Controller
             'nationality'  => $form->createView(),
         ));
     }
-
 }
