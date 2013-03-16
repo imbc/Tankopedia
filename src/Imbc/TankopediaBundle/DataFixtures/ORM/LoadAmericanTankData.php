@@ -534,6 +534,72 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td16->setReward( FALSE );
         $manager->persist( $td16 );
 
+        /**
+         * Artillery
+         */
+        $spg1 = new Tank();
+        $spg1->setName( 'T57' );
+        $spg1->setTier( $tier2 );
+        $spg1->setNationality( $american );
+        $spg1->setClass( $spg );
+        $spg1->setPremium( FALSE );
+        $spg1->setReward( FALSE );
+        $manager->persist( $spg1 );
+
+        $spg2 = new Tank();
+        $spg2->setName( 'M37' );
+        $spg2->setTier( $tier3 );
+        $spg2->setNationality( $american );
+        $spg2->setClass( $spg );
+        $spg2->setPremium( FALSE );
+        $spg2->setReward( FALSE );
+        $manager->persist( $spg2 );
+
+        $spg3 = new Tank();
+        $spg3->setName( 'M7 Priest' );
+        $spg3->setTier( $tier4 );
+        $spg3->setNationality( $american );
+        $spg3->setClass( $spg );
+        $spg3->setPremium( FALSE );
+        $spg3->setReward( FALSE );
+        $manager->persist( $spg3 );
+
+        $spg4 = new Tank();
+        $spg4->setName( 'M41' );
+        $spg4->setTier( $tier5 );
+        $spg4->setNationality( $american );
+        $spg4->setClass( $spg );
+        $spg4->setPremium( FALSE );
+        $spg4->setReward( FALSE );
+        $manager->persist( $spg4 );
+
+        $spg5 = new Tank();
+        $spg5->setName( 'M12' );
+        $spg5->setTier( $tier6 );
+        $spg5->setNationality( $american );
+        $spg5->setClass( $spg );
+        $spg5->setPremium( FALSE );
+        $spg5->setReward( FALSE );
+        $manager->persist( $spg5 );
+
+        $spg6 = new Tank();
+        $spg6->setName( 'M40/M43' );
+        $spg6->setTier( $tier7 );
+        $spg6->setNationality( $american );
+        $spg6->setClass( $spg );
+        $spg6->setPremium( FALSE );
+        $spg6->setReward( FALSE );
+        $manager->persist( $spg6 );
+
+        $spg7 = new Tank();
+        $spg7->setName( 'T92' );
+        $spg7->setTier( $tier8 );
+        $spg7->setNationality( $american );
+        $spg7->setClass( $spg );
+        $spg7->setPremium( FALSE );
+        $spg7->setReward( FALSE );
+        $manager->persist( $spg7 );
+
         $manager->flush();
     }
     //put your code here
