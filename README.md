@@ -1,7 +1,7 @@
 Tank'O'pedia
 ========================
 
-This is just a side project to better understand the use of Symfony2.
+This is just a side project to better understand the use of Symfony2. The interface is using the default twitter bootstrap for now.
 
 The data is from http://wiki.worldoftanks.eu (online video game around tank warfare)
 
@@ -24,3 +24,4 @@ TODO:
 10. add custom icons for tanks/tier/class/modules/equipment
 11. add crew specialization
 12. add consummables
+13. customize bootstrap theme
