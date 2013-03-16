@@ -1,7 +1,8 @@
 Tank'O'pedia
 ========================
 
-This is just a side project to better understand the use of Symfony2. The interface is using the default twitter bootstrap for now.
+This is just a side project to better understand the use of Symfony2 http://symfony.com/.
+The interface is using the default twitter bootstrap for now. http://twitter.github.com/bootstrap/
 
 The data is from http://wiki.worldoftanks.eu (online video game around tank warfare)
 
@@ -16,7 +17,7 @@ TODO:
 4. continue with equipment
 5. investigate need for hull entity (on tanks) with properties armor (front, side, rear)
 6. add battle range for tanks
-7. display some chart for the different indexes using d3
+7. display some chart for the different indexes using d3 http://d3js.org/
 8. investigate scrapping data directly from wot for player and save that to local db.
 9. refactor edit/new forms
      - use chosen javascript library for multiselect http://harvesthq.github.com/chosen/
