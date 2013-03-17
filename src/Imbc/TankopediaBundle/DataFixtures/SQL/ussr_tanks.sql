@@ -13,7 +13,11 @@ VALUES
 	(1,4,2,"A-20",0,0),
 	(1,4,2,"T-50",0,0),
 	(1,4,2,"Valentine II",1,0),
-	(1,5,2,"T-50-2",0,0),
+	(1,5,2,"T-50-2",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(2,4,2,"A-32",1,1),
 	(2,4,2,"T-28",0,0),
 	(2,5,2,"Matilda IV",1,0),
@@ -23,7 +27,11 @@ VALUES
 	(2,7,2,"T-43",0,0),
 	(2,8,2,"T-44",0,0),
 	(2,9,2,"T-54",0,0),
-	(2,10,2,"T-62A",0,0),
+	(2,10,2,"T-62A",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(3,5,2,"Churchill III",1,0),
 	(3,5,2,"KV",1,1),
 	(3,5,2,"KV-1",0,0),
@@ -41,7 +49,11 @@ VALUES
 	(3,9,2,"IS-8",0,0),
 	(3,9,2,"ST-I",0,0),
 	(3,10,2,"IS-4",0,0),
-	(3,10,2,"IS-7",0,0),
+	(3,10,2,"IS-7",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(4,2,2,"AT-1",0,0),
 	(4,3,2,"SU-76",0,0),
 	(4,4,2,"SU-85B",0,0),
@@ -57,7 +69,11 @@ VALUES
 	(4,9,2,"Object 704",0,0),
 	(4,9,2,"SU-122-54",0,0),
 	(4,10,2,"Object 263",0,0),
-	(4,10,2,"Object 268",0,0),
+	(4,10,2,"Object 268",0,0);
+
+INSERT INTO `tanks__tank`
+	(class_id, tier_id, nationality_id, name, premium, reward)
+VALUES
 	(5,2,2,"SU-18",0,0),
 	(5,3,2,"SU-26",0,0),
 	(5,4,2,"SU-5",0,0),

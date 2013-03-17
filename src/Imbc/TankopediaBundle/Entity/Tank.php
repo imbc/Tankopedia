@@ -106,7 +106,7 @@ class Tank
     /**
      * Get name
      *
-     * @return string
+     * @return stringphp
      */
     public function getName()
     {
@@ -147,26 +147,32 @@ class Tank
     }
 
     /**
-     * Add parents
+     * Add parent
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $parents
+     * @param \Imbc\TankopediaBundle\Entity\Tank $parent
      * @return Tank
      */
-    public function addParent( \Imbc\TankopediaBundle\Entity\Tank $parents )
+    public function addParent( \Imbc\TankopediaBundle\Entity\Tank $parent )
     {
-        $this->parents[] = $parents;
+        if( !$this->parents->contains( $parent ))
+        {
+            $this->parents->add( $parent );
+        }
 
         return $this;
     }
 
     /**
-     * Remove parents
+     * Remove parent
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $parents
+     * @param \Imbc\TankopediaBundle\Entity\Tank $parent
      */
-    public function removeParent( \Imbc\TankopediaBundle\Entity\Tank $parents )
+    public function removeParent( \Imbc\TankopediaBundle\Entity\Tank $parent )
     {
-        $this->parents->removeElement( $parents );
+        if( $this->parents->contains( $parent ))
+        {
+            $this->parents->removeElement( $parent );
+        }
     }
 
     /**
@@ -180,26 +186,32 @@ class Tank
     }
 
     /**
-     * Add children
+     * Add child
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $children
+     * @param \Imbc\TankopediaBundle\Entity\Tank $child
      * @return Tank
      */
-    public function addChildren( \Imbc\TankopediaBundle\Entity\Tank $children )
+    public function addChildren( \Imbc\TankopediaBundle\Entity\Tank $child )
     {
-        $this->children[] = $children;
+        if( !$this->children->contains( $child ))
+        {
+            $this->children->add( $child );
+        }
 
         return $this;
     }
 
     /**
-     * Remove children
+     * Remove child
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $children
+     * @param \Imbc\TankopediaBundle\Entity\Tank $child
      */
-    public function removeChildren( \Imbc\TankopediaBundle\Entity\Tank $children )
+    public function removeChildren( \Imbc\TankopediaBundle\Entity\Tank $child )
     {
-        $this->children->removeElement( $children );
+        if( $this->children->contains( $child ))
+        {
+            $this->children->removeElement( $child );
+        }
     }
 
     /**
@@ -287,7 +299,7 @@ class Tank
      * @param boolean $premium
      * @return Tank
      */
-    public function setPremium( $premium )
+    public function setPremium( $premium = FALSE )
     {
         $this->premium = $premium;
 
@@ -310,7 +322,7 @@ class Tank
      * @param boolean $reward
      * @return Tank
      */
-    public function setReward( $reward )
+    public function setReward( $reward  = FALSE )
     {
         $this->reward = $reward;
 

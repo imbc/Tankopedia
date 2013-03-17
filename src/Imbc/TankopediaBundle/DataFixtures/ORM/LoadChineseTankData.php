@@ -40,7 +40,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $lt1->setTier( $tier1 );
         $lt1->setNationality( $china );
         $lt1->setClass( $light );
-        $lt1->setReward( FALSE );
+        $lt1->setPremium( FALSE );
         $lt1->setReward( FALSE );
         $manager->persist( $lt1 );
 
@@ -49,7 +49,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $lt2->setTier( $tier2 );
         $lt2->setNationality( $china );
         $lt2->setClass( $light );
-        $lt2->setReward( FALSE );
+        $lt2->setPremium( FALSE );
         $lt2->setReward( FALSE );
         $manager->persist( $lt2 );
 
@@ -58,7 +58,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $lt3->setTier( $tier3 );
         $lt3->setNationality( $china );
         $lt3->setClass( $light );
-        $lt3->setReward( FALSE );
+        $lt3->setPremium( FALSE );
         $lt3->setReward( FALSE );
         $manager->persist( $lt3 );
 
@@ -67,7 +67,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $lt4->setTier( $tier4 );
         $lt4->setNationality( $china );
         $lt4->setClass( $light );
-        $lt4->setReward( FALSE );
+        $lt4->setPremium( FALSE );
         $lt4->setReward( FALSE );
         $manager->persist( $lt4 );
 
@@ -76,7 +76,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $lt5->setTier( $tier6 );
         $lt5->setNationality( $china );
         $lt5->setClass( $light );
-        $lt5->setReward( FALSE );
+        $lt5->setPremium( FALSE );
         $lt5->setReward( FALSE );
         $manager->persist( $lt5 );
 
@@ -85,7 +85,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $lt6->setTier( $tier7 );
         $lt6->setNationality( $china );
         $lt6->setClass( $light );
-        $lt6->setReward( TRUE );
+        $lt6->setPremium( TRUE );
         $lt6->setReward( TRUE );
         $manager->persist( $lt6 );
 
@@ -94,7 +94,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $lt7->setTier( $tier7 );
         $lt7->setNationality( $china );
         $lt7->setClass( $light );
-        $lt7->setReward( FALSE );
+        $lt7->setPremium( FALSE );
         $lt7->setReward( FALSE );
         $manager->persist( $lt7 );
 
@@ -103,7 +103,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $lt8->setTier( $tier8 );
         $lt8->setNationality( $china );
         $lt8->setClass( $light );
-        $lt8->setReward( FALSE );
+        $lt8->setPremium( FALSE );
         $lt8->setReward( FALSE );
         $manager->persist( $lt8 );
 
@@ -113,7 +113,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt1->setTier( $tier5 );
         $mt1->setNationality( $china );
         $mt1->setClass( $medium );
-        $mt1->setReward( FALSE );
+        $mt1->setPremium( FALSE );
         $mt1->setReward( FALSE );
         $manager->persist( $mt1 );
 
@@ -122,7 +122,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt2->setTier( $tier6 );
         $mt2->setNationality( $china );
         $mt2->setClass( $medium );
-        $mt2->setReward( FALSE );
+        $mt2->setPremium( FALSE );
         $mt2->setReward( FALSE );
         $manager->persist( $mt2 );
 
@@ -131,7 +131,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt3->setTier( $tier7 );
         $mt3->setNationality( $china );
         $mt3->setClass( $medium );
-        $mt3->setReward( FALSE );
+        $mt3->setPremium( FALSE );
         $mt3->setReward( FALSE );
         $manager->persist( $mt3 );
 
@@ -140,7 +140,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt4->setTier( $tier8 );
         $mt4->setNationality( $china );
         $mt4->setClass( $medium );
-        $mt4->setReward( FALSE );
+        $mt4->setPremium( FALSE );
         $mt4->setReward( FALSE );
         $manager->persist( $mt4 );
 
@@ -149,7 +149,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt5->setTier( $tier8 );
         $mt5->setNationality( $china );
         $mt5->setClass( $medium );
-        $mt5->setReward( TRUE );
+        $mt5->setPremium( TRUE );
         $mt5->setReward( TRUE );
         $manager->persist( $mt5 );
 
@@ -158,7 +158,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt6->setTier( $tier8 );
         $mt6->setNationality( $china );
         $mt6->setClass( $light );
-        $mt6->setReward( TRUE );
+        $mt6->setPremium( TRUE );
         $mt6->setReward( TRUE );
         $manager->persist( $mt6 );
 
@@ -167,7 +167,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt7->setTier( $tier9 );
         $mt7->setNationality( $china );
         $mt7->setClass( $medium );
-        $mt7->setReward( FALSE );
+        $mt7->setPremium( FALSE );
         $mt7->setReward( FALSE );
         $manager->persist( $mt7 );
 
@@ -176,7 +176,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt8->setTier( $tier10 );
         $mt8->setNationality( $china );
         $mt8->setClass( $medium );
-        $mt8->setReward( FALSE );
+        $mt8->setPremium( FALSE );
         $mt8->setReward( FALSE );
         $manager->persist( $mt8 );
 
@@ -186,7 +186,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $ht1->setTier( $tier7 );
         $ht1->setNationality( $china );
         $ht1->setClass( $heavy );
-        $ht1->setReward( FALSE );
+        $ht1->setPremium( FALSE );
         $ht1->setReward( FALSE );
         $manager->persist( $ht1 );
 
@@ -195,7 +195,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $ht2->setTier( $tier8 );
         $ht2->setNationality( $china );
         $ht2->setClass( $heavy );
-        $ht2->setReward( FALSE );
+        $ht2->setPremium( FALSE );
         $ht2->setReward( FALSE );
         $manager->persist( $ht2 );
 
@@ -204,7 +204,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $ht3->setTier( $tier8 );
         $ht3->setNationality( $china );
         $ht3->setClass( $heavy );
-        $ht3->setReward( TRUE );
+        $ht3->setPremium( TRUE );
         $ht3->setReward( TRUE );
         $manager->persist( $ht3 );
 
@@ -213,7 +213,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $ht4->setTier( $tier9 );
         $ht4->setNationality( $china );
         $ht4->setClass( $heavy );
-        $ht4->setReward( FALSE );
+        $ht4->setPremium( FALSE );
         $ht4->setReward( FALSE );
         $manager->persist( $ht4 );
 
@@ -222,7 +222,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $ht5->setTier( $tier10 );
         $ht5->setNationality( $china );
         $ht5->setClass( $heavy );
-        $ht5->setReward( FALSE );
+        $ht5->setPremium( FALSE );
         $ht5->setReward( FALSE );
         $manager->persist( $ht5 );
 
