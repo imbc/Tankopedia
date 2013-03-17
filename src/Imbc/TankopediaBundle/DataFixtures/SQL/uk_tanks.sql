@@ -20,12 +20,12 @@ VALUES
 	(2,6,3,"Cromwell",0,0),
 	(2,7,3,"Comet",0,0),
 	(2,8,3,"Centurion Mk. I",0,0),
-	(2,9,3,"Centurion Mk. 7/1",0,0);
+	(2,9,3,"Centurion Mk. 7/1",0,0),
+	(2,10,3,"FV4202",0,0);
 
 INSERT INTO `tanks__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
-	(2,10,3,"FV4202",0,0),
 	(3,5,3,"Churchill I",0,0),
 	(3,6,3,"Churchill VII",0,0),
 	(3,6,3,"TOG II*",1,0),
