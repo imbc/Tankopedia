@@ -436,25 +436,187 @@ class LoadGermanTankData extends AbstractFixture implements OrderedFixtureInterf
          * tank destroyers
          */
         $td1 = new Tank();
-        $td1->setName( '' );
-        $td1->setTier(  );
+        $td1->setName( 'Panzerjäger I' );
+        $td1->setTier( $tier2 );
         $td1->setNationality( $nationality );
         $td1->setClass( $td );
         $td1->setPremium( FALSE );
         $td1->setReward( FALSE );
         $manager->persist( $td1 );
 
+        $td2 = new Tank();
+        $td2->setName( 'Marder II' );
+        $td2->setTier( $tier3 );
+        $td2->setNationality( $nationality );
+        $td2->setClass( $td );
+        $td2->setPremium( FALSE );
+        $td2->setReward( FALSE );
+        $manager->persist( $td2 );
+
+        $td3 = new Tank();
+        $td3->setName( 'Hetzer' );
+        $td3->setTier( $tier4 );
+        $td3->setNationality( $nationality );
+        $td3->setClass( $td );
+        $td3->setPremium( FALSE );
+        $td3->setReward( FALSE );
+        $manager->persist( $td3 );
+
+        $td4 = new Tank();
+        $td4->setName( 'StuG III' );
+        $td4->setTier( $tier5 );
+        $td4->setNationality( $nationality );
+        $td4->setClass( $td );
+        $td4->setPremium( FALSE );
+        $td4->setReward( FALSE );
+        $manager->persist( $td4 );
+
+        $td5 = new Tank();
+        $td5->setName( 'Dicker Max' );
+        $td5->setTier( $tier6 );
+        $td5->setNationality( $nationality );
+        $td5->setClass( $td );
+        $td5->setPremium( TRUE );
+        $td5->setReward( FALSE );
+        $manager->persist( $td5 );
+
+        $td6 = new Tank();
+        $td6->setName( 'JagdPz IV' );
+        $td6->setTier( $tier6 );
+        $td6->setNationality( $nationality );
+        $td6->setClass( $td );
+        $td6->setPremium( FALSE );
+        $td6->setReward( FALSE );
+        $manager->persist( $td6 );
+
+        $td7 = new Tank();
+        $td7->setName( 'Jagdpanther' );
+        $td7->setTier( $tier7 );
+        $td7->setNationality( $nationality );
+        $td7->setClass( $td );
+        $td7->setPremium( FALSE );
+        $td7->setReward( FALSE );
+        $manager->persist( $td7 );
+
+        $td8 = new Tank();
+        $td8->setName( '8.8 cm PaK 43 Jagdtige' );
+        $td8->setTier( $tier8 );
+        $td8->setNationality( $nationality );
+        $td8->setClass( $td );
+        $td8->setPremium( TRUE );
+        $td8->setReward( FALSE );
+        $manager->persist( $td8 );
+
+        $td9 = new Tank();
+        $td9->setName( 'Ferdinand' );
+        $td9->setTier( $tier8 );
+        $td9->setNationality( $nationality );
+        $td9->setClass( $td );
+        $td9->setPremium( FALSE );
+        $td9->setReward( FALSE );
+        $manager->persist( $td9 );
+
+        $td10 = new Tank();
+        $td10->setName( 'Jagdpanther II' );
+        $td10->setTier( $tier8 );
+        $td10->setNationality( $nationality );
+        $td10->setClass( $td );
+        $td10->setPremium( FALSE );
+        $td10->setReward( FALSE );
+        $manager->persist( $td10 );
+
+        $td11 = new Tank();
+        $td11->setName( 'Jagdtiger' );
+        $td11->setTier( $tier9 );
+        $td11->setNationality( $nationality );
+        $td11->setClass( $td );
+        $td11->setPremium( FALSE );
+        $td11->setReward( FALSE );
+        $manager->persist( $td11 );
+
+        $td12 = new Tank();
+        $td12->setName( 'JagdPz E-100' );
+        $td12->setTier( $tier10 );
+        $td12->setNationality( $nationality );
+        $td12->setClass( $td );
+        $td12->setPremium( FALSE );
+        $td12->setReward( FALSE );
+        $manager->persist( $td12 );
+
         /**
          * artillery
          */
         $spg1 = new Tank();
-        $spg1->setName( '' );
-        $spg1->setTier(  );
+        $spg1->setName( 'Sturmpanzer I Bison' );
+        $spg1->setTier( $tier2 );
         $spg1->setNationality( $nationality );
         $spg1->setClass( $spg );
         $spg1->setPremium( FALSE );
         $spg1->setReward( FALSE );
         $manager->persist( $spg1 );
+
+        $spg2 = new Tank();
+        $spg2->setName( 'Sturmpanzer II' );
+        $spg2->setTier( $tier3 );
+        $spg2->setNationality( $nationality );
+        $spg2->setClass( $spg );
+        $spg2->setPremium( FALSE );
+        $spg2->setReward( FALSE );
+        $manager->persist( $spg2 );
+
+        $spg3 = new Tank();
+        $spg3->setName( 'Wespe' );
+        $spg3->setTier( $tier3 );
+        $spg3->setNationality( $nationality );
+        $spg3->setClass( $spg );
+        $spg3->setPremium( FALSE );
+        $spg3->setReward( FALSE );
+        $manager->persist( $spg3 );
+
+        $spg4 = new Tank();
+        $spg4->setName( 'Grille' );
+        $spg4->setTier( $tier4 );
+        $spg4->setNationality( $nationality );
+        $spg4->setClass( $spg );
+        $spg4->setPremium( FALSE );
+        $spg4->setReward( FALSE );
+        $manager->persist( $spg4 );
+
+        $spg5 = new Tank();
+        $spg5->setName( 'Hummel' );
+        $spg5->setTier( $tier5 );
+        $spg5->setNationality( $nationality );
+        $spg5->setClass( $spg );
+        $spg5->setPremium( FALSE );
+        $spg5->setReward( FALSE );
+        $manager->persist( $spg5 );
+
+        $spg6 = new Tank();
+        $spg6->setName( 'GW Panther' );
+        $spg6->setTier( $tier6 );
+        $spg6->setNationality( $nationality );
+        $spg6->setClass( $spg );
+        $spg6->setPremium( FALSE );
+        $spg6->setReward( FALSE );
+        $manager->persist( $spg6 );
+
+        $spg7 = new Tank();
+        $spg7->setName( 'GW Tiger' );
+        $spg7->setTier( $tier7 );
+        $spg7->setNationality( $nationality );
+        $spg7->setClass( $spg );
+        $spg7->setPremium( FALSE );
+        $spg7->setReward( FALSE );
+        $manager->persist( $spg7 );
+
+        $spg8 = new Tank();
+        $spg8->setName( 'GW Typ E' );
+        $spg8->setTier( $tier8 );
+        $spg8->setNationality( $nationality );
+        $spg8->setClass( $spg );
+        $spg8->setPremium( FALSE );
+        $spg8->setReward( FALSE );
+        $manager->persist( $spg8 );
 
         $manager->flush();
     }
