@@ -14,6 +14,8 @@ TODO:
      - refactor edit
 2. use DataGridBundle for each index template https://github.com/Abhoryo/APYDataGridBundle
 3. use DataFixtures to allow to load all data regarding the tanks and modules
+    - ~~tank~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
+    - modules: engine, gun, radio, track, turret
 4. continue with equipment
 5. investigate need for hull entity (on tanks) with properties armor (front, side, rear)
 6. add battle range for tanks
