@@ -157,7 +157,7 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $mt6->setName( 'Type 59 G' );
         $mt6->setTier( $tier8 );
         $mt6->setNationality( $nationality );
-        $mt6->setClass( $light );
+        $mt6->setClass( $medium );
         $mt6->setPremium( TRUE );
         $mt6->setReward( TRUE );
         $manager->persist( $mt6 );

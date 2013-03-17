@@ -22,6 +22,8 @@ TODO:
      - use chosen javascript library for multiselect http://harvesthq.github.com/chosen/
      - use slider
 9. add custom icons for tanks/tier/class/modules/equipment
+     - use LiipImagineBundle for icon display (might be an overkill though) https://github.com/liip/LiipImagineBundle
+     - investigate the possibility to use Gaufrette instead https://github.com/KnpLabs/KnpGaufretteBundle
 10. add crew specialization
 11. add consummables
 12. customize bootstrap theme

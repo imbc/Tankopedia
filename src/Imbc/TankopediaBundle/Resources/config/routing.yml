@@ -37,6 +37,3 @@ tankopedia_nationality:
 tankopedia_class:
     resource: "@ImbcTankopediaBundle/Resources/config/routing/tankclass.yml"
     prefix:   /type
-
-
-

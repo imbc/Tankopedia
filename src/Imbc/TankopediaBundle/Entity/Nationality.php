@@ -16,29 +16,27 @@ class Nationality
      * @ORM\Column(name="id", type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
-     *
      * @ORM\Column(name="abreviation", type="string")
      */
-    private $abreviation;
+    protected $abreviation;
 
     /**
-     *
      * @ORM\Column(name="name", type="string")
      */
-    private $name;
+    protected $name;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="nationality")
      **/
-    private $modules;
+    protected $modules;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="nationality")
      **/
-    private $tanks;
+    protected $tanks;
 
     /**
      * Constructor

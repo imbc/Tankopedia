@@ -178,25 +178,259 @@ class LoadGermanTankData extends AbstractFixture implements OrderedFixtureInterf
          * medium tanks
          */
         $mt1 = new Tank();
-        $mt1->setName( '' );
-        $mt1->setTier(  );
+        $mt1->setName( 'PzKpfw S35 739 (f)' );
+        $mt1->setTier( $tier3 );
         $mt1->setNationality( $nationality );
         $mt1->setClass( $medium );
-        $mt1->setPremium( FALSE );
+        $mt1->setPremium( TRUE );
         $mt1->setReward( FALSE );
         $manager->persist( $mt1 );
+
+        $mt2 = new Tank();
+        $mt2->setName( 'PzKpfw III' );
+        $mt2->setTier( $tier4 );
+        $mt2->setNationality( $nationality );
+        $mt2->setClass( $medium );
+        $mt2->setPremium( FALSE );
+        $mt2->setReward( FALSE );
+        $manager->persist( $mt2 );
+
+        $mt3 = new Tank();
+        $mt3->setName( 'PzKpfw III/IV' );
+        $mt3->setTier( $tier5 );
+        $mt3->setNationality( $nationality );
+        $mt3->setClass( $medium );
+        $mt3->setPremium( FALSE );
+        $mt3->setReward( FALSE );
+        $manager->persist( $mt3 );
+
+        $mt4 = new Tank();
+        $mt4->setName( 'PzKpfw IV' );
+        $mt4->setTier( $tier5 );
+        $mt4->setNationality( $nationality );
+        $mt4->setClass( $medium );
+        $mt4->setPremium( FALSE );
+        $mt4->setReward( FALSE );
+        $manager->persist( $mt4 );
+
+        $mt5 = new Tank();
+        $mt5->setName( 'PzKpfw IV Hydraulic' );
+        $mt5->setTier( $tier5 );
+        $mt5->setNationality( $nationality );
+        $mt5->setClass( $medium );
+        $mt5->setPremium( TRUE );
+        $mt5->setReward( TRUE );
+        $manager->persist( $mt5 );
+
+        $mt6 = new Tank();
+        $mt6->setName( 'T-25' );
+        $mt6->setTier( $tier5 );
+        $mt6->setNationality( $nationality );
+        $mt6->setClass( $medium );
+        $mt6->setPremium( TRUE );
+        $mt6->setReward( FALSE );
+        $manager->persist( $mt6 );
+
+        $mt7 = new Tank();
+        $mt7->setName( 'PzKpfw IV Schmalturm' );
+        $mt7->setTier( $tier6 );
+        $mt7->setNationality( $nationality );
+        $mt7->setClass( $medium );
+        $mt7->setPremium( TRUE );
+        $mt7->setReward( FALSE );
+        $manager->persist( $mt7 );
+
+        $mt8 = new Tank();
+        $mt8->setName( 'PzKpfw V-IV' );
+        $mt8->setTier( $tier6 );
+        $mt8->setNationality( $nationality );
+        $mt8->setClass( $medium );
+        $mt8->setPremium( TRUE );
+        $mt8->setReward( TRUE );
+        $manager->persist( $mt8 );
+
+        $mt9 = new Tank();
+        $mt9->setName( 'PzKpfw V-IV Alpha' );
+        $mt9->setTier( $tier6 );
+        $mt9->setNationality( $nationality );
+        $mt9->setClass( $medium );
+        $mt9->setPremium( TRUE );
+        $mt9->setReward( TRUE );
+        $manager->persist( $mt9 );
+
+        $mt10 = new Tank();
+        $mt10->setName( 'VK 3001 (H)' );
+        $mt10->setTier( $tier6 );
+        $mt10->setNationality( $nationality );
+        $mt10->setClass( $medium );
+        $mt10->setPremium( FALSE );
+        $mt10->setReward( FALSE );
+        $manager->persist( $mt10 );
+
+        $mt11 = new Tank();
+        $mt11->setName( 'VK 3001 (P)' );
+        $mt11->setTier( $tier6 );
+        $mt11->setNationality( $nationality );
+        $mt11->setClass( $medium );
+        $mt11->setPremium( FALSE );
+        $mt11->setReward( FALSE );
+        $manager->persist( $mt11 );
+
+        $mt12 = new Tank();
+        $mt12->setName( 'VK 3601 (H)' );
+        $mt12->setTier( $tier6 );
+        $mt12->setNationality( $nationality );
+        $mt12->setClass( $medium );
+        $mt12->setPremium( FALSE );
+        $mt12->setReward( FALSE );
+        $manager->persist( $mt12 );
+
+        $mt13 = new Tank();
+        $mt13->setName( 'Panther-M10' );
+        $mt13->setTier( $tier7 );
+        $mt13->setNationality( $nationality );
+        $mt13->setClass( $medium );
+        $mt13->setPremium( FALSE );
+        $mt13->setReward( FALSE );
+        $manager->persist( $mt13 );
+
+        $mt14 = new Tank();
+        $mt14->setName( 'PzKpfw V Panther' );
+        $mt14->setTier( $tier7 );
+        $mt14->setNationality( $nationality );
+        $mt14->setClass( $medium );
+        $mt14->setPremium( FALSE );
+        $mt14->setReward( FALSE );
+        $manager->persist( $mt14 );
+
+        $mt15 = new Tank();
+        $mt15->setName( 'VK 3002 (DB)' );
+        $mt15->setTier( $tier7 );
+        $mt15->setNationality( $nationality );
+        $mt15->setClass( $medium );
+        $mt15->setPremium( FALSE );
+        $mt15->setReward( FALSE );
+        $manager->persist( $mt15 );
+
+        $mt16 = new Tank();
+        $mt16->setName( 'Panther II' );
+        $mt16->setTier( $tier8 );
+        $mt16->setNationality( $nationality );
+        $mt16->setClass( $medium );
+        $mt16->setPremium( FALSE );
+        $mt16->setReward( FALSE );
+        $manager->persist( $mt16 );
+
+        $mt17 = new Tank();
+        $mt17->setName( 'E-50' );
+        $mt17->setTier( $tier9 );
+        $mt17->setNationality( $nationality );
+        $mt17->setClass( $medium );
+        $mt17->setPremium( FALSE );
+        $mt17->setReward( FALSE );
+        $manager->persist( $mt17 );
+
+        $mt18 = new Tank();
+        $mt18->setName( 'E-50 Ausf. M' );
+        $mt18->setTier( $tier10 );
+        $mt18->setNationality( $nationality );
+        $mt18->setClass( $medium );
+        $mt18->setPremium( FALSE );
+        $mt18->setReward( FALSE );
+        $manager->persist( $mt18 );
 
         /**
          * heavy tanks
          */
         $ht1 = new Tank();
-        $ht1->setName( '' );
-        $ht1->setTier( $tier5 );
+        $ht1->setName( 'PzKpfw B2 740 (f)' );
+        $ht1->setTier( $tier4 );
         $ht1->setNationality( $nationality );
         $ht1->setClass( $heavy );
-        $ht1->setPremium( FALSE );
-        $ht1->setReward( FALSE );
+        $ht1->setPremium( TRUE );
+        $ht1->setReward( TRUE );
         $manager->persist( $ht1 );
+
+        $ht2 = new Tank();
+        $ht2->setName( 'PzKpfw VI Tiger' );
+        $ht2->setTier( $tier7 );
+        $ht2->setNationality( $nationality );
+        $ht2->setClass( $heavy );
+        $ht2->setPremium( FALSE );
+        $ht2->setReward( FALSE );
+        $manager->persist( $ht2 );
+
+        $ht3 = new Tank();
+        $ht3->setName( 'PzKpfw VI Tiger (P)' );
+        $ht3->setTier( $tier7 );
+        $ht3->setNationality( $nationality );
+        $ht3->setClass( $heavy );
+        $ht3->setPremium( FALSE );
+        $ht3->setReward( FALSE );
+        $manager->persist( $ht3 );
+
+        $ht4 = new Tank();
+        $ht4->setName( 'Löwe' );
+        $ht4->setTier( $tier8 );
+        $ht4->setNationality( $nationality );
+        $ht4->setClass( $heavy );
+        $ht4->setPremium( TRUE );
+        $ht4->setReward( FALSE );
+        $manager->persist( $ht4 );
+
+        $ht5 = new Tank();
+        $ht5->setName( 'PzKpfw VIB Tiger II' );
+        $ht5->setTier( $tier8 );
+        $ht5->setNationality( $nationality );
+        $ht5->setClass( $heavy );
+        $ht5->setPremium( FALSE );
+        $ht5->setReward( FALSE );
+        $manager->persist( $ht5 );
+
+        $ht6 = new Tank();
+        $ht6->setName( 'VK 4502 (P) Ausf. A' );
+        $ht6->setTier( $tier8 );
+        $ht6->setNationality( $nationality );
+        $ht6->setClass( $heavy );
+        $ht6->setPremium( FALSE );
+        $ht6->setReward( FALSE );
+        $manager->persist( $ht6 );
+
+        $ht7 = new Tank();
+        $ht7->setName( 'E-75' );
+        $ht7->setTier( $tier9 );
+        $ht7->setNationality( $nationality );
+        $ht7->setClass( $heavy );
+        $ht7->setPremium( FALSE );
+        $ht7->setReward( FALSE );
+        $manager->persist( $ht7 );
+
+        $ht8 = new Tank();
+        $ht8->setName( 'VK 4502 (P) Ausf. B' );
+        $ht8->setTier( $tier9 );
+        $ht8->setNationality( $nationality );
+        $ht8->setClass( $heavy );
+        $ht8->setPremium( FALSE );
+        $ht8->setReward( FALSE );
+        $manager->persist( $ht8 );
+
+        $ht9 = new Tank();
+        $ht9->setName( 'E-100' );
+        $ht9->setTier( $tier10 );
+        $ht9->setNationality( $nationality );
+        $ht9->setClass( $heavy );
+        $ht9->setPremium( FALSE );
+        $ht9->setReward( FALSE );
+        $manager->persist( $ht9 );
+
+        $ht10 = new Tank();
+        $ht10->setName( 'Maus' );
+        $ht10->setTier( $tier10 );
+        $ht10->setNationality( $nationality );
+        $ht10->setClass( $heavy );
+        $ht10->setPremium( FALSE );
+        $ht10->setReward( FALSE );
+        $manager->persist( $ht10 );
 
         /**
          * tank destroyers
