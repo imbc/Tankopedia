@@ -1,6 +1,7 @@
 parameters:
 #    imbc_tankopedia.example.class: Imbc\TankopediaBundle\Example
     imbc.twig.extensions.tankopedia_extension.class: Imbc\TankopediaBundle\Twig\TankopediaExtension
+    imbc.grid.tank.class: Imbc\TankopediaBundle\Grid\TankGrid
 
 services:
 #    imbc_tankopedia.example:
@@ -14,6 +15,7 @@ services:
         tags:
             - { name: twig.extension }
 
-
-
-
+    imbc.grid.tank:
+        class: %imbc.grid.tank.class%
+        arguments: ["@doctrine.orm.entity_manager", "@grid"]
+        scope: prototype

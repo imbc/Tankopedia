@@ -30,10 +30,22 @@ class TankController extends Controller
                 return $this->redirect( $this->generateUrl( 'tankopedia_tank' ) );
             }
         }
-        return $this->render( 'ImbcTankopediaBundle:Tank:index.html.twig', array(
-            'tanks' => $tanks,
-            'form'  => $tankForm->createView(),
-        ));
+
+        $gridService = $this->get( 'imbc.grid.tank' );
+        $grid = $gridService->getGrid();
+        if ( $grid->isReadyForRedirect() )
+        {
+            if ( $grid->isReadyForExport() ) return $grid->getGridResponse();
+            return $this->redirect( $grid->getRouteUrl() );
+        }
+        else
+        {
+            return $this->render( 'ImbcTankopediaBundle:Tank:index.html.twig', array(
+                'grid'  => $grid,
+                'tanks' => $tanks,
+                'form'  => $tankForm->createView(),
+            ));
+        }
     }
 
     public function showAction( Request $request )
