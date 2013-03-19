@@ -27,12 +27,14 @@ class TankGrid
     public function getGrid()
     {
         $source = new Entity( 'ImbcTankopediaBundle:Tank' );
-        $this->grid->setColumns( $this->presetColumns() );
+//        $this->grid->setColumns( $this->presetColumns() );
         $this->grid->setSource( $source );
         $this->addActionColumn();
-        $grid->hideColumns("id");
+//        $this->grid->hideColumns( 'id' );
+//        $this->grid->setDefaultOrder( 'tier', 'asc' );
+//        $this->setFilters();
 
-        return $grid;
+        return $this->grid;
     }
 
     public function setFilters()
@@ -46,7 +48,7 @@ class TankGrid
     {
         $this->grid->addRowAction( new Action\RowAction(
             'Info',
-            'tankopedia_tank_view',
+            'tankopedia_tank_show',
             false, '_self',
             array( 'class' => 'grid-action info', 'title' => 'View tank data' )
         ));

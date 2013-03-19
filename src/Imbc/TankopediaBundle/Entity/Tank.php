@@ -4,6 +4,7 @@ namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use APY\DataGridBundle\Grid\Mapping as GRID;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TankRepository")
@@ -15,29 +16,40 @@ class Tank
      * @ORM\Id
      * @ORM\Column(name="id", type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
+     *
+     * @GRID\Column(visible=false)
      */
     private $id;
 
     /**
      * @ORM\Column(name="name", type="string")
+     *
+     * @GRID\Column(title="Tank", type="text", size="-1")
+     * @GRID\Column(filter="select", selectFrom="source")
      */
     private $name;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\TankClass", inversedBy="tanks")
      * @ORM\JoinColumn(name="class_id", referencedColumnName="id")
+     *
+     * @GRID\Column(field="class.name", title="Class", filter="select")
      */
     private $class;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
      * @ORM\JoinColumn(name="tier_id", referencedColumnName="id")
+     *
+     * @GRID\Column(field="tier.value", title="Tier", filter="select")
      */
     protected $tier;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Nationality", inversedBy="tanks")
      * @ORM\JoinColumn(name="nationality_id", referencedColumnName="id")
+     *
+     * @GRID\Column(field="nationality.name", title="Nation", filter="select")
      */
     private $nationality;
 
@@ -48,11 +60,15 @@ class Tank
 
     /**
      * @ORM\Column(name="premium", type="boolean", nullable=true)
+     *
+     * @GRID\Column(title="Premium", type="boolean", size="-1")
      */
     private $premium;
 
     /**
      * @ORM\Column(name="reward", type="boolean", nullable=true)
+     *
+     * @GRID\Column(title="Reward", type="boolean", size="-1")
      */
     private $reward;
 
