@@ -37,6 +37,7 @@ class TankGrid
         return $this->grid;
     }
 
+    // not in use for entity
     public function setFilters()
     {
         $this->grid->getColumn( 'tier' )->setFilterType( 'select' );
@@ -50,10 +51,11 @@ class TankGrid
             'View',
             'tankopedia_tank_show',
             false, '_self',
-            array( 'class' => 'grid-action info', 'title' => 'View tank data' )
+            array( 'class' => 'grid-action info ', 'title' => 'View tank data' )
         ));
     }
 
+    // not in use for entity
     protected function presetColumns()
     {
         return array(

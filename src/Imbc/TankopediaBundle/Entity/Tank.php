@@ -25,7 +25,7 @@ class Tank
      * @ORM\Column(name="name", type="string")
      *
      * @GRID\Column(title="Tank", type="text", size="-1")
-     * @GRID\Column(filter="select", selectFrom="source", operatorsVisible=false, align="center")
+     * @GRID\Column(title="Name",filter="select", selectFrom="source", operatorsVisible=false, align="center")
      */
     private $name;
 
