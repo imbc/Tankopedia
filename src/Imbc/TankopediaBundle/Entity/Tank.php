@@ -25,7 +25,7 @@ class Tank
      * @ORM\Column(name="name", type="string")
      *
      * @GRID\Column(title="Tank", type="text", size="-1")
-     * @GRID\Column(filter="select", selectFrom="source")
+     * @GRID\Column(filter="select", selectFrom="source", operatorsVisible=false, align="center")
      */
     private $name;
 
@@ -33,7 +33,7 @@ class Tank
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\TankClass", inversedBy="tanks")
      * @ORM\JoinColumn(name="class_id", referencedColumnName="id")
      *
-     * @GRID\Column(field="class.name", title="Class", filter="select", selectFrom="source")
+     * @GRID\Column(field="class.name", title="Class", filter="select", selectFrom="source", operatorsVisible=false, align="center")
      */
     private $class;
 
@@ -41,7 +41,7 @@ class Tank
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
      * @ORM\JoinColumn(name="tier_id", referencedColumnName="id")
      *
-     * @GRID\Column(field="tier.value", title="Tier", filter="select")
+     * @GRID\Column(field="tier.value", title="Tier", filter="select", operatorsVisible=false, align="center")
      */
     protected $tier;
 
@@ -49,7 +49,7 @@ class Tank
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Nationality", inversedBy="tanks")
      * @ORM\JoinColumn(name="nationality_id", referencedColumnName="id")
      *
-     * @GRID\Column(field="nationality.name", title="Nation", filter="select", type="text")
+     * @GRID\Column(field="nationality.name", title="Nation", filter="select", type="text", operatorsVisible=false, align="center")
      */
     private $nationality;
 
