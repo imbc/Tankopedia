@@ -33,7 +33,7 @@ class Tank
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\TankClass", inversedBy="tanks")
      * @ORM\JoinColumn(name="class_id", referencedColumnName="id")
      *
-     * @GRID\Column(field="class.name", title="Class", filter="select")
+     * @GRID\Column(field="class.name", title="Class", filter="select", selectFrom="source")
      */
     private $class;
 
@@ -49,7 +49,7 @@ class Tank
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Nationality", inversedBy="tanks")
      * @ORM\JoinColumn(name="nationality_id", referencedColumnName="id")
      *
-     * @GRID\Column(field="nationality.name", title="Nation", filter="select")
+     * @GRID\Column(field="nationality.name", title="Nation", filter="select", type="text")
      */
     private $nationality;
 
