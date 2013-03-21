@@ -78,7 +78,10 @@ class TankClass
      */
     public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tanks ))
+        {
+            $this->tanks->add( $tanks );
+        }
 
         return $this;
     }
@@ -90,7 +93,10 @@ class TankClass
      */
     public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
     {
-        $this->tanks->removeElement( $tanks );
+        if( $this->tanks->contains( $tanks ))
+        {
+            $this->tanks->removeElement( $tanks );
+        }
     }
 
     /**

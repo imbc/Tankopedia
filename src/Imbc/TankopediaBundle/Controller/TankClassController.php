@@ -14,173 +14,68 @@ use Imbc\TankopediaBundle\Form\Type\TankClassType;
  */
 class TankClassController extends Controller
 {
-    /**
-     * Lists all Type entities.
-     *
-     */
-    public function indexAction()
+    public function indexAction( Request $request )
     {
         $em = $this->getDoctrine()->getManager();
-
-        $entities = $em->getRepository('ImbcTankopediaBundle:TankClass')->findAll();
-
-        return $this->render('ImbcTankopediaBundle:TankClass:index.html.twig', array(
-            'entities' => $entities,
-        ));
-    }
-
-    /**
-     * Creates a new Type entity.
-     *
-     */
-    public function createAction(Request $request)
-    {
-        $entity  = new TankClass();
-        $form = $this->createForm(new TankClassType(), $entity);
-        $form->bind($request);
-
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($entity);
-            $em->flush();
-
-            return $this->redirect($this->generateUrl('tankopedia_class_show', array('id' => $entity->getId())));
-        }
-
-        return $this->render('ImbcTankopediaBundle:TankClass:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        ));
-    }
-
-    /**
-     * Displays a form to create a new Type entity.
-     *
-     */
-    public function newAction()
-    {
-        $entity = new TankClass();
-        $form   = $this->createForm(new TankClassType(), $entity);
-
-        return $this->render('ImbcTankopediaBundle:TankClass:new.html.twig', array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a Type entity.
-     *
-     */
-    public function showAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ImbcTankopediaBundle:TankClass')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Type entity.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-
-        return $this->render('ImbcTankopediaBundle:TankClass:show.html.twig', array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),        ));
-    }
-
-    /**
-     * Displays a form to edit an existing Type entity.
-     *
-     */
-    public function editAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ImbcTankopediaBundle:TankClass')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Type entity.');
-        }
-
-        $editForm = $this->createForm(new TankClass(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
-
-        return $this->render('ImbcTankopediaBundle:TankClass:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Edits an existing Type entity.
-     *
-     */
-    public function updateAction(Request $request, $id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ImbcTankopediaBundle:TankClass')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Type entity.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-        $editForm = $this->createForm(new TankClass(), $entity);
-        $editForm->bind($request);
-
-        if ($editForm->isValid()) {
-            $em->persist($entity);
-            $em->flush();
-
-            return $this->redirect($this->generateUrl('tankopedia_class_edit', array('id' => $id)));
-        }
-
-        return $this->render('ImbcTankopediaBundle:TankClass:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Deletes a Type entity.
-     *
-     */
-    public function deleteAction(Request $request, $id)
-    {
-        $form = $this->createDeleteForm($id);
-        $form->bind($request);
-
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('ImbcTankopediaBundle:TankClass')->find($id);
-
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Type entity.');
+        $repo = $em->getRepository( 'ImbcTankopediaBundle:TankClass' );
+        $classes = $repo->findAll();
+        $thisTankClass = new TankClass();
+        $form = $this->createForm( new TankClassType(), $thisTankClass );
+        if ( null !== $request->get( $form->getName() ) )
+        {
+            $form->bind( $request );
+            if ( $form->isValid() )
+            {
+                $em->persist( $thisTankClass );
+                $em->flush();
+                return $this->redirect( $this->generateUrl( 'tankopedia_class' ) );
             }
-
-            $em->remove($entity);
-            $em->flush();
         }
-
-        return $this->redirect($this->generateUrl('tankopedia_class'));
+        return $this->render( 'ImbcTankopediaBundle:TankClass:index.html.twig', array(
+            'classes' => $classes,
+            'form'  => $form->createView(),
+        ));
     }
 
-    /**
-     * Creates a form to delete a Type entity by id.
-     *
-     * @param mixed $id The entity id
-     *
-     * @return Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm($id)
+    public function showAction( Request $request )
     {
-        return $this->createFormBuilder(array('id' => $id))
-            ->add('id', 'hidden')
-            ->getForm()
-        ;
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository( 'ImbcTankopediaBundle:TankClass' );
+        if ( null === $class=  $repo->find( $request->get( 'id' ) ))
+        {
+            throw $this->createNotFoundException( 'TankClass does not exist' );
+        }
+        return $this->render( 'ImbcTankopediaBundle:TankClass:show.html.twig', array(
+            'class' => $class,
+        ));
+    }
+
+    public function editAction( Request $request )
+    {
+        $edit = false;
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository( 'ImbcTankopediaBundle:TankClass' );
+        $class = new TankClass();
+        if ( $request->get( 'id' ) )
+        {
+            $edit = true;
+            $class = $repo->find( $request->get( 'id' ));
+        }
+        $form = $this->createForm( new TankClassType(), $class );
+        if ( null !== $request->get( $form->getName() ))
+        {
+            $form->bind( $request );
+            if ( $form->isValid() )
+            {
+                $em->persist( $class );
+                $em->flush();
+                return $this->redirect( $this->generateUrl( 'tankopedia_class' ));
+            }
+        }
+
+        return $this->render( 'ImbcTankopediaBundle:TankClass:edit.html.twig', array(
+            'edit' => $edit,
+            'class'  => $form->createView(),
+        ));
     }
 }
