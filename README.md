@@ -19,7 +19,14 @@ TODO:
 4. continue with equipment
 5. investigate need for hull entity (on tanks) with properties armor (front, side, rear)
 6. add battle range for tanks
+    - ~~add to Tank/Tier entity~~
+    - add ref to DataFixtures
+    - display on indexes
 7. display some chart for the different indexes using d3 http://d3js.org/
+    - ~~create new branch~~
+    - add pie charts
+    - pretty them
+    - add dynamic values
 8. refactor edit/new forms
      - use chosen javascript library for multiselect http://harvesthq.github.com/chosen/
      - use slider

@@ -73,6 +73,21 @@ class Tank
     protected $reward;
 
     /**
+     * @ORM\Column(name="armorFront", type="integer")
+     */
+    protected $armorFront;
+
+    /**
+     * @ORM\Column(name="armorSide", type="integer")
+     */
+    protected $armorSide;
+
+    /**
+     * @ORM\Column(name="armorRear", type="integer")
+     */
+    protected $armorRear;
+
+    /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="children")
      */
     protected $parents;

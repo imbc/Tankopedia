@@ -14,32 +14,32 @@ class Turret extends Module
     /**
      * @ORM\Column(name="armorFront", type="integer")
      */
-    private $armorFront;
+    protected $armorFront;
 
     /**
      * @ORM\Column(name="armorSide", type="integer")
      */
-    private $armorSide;
+    protected $armorSide;
 
     /**
      * @ORM\Column(name="armorRear", type="integer")
      */
-    private $armorRear;
+    protected $armorRear;
 
     /**
      * @ORM\Column(name="traverseSpeed", type="integer")
      */
-    private $traverseSpeed;
+    protected $traverseSpeed;
 
     /**
      * @ORM\Column(name="viewRange", type="integer")
      */
-    private $viewRange;
+    protected $viewRange;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Gun", mappedBy="turret")
      */
-    private $guns;
+    protected $guns;
 
     /**
      * Constructor
