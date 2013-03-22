@@ -1,43 +1,90 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Class list</h1>
+<h1>Class list</h1>
+<div class="chart"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
 
-    <table class="table table-condensed table-hover table-striped records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Number of Tanks</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for class in classes %}
-            <tr>
-                <td><a href="{{ path('tankopedia_class_show', { 'id': class.id }) }}">{{ class.id }}</a></td>
-                <td>{{ class.name }}</td>
-                <td>{{ class.tanks | length }}</td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_class_show', { 'id': class.id }) }}">show</a>
-                        </button>
-                        <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_class_edit', { 'id': class.id }) }}">edit</a>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+var width = 960,
+    height = 500,
+    radius = Math.min(width, height) / 2;
 
-        <ul>
-        <li>
-            <a href="{{ path('tankopedia_class_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
-    {% endblock %}
+var color = d3.scale.ordinal()
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+var arc = d3.svg.arc()
+    .outerRadius(radius - 10)
+    .innerRadius(0);
+
+var pie = d3.layout.pie()
+    .sort(null)
+    .value(function(d) { return d.population; });
+
+var svg = d3.select(".chart").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    data = [{% for class in classes %}{ "label":"{{ class.name }}", "population":{{ class.tanks | length }} },{% endfor %}];
+
+  data.forEach(function(d) {
+    d.population = +d.population;
+  });
+
+  var g = svg.selectAll(".arc")
+      .data(pie(data))
+    .enter().append("g")
+      .attr("class", "arc");
+
+  g.append("path")
+      .attr("d", arc)
+      .style("fill", function(d) { return color(d.data.label); });
+
+  g.append("text")
+      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.data.label; });
+
+</script>
+
+<table class="table table-condensed table-hover table-striped records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Number of Tanks</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for class in classes %}
+        <tr>
+            <td><a href="{{ path('tankopedia_class_show', { 'id': class.id }) }}">{{ class.id }}</a></td>
+            <td>{{ class.name }}</td>
+            <td>{{ class.tanks | length }}</td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-mini">
+                        <a href="{{ path('tankopedia_class_show', { 'id': class.id }) }}">show</a>
+                    </button>
+                    <button class="btn btn-mini">
+                        <a href="{{ path('tankopedia_class_edit', { 'id': class.id }) }}">edit</a>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('tankopedia_class_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{% endblock %}
