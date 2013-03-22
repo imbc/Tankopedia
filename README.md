@@ -8,7 +8,7 @@ The data is from http://wiki.worldoftanks.eu (online video game around tank warf
 
 TODO:
 
-1. refactor the controller for ~~Engine~~, ~~Gun~~, ~~Nationality~~, ~~Tank~~, TankClass, Tier, Track and Turret
+1. refactor the controller for ~~Engine~~, ~~Gun~~, ~~Nationality~~, ~~Tank~~, ~~TankClass~~, Tier, Track and Turret
      - remove delete control (not needed)
      - remove new/update
      - refactor edit
@@ -29,5 +29,6 @@ TODO:
 10. add crew specialization
 11. add consummables
 12. customize bootstrap theme
+    - use font awesome for icons (installed)
 13. add way to compare 3-4 tanks as tables side by side
 14. investigate scrapping data directly from wot for player and save that to local db.

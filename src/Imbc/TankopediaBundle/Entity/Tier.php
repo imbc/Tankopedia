@@ -16,23 +16,28 @@ class Tier
      * @ORM\Column(name="id", type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      *
      * @ORM\Column(name="value", type="string")
      */
-    private $value;
+    protected $value;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="tier")
      * */
-    private $modules;
+    protected $modules;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="tier")
      * */
-    private $tanks;
+    protected $tanks;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="tier")
+     */
+    protected $matchMaker;
 
     /**
      * Constructor
@@ -41,6 +46,7 @@ class Tier
     {
         $this->modules = new ArrayCollection();
         $this->tanks = new ArrayCollection();
+        $this->matchMaker = new ArrayCollection();
     }
 
     /**
@@ -117,7 +123,10 @@ class Tier
      */
     public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tanks ))
+        {
+            $this->tanks->add( $tanks );
+        }
 
         return $this;
     }
@@ -129,7 +138,10 @@ class Tier
      */
     public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
     {
-        $this->tanks->removeElement( $tanks );
+        if( $this->tanks->contains( $tanks ))
+        {
+            $this->tanks->removeElement( $tanks );
+        }
     }
 
     /**
@@ -140,6 +152,16 @@ class Tier
     public function getTanks()
     {
         return $this->tanks;
+    }
+
+    /**
+     * Get matchMaker
+     *
+     * @return ArrayCollection
+     */
+    public function getMatchMaker()
+    {
+        return $this->matchMaker;
     }
 
     public function __toString()

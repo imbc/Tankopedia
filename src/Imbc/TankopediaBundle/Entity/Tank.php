@@ -19,7 +19,7 @@ class Tank
      *
      * @GRID\Column(visible=false)
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(name="name", type="string")
@@ -27,7 +27,7 @@ class Tank
      * @GRID\Column(title="Tank", type="text", size="-1")
      * @GRID\Column(title="Name",filter="select", selectFrom="source", operatorsVisible=false, align="center")
      */
-    private $name;
+    protected $name;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\TankClass", inversedBy="tanks")
@@ -35,7 +35,7 @@ class Tank
      *
      * @GRID\Column(field="class.name", title="Class", filter="select", selectFrom="source", operatorsVisible=false, align="center")
      */
-    private $class;
+    protected $class;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
@@ -51,31 +51,31 @@ class Tank
      *
      * @GRID\Column(field="nationality.name", title="Nation", filter="select", type="text", operatorsVisible=false, align="center")
      */
-    private $nationality;
+    protected $nationality;
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="tanks")
      */
-    private $modules;
+    protected $modules;
 
     /**
      * @ORM\Column(name="premium", type="boolean", nullable=true)
      *
      * @GRID\Column(title="Premium", type="boolean", size="-1")
      */
-    private $premium;
+    protected $premium;
 
     /**
      * @ORM\Column(name="reward", type="boolean", nullable=true)
      *
      * @GRID\Column(title="Reward", type="boolean", size="-1")
      */
-    private $reward;
+    protected $reward;
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="children")
-     * */
-    private $parents;
+     */
+    protected $parents;
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="parents")
@@ -83,8 +83,17 @@ class Tank
      *      joinColumns={@ORM\JoinColumn(name="parent_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="child_id", referencedColumnName="id")}
      *      )
-     * */
-    private $children;
+     */
+    protected $children;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
+     * @ORM\JoinTable(name="tanks__matchmaking",
+     *      joinColumns={@ORM\JoinColumn(name="tank_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="tier_id", referencedColumnName="id")}
+     *      )
+     */
+    protected $matchMaker;
 
     /**
      * Constructor
@@ -94,6 +103,7 @@ class Tank
         $this->modules = new ArrayCollection();
         $this->parents = new ArrayCollection();
         $this->children = new ArrayCollection();
+        $this->matchMaker = new ArrayCollection();
     }
 
     /**
@@ -353,6 +363,55 @@ class Tank
     public function getReward()
     {
         return $this->reward;
+    }
+
+    /**
+     * Get matchMaker
+     *
+     * @return array
+     */
+    public function getBattleRange()
+    {
+        return $this->matchMaker;
+    }
+
+    /**
+     * Set matchMaker
+     *
+     * @param ArrayCollection $matchMaker
+     * @return Tank
+     */
+    public function setBattleRange( ArrayCollection $matchMaker)
+    {
+        $this->matchMaker = $matchMaker;
+
+        return $this;
+    }
+
+    /**
+     * Add tier
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tier $battleTier
+     */
+    public function addBattleTier( \Imbc\TankopediaBundle\Entity\Tier $battleTier )
+    {
+        if( !$this->matchMaker->contains( $battleTier ))
+        {
+            $this->matchMaker->add( $battleTier );
+        }
+    }
+
+    /**
+     * Remove tier
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tier $battleTier
+     */
+    public function removeBattleTier( \Imbc\TankopediaBundle\Entity\Tier $battleTier )
+    {
+        if( $this->matchMaker->contains( $battleTier ))
+        {
+            $this->matchMaker->remove( $battleTier );
+        }
     }
 
     public function __toString()
