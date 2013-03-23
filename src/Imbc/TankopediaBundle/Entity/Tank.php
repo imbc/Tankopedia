@@ -8,7 +8,7 @@ use APY\DataGridBundle\Grid\Mapping as GRID;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TankRepository")
- * @ORM\Table(name="tanks__tank")
+ * @ORM\Table(name="top__tank")
  */
 class Tank
 {
@@ -73,28 +73,13 @@ class Tank
     protected $reward;
 
     /**
-     * @ORM\Column(name="armorFront", type="integer")
-     */
-    protected $armorFront;
-
-    /**
-     * @ORM\Column(name="armorSide", type="integer")
-     */
-    protected $armorSide;
-
-    /**
-     * @ORM\Column(name="armorRear", type="integer")
-     */
-    protected $armorRear;
-
-    /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="children")
      */
     protected $parents;
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="parents")
-     * @ORM\JoinTable(name="tanks__parent_child",
+     * @ORM\JoinTable(name="top__parent_child",
      *      joinColumns={@ORM\JoinColumn(name="parent_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="child_id", referencedColumnName="id")}
      *      )
@@ -103,7 +88,7 @@ class Tank
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
-     * @ORM\JoinTable(name="tanks__matchmaking",
+     * @ORM\JoinTable(name="top__matchmaking",
      *      joinColumns={@ORM\JoinColumn(name="tank_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="tier_id", referencedColumnName="id")}
      *      )

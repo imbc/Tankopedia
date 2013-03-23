@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\RadioRepository")
- * @ORM\Table(name="tanks__module_radio")
+ * @ORM\Table(name="top__module_radio")
  */
 class Radio extends Module
 {

@@ -1,4 +1,4 @@
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(1,1,1,"T1 Cunningham",0,0),
@@ -13,7 +13,7 @@ VALUES
 	(1,6,1,"T21",0,0),
 	(1,7,1,"T71",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(2,2,1,"T2 Medium Tank",0,0),
@@ -34,7 +34,7 @@ VALUES
 	(2,9,1,"T54E1",0,0),
 	(2,10,1,"M48A1",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(3,5,1,"T1 Heavy Tank",0,0),
@@ -48,7 +48,7 @@ VALUES
 	(3,10,1,"T110E5",0,0),
 	(3,10,1,"T57 Heavy Tank",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(4,2,1,"T18",0,0),
@@ -68,7 +68,7 @@ VALUES
 	(4,10,1,"T110E3",0,0),
 	(4,10,1,"T110E4",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(5,2,1,"T57",0,0),

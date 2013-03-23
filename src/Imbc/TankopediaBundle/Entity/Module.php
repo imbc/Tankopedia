@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\ModuleRepository")
- * @ORM\Table(name="tanks__module")
+ * @ORM\Table(name="top__module")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
  * @ORM\DiscriminatorMap({"engine" = "Engine", "gun" = "Gun", "radio" = "Radio", "track" = "Track", "turret" = "Turret"})
@@ -55,7 +55,7 @@ abstract class Module
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="modules")
-     * @ORM\JoinTable(name="tanks__tanks_modules")
+     * @ORM\JoinTable(name="top__tanks_modules")
      **/
     protected $tanks;
 

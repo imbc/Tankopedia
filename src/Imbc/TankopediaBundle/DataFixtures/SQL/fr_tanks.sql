@@ -1,4 +1,4 @@
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(1,1,4,"RenaultFT",0,0),
@@ -11,14 +11,14 @@ VALUES
 	(1,7,4,"AMX 13 75",0,0),
 	(1,8,4,"AMX 13 90",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(2,3,4,"D2",0,0),
 	(2,9,4,"Lorraine 40 t",0,0),
 	(2,10,4,"Bat Chatillon 25 t",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(3,4,4,"B1",0,0),
@@ -30,7 +30,7 @@ VALUES
 	(3,9,4,"AMX 50 120",0,0),
 	(3,10,4,"AMX 50B",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(4,2,4,"RenaultFT AC",0,0),
@@ -44,7 +44,7 @@ VALUES
 	(4,9,4,"AMX 50 Foch",0,0),
 	(4,10,4,"AMX-50 Foch (155)",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(5,2,4,"RenaultBS",0,0),

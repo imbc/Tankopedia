@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\EngineRepository")
- * @ORM\Table(name="tanks__module_engine")
+ * @ORM\Table(name="top__module_engine")
  */
 class Engine extends Module
 {
