@@ -9,6 +9,10 @@ The data is from http://wiki.worldoftanks.eu (online video game around tank warf
 installation:
 
 1. create your virtual host
+    - new file in ```/etc/apache2/sites-available/``` for the config of the virtual host
+    - symlink to this file in ```/etc/apache2/site-enabled```
+    - vhosts's url added to /etc/hosts
+    - restart apache service
 2. check the database setting and adjust accordingly
 3. run composer to fetch all dependencies
 4. run the following command to create the tables:
