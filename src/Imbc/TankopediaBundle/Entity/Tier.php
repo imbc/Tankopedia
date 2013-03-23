@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TierRepository")
- * @ORM\Table(name="tanks__tier")
+ * @ORM\Table(name="top__tier")
  */
 class Tier
 {
@@ -35,7 +35,7 @@ class Tier
     protected $tanks;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="tier")
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="matchMaker")
      */
     protected $matchMaker;
 

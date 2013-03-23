@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\ModuleRepository")
- * @ORM\Table(name="tanks__module")
+ * @ORM\Table(name="top__module")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
  * @ORM\DiscriminatorMap({"engine" = "Engine", "gun" = "Gun", "radio" = "Radio", "track" = "Track", "turret" = "Turret"})
@@ -55,7 +55,7 @@ abstract class Module
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="modules")
-     * @ORM\JoinTable(name="tanks__tanks_modules")
+     * @ORM\JoinTable(name="top__tanks_modules")
      **/
     protected $tanks;
 
@@ -216,14 +216,17 @@ abstract class Module
     }
 
     /**
-     * Add tanks
+     * Add tank
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      * @return Module
      */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->add( $tank );
+        }
 
         return $this;
     }
@@ -231,11 +234,14 @@ abstract class Module
     /**
      * Remove tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks->removeElement($tanks);
+        if( $this->tanks->contains( $tank ))
+        {
+            $this->tanks->removeElement($tank);
+        }
     }
 
     /**

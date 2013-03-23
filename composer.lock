@@ -560,12 +560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elao/WebProfilerExtraBundle.git",
-                "reference": "5808ef35d1bd1464206e8ae1a1b2df52e7af52da"
+                "reference": "794dd4282c6d982669d4f3c8bf62c59e3b20366a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elao/WebProfilerExtraBundle/zipball/5808ef35d1bd1464206e8ae1a1b2df52e7af52da",
-                "reference": "5808ef35d1bd1464206e8ae1a1b2df52e7af52da",
+                "url": "https://api.github.com/repos/Elao/WebProfilerExtraBundle/zipball/794dd4282c6d982669d4f3c8bf62c59e3b20366a",
+                "reference": "794dd4282c6d982669d4f3c8bf62c59e3b20366a",
                 "shasum": ""
             },
             "require": {
@@ -606,7 +606,7 @@
                 "extra",
                 "profiler"
             ],
-            "time": "2013-03-15 15:16:19"
+            "time": "2013-03-22 12:29:56"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1257,12 +1257,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeaseWeb/LswVersionInformationBundle.git",
-                "reference": "5722b5f7f28165a1196302dd19e4ec12668bb8f8"
+                "reference": "6412719fb011cd82dfbbb575f619c8b1cc9c8908"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeaseWeb/LswVersionInformationBundle/zipball/5722b5f7f28165a1196302dd19e4ec12668bb8f8",
-                "reference": "5722b5f7f28165a1196302dd19e4ec12668bb8f8",
+                "url": "https://api.github.com/repos/LeaseWeb/LswVersionInformationBundle/zipball/6412719fb011cd82dfbbb575f619c8b1cc9c8908",
+                "reference": "6412719fb011cd82dfbbb575f619c8b1cc9c8908",
                 "shasum": ""
             },
             "require": {
@@ -1299,14 +1299,14 @@
                     "email": "m.vanderschee@leaseweb.com"
                 }
             ],
-            "description": "LeaseWeb LswVersionInformationBundle",
+            "description": "Adds output of SVN and Git 'status' commands to the Web Debug Toolbar",
             "homepage": "http://www.leaseweblabs.com",
             "keywords": [
                 "subversion",
                 "svn",
                 "version"
             ],
-            "time": "2013-03-20 07:51:57"
+            "time": "2013-03-23 00:32:55"
         },
         {
             "name": "leek/git-debug-bundle",
@@ -2114,9 +2114,7 @@
             "time": "2013-02-09 18:21:53"
         }
     ],
-    "packages-dev": [
-
-    ],
+    "packages-dev": null,
     "aliases": [
 
     ],
@@ -2132,11 +2130,5 @@
         "elao/web-profiler-extra-bundle": 20,
         "leaseweb/version-information-bundle": 20,
         "leek/git-debug-bundle": 20
-    },
-    "platform": {
-        "php": ">=5.3.3"
-    },
-    "platform-dev": [
-
-    ]
+    }
 }

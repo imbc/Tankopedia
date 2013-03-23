@@ -46,6 +46,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt1->setClass( $light );
         $lt1->setPremium( FALSE );
         $lt1->setReward( FALSE );
+        $lt1->setHitPoints( 105 );
+        $lt1->setArmorFront( 10 );
+        $lt1->setArmorSide( 10 );
+        $lt1->setArmorRear( 10 );
         $manager->persist( $lt1 );
 
         $lt2 = new Tank();
@@ -55,6 +59,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt2->setClass( $light );
         $lt2->setPremium( FALSE );
         $lt2->setReward( FALSE );
+        $lt2->setHitPoints( 140 );
+        $lt2->setArmorFront( 25 );
+        $lt2->setArmorSide( 25 );
+        $lt2->setArmorRear( 25 );
         $manager->persist( $lt2 );
 
         $lt3 = new Tank();
@@ -64,6 +72,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt3->setClass( $light );
         $lt3->setPremium( TRUE );
         $lt3->setReward( TRUE );
+        $lt3->setHitPoints( 160 );
+        $lt3->setArmorFront( 15.9 );
+        $lt3->setArmorSide( 6.4 );
+        $lt3->setArmorRear( 6.4 );
         $manager->persist( $lt3 );
 
         $lt4 = new Tank();
@@ -73,6 +85,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt4->setClass( $light );
         $lt4->setPremium( TRUE );
         $lt4->setReward( FALSE );
+        $lt4->setHitPoints( 150 );
+        $lt4->setArmorFront( 17 );
+        $lt4->setArmorSide( 15 );
+        $lt4->setArmorRear( 6 );
         $manager->persist( $lt4 );
 
         $lt5 = new Tank();
@@ -82,6 +98,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt5->setClass( $light );
         $lt5->setPremium( TRUE );
         $lt5->setReward( FALSE );
+        $lt5->setHitPoints( 250 );
+        $lt5->setArmorFront( 25 );
+        $lt5->setArmorSide( 13 );
+        $lt5->setArmorRear( 13 );
         $manager->persist( $lt5 );
 
         $lt6 = new Tank();
@@ -91,6 +111,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt6->setClass( $light );
         $lt6->setPremium( FALSE );
         $lt6->setReward( FALSE );
+        $lt6->setHitPoints( 220 );
+        $lt6->setArmorFront( 38 );
+        $lt6->setArmorSide( 25 );
+        $lt6->setArmorRear( 25 );
         $manager->persist( $lt6 );
 
         $lt7 = new Tank();
@@ -100,6 +124,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt7->setClass( $light );
         $lt7->setPremium( TRUE );
         $lt7->setReward( TRUE );
+        $lt7->setHitPoints( 220 );
+        $lt7->setArmorFront( 38.1 );
+        $lt7->setArmorSide( 25.4 );
+        $lt7->setArmorRear( 25.4 );
         $manager->persist( $lt7 );
 
         $lt8 = new Tank();
@@ -109,6 +137,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt8->setClass( $light );
         $lt8->setPremium( FALSE );
         $lt8->setReward( FALSE );
+        $lt8->setHitPoints( 290 );
+        $lt8->setArmorFront( 29 );
+        $lt8->setArmorSide( 25 );
+        $lt8->setArmorRear( 25 );
         $manager->persist( $lt8 );
 
         $lt9 = new Tank();
@@ -118,6 +150,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt9->setClass( $light );
         $lt9->setPremium( FALSE );
         $lt9->setReward( FALSE );
+        $lt9->setHitPoints( 530 );
+        $lt9->setArmorFront( 25 );
+        $lt9->setArmorSide( 25 );
+        $lt9->setArmorRear( 19 );
         $manager->persist( $lt9 );
 
         $lt10 = new Tank();
@@ -127,6 +163,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt10->setClass( $light );
         $lt10->setPremium( FALSE );
         $lt10->setReward( FALSE );
+        $lt10->setHitPoints( 590 );
+        $lt10->setArmorFront( 28 );
+        $lt10->setArmorSide( 25 );
+        $lt10->setArmorRear( 22 );
         $manager->persist( $lt10 );
 
         $lt11 = new Tank();
@@ -136,6 +176,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $lt11->setClass( $light );
         $lt11->setPremium( FALSE );
         $lt11->setReward( FALSE );
+        $lt11->setHitPoints( 840 );
+        $lt11->setArmorFront( 25 );
+        $lt11->setArmorSide( 22 );
+        $lt11->setArmorRear( 19 );
         $manager->persist( $lt11 );
 
         /**
@@ -148,6 +192,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt1->setClass( $medium );
         $mt1->setPremium( FALSE );
         $mt1->setReward( FALSE );
+        $mt1->setHitPoints( 155 );
+        $mt1->setArmorFront( 22 );
+        $mt1->setArmorSide( 22 );
+        $mt1->setArmorRear( 22 );
         $manager->persist( $mt1 );
 
         $mt2 = new Tank();
@@ -157,6 +205,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt2->setClass( $medium );
         $mt2->setPremium( FALSE );
         $mt2->setReward( FALSE );
+        $mt2->setHitPoints( 180 );
+        $mt2->setArmorFront( 32 );
+        $mt2->setArmorSide( 18 );
+        $mt2->setArmorRear( 13 );
         $manager->persist( $mt2 );
 
         $mt3 = new Tank();
@@ -166,6 +218,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt3->setClass( $medium );
         $mt3->setPremium( FALSE );
         $mt3->setReward( FALSE );
+        $mt3->setHitPoints( 310 );
+        $mt3->setArmorFront( 51 );
+        $mt3->setArmorSide( 38 );
+        $mt3->setArmorRear( 38 );
         $manager->persist( $mt3 );
 
         $mt4 = new Tank();
@@ -175,6 +231,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt4->setClass( $medium );
         $mt4->setPremium( FALSE );
         $mt4->setReward( FALSE );
+        $mt4->setHitPoints( 400 );
+        $mt4->setArmorFront( 51 );
+        $mt4->setArmorSide( 38 );
+        $mt4->setArmorRear( 38 );
         $manager->persist( $mt4 );
 
         $mt5 = new Tank();
@@ -184,6 +244,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt5->setClass( $medium );
         $mt5->setPremium( TRUE );
         $mt5->setReward( TRUE );
+        $mt5->setHitPoints( 480 );
+        $mt5->setArmorFront( 64 );
+        $mt5->setArmorSide( 38 );
+        $mt5->setArmorRear( 38 );
         $manager->persist( $mt5 );
 
         $mt6 = new Tank();
@@ -193,6 +257,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt6->setClass( $medium );
         $mt6->setPremium( FALSE );
         $mt6->setReward( FALSE );
+        $mt6->setHitPoints( 400 );
+        $mt6->setArmorFront( 38 );
+        $mt6->setArmorSide( 32 );
+        $mt6->setArmorRear( 25 );
         $manager->persist( $mt6 );
 
         $mt7 = new Tank();
@@ -202,6 +270,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt7->setClass( $medium );
         $mt7->setPremium( TRUE );
         $mt7->setReward( FALSE );
+        $mt7->setHitPoints( 610 );
+        $mt7->setArmorFront( 76.2 );
+        $mt7->setArmorSide( 63 );
+        $mt7->setArmorRear( 38 );
         $manager->persist( $mt7 );
 
         $mt8 = new Tank();
@@ -211,6 +283,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt8->setClass( $medium );
         $mt8->setPremium( FALSE );
         $mt8->setReward( FALSE );
+        $mt8->setHitPoints( 730 );
+        $mt8->setArmorFront( 101.6 );
+        $mt8->setArmorSide( 76.2 );
+        $mt8->setArmorRear( 38.1 );
         $manager->persist( $mt8 );
 
         $mt9 = new Tank();
@@ -220,6 +296,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt9->setClass( $medium );
         $mt9->setPremium( FALSE );
         $mt9->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt9 );
 
         $mt10 = new Tank();
@@ -229,6 +309,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt10->setClass( $medium );
         $mt10->setPremium( FALSE );
         $mt10->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt10 );
 
         $mt11 = new Tank();
@@ -238,6 +322,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt11->setClass( $medium );
         $mt11->setPremium( FALSE );
         $mt11->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt11 );
 
         $mt12 = new Tank();
@@ -247,6 +335,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt12->setClass( $medium );
         $mt12->setPremium( TRUE );
         $mt12->setReward( TRUE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt12 );
 
         $mt13 = new Tank();
@@ -256,6 +348,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt13->setClass( $medium );
         $mt13->setPremium( TRUE );
         $mt13->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt13 );
 
         $mt14 = new Tank();
@@ -265,6 +361,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt14->setClass( $medium );
         $mt14->setPremium( FALSE );
         $mt14->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt14 );
 
         $mt15 = new Tank();
@@ -274,6 +374,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt15->setClass( $medium );
         $mt15->setPremium( FALSE );
         $mt15->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt15 );
 
         $mt16 = new Tank();
@@ -283,6 +387,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt16->setClass( $medium );
         $mt16->setPremium( FALSE );
         $mt16->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt16 );
 
         $mt17 = new Tank();
@@ -292,6 +400,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $mt17->setClass( $medium );
         $mt17->setPremium( FALSE );
         $mt17->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $mt17 );
 
         /**
@@ -304,6 +416,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht1->setClass( $heavy );
         $ht1->setPremium( FALSE );
         $ht1->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht1 );
 
         $ht2 = new Tank();
@@ -313,6 +429,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht2->setClass( $heavy );
         $ht2->setPremium( TRUE );
         $ht2->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht2 );
 
         $ht3 = new Tank();
@@ -322,6 +442,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht3->setClass( $heavy );
         $ht3->setPremium( FALSE );
         $ht3->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht3 );
 
         $ht4 = new Tank();
@@ -331,6 +455,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht4->setClass( $heavy );
         $ht4->setPremium( FALSE );
         $ht4->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht4 );
 
         $ht5 = new Tank();
@@ -340,6 +468,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht5->setClass( $heavy );
         $ht5->setPremium( TRUE );
         $ht5->setReward( TRUE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht5 );
 
         $ht6 = new Tank();
@@ -349,6 +481,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht6->setClass( $heavy );
         $ht6->setPremium( FALSE );
         $ht6->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht6 );
 
         $ht7 = new Tank();
@@ -358,6 +494,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht7->setClass( $heavy );
         $ht7->setPremium( TRUE );
         $ht7->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht7 );
 
         $ht8 = new Tank();
@@ -367,6 +507,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht8->setClass( $heavy );
         $ht8->setPremium( FALSE );
         $ht8->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht8 );
 
         $ht9 = new Tank();
@@ -376,6 +520,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht9->setClass( $heavy );
         $ht9->setPremium( FALSE );
         $ht9->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht9 );
 
         $ht10 = new Tank();
@@ -385,6 +533,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $ht10->setClass( $heavy );
         $ht10->setPremium( FALSE );
         $ht10->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $ht10 );
 
         /**
@@ -397,6 +549,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td1->setClass( $td );
         $td1->setPremium( FALSE );
         $td1->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td1 );
 
         $td2 = new Tank();
@@ -406,6 +562,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td2->setClass( $td );
         $td2->setPremium( FALSE );
         $td2->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td2 );
 
         $td3 = new Tank();
@@ -415,6 +575,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td3->setClass( $td );
         $td3->setPremium( FALSE );
         $td3->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td3 );
 
         $td4 = new Tank();
@@ -424,6 +588,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td4->setClass( $td );
         $td4->setPremium( FALSE );
         $td4->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td4 );
 
         $td5 = new Tank();
@@ -433,6 +601,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td5->setClass( $td );
         $td5->setPremium( FALSE );
         $td5->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td5 );
 
         $td6 = new Tank();
@@ -442,6 +614,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td6->setClass( $td );
         $td6->setPremium( FALSE );
         $td6->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td6 );
 
         $td7 = new Tank();
@@ -451,6 +627,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td7->setClass( $td );
         $td7->setPremium( FALSE );
         $td7->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td7 );
 
         $td8 = new Tank();
@@ -460,6 +640,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td8->setClass( $td );
         $td8->setPremium( FALSE );
         $td8->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td8 );
 
         $td9 = new Tank();
@@ -469,6 +653,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td9->setClass( $td );
         $td9->setPremium( FALSE );
         $td9->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td9 );
 
         $td10 = new Tank();
@@ -478,6 +666,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td10->setClass( $td );
         $td10->setPremium( FALSE );
         $td10->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td10 );
 
         $td11 = new Tank();
@@ -487,6 +679,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td11->setClass( $td );
         $td11->setPremium( FALSE );
         $td11->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td11 );
 
         $td12 = new Tank();
@@ -496,6 +692,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td12->setClass( $td );
         $td12->setPremium( FALSE );
         $td12->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td12 );
 
         $td13 = new Tank();
@@ -505,6 +705,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td13->setClass( $td );
         $td13->setPremium( FALSE );
         $td13->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td13 );
 
         $td14 = new Tank();
@@ -514,6 +718,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td14->setClass( $td );
         $td14->setPremium( FALSE );
         $td14->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td14 );
 
         $td15 = new Tank();
@@ -523,6 +731,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td15->setClass( $td );
         $td15->setPremium( FALSE );
         $td15->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td15 );
 
         $td16 = new Tank();
@@ -532,6 +744,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $td16->setClass( $td );
         $td16->setPremium( FALSE );
         $td16->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $td16 );
 
         /**
@@ -544,6 +760,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $spg1->setClass( $spg );
         $spg1->setPremium( FALSE );
         $spg1->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $spg1 );
 
         $spg2 = new Tank();
@@ -553,6 +773,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $spg2->setClass( $spg );
         $spg2->setPremium( FALSE );
         $spg2->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $spg2 );
 
         $spg3 = new Tank();
@@ -562,6 +786,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $spg3->setClass( $spg );
         $spg3->setPremium( FALSE );
         $spg3->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $spg3 );
 
         $spg4 = new Tank();
@@ -571,6 +799,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $spg4->setClass( $spg );
         $spg4->setPremium( FALSE );
         $spg4->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $spg4 );
 
         $spg5 = new Tank();
@@ -580,6 +812,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $spg5->setClass( $spg );
         $spg5->setPremium( FALSE );
         $spg5->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $spg5 );
 
         $spg6 = new Tank();
@@ -589,6 +825,10 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $spg6->setClass( $spg );
         $spg6->setPremium( FALSE );
         $spg6->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $spg6 );
 
         $spg7 = new Tank();
@@ -598,9 +838,25 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
         $spg7->setClass( $spg );
         $spg7->setPremium( FALSE );
         $spg7->setReward( FALSE );
+        $lt7->setHitPoints(  );
+        $lt7->setArmorFront(  );
+        $lt7->setArmorSide(  );
+        $lt7->setArmorRear(  );
         $manager->persist( $spg7 );
 
         $manager->flush();
+
+        $this->addReference( 'lt1' , $lt1 );
+        $this->addReference( 'lt2' , $lt2 );
+        $this->addReference( 'lt3' , $lt3 );
+        $this->addReference( 'lt4' , $lt4 );
+        $this->addReference( 'lt5' , $lt5 );
+        $this->addReference( 'lt6' , $lt6 );
+        $this->addReference( 'lt7' , $lt7 );
+        $this->addReference( 'lt8' , $lt8 );
+        $this->addReference( 'lt9' , $lt9 );
+        $this->addReference( 'lt10' , $lt10 );
+        $this->addReference( 'lt11' , $lt11 );
     }
     //put your code here
 }

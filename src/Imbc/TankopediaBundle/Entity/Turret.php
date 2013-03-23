@@ -7,22 +7,22 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TurretRepository")
- * @ORM\Table(name="tanks__module_turret")
+ * @ORM\Table(name="top__module_turret")
  */
 class Turret extends Module
 {
     /**
-     * @ORM\Column(name="armorFront", type="integer")
+     * @ORM\Column(name="armorFront", type="float")
      */
     protected $armorFront;
 
     /**
-     * @ORM\Column(name="armorSide", type="integer")
+     * @ORM\Column(name="armorSide", type="float")
      */
     protected $armorSide;
 
     /**
-     * @ORM\Column(name="armorRear", type="integer")
+     * @ORM\Column(name="armorRear", type="float")
      */
     protected $armorRear;
 
@@ -56,7 +56,7 @@ class Turret extends Module
      * @param \Imbc\TankopediaBundle\Entity\Gun $guns
      * @return Turret
      */
-    public function addGun(\Imbc\TankopediaBundle\Entity\Gun $guns)
+    public function addGun( \Imbc\TankopediaBundle\Entity\Gun $guns )
     {
         $this->guns[] = $guns;
 
@@ -68,7 +68,7 @@ class Turret extends Module
      *
      * @param \Imbc\TankopediaBundle\Entity\Gun $guns
      */
-    public function removeGun(\Imbc\TankopediaBundle\Entity\Gun $guns)
+    public function removeGun( \Imbc\TankopediaBundle\Entity\Gun $guns )
     {
         $this->guns->removeElement($guns);
     }
@@ -86,12 +86,15 @@ class Turret extends Module
     /**
      * Add tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      * @return Turret
      */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->add( $tank );
+        }
 
         return $this;
     }
@@ -99,11 +102,14 @@ class Turret extends Module
     /**
      * Remove tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks->removeElement($tanks);
+        if( $this->tanks->contains( $tank ))
+        {
+            $this->tanks->removeElement($tank);
+        }
     }
 
     /**
@@ -221,7 +227,7 @@ class Turret extends Module
     /**
      * Set armorFront
      *
-     * @param integer $armorFront
+     * @param float $armorFront
      * @return Turret
      */
     public function setArmorFront( $armorFront )
@@ -234,7 +240,7 @@ class Turret extends Module
     /**
      * Get armorFront
      *
-     * @return integer
+     * @return float
      */
     public function getArmorFront()
     {
@@ -244,7 +250,7 @@ class Turret extends Module
     /**
      * Set armorSide
      *
-     * @param integer $armorSide
+     * @param float $armorSide
      * @return Turret
      */
     public function setArmorSide( $armorSide )
@@ -257,7 +263,7 @@ class Turret extends Module
     /**
      * Get armorSide
      *
-     * @return integer
+     * @return float
      */
     public function getArmorSide()
     {
@@ -267,7 +273,7 @@ class Turret extends Module
     /**
      * Set armorRear
      *
-     * @param integer $armorRear
+     * @param float $armorRear
      * @return Turret
      */
     public function setArmorRear( $armorRear )
@@ -280,7 +286,7 @@ class Turret extends Module
     /**
      * Get armorRear
      *
-     * @return integer
+     * @return float
      */
     public function getArmorRear()
     {

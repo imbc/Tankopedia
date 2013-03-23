@@ -3,10 +3,11 @@
 namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\RadioRepository")
- * @ORM\Table(name="tanks__module_radio")
+ * @ORM\Table(name="top__module_radio")
  */
 class Radio extends Module
 {
@@ -20,30 +21,44 @@ class Radio extends Module
      */
     public function __construct()
     {
-        $this->tanks = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->tanks = new ArrayCollection();
     }
 
     /**
-     * Add tanks
+     * Add tank
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      * @return Radio
      */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->add( $tank );
+        }
 
         return $this;
     }
 
-    /**
-     * Remove tanks
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function addTanks( array $tanks )
     {
-        $this->tanks->removeElement($tanks);
+        foreach( $tanks as $tank )
+        {
+            $this->addTank( $tank );
+        }
+    }
+
+    /**
+     * Remove tank
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
+     */
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
+    {
+        if( $this->tanks->contains( $tank ))
+        {
+            $this->tanks->removeElement( $tank );
+        }
     }
 
     /**

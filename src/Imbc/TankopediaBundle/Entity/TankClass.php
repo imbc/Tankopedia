@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TankClassRepository")
- * @ORM\Table(name="tanks__class")
+ * @ORM\Table(name="top__class")
  */
 class TankClass
 {

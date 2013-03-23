@@ -1,4 +1,4 @@
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(1,2,3,"Cruiser Mk. I",0,0),
@@ -9,7 +9,7 @@ VALUES
 	(1,4,3,"Valentine",0,0),
 	(1,5,3,"Crusader",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(2,1,3,"Vickers Medium Mk. I",0,0),
@@ -23,7 +23,7 @@ VALUES
 	(2,9,3,"Centurion Mk. 7/1",0,0),
 	(2,10,3,"FV4202",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(3,5,3,"Churchill I",0,0),
@@ -34,7 +34,7 @@ VALUES
 	(3,9,3,"Conqueror",0,0),
 	(3,10,3,"FV215b",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(4,2,3,"Universal Carrier 2-pdr",0,0),

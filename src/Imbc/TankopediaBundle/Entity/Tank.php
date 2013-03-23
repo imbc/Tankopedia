@@ -8,7 +8,7 @@ use APY\DataGridBundle\Grid\Mapping as GRID;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TankRepository")
- * @ORM\Table(name="tanks__tank")
+ * @ORM\Table(name="top__tank")
  */
 class Tank
 {
@@ -73,19 +73,24 @@ class Tank
     protected $reward;
 
     /**
-     * @ORM\Column(name="armorFront", type="integer")
+     * @ORM\Column(name="armorFront", type="float")
      */
     protected $armorFront;
 
     /**
-     * @ORM\Column(name="armorSide", type="integer")
+     * @ORM\Column(name="armorSide", type="float")
      */
     protected $armorSide;
 
     /**
-     * @ORM\Column(name="armorRear", type="integer")
+     * @ORM\Column(name="armorRear", type="float")
      */
     protected $armorRear;
+
+    /**
+     * @ORM\Column(name="hitPoints", type="integer")
+     */
+    protected $hitPoints;
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="children")
@@ -94,7 +99,7 @@ class Tank
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="parents")
-     * @ORM\JoinTable(name="tanks__parent_child",
+     * @ORM\JoinTable(name="top__parent_child",
      *      joinColumns={@ORM\JoinColumn(name="parent_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="child_id", referencedColumnName="id")}
      *      )
@@ -102,8 +107,8 @@ class Tank
     protected $children;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
-     * @ORM\JoinTable(name="tanks__matchmaking",
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="matchMaker")
+     * @ORM\JoinTable(name="top__matchmaking",
      *      joinColumns={@ORM\JoinColumn(name="tank_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="tier_id", referencedColumnName="id")}
      *      )
@@ -185,6 +190,116 @@ class Tank
     public function getModules()
     {
         return $this->modules;
+    }
+
+    /**
+     * Get armorFront
+     *
+     * @return float
+     */
+    public function getArmorFront()
+    {
+        return $this->armorFront;
+    }
+
+    /**
+     * Set armorFront
+     *
+     * @param float $armorFront
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
+    public function setArmorFront( $armorFront )
+    {
+        $this->armorFront = $armorFront;
+        return $this;
+    }
+
+    /**
+     * Get armorSide
+     *
+     * @return float
+     */
+    public function getArmorSide()
+    {
+        return $this->armorSide;
+    }
+
+    /**
+     * Set armorSide
+     *
+     * @param float $armorSide
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
+    public function setArmorSide( $armorSide )
+    {
+        $this->armorSide = $armorSide;
+        return $this;
+    }
+
+    /**
+     * Get armorRear
+     *
+     * @return float
+     */
+    public function getArmorRear()
+    {
+        return $this->armorRear;
+    }
+
+    /**
+     * Set armorRead
+     *
+     * @param float $armorRear
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
+    public function setArmorRear( $armorRear )
+    {
+        $this->armorRear = $armorRear;
+        return $this;
+    }
+
+    /**
+     * Get hitPoints
+     *
+     * @return integer
+     */
+    public function getHitPoints()
+    {
+        return $this->hitPoints;
+    }
+
+    /**
+     * Set hitPoints
+     *
+     * @param integer $hitPoints
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
+    public function setHitPoints( $hitPoints )
+    {
+        $this->hitPoints = $hitPoints;
+        return $this;
+    }
+
+    /**
+     * Get matchMaker
+     *
+     * @return \Imbc\TankopediaBundle\Entity\Tier
+     */
+    public function getMatchMaker()
+    {
+        return $this->matchMaker;
+    }
+
+    /**
+     * Set matchMaker
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tier $matchMaker
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
+    public function setMatchMaker( $matchMaker )
+    {
+        $this->matchMaker = $matchMaker;
+        return $this;
     }
 
     /**

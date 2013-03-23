@@ -34,7 +34,6 @@ class LoadRadioData extends AbstractFixture implements OrderedFixtureInterface
         $usa = $this->getReference( 'usa' );
         $ussr = $this->getReference( 'ussr' );
         $france = $this->getReference( 'fr' );
-
     }
 //
 //    "I","USA","Signal Flags","90 m",0,"1 kg","T1 Cunningham"

@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\ShellRepository")
- * @ORM\Table(name="tanks__shell")
+ * @ORM\Table(name="top__shell")
  */
 class Shell
 {

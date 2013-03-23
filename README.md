@@ -12,6 +12,7 @@ TODO:
      - remove delete control (not needed)
      - remove new/update
      - refactor edit
+     - need to move xp from modules to tank
 2. use DataGridBundle for each index template https://github.com/Abhoryo/APYDataGridBundle
 3. use DataFixtures to allow to load all data regarding the tanks and modules
     - ~~tank~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~

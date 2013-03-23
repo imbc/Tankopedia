@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\GunRepository")
- * @ORM\Table(name="tanks__module_gun")
+ * @ORM\Table(name="top__module_gun")
  */
 class Gun extends Module
 {
