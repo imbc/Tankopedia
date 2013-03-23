@@ -6,6 +6,24 @@ The interface is using the default twitter bootstrap for now. http://twitter.git
 
 The data is from http://wiki.worldoftanks.eu (online video game around tank warfare)
 
+installation:
+
+1. create your virtual host
+2. check the database setting and adjust accordingly
+3. run composer to fetch all dependencies
+4. run the following command to create the tables:
+```
+    php app/console doctrine:schema:update --dump-sql
+```
+5. run the following command to populate the tables:
+```
+    php app/console doctrine:fixtures:load --fixtures=src/Imbc/TankopediaBundle/DataFixtures/ORM --append
+```
+
+Access the dev environment through http://virtualhost/app_dev.php/tankopedia/tank/
+
+The virtual host could be ```imbc.local``` or ```localost/imbc/``` if you have set this
+
 TODO:
 
 1. refactor the controller for ~~Engine~~, ~~Gun~~, ~~Nationality~~, ~~Tank~~, ~~TankClass~~, Tier, Track and Turret
