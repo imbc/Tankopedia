@@ -79,7 +79,7 @@ class Tank
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="parents")
-     * @ORM\JoinTable(name="top__parent_child",
+     * @ORM\JoinTable(name="top__tank_relastionship",
      *      joinColumns={@ORM\JoinColumn(name="parent_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="child_id", referencedColumnName="id")}
      *      )
@@ -87,7 +87,7 @@ class Tank
     protected $children;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="matchMaker")
      * @ORM\JoinTable(name="top__matchmaking",
      *      joinColumns={@ORM\JoinColumn(name="tank_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="tier_id", referencedColumnName="id")}

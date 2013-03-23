@@ -35,7 +35,7 @@ class Tier
     protected $tanks;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="tier")
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="matchMaker")
      */
     protected $matchMaker;
 
