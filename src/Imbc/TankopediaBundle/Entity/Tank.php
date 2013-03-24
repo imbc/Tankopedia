@@ -30,6 +30,11 @@ class Tank
     protected $name;
 
     /**
+     * @ORM\OneToOne(targetEntity="Imbc\TankopediaBundle\Entity\Image")
+     */
+    protected $image;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\TankClass", inversedBy="tanks")
      * @ORM\JoinColumn(name="class_id", referencedColumnName="id")
      *
@@ -137,6 +142,18 @@ class Tank
     public function getName()
     {
         return $this->name;
+    }
+
+    public function setImage( \Imbc\TankopediaBundle\Entity\Image $image )
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
     }
 
     /**

@@ -105,13 +105,13 @@ class Image
   public function getUploadDir()
   {
     // On retourne le chemin relatif vers l'image pour un navigateur
-    return 'uploads/img';
+    return 'imbctankopedia/img';
   }
 
   protected function getUploadRootDir()
   {
     // On retourne le chemin relatif vers l'image pour notre code PHP
-    return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    return __DIR__.'/../../../../web/bundles/'.$this->getUploadDir();
   }
 
   public function getWebPath()
