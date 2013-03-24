@@ -36,13 +36,15 @@ class NationalityController extends Controller
     public function showAction( Request $request )
     {
         $em = $this->getDoctrine()->getManager();
-        $repo = $em->getRepository( 'ImbcTankopediaBundle:Nationality' );
-        if ( null === $nationality=  $repo->find( $request->get( 'id' ) ))
+        $nationalityRepo = $em->getRepository( 'ImbcTankopediaBundle:Nationality' );
+        $tankRepo = $em->getRepository( 'ImbcTankopediaBundle:Tank' );
+        if ( null === $nationality = $nationalityRepo->find( $request->get( 'id' ) ))
         {
             throw $this->createNotFoundException( 'Nationality does not exist' );
         }
         return $this->render( 'ImbcTankopediaBundle:Nationality:show.html.twig', array(
             'nationality' => $nationality,
+            'tanks' => $tankRepo->getTankByNationality( $nationality )
         ));
     }
 
