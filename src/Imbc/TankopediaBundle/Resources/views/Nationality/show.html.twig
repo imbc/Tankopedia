@@ -1,34 +1,117 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Nationality</h1>
+<h1>{{ nationality.name }}</h1>
 
-    <table class="table table-condensed table-hover table-striped record_properties">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ nationality.id }}</td>
-            </tr>
-            <tr>
-                <th>Abreviation</th>
-                <td>{{ nationality.abreviation }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ nationality.name }}</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="panel">
+    <div class="frame">
+        <div class="header">Light Tanks</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.class.name == 'Light Tank' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>{{ tank.name }}</div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
 
-        <ul class="record_actions">
+<div class="panel">
+    <div class="frame">
+        <div class="header">Medium Tanks</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.class.name == 'Medium Tank' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>{{ tank.name }}</div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">Heavy Tanks</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.class.name == 'Heavy Tank' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>{{ tank.name }}</div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">Tank Destroyers</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.class.name == 'Tank Destroyer' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>{{ tank.name }}</div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">Self-Propelled Guns</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.class.name == 'Self-Propelled Gun' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>{{ tank.name }}</div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<ul class="record_actions">
     <li>
-        <a href="{{ path('tankopedia_nationality') }}">
-            Back to the list
+        <a class="btn" href="{{ path('tankopedia_nationality') }}">
+            <i class="icon-arrow-left"></i> Back to the list
         </a>
     </li>
     <li>
-        <a href="{{ path('tankopedia_nationality_edit', { 'id': nationality.id }) }}">
-            Edit
+        <a class="btn" href="{{ path('tankopedia_nationality_edit', { 'id': nationality.id }) }}">
+            <i class="icon-cogs"></i> Edit
         </a>
     </li>
 </ul>

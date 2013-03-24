@@ -40,13 +40,15 @@ class TankClassController extends Controller
     public function showAction( Request $request )
     {
         $em = $this->getDoctrine()->getManager();
-        $repo = $em->getRepository( 'ImbcTankopediaBundle:TankClass' );
-        if ( null === $class=  $repo->find( $request->get( 'id' ) ))
+        $classRepo = $em->getRepository( 'ImbcTankopediaBundle:TankClass' );
+        $tankRepo = $em->getRepository( 'ImbcTankopediaBundle:Tank' );
+        if ( null === $class=  $classRepo->find( $request->get( 'id' ) ))
         {
             throw $this->createNotFoundException( 'TankClass does not exist' );
         }
         return $this->render( 'ImbcTankopediaBundle:TankClass:show.html.twig', array(
             'class' => $class,
+            'tanks' => $tankRepo->getTankByClass( $class )
         ));
     }
 
