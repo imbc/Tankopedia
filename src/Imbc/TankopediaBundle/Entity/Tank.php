@@ -125,7 +125,7 @@ class Tank
      * Set name
      *
      * @param string $name
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setName( $name )
     {
@@ -137,13 +137,19 @@ class Tank
     /**
      * Get name
      *
-     * @return stringphp
+     * @return string
      */
     public function getName()
     {
         return $this->name;
     }
 
+    /**
+     * Set image
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Image $image
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
     public function setImage( \Imbc\TankopediaBundle\Entity\Image $image )
     {
         $this->image = $image;
@@ -151,6 +157,11 @@ class Tank
         return $this;
     }
 
+    /**
+     * Get image
+     *
+     * @return \Imbc\TankopediaBundle\Entity\Image
+     */
     public function getImage()
     {
         return $this->image;
@@ -160,7 +171,7 @@ class Tank
      * Add modules
      *
      * @param \Imbc\TankopediaBundle\Entity\Module $modules
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function addModule( \Imbc\TankopediaBundle\Entity\Module $modules )
     {
@@ -193,7 +204,7 @@ class Tank
      * Add parent
      *
      * @param \Imbc\TankopediaBundle\Entity\Tank $parent
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function addParent( \Imbc\TankopediaBundle\Entity\Tank $parent )
     {
@@ -232,7 +243,7 @@ class Tank
      * Add child
      *
      * @param \Imbc\TankopediaBundle\Entity\Tank $child
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function addChildren( \Imbc\TankopediaBundle\Entity\Tank $child )
     {
@@ -271,7 +282,7 @@ class Tank
      * Set class
      *
      * @param \Imbc\TankopediaBundle\Entity\TankClass $class
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setClass( \Imbc\TankopediaBundle\Entity\TankClass $class = null )
     {
@@ -294,7 +305,7 @@ class Tank
      * Set tier
      *
      * @param \Imbc\TankopediaBundle\Entity\Tier $tier
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setTier( \Imbc\TankopediaBundle\Entity\Tier $tier = null )
     {
@@ -317,7 +328,7 @@ class Tank
      * Set nationality
      *
      * @param \Imbc\TankopediaBundle\Entity\Nationality $nationality
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setNationality( \Imbc\TankopediaBundle\Entity\Nationality $nationality = null )
     {
@@ -340,7 +351,7 @@ class Tank
      * Set premium
      *
      * @param boolean $premium
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setPremium( $premium = FALSE )
     {
@@ -396,7 +407,7 @@ class Tank
      * Set matchMaker
      *
      * @param ArrayCollection $matchMaker
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setBattleRange( ArrayCollection $matchMaker)
     {
