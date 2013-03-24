@@ -6,7 +6,6 @@
     <table class="table table-condensed table-hover table-striped records_list">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
                 <th>Number of Tanks</th>
                 <th>Actions</th>
@@ -15,7 +14,6 @@
         <tbody>
         {% for class in classes %}
             <tr>
-                <td><a href="{{ path('tankopedia_class_show', { 'id': class.id }) }}">{{ class.id }}</a></td>
                 <td>{{ class.name }}</td>
                 <td>{{ class.tanks | length }}</td>
                 <td>

@@ -6,7 +6,6 @@
     <table class="table table-condensed table-hover table-striped records_list">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Abreviation</th>
                 <th>Name</th>
                 <th>Number of Tanks</th>
@@ -16,7 +15,6 @@
         <tbody>
         {% for nationality in nationalities %}
             <tr>
-                <td><a href="{{ path('tankopedia_nationality_show', { 'id': nationality.id }) }}">{{ nationality.id }}</a></td>
                 <td>{{ nationality.abreviation }}</td>
                 <td>{{ nationality.name }}</td>
                 <td>{{ nationality.tanks | length }}</td>
