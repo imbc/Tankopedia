@@ -3,28 +3,13 @@ tankopedia_tier:
     defaults: { _controller: "ImbcTankopediaBundle:Tier:index" }
 
 tankopedia_tier_show:
-    pattern:  /{id}/show
+    pattern:  /{slug}/show
     defaults: { _controller: "ImbcTankopediaBundle:Tier:show" }
 
 tankopedia_tier_new:
     pattern:  /new
-    defaults: { _controller: "ImbcTankopediaBundle:Tier:new" }
-
-tankopedia_tier_create:
-    pattern:  /create
-    defaults: { _controller: "ImbcTankopediaBundle:Tier:create" }
-    requirements: { _method: post }
-
-tankopedia_tier_edit:
-    pattern:  /{id}/edit
     defaults: { _controller: "ImbcTankopediaBundle:Tier:edit" }
 
-tankopedia_tier_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "ImbcTankopediaBundle:Tier:update" }
-    requirements: { _method: post|put }
-
-tankopedia_tier_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "ImbcTankopediaBundle:Tier:delete" }
-    requirements: { _method: post|delete }
+tankopedia_tier_edit:
+    pattern:  /{slug}/edit
+    defaults: { _controller: "ImbcTankopediaBundle:Tier:edit" }

@@ -8,16 +8,14 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class TierType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm( FormBuilderInterface $builder, array $options )
     {
-        $builder
-            ->add('value')
-        ;
+        $builder->add( 'value' );
     }
 
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function setDefaultOptions( OptionsResolverInterface $resolver )
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults( array(
             'data_class' => 'Imbc\TankopediaBundle\Entity\Tier'
         ));
     }

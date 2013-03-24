@@ -44,7 +44,7 @@ class Tier
      * @Gedmo\Slug(fields={"value"})
      * @ORM\Column(length=128, unique=true)
      */
-    private $slug;
+    protected $slug;
 
     /**
      * Constructor
@@ -92,24 +92,29 @@ class Tier
     /**
      * Add modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      * @return Tier
      */
-    public function addModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function addModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules[] = $modules;
-
+        if( !$this->modules->contains( $module ))
+        {
+            $this->modules->add( $module );
+        }
         return $this;
     }
 
     /**
      * Remove modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      */
-    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules->removeElement( $modules );
+        if( $this->modules->contains( $module ))
+        {
+            $this->modules->removeElement( $module );
+        }
     }
 
     /**
@@ -171,6 +176,11 @@ class Tier
         return $this->matchMaker;
     }
 
+    /**
+     * Get slug
+     *
+     * @return string
+     */
     public function getSlug()
     {
         return $this->slug;
