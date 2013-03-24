@@ -2,6 +2,7 @@
 
 namespace Imbc\TankopediaBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -58,6 +59,12 @@ abstract class Module
      * @ORM\JoinTable(name="top__tanks_modules")
      **/
     protected $tanks;
+
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    private $slug;
 
     /**
      * Constructor

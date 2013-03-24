@@ -38,7 +38,9 @@ class NationalityController extends Controller
         $em = $this->getDoctrine()->getManager();
         $nationalityRepo = $em->getRepository( 'ImbcTankopediaBundle:Nationality' );
         $tankRepo = $em->getRepository( 'ImbcTankopediaBundle:Tank' );
-        if ( null === $nationality = $nationalityRepo->find( $request->get( 'id' ) ))
+        if ( null === $nationality = $nationalityRepo->findOneBy( array(
+                        'slug' => $request->get( 'slug' ))
+            ))
         {
             throw $this->createNotFoundException( 'Nationality does not exist' );
         }
@@ -54,10 +56,12 @@ class NationalityController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository( 'ImbcTankopediaBundle:Nationality' );
         $nationality = new Nationality();
-        if ( $request->get( 'id' ) )
+        if ( $request->get( 'slug' ) )
         {
             $edit = true;
-            $nationality = $repo->find( $request->get( 'id' ));
+            $nationality = $repo->findOneBy( array(
+                        'slug' => $request->get( 'slug' )
+            ));
         }
         $form = $this->createForm( new NationalityType(), $nationality );
         if ( null !== $request->get( $form->getName() ))

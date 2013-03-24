@@ -3,7 +3,7 @@ tankopedia_class:
     defaults: { _controller: "ImbcTankopediaBundle:TankClass:index" }
 
 tankopedia_class_show:
-    pattern:  /{id}/show
+    pattern:  /{slug}/show
     defaults: { _controller: "ImbcTankopediaBundle:TankClass:show" }
 
 tankopedia_class_new:
@@ -11,5 +11,5 @@ tankopedia_class_new:
     defaults: { _controller: "ImbcTankopediaBundle:TankClass:edit" }
 
 tankopedia_class_edit:
-    pattern:  /{id}/edit
+    pattern:  /{slug}/edit
     defaults: { _controller: "ImbcTankopediaBundle:TankClass:edit" }

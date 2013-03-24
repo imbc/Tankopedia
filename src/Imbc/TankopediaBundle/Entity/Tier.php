@@ -2,6 +2,7 @@
 
 namespace Imbc\TankopediaBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -38,6 +39,12 @@ class Tier
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="matchMaker")
      */
     protected $matchMaker;
+
+    /**
+     * @Gedmo\Slug(fields={"value"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    private $slug;
 
     /**
      * Constructor
@@ -162,6 +169,11 @@ class Tier
     public function getMatchMaker()
     {
         return $this->matchMaker;
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     public function __toString()

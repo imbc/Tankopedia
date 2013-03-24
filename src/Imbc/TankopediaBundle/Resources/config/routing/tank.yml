@@ -3,7 +3,7 @@ tankopedia_tank:
     defaults: { _controller: "ImbcTankopediaBundle:Tank:index" }
 
 tankopedia_tank_show:
-    pattern:  /{id}/show
+    pattern:  /{slug}/show
     defaults: { _controller: "ImbcTankopediaBundle:Tank:show" }
 
 tankopedia_tank_new:
@@ -11,10 +11,5 @@ tankopedia_tank_new:
     defaults: { _controller: "ImbcTankopediaBundle:Tank:edit" }
 
 tankopedia_tank_edit:
-    pattern:  /{id}/edit
+    pattern:  /{slug}/edit
     defaults: { _controller: "ImbcTankopediaBundle:Tank:edit" }
-
-tankopedia_tank_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "ImbcTankopediaBundle:Tank:delete" }
-    requirements: { _method: post|delete }

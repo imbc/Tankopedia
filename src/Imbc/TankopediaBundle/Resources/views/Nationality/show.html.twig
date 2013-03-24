@@ -14,7 +14,7 @@
                     <div class="block-list-item">
                         <div>{{ tank.tier }}</div>
                         <div>
-                            <a href="{{ path( 'tankopedia_tank_show', { 'id': tank.id }) }}">
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
                                 {{ tank.name }}
                             </a>
                         </div>
@@ -38,7 +38,7 @@
                     <div class="block-list-item">
                         <div>{{ tank.tier }}</div>
                         <div>
-                            <a href="{{ path( 'tankopedia_tank_show', { 'id': tank.id }) }}">
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
                                 {{ tank.name }}
                             </a>
                         </div>
@@ -62,7 +62,7 @@
                     <div class="block-list-item">
                         <div>{{ tank.tier }}</div>
                         <div>
-                            <a href="{{ path( 'tankopedia_tank_show', { 'id': tank.id }) }}">
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
                                 {{ tank.name }}
                             </a>
                         </div>
@@ -86,7 +86,7 @@
                     <div class="block-list-item">
                         <div>{{ tank.tier }}</div>
                         <div>
-                            <a href="{{ path( 'tankopedia_tank_show', { 'id': tank.id }) }}">
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
                                 {{ tank.name }}
                             </a>
                         </div>
@@ -110,7 +110,7 @@
                     <div class="block-list-item">
                         <div>{{ tank.tier }}</div>
                         <div>
-                            <a href="{{ path( 'tankopedia_tank_show', { 'id': tank.id }) }}">
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
                                 {{ tank.name }}
                             </a>
                         </div>
@@ -130,7 +130,7 @@
         </a>
     </li>
     <li>
-        <a class="btn" href="{{ path('tankopedia_nationality_edit', { 'id': nationality.id }) }}">
+        <a class="btn" href="{{ path('tankopedia_nationality_edit', { 'slug': nationality.slug }) }}">
             <i class="icon-cogs"></i> Edit
         </a>
     </li>

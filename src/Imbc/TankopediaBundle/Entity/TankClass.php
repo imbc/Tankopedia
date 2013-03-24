@@ -2,6 +2,7 @@
 
 namespace Imbc\TankopediaBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -19,7 +20,6 @@ class TankClass
     private $id;
 
     /**
-     *
      * @ORM\Column(name="name", type="string")
      */
     private $name;
@@ -28,6 +28,12 @@ class TankClass
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="class")
      **/
     private $tanks;
+
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    private $slug;
 
     /**
      * Constructor
@@ -107,6 +113,11 @@ class TankClass
     public function getTanks()
     {
         return $this->tanks;
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     public function __toString()

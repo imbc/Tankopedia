@@ -42,7 +42,9 @@ class TankClassController extends Controller
         $em = $this->getDoctrine()->getManager();
         $classRepo = $em->getRepository( 'ImbcTankopediaBundle:TankClass' );
         $tankRepo = $em->getRepository( 'ImbcTankopediaBundle:Tank' );
-        if ( null === $class=  $classRepo->find( $request->get( 'id' ) ))
+        if ( null === $class = $classRepo->findOneBy( array(
+                        'slug' => $request->get( 'slug' ))
+            ))
         {
             throw $this->createNotFoundException( 'TankClass does not exist' );
         }
@@ -58,10 +60,12 @@ class TankClassController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository( 'ImbcTankopediaBundle:TankClass' );
         $class = new TankClass();
-        if ( $request->get( 'id' ) )
+        if ( $request->get( 'slug' ) )
         {
             $edit = true;
-            $class = $repo->find( $request->get( 'id' ));
+            $class = $repo->findOneBy( array(
+                        'slug' => $request->get( 'slug' )
+            ));
         }
         $form = $this->createForm( new TankClassType(), $class );
         if ( null !== $request->get( $form->getName() ))

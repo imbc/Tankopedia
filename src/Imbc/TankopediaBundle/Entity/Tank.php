@@ -2,6 +2,7 @@
 
 namespace Imbc\TankopediaBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use APY\DataGridBundle\Grid\Mapping as GRID;
@@ -94,6 +95,14 @@ class Tank
      *      )
      */
     protected $matchMaker;
+
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=true)
+     * 
+     * @GRID\Column(visible=false)
+     */
+    private $slug;
 
     /**
      * Constructor
@@ -417,6 +426,11 @@ class Tank
         {
             $this->matchMaker->remove( $battleTier );
         }
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     public function __toString()
