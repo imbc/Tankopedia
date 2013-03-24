@@ -62,4 +62,5 @@ TODO:
 13. add way to compare 3-4 tanks as tables side by side
 14. investigate scrapping data directly from wot for player and save that to local db.
 15. add breadcrumb using white-october bundle https://github.com/whiteoctober/BreadcrumbsBundle
-16. add gedmo slug behaviour https://github.com/l3pp4rd/DoctrineExtensions
+16. add gedmo slug behaviour https://github.com/l3pp4rd/DoctrineExtensions && https://github.com/stof/StofDoctrineExtensionsBundle
+    - ~~Tank~~, ~~TankClass~~, ~~Nationality~~, Tier, Modules
