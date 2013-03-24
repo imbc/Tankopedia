@@ -27,6 +27,8 @@ class NationalityController extends Controller
                 return $this->redirect( $this->generateUrl( 'tankopedia_nationality' ) );
             }
         }
+        $breadcrumbs = $this->get( 'white_october_breadcrumbs' );
+        $breadcrumbs->addItem( 'Home', $this->get( 'router' )->generate( 'tankopedia_nationality' ));
         return $this->render( 'ImbcTankopediaBundle:Nationality:index.html.twig', array(
             'nationalities' => $nationalities,
             'form'  => $form->createView(),
@@ -42,6 +44,8 @@ class NationalityController extends Controller
         {
             throw $this->createNotFoundException( 'Nationality does not exist' );
         }
+        $breadcrumbs = $this->get( 'white_october_breadcrumbs' );
+        $breadcrumbs->addItem( $nationality->getName(), $this->get( 'router' )->generate( 'tankopedia_nationality' ));
         return $this->render( 'ImbcTankopediaBundle:Nationality:show.html.twig', array(
             'nationality' => $nationality,
             'tanks' => $tankRepo->getTankByNationality( $nationality )

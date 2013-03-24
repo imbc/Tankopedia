@@ -58,3 +58,6 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# white_october BreadCrumb
+white_october_breadcrumbs: ~
