@@ -17,22 +17,22 @@
             </tr>
         </thead>
         <tbody>
-        {% for entity in entities %}
+        {% for track in tracks %}
             <tr>
-                <td>{{ entity.tier }}</td>
-                <td>{{ entity.name }}</td>
-                <td>{{ entity.xp }}</td>
-                <td>{{ entity.cost }}</td>
-                <td>{{ entity.weight }}</td>
-                <td>{{ entity.loadLimit }}</td>
-                <td>{{ entity.traverseSpeed }}</td>
+                <td>{{ track.tier }}</td>
+                <td>{{ track.name }}</td>
+                <td>{{ track.xp }}</td>
+                <td>{{ track.cost }}</td>
+                <td>{{ track.weight }}</td>
+                <td>{{ track.loadLimit }}</td>
+                <td>{{ track.traverseSpeed }}</td>
                 <td>
                     <div class="btn-group">
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_track_show', { 'id': entity.id }) }}">show</a>
+                            <a href="{{ path('tankopedia_track_show', { 'slug': track.slug }) }}">show</a>
                         </button>
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_track_edit', { 'id': entity.id }) }}">edit</a>
+                            <a href="{{ path('tankopedia_track_edit', { 'slug': track.slug }) }}">edit</a>
                         </button>
                     </div>
                 </td>

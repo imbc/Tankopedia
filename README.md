@@ -34,7 +34,7 @@ TODO:
      - remove delete control (not needed)
      - remove new/update
      - refactor edit
-2. use DataGridBundle for each index template https://github.com/Abhoryo/APYDataGridBundle
+2. use DataGridBundle for tank index template https://github.com/Abhoryo/APYDataGridBundle
 3. use DataFixtures to allow to load all data regarding the tanks and modules
     - ~~tank~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
     - modules: engine, gun, radio, track, turret
