@@ -20,7 +20,6 @@ class Tier
     protected $id;
 
     /**
-     *
      * @ORM\Column(name="value", type="string")
      */
     protected $value;
