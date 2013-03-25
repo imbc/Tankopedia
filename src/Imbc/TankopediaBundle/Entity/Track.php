@@ -232,6 +232,11 @@ class Track extends Module
         return $this->tier;
     }
 
+    public function geSlug()
+    {
+        return $this->slug;
+    }
+
     public function __toString()
     {
         return $this->name;
