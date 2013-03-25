@@ -30,7 +30,7 @@ The virtual host could be ```imbc.local``` or ```localost/imbc/``` if you have s
 
 TODO:
 
-1. refactor the controller for ~~Engine~~, ~~Gun~~, ~~Nationality~~, ~~Tank~~, ~~TankClass~~, ~~Tier~~, Track and Turret
+1. refactor the controller for ~~Engine~~, ~~Gun~~, ~~Nationality~~, ~~Tank~~, ~~TankClass~~, ~~Tier~~, ~~Track~~ and Turret
      - remove delete control (not needed)
      - remove new/update
      - refactor edit
