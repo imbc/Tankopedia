@@ -36,7 +36,6 @@ class Radio extends Module
         {
             $this->tanks->add( $tank );
         }
-
         return $this;
     }
 

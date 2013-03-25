@@ -54,9 +54,9 @@ class Tank
     protected $nationality;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="tanks")
+     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\TankModule", mappedBy="tanks")
      */
-    protected $modules;
+    protected $tankmodules;
 
     /**
      * @ORM\Column(name="premium", type="boolean", nullable=true)
@@ -116,11 +116,19 @@ class Tank
     protected $matchMaker;
 
     /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=true)
+     *
+     * @GRID\Column(visible=false)
+     */
+    private $slug;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
-        $this->modules = new ArrayCollection();
+        $this->tankmodules = new ArrayCollection();
         $this->parents = new ArrayCollection();
         $this->children = new ArrayCollection();
         $this->matchMaker = new ArrayCollection();
@@ -160,36 +168,13 @@ class Tank
     }
 
     /**
-     * Add modules
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
-     * @return Tank
-     */
-    public function addModule( \Imbc\TankopediaBundle\Entity\Module $modules )
-    {
-        $this->modules[] = $modules;
-
-        return $this;
-    }
-
-    /**
-     * Remove modules
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
-     */
-    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $modules )
-    {
-        $this->modules->removeElement( $modules );
-    }
-
-    /**
      * Get modules
      *
      * @return \Doctrine\Common\Collections\Collection
      */
     public function getModules()
     {
-        return $this->modules;
+        return $this->tankmodules;
     }
 
     /**

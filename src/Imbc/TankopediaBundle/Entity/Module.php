@@ -39,11 +39,6 @@ abstract class Module
     private $nationality;
 
     /**
-     * @ORM\Column(name="xp", type="integer")
-     */
-    protected $xp;
-
-    /**
      * @ORM\Column(name="cost", type="integer")
      */
     protected $cost;
@@ -54,17 +49,16 @@ abstract class Module
     protected $weight;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="modules")
-     * @ORM\JoinTable(name="top__tanks_modules")
+     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\TankModule", mappedBy="modules")
      **/
-    protected $tanks;
+    protected $tankmodules;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->tanks = new ArrayCollection();
+        $this->tankmodules = new ArrayCollection();
     }
 
     /**
@@ -147,29 +141,6 @@ abstract class Module
     }
 
     /**
-     * Set xp
-     *
-     * @param integer $xp
-     * @return Module
-     */
-    public function setXp( $xp )
-    {
-        $this->xp = $xp;
-
-        return $this;
-    }
-
-    /**
-     * Get xp
-     *
-     * @return integer
-     */
-    public function getXp()
-    {
-        return $this->xp;
-    }
-
-    /**
      * Set cost
      *
      * @param integer $cost
@@ -216,41 +187,19 @@ abstract class Module
     }
 
     /**
-     * Add tank
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
-     * @return Module
-     */
-    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
-    {
-        if( !$this->tanks->contains( $tank ))
-        {
-            $this->tanks->add( $tank );
-        }
-
-        return $this;
-    }
-
-    /**
-     * Remove tanks
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
-     */
-    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
-    {
-        if( $this->tanks->contains( $tank ))
-        {
-            $this->tanks->removeElement($tank);
-        }
-    }
-
-    /**
      * Get tanks
      *
      * @return \Doctrine\Common\Collections\Collection
      */
     public function getTanks()
     {
-        return $this->tanks;
+        $tanks = new ArrayCollection();
+
+        foreach( $this->tankmodules as $tank )
+        {
+            $tanks[] = $tank->getModules();
+        }
+
+        return $tanks;
     }
 }
