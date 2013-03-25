@@ -56,7 +56,7 @@ abstract class Module
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="modules")
-     * @ORM\JoinTable(name="top__tanks_modules")
+     * @ORM\JoinTable(name="top__tank_module")
      **/
     protected $tanks;
 
