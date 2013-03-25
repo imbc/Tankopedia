@@ -20,25 +20,25 @@
             </tr>
         </thead>
         <tbody>
-        {% for entity in entities %}
+        {% for turret in turrets %}
             <tr>
-                <td>{{ entity.tier }}</td>
-                <td>{{ entity.name }}</td>
-                <td>{{ entity.xp }}</td>
-                <td>{{ entity.cost }}</td>
-                <td>{{ entity.weight }}</td>
-                <td>{{ entity.armorFront }}</td>
-                <td>{{ entity.armorSide }}</td>
-                <td>{{ entity.armorRear }}</td>
-                <td>{{ entity.traverseSpeed }}</td>
-                <td>{{ entity.viewRange }}</td>
+                <td>{{ turret.tier }}</td>
+                <td>{{ turret.name }}</td>
+                <td>{{ turret.xp }}</td>
+                <td>{{ turret.cost }}</td>
+                <td>{{ turret.weight }}</td>
+                <td>{{ turret.armorFront }}</td>
+                <td>{{ turret.armorSide }}</td>
+                <td>{{ turret.armorRear }}</td>
+                <td>{{ turret.traverseSpeed }}</td>
+                <td>{{ turret.viewRange }}</td>
                 <td>
                     <div class="btn-group">
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_turret_show', { 'id': entity.id }) }}">show</a>
+                            <a href="{{ path('tankopedia_turret_show', { 'slug': turret.slug }) }}">show</a>
                         </button>
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_turret_edit', { 'id': entity.id }) }}">edit</a>
+                            <a href="{{ path('tankopedia_turret_edit', { 'slug': turret.slug }) }}">edit</a>
                         </button>
                     </div>
                 </td>

@@ -53,12 +53,15 @@ class Turret extends Module
     /**
      * Add guns
      *
-     * @param \Imbc\TankopediaBundle\Entity\Gun $guns
+     * @param \Imbc\TankopediaBundle\Entity\Gun $gun
      * @return Turret
      */
-    public function addGun(\Imbc\TankopediaBundle\Entity\Gun $guns)
+    public function addGun( \Imbc\TankopediaBundle\Entity\Gun $gun )
     {
-        $this->guns[] = $guns;
+        if( !$this->guns->contains( $gun ))
+        {
+            $this->guns->add( $gun );
+        }
 
         return $this;
     }
@@ -66,11 +69,14 @@ class Turret extends Module
     /**
      * Remove guns
      *
-     * @param \Imbc\TankopediaBundle\Entity\Gun $guns
+     * @param \Imbc\TankopediaBundle\Entity\Gun $gun
      */
-    public function removeGun(\Imbc\TankopediaBundle\Entity\Gun $guns)
+    public function removeGun( \Imbc\TankopediaBundle\Entity\Gun $gun )
     {
-        $this->guns->removeElement($guns);
+        if( $this->guns->contains( $gun ))
+        {
+            $this->guns->removeElement($gun);
+        }
     }
 
     /**
@@ -354,6 +360,11 @@ class Turret extends Module
     public function getTier()
     {
         return $this->tier;
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**

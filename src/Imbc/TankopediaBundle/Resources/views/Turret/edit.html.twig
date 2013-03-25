@@ -1,28 +1,123 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Turret edit</h1>
 
-    <form action="{{ path('tankopedia_turret_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-        <input type="hidden" name="_method" value="PUT" />
-        {{ form_widget(edit_form) }}
-        <p>
-            <button type="submit">Edit</button>
-        </p>
-    </form>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('tankopedia_turret') }}">
-            Back to the list
+{% if edit == true %}
+    <h1>Editing existing Radio</h1>
+{% else %}
+    <h1>New Radio</h1>
+{% endif %}
+<form class="form-horizontal" method="POST" action="">
+    <div class="form-horizontal">
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.name ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.name ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.xp ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.xp ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.cost ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.cost ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.weight ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.weight ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.armorFront ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.armorFront ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.armorSide ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.armorSide ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.armorRear ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.armorRear ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.traverseSpeed ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.traverseSpeed ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.viewRange ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.viewRange ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.tier ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.tier ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.nationality ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.nationality ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.tanks ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.tanks ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( turret.guns ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( turret.guns ) }}
+            </div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <a type="submit" class="btn btn-mini">
+            <i class="icon-ok"></i> Save Form
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_turret_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+    </div>
+</form>
 {% endblock %}

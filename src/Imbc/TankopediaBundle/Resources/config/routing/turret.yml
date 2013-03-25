@@ -3,28 +3,13 @@ tankopedia_turret:
     defaults: { _controller: "ImbcTankopediaBundle:Turret:index" }
 
 tankopedia_turret_show:
-    pattern:  /{id}/show
+    pattern:  /{slug}/show
     defaults: { _controller: "ImbcTankopediaBundle:Turret:show" }
 
 tankopedia_turret_new:
     pattern:  /new
-    defaults: { _controller: "ImbcTankopediaBundle:Turret:new" }
-
-tankopedia_turret_create:
-    pattern:  /create
-    defaults: { _controller: "ImbcTankopediaBundle:Turret:create" }
-    requirements: { _method: post }
-
-tankopedia_turret_edit:
-    pattern:  /{id}/edit
     defaults: { _controller: "ImbcTankopediaBundle:Turret:edit" }
 
-tankopedia_turret_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "ImbcTankopediaBundle:Turret:update" }
-    requirements: { _method: post|put }
-
-tankopedia_turret_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "ImbcTankopediaBundle:Turret:delete" }
-    requirements: { _method: post|delete }
+tankopedia_turret_edit:
+    pattern:  /{slug}/edit
+    defaults: { _controller: "ImbcTankopediaBundle:Turret:edit" }
