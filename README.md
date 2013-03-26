@@ -38,8 +38,8 @@ TODO:
 3. use DataFixtures to allow to load all data regarding the tanks and modules
     - ~~tank~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
     - modules: engine, gun, radio, track, turret
-4. continue with equipment
-5. investigate need for hull entity (on tanks) with properties armor (front, side, rear)
+4. create join entity TankModule to hold ManyToOne and OneToMany relatioship AND xp value
+5. add hull details on Tank with properties armor (front, side, rear)
 6. add battle range for tanks
     - ~~add to Tank/Tier entity~~
     - add ref to DataFixtures
