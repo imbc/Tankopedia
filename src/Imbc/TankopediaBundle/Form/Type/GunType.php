@@ -14,9 +14,6 @@ class GunType extends AbstractType
         $builder->add( 'name', 'text', array(
                     'label' => 'Name',
         ));
-        $builder->add( 'xp', 'number', array(
-                    'label' => 'XP Required',
-        ));
         $builder->add( 'cost' );
         $builder->add( 'weight' );
         $builder->add( 'ammoCapacity', 'number', array(

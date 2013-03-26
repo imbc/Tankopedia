@@ -14,10 +14,6 @@
                 <td>{{ track.name }}</td>
             </tr>
             <tr>
-                <th>Xp</th>
-                <td>{{ track.xp }}</td>
-            </tr>
-            <tr>
                 <th>Cost</th>
                 <td>{{ track.cost }}</td>
             </tr>
@@ -46,13 +42,6 @@
         <a href="{{ path('tankopedia_track_edit', { 'slug': track.slug }) }}">
             Edit
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_track_delete', { 'slug': track.slug }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
     </li>
 </ul>
 {% endblock %}

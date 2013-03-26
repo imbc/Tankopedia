@@ -156,29 +156,6 @@ class Turret extends Module
     }
 
     /**
-     * Set xp
-     *
-     * @param integer $xp
-     * @return Turret
-     */
-    public function setXp( $xp )
-    {
-        $this->xp = $xp;
-
-        return $this;
-    }
-
-    /**
-     * Get xp
-     *
-     * @return integer
-     */
-    public function getXp()
-    {
-        return $this->xp;
-    }
-
-    /**
      * Set cost
      *
      * @param integer $cost

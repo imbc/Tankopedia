@@ -14,7 +14,6 @@ class EngineType extends AbstractType
         $builder->add( 'name', 'text', array(
             'label' => 'Name',
         ));
-        $builder->add( 'xp' );
         $builder->add( 'cost' );
         $builder->add( 'weight' );
         $builder->add( 'power' );

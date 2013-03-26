@@ -9,9 +9,6 @@
     <a class="btn btn-mini" href="{{ path('tankopedia_engine_edit', { 'id': engine.id }) }}">
         <i class="icon-wrench"></i> Edit
     </a>
-    <a class="btn btn-mini" href="#">
-        <i class="icon-trash"></i> Delete
-    </a>
 </div>
 
 <table class="table table-condensed table-hover table-striped record_properties">
@@ -23,10 +20,6 @@
         <tr>
             <th>Name</th>
             <td>{{ engine.name }}</td>
-        </tr>
-        <tr>
-            <th>Xp</th>
-            <td>{{ engine.xp }}</td>
         </tr>
         <tr>
             <th>Cost</th>

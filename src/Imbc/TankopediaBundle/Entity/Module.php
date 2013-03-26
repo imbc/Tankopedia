@@ -40,11 +40,6 @@ abstract class Module
     private $nationality;
 
     /**
-     * @ORM\Column(name="xp", type="integer")
-     */
-    protected $xp;
-
-    /**
      * @ORM\Column(name="cost", type="integer")
      */
     protected $cost;
@@ -151,29 +146,6 @@ abstract class Module
     public function getTier()
     {
         return $this->tier;
-    }
-
-    /**
-     * Set xp
-     *
-     * @param integer $xp
-     * @return Module
-     */
-    public function setXp( $xp )
-    {
-        $this->xp = $xp;
-
-        return $this;
-    }
-
-    /**
-     * Get xp
-     *
-     * @return integer
-     */
-    public function getXp()
-    {
-        return $this->xp;
     }
 
     /**

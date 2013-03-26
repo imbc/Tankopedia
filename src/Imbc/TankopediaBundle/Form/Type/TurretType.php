@@ -14,9 +14,6 @@ class TurretType extends AbstractType
         $builder->add( 'name', 'text', array(
             'label' => 'Name',
         ));
-        $builder->add( 'xp', 'number', array(
-            'label' => 'Experience Needed',
-        ));
         $builder->add( 'cost', 'number', array(
             'label' => 'Cost',
         ));
