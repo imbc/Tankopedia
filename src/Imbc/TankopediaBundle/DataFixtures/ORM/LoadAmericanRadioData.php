@@ -35,7 +35,7 @@ class LoadAmericanRadioData extends AbstractFixture implements OrderedFixtureInt
         $radio1 = new Radio();
         $radio1->setTier( $tier1 );
         $radio1->setNationality( $nationality );
-        $radio1->setName( "Signal Flags" );
+        $radio1->setName( 'Signal Flags' );
         $radio1->setSignalRange( 90 );
         $radio1->setCost( 0 );
         $radio1->setWeight( 1 );
@@ -46,7 +46,7 @@ class LoadAmericanRadioData extends AbstractFixture implements OrderedFixtureInt
         $radio2 = new Radio();
         $radio2->setTier( $tier2 );
         $radio2->setNationality( $nationality );
-        $radio2->setName( "SCR 193" );
+        $radio2->setName( 'SCR 193' );
         $radio2->setSignalRange( 325 );
         $radio2->setCost( 0 );
         $radio2->setWeight( 80 );
