@@ -37,11 +37,17 @@ TODO:
 2. use DataGridBundle for tank index template https://github.com/Abhoryo/APYDataGridBundle
 3. use DataFixtures to allow to load all data regarding the tanks and modules
     - ~~tank~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
-    - modules: engine, gun, radio, track, turret
+    - modules:
+        * engine: usa, ussr, uk, fr, de, cn
+        * gun: usa, ussr, uk, fr, de, cn
+        * radio: ~~usa~~, ~~ussr~~, uk, fr, de, cn
+        * track: usa, ussr, uk, fr, de, cn
+        * turret: usa, ussr, uk, fr, de, cn
 4. create join entity TankModule to hold ManyToOne and OneToMany relatioship AND xp value
 5. add hull details on Tank with properties armor (front, side, rear)
 6. add battle range for tanks
-    - ~~add to Tank/Tier entity~~
+    - create new branch
+    - add to Tank/Tier entity
     - add ref to DataFixtures
     - display on indexes
 7. display some chart for the different indexes using d3 http://d3js.org/
@@ -64,3 +70,4 @@ TODO:
 15. add breadcrumb using white-october bundle https://github.com/whiteoctober/BreadcrumbsBundle
 16. add gedmo slug behaviour https://github.com/l3pp4rd/DoctrineExtensions && https://github.com/stof/StofDoctrineExtensionsBundle
     - ~~Tank~~, ~~TankClass~~, ~~Nationality~~, Tier, Modules
+17. investigate use of Graph data structure for the 'tech tree' (parents-children on tank entity); might have to use OrientDB
