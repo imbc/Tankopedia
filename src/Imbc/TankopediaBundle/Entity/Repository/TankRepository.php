@@ -78,12 +78,11 @@ class TankRepository extends EntityRepository
         $qb->setParameter( 'nationality', $nationality );
 
         return $qb->getQuery()->getResult();
-
     }
 
     /**
      * Get tanks by Nationality and TankClass
-     * 
+     *
      * @param \Imbc\TankopediaBundle\Entity\Nationality $nationality
      * @param \Imbc\TankopediaBundle\Entity\TankClass $class
      * @return \Doctrine\Common\Collections\ArrayCollection
@@ -99,6 +98,22 @@ class TankRepository extends EntityRepository
         $qb->setParameter( 'nationality', $nationality );
 
         return $qb->getQuery()->getResult();
+    }
 
+    /**
+     * Get Tank by name
+     *
+     * @param string $name
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
+    public function getTankByName( $name )
+    {
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select( 't' );
+        $qb->from( 'ImbcTankopediaBundle:Tank', 't' );
+        $qb->add( 'where', $qb->expr()->eq( 't.name', ':name' ));
+        $qb->setParameter( 'name', $name );
+
+        return $qb->getQuery()->getSingleResult();
     }
 }

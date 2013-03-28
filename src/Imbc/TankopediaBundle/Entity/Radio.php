@@ -26,12 +26,15 @@ class Radio extends Module
     /**
      * Add tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      * @return Radio
      */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->add( $tank );
+        }
 
         return $this;
     }
@@ -39,11 +42,14 @@ class Radio extends Module
     /**
      * Remove tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks->removeElement($tanks);
+        if( $this->tanks->contains( $tank ))
+        {
+            $this->tanks->removeElement( $tank );
+        }
     }
 
     /**
