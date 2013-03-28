@@ -83,7 +83,7 @@ abstract class Module
      * Set name
      *
      * @param string $name
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setName( $name )
     {
@@ -106,7 +106,7 @@ abstract class Module
      * Set nationality
      *
      * @param \Imbc\TankopediaBundle\Entity\Nationality $nationality
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setNationality( \Imbc\TankopediaBundle\Entity\Nationality $nationality = null )
     {
@@ -129,7 +129,7 @@ abstract class Module
      * Set tier
      *
      * @param \Imbc\TankopediaBundle\Entity\Nationality $nationality
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setTier( \Imbc\TankopediaBundle\Entity\Tier $tier )
     {
@@ -152,7 +152,7 @@ abstract class Module
      * Set cost
      *
      * @param integer $cost
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setCost( $cost )
     {
@@ -175,7 +175,7 @@ abstract class Module
      * Set weight
      *
      * @param integer $weight
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setWeight( $weight )
     {
@@ -198,9 +198,9 @@ abstract class Module
      * Add tanks
      *
      * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
     {
         $this->tanks[] = $tanks;
 
@@ -212,7 +212,7 @@ abstract class Module
      *
      * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
      */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
     {
         $this->tanks->removeElement($tanks);
     }

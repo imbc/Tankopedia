@@ -235,39 +235,153 @@ class LoadAmericanRadioData extends AbstractFixture implements OrderedFixtureInt
         $radio12->addTank( $tankRepo->getTankByName( 'M6A2E1' ));
         $manager->persist( $radio12 );
 
-        //"IX","USA","British Wireless set N19","570 m",0,"110 kg","Ram-II"
+//        "IX","USA","British Wireless set N19","570 m",0,"110 kg","Ram-II"
         $radio13 = new Radio();
+        $radio13->setTier( $tier9 );
+        $radio13->setNationality( $nationality );
+        $radio13->setName( 'British Wireless set N19' );
+        $radio13->setSignalRange( 570 );
+        $radio13->setCost( 0 );
+        $radio13->setWeight( 110 );
+        $radio13->addTank( $tankRepo->getTankByName( 'Ram-II' ));
+        $manager->persist( $radio13 );
 
-        //"IX","USA","SCR 506","615 m",33600,"110 kg","T57, M2 Light Tank,
-        //T2 Medium Tank, T82, M2 Medium Tank, M3 Stuart, M37, T40, M3 Lee,
-        //M5 Stuart, M7 Priest, M4 Sherman, M10 Wolverine, M24 Chaffee,
-        //M36 Jackson, M4A3E8 Sherman, M4A3E2 Sherman Jumbo, T25 AT, T20, T25/2"
+//        "IX","USA","SCR 506","615 m",33600,"110 kg","T57, M2 Light Tank,
+//        T2 Medium Tank, T82, M2 Medium Tank, M3 Stuart, M37, T40, M3 Lee,
+//        M5 Stuart, M7 Priest, M4 Sherman, M10 Wolverine, M24 Chaffee,
+//        M36 Jackson, M4A3E8 Sherman, M4A3E2 Sherman Jumbo, T25 AT, T20, T25/2"
         $radio14 = new Radio();
+        $radio14->setTier( $tier9 );
+        $radio14->setNationality( $nationality );
+        $radio14->setName( 'SCR 506' );
+        $radio14->setSignalRange( 615 );
+        $radio14->setCost( 33600 );
+        $radio14->setWeight( 110 );
+        $radio14->addTank( $tankRepo->getTankByName( 'T57' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M2 Light Tank' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'T2 Medium Tank' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'T82' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M2 Medium Tank' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M3 Stuart' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M37' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'T40' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M3 Lee' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M5 Stuart' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M7 Priest' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M4 Sherman' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M10 Wolverine' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M24 Chaffee' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M36 Jackson' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M4A3E8 Sherman' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'M4A3E2 Sherman Jumbo' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'T25 AT' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'T20' ));
+        $radio14->addTank( $tankRepo->getTankByName( 'T25/2' ));
+        $manager->persist( $radio14 );
 
-        //"X","USA","AN/GRC-7","745 m",54000,"120 kg","T71, T54E1, M103"
+//        "X","USA","AN/GRC-7","745 m",54000,"120 kg","T71, T54E1, M103"
         $radio15 = new Radio();
+        $radio15->setTier( $tier10 );
+        $radio15->setNationality( $nationality );
+        $radio15->setName( 'AN/GRC-7' );
+        $radio15->setSignalRange( 745 );
+        $radio15->setCost( 54000 );
+        $radio15->setWeight( 120 );
+        $radio15->addTank( $tankRepo->getTankByName( 'T71' ));
+        $radio15->addTank( $tankRepo->getTankByName( 'T54E1' ));
+        $radio15->addTank( $tankRepo->getTankByName( 'M103' ));
+        $manager->persist( $radio15 );
 
-        //"X","USA","AN/VRC-7","745 m",54000,"100 kg","M48A1"
+//        "X","USA","AN/VRC-7","745 m",54000,"100 kg","M48A1"
         $radio16 = new Radio();
+        $radio16->setTier( $tier10 );
+        $radio16->setNationality( $nationality );
+        $radio16->setName( 'AN/VRC-7' );
+        $radio16->setSignalRange( 745 );
+        $radio16->setCost( 54000 );
+        $radio16->setWeight( 100 );
+        $radio16->addTank( $tankRepo->getTankByName( 'M48A1' ));
+        $manager->persist( $radio16 );
 
-        //"X","USA","AN/VRC-3","745 m",51600,"160 kg","T57 Heavy Tank,
-        //T110E5, T110E4, T110E3"
+//        "X","USA","AN/VRC-3","745 m",51600,"160 kg","T57 Heavy Tank,
+//        T110E5, T110E4, T110E3"
         $radio17 = new Radio();
+        $radio17->setTier( $tier10 );
+        $radio17->setNationality( $nationality );
+        $radio17->setName( 'AN/VRC-3' );
+        $radio17->setSignalRange( 745 );
+        $radio17->setCost( 51600 );
+        $radio17->setWeight( 160 );
+        $radio17->addTank( $tankRepo->getTankByName( 'T57 Heavy Tank' ));
+        $radio17->addTank( $tankRepo->getTankByName( 'T110E5' ));
+        $radio17->addTank( $tankRepo->getTankByName( 'T110E4' ));
+        $radio17->addTank( $tankRepo->getTankByName( 'T110E3' ));
+        $manager->persist( $radio17 );
 
-        //"X","USA","SCR 528","745 m",54000,"80 kg","M7 Priest, M7,
-        //M24 Chaffee, T29, M26 Pershing, T28, T32, T28 Prototype,
-        //M46 Patton, T95, T30"
+//        "X","USA","SCR 528","745 m",54000,"80 kg","M7 Priest, M7,
+//        M24 Chaffee, T29, M26 Pershing, T28, T32, T28 Prototype,
+//        M46 Patton, T95, T30"
         $radio18 = new Radio();
+        $radio18->setTier( $tier10 );
+        $radio18->setNationality( $nationality );
+        $radio18->setName( 'SCR 528' );
+        $radio18->setSignalRange( 745 );
+        $radio18->setCost( 54000 );
+        $radio18->setWeight( 80 );
+        $radio18->addTank( $tankRepo->getTankByName( 'M7 Priest' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'M7' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'M24 Chaffee' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'T29' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'M26 Pershing' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'T28' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'T32' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'T28 Prototype' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'M46 Patton' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'T95' ));
+        $radio18->addTank( $tankRepo->getTankByName( 'T30' ));
+        $manager->persist( $radio18 );
 
-        //"X","USA","SCR 528A1","745 m",0,"91 kg","T26E4 Super Pershing, T34"
+//        "X","USA","SCR 528A1","745 m",0,"91 kg","T26E4 Super Pershing, T34"
         $radio19 = new Radio();
+        $radio19->setTier( $tier10 );
+        $radio19->setNationality( $nationality );
+        $radio19->setName( 'SCR 528A1' );
+        $radio19->setSignalRange( 745 );
+        $radio19->setCost( 0 );
+        $radio19->setWeight( 91 );
+        $radio19->addTank( $tankRepo->getTankByName( 'T26E4 Super Pershing' ));
+        $radio19->addTank( $tankRepo->getTankByName( 'T34' ));
+        $manager->persist( $radio19 );
 
-        //"X","USA","SCR 528F","750 m",54000,"80 kg","T21"
+//        "X","USA","SCR 528F","750 m",54000,"80 kg","T21"
         $radio20 = new Radio();
+        $radio20->setTier( $tier10 );
+        $radio20->setNationality( $nationality );
+        $radio20->setName( 'SCR 528F' );
+        $radio20->setSignalRange( 750 );
+        $radio20->setCost( 54000 );
+        $radio20->setWeight( 80 );
+        $radio20->addTank( $tankRepo->getTankByName( 'T21' ));
+        $manager->persist( $radio20 );
 
-        //"X","USA","SCR 619","750 m",54000,"80 kg","T69, M8A1, T49, M41,
-        //M18 Hellcat, M12, M40/M43, T92"
+//        "X","USA","SCR 619","750 m",54000,"80 kg","T69, M8A1, T49, M41,
+//        M18 Hellcat, M12, M40/M43, T92"
         $radio21 = new Radio();
+        $radio21->setTier( $tier10 );
+        $radio21->setNationality( $nationality );
+        $radio21->setName( 'SCR 619' );
+        $radio21->setSignalRange( 750 );
+        $radio21->setCost( 54000 );
+        $radio21->setWeight( 80 );
+        $radio21->addTank( $tankRepo->getTankByName( 'T69' ));
+        $radio21->addTank( $tankRepo->getTankByName( 'M8A1' ));
+        $radio21->addTank( $tankRepo->getTankByName( 'T49' ));
+        $radio21->addTank( $tankRepo->getTankByName( 'M41' ));
+        $radio21->addTank( $tankRepo->getTankByName( 'M18 Hellcat' ));
+        $radio21->addTank( $tankRepo->getTankByName( 'M12' ));
+        $radio21->addTank( $tankRepo->getTankByName( 'M40/M43' ));
+        $radio21->addTank( $tankRepo->getTankByName( 'T92' ));
+        $manager->persist( $radio21 );
 
         $manager->flush();
     }
