@@ -38,7 +38,7 @@ TODO:
 3. use DataFixtures to allow to load all data regarding the tanks and modules (need to retrieve info for 8.4 tank update)
     - ~~tank~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
     - modules:
-        * engine: ~~usa~~, ussr, uk, fr, de, cn
+        * engine: ~~usa~~, ~~ussr~~, uk, fr, de, cn
         * gun: usa, ussr, uk, fr, de, cn
         * ~~radio~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
         * track: usa, ussr, uk, fr, de, cn

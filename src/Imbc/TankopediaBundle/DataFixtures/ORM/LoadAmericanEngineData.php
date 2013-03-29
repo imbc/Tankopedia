@@ -820,7 +820,7 @@ class LoadAmericanEngineData extends AbstractFixture implements OrderedFixtureIn
         $engine55 = new Engine();
         $engine55->setTier( $tier10 );
         $engine55->setNationality( $nationality );
-        $engine55->setName( ',Wright G200 M781 C9GC5' );
+        $engine55->setName( 'Wright G200 M781 C9GC5' );
         $engine55->setPower( 960 );
         $engine55->setFireChance( 20 );
         $engine55->setFuelType( $gazoline );
