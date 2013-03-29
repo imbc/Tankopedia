@@ -59,7 +59,7 @@ abstract class Module
      * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(length=128, unique=true)
      */
-    private $slug;
+    protected $slug;
 
     /**
      * Constructor
@@ -197,12 +197,15 @@ abstract class Module
     /**
      * Add tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      * @return \Imbc\TankopediaBundle\Entity\Module
      */
-    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->add( $tank );
+        }
 
         return $this;
     }
@@ -210,11 +213,14 @@ abstract class Module
     /**
      * Remove tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      */
-    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks->removeElement($tanks);
+        if( $this->tanks->contains( $tank ))
+        {
+            $this->tanks->removeElement($tank);
+        }
     }
 
     /**
@@ -225,5 +231,18 @@ abstract class Module
     public function getTanks()
     {
         return $this->tanks;
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * __toString overriding method
+     */
+    public function __toString()
+    {
+        return $this->name;
     }
 }

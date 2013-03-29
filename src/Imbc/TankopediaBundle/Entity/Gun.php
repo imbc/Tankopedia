@@ -92,14 +92,6 @@ class Gun extends Module
     private $turret;
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->tanks = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
      * Set requiresTurret
      *
      * @param boolean $requiresTurret
@@ -128,7 +120,7 @@ class Gun extends Module
      * @param \Imbc\TankopediaBundle\Entity\Turret $turret
      * @return Gun
      */
-    public function setTurret(\Imbc\TankopediaBundle\Entity\Turret $turret = null)
+    public function setTurret( \Imbc\TankopediaBundle\Entity\Turret $turret = null )
     {
         $this->turret = $turret;
 
@@ -143,118 +135,6 @@ class Gun extends Module
     public function getTurret()
     {
         return $this->turret;
-    }
-
-    /**
-     * Add tanks
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     * @return Gun
-     */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
-    {
-        $this->tanks[] = $tanks;
-
-        return $this;
-    }
-
-    /**
-     * Remove tanks
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
-    {
-        $this->tanks->removeElement($tanks);
-    }
-
-    /**
-     * Get tanks
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getTanks()
-    {
-        return $this->tanks;
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     * @return Gun
-     */
-    public function setName( $name )
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Set cost
-     *
-     * @param integer $cost
-     * @return Gun
-     */
-    public function setCost( $cost )
-    {
-        $this->cost = $cost;
-
-        return $this;
-    }
-
-    /**
-     * Get cost
-     *
-     * @return integer
-     */
-    public function getCost()
-    {
-        return $this->cost;
-    }
-
-    /**
-     * Set weight
-     *
-     * @param integer $weight
-     * @return Gun
-     */
-    public function setWeight( $weight )
-    {
-        $this->weight = $weight;
-
-        return $this;
-    }
-
-    /**
-     * Get weight
-     *
-     * @return integer
-     */
-    public function getWeight()
-    {
-        return $this->weight;
     }
 
     /**
@@ -577,36 +457,5 @@ class Gun extends Module
     public function getElevationMax()
     {
         return $this->elevationMax;
-    }
-
-    /**
-     * Set tier
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tier $tier
-     * @return Gun
-     */
-    public function setTier( \Imbc\TankopediaBundle\Entity\Tier $tier = null )
-    {
-        $this->tier = $tier;
-
-        return $this;
-    }
-
-    /**
-     * Get tier
-     *
-     * @return \Imbc\TankopediaBundle\Entity\Tier
-     */
-    public function getTier()
-    {
-        return $this->tier;
-    }
-
-    /**
-     * __toString overriding method
-     */
-    public function __toString()
-    {
-        return $this->name;
     }
 }

@@ -114,12 +114,15 @@ class Nationality
     /**
      * Add modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      * @return Nationality
      */
-    public function addModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function addModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules[] = $modules;
+        if( !$this->modules->contains( $module ))
+        {
+            $this->modules->add( $module );
+        }
 
         return $this;
     }
@@ -127,11 +130,15 @@ class Nationality
     /**
      * Remove modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      */
-    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules->removeElement($modules);
+        if( !$this->modules->contains( $module ))
+        {
+            $this->modules->removeElement( $module );
+        }
+
     }
 
     /**
@@ -147,12 +154,15 @@ class Nationality
     /**
      * Add tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      * @return Nationality
      */
-    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->add( $tank );
+        }
 
         return $this;
     }
@@ -160,11 +170,14 @@ class Nationality
     /**
      * Remove tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      */
-    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks->removeElement($tanks);
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->removeElement( $tank );
+        }
     }
 
     /**
