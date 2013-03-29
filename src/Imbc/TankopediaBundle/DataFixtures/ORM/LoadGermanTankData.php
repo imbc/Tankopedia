@@ -499,7 +499,7 @@ class LoadGermanTankData extends AbstractFixture implements OrderedFixtureInterf
         $manager->persist( $td7 );
 
         $td8 = new Tank();
-        $td8->setName( '8.8 cm PaK 43 Jagdtige' );
+        $td8->setName( '8.8 cm PaK 43 Jagdtiger' );
         $td8->setTier( $tier8 );
         $td8->setNationality( $nationality );
         $td8->setClass( $td );

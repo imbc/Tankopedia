@@ -35,12 +35,12 @@ TODO:
      - remove new/update
      - refactor edit
 2. use DataGridBundle for tank index template https://github.com/Abhoryo/APYDataGridBundle
-3. use DataFixtures to allow to load all data regarding the tanks and modules
+3. use DataFixtures to allow to load all data regarding the tanks and modules (need to retrieve info for 8.4 tank update)
     - ~~tank~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
     - modules:
         * engine: usa, ussr, uk, fr, de, cn
         * gun: usa, ussr, uk, fr, de, cn
-        * radio: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, de, cn
+        * ~~radio~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
         * track: usa, ussr, uk, fr, de, cn
         * turret: usa, ussr, uk, fr, de, cn
 4. create join entity TankModule to hold ManyToOne and OneToMany relatioship AND xp value
