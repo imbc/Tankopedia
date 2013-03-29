@@ -56,6 +56,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio2->addTank( $tankRepo->getTankByName( 'Cruiser Mk. I' ));
         $radio2->addTank( $tankRepo->getTankByName( 'Vickers Medium Mk. II' ));
         $radio2->addTank( $tankRepo->getTankByName( 'Vickers Medium Mk. III' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Universal Carrier 2-pdr' ));
         $manager->persist( $radio2 );
 
 //        "III","UK","WS No. 11","350 m",600,"40 kg","Cruiser Mk. I, 
@@ -76,6 +77,9 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio3->addTank( $tankRepo->getTankByName( 'Cruiser Mk. IV' ));
         $radio3->addTank( $tankRepo->getTankByName( 'Valentine' ));
         $radio3->addTank( $tankRepo->getTankByName( 'Matilda' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Universal Carrier 2-pdr' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Valentine AT' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Alecto' ));
         $manager->persist( $radio3 );
 
 //        "V","UK","WS No. 9","375 m",3600,"40 kg","Cruiser Mk. I, 
@@ -99,6 +103,9 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio4->addTank( $tankRepo->getTankByName( 'Valentine' ));
         $radio4->addTank( $tankRepo->getTankByName( 'Matilda' ));
         $radio4->addTank( $tankRepo->getTankByName( 'Crusader' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Universal Carrier 2-pdr' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Valentine AT' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Alecto' ));
         $manager->persist( $radio4 );
 
 //        "VI","UK","WS No. 19 Mk. I","400 m",15000,"40 kg","Cruiser Mk. III, 
@@ -121,6 +128,11 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio5->addTank( $tankRepo->getTankByName( 'Crusader' ));
         $radio5->addTank( $tankRepo->getTankByName( 'Cromwell' ));
         $radio5->addTank( $tankRepo->getTankByName( 'Churchill VII' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Valentine AT' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Alecto' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 2' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Churchill Gun Carrier' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 8' ));
         $manager->persist( $radio5 );
 
 //        "VII","UK","WS No. 19 Mk. II","450 m",21000,"40 kg","Cruiser Mk. III, 
@@ -145,6 +157,12 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio6->addTank( $tankRepo->getTankByName( 'Churchill VII' ));
         $radio6->addTank( $tankRepo->getTankByName( 'Comet' ));
         $radio6->addTank( $tankRepo->getTankByName( 'Black Prince' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Valentine AT' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Alecto' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 2' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Churchill Gun Carrier' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 8' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 7' ));
         $manager->persist( $radio6 );
 
 //        "VIII","UK","WS No. 19 Mk. III","550 m",22000,"40 kg","Covenanter, 
@@ -168,6 +186,12 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio7->addTank( $tankRepo->getTankByName( 'Caernarvon' ));
         $radio7->addTank( $tankRepo->getTankByName( 'Centurion Mk. 7/1' ));
         $radio7->addTank( $tankRepo->getTankByName( 'Conqueror' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 2' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Churchill Gun Carrier' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 8' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 7' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 15' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Tortoise' ));
         $manager->persist( $radio7 );
 
 //        "VIII","UK","WS No. 22","700 m",25000,"40 kg","Comet, Black Prince, 
@@ -185,6 +209,9 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio8->addTank( $tankRepo->getTankByName( 'Caernarvon' ));
         $radio8->addTank( $tankRepo->getTankByName( 'Centurion Mk. 7/1' ));
         $radio8->addTank( $tankRepo->getTankByName( 'Conqueror' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 7' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 15' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Tortoise' ));
         $manager->persist( $radio8 );
 
 //        "IX","UK","WS No. 19 Special","570 m",0,"40 kg","Matilda Black Prince, 
@@ -214,6 +241,8 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio10->addTank( $tankRepo->getTankByName( 'Caernarvon' ));
         $radio10->addTank( $tankRepo->getTankByName( 'Centurion Mk. 7/1' ));
         $radio10->addTank( $tankRepo->getTankByName( 'Conqueror' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'AT 15' ));
+        $radio2->addTank( $tankRepo->getTankByName( 'Tortoise' ));
         $manager->persist( $radio10 );
 
 //        "X","UK","SR C45","750 m",45600,"40 kg","FV4202, FV215b"
@@ -226,6 +255,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio11->setWeight( 40 );
         $radio11->addTank( $tankRepo->getTankByName( 'FV4202' ));
         $radio11->addTank( $tankRepo->getTankByName( 'FV215b' ));
+        $radio11->addTank( $tankRepo->getTankByName( 'FV215b (183)' ));
         $manager->persist( $radio11 );
 
         $manager->flush();
