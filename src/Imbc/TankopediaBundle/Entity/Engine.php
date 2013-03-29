@@ -30,6 +30,19 @@ class Engine extends Module
     private $fuelType;
 
     /**
+     * Constructor
+     */
+    public function __construct( $name = null, $tier = null, $nationality = null,
+            $cost = null, $weight = null, $power = null, $fireChance = null,
+            $fuelType = null )
+    {
+        parent::__construct( $name, $tier, $nationality, $cost, $weight );
+        if( $power !== null ) $this->power = $power;
+        if( $fireChance !== null ) $this->fireChance = $fireChance;
+        if( $fuelType !== null ) $this->fuelType = $fuelType;
+    }
+
+    /**
      * Set power
      *
      * @param integer $power

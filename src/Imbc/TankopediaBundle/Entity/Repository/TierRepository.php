@@ -12,4 +12,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class TierRepository extends EntityRepository
 {
+    public function getTierByValue( $value )
+    {
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select( 't' );
+        $qb->from( 'ImbcTankopediaBundle:Tier', 't' );
+        $qb->add( 'where', $qb->expr()->eq( 't.value', ':value' ));
+        $qb->setParameter( 'value', $value );
+
+        return $qb->getQuery()->getSingleResult();
+    }
+
 }

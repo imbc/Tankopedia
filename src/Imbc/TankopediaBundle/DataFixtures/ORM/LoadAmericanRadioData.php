@@ -32,37 +32,19 @@ class LoadAmericanRadioData extends AbstractFixture implements OrderedFixtureInt
         $nationality = $this->getReference( 'usa' );
 
 //        "I","USA","Signal Flags","90 m",0,"1 kg","T1 Cunningham"
-        $radio1 = new Radio();
-        $radio1->setTier( $tier1 );
-        $radio1->setNationality( $nationality );
-        $radio1->setName( 'Signal Flags' );
-        $radio1->setSignalRange( 90 );
-        $radio1->setCost( 0 );
-        $radio1->setWeight( 1 );
+        $radio1 = new Radio( 'Signal Flags', $tier1, $nationality, 0, 1, 90 );
         $radio1->addTank( $tankRepo->getTankByName( 'T1 Cunningham' ));
         $manager->persist( $radio1 );
 
 //        "II","USA","SCR 193","325 m",0,"80 kg","T1E6"
-        $radio2 = new Radio();
-        $radio2->setTier( $tier2 );
-        $radio2->setNationality( $nationality );
-        $radio2->setName( 'SCR 193' );
-        $radio2->setSignalRange( 325 );
-        $radio2->setCost( 0 );
-        $radio2->setWeight( 80 );
+        $radio2 = new Radio( 'SCR 193', $tier2, $nationality, 0, 80, 325 );
         $radio2->addTank( $tankRepo->getTankByName( 'T1E6' ));
         $manager->persist( $radio2 );
 
 //        "II","USA","SCR 200","265 m",180,"40 kg",
 //        "T1 Cunningham, T18, T57, M2 Light Tank, T2 Medium Tank, T82,
 //        M2 Medium Tank, M3 Stuart, T40, M3 Lee"
-        $radio3 = new Radio();
-        $radio3->setTier( $tier2 );
-        $radio3->setNationality( $nationality );
-        $radio3->setName( 'SCR 200' );
-        $radio3->setSignalRange( 265 );
-        $radio3->setCost( 180 );
-        $radio3->setWeight( 40 );
+        $radio3 = new Radio( 'SCR 200', $tier2, $nationality, 180, 40, 265 );
         $radio3->addTank( $tankRepo->getTankByName( 'T1 Cunningham' ));
         $radio3->addTank( $tankRepo->getTankByName( 'T18' ));
         $radio3->addTank( $tankRepo->getTankByName( 'T57' ));
@@ -77,13 +59,7 @@ class LoadAmericanRadioData extends AbstractFixture implements OrderedFixtureInt
 
 //        "IV","USA","SCR 210","325 m",1980,"80 kg","T18, T57, M2 Light Tank,
 //        T2 Medium Tank, T82, M2 Medium Tank, M3 Stuart, M37, T40, M3 Lee"
-        $radio4 = new Radio();
-        $radio4->setTier( $tier4 );
-        $radio4->setNationality( $nationality );
-        $radio4->setName( 'SCR 210' );
-        $radio4->setSignalRange( 325 );
-        $radio4->setCost( 1980 );
-        $radio4->setWeight( 80 );
+        $radio4 = new Radio( 'SCR 210', $tier4, $nationality, 1980, 80, 325 );
         $radio4->addTank( $tankRepo->getTankByName( 'T18' ));
         $radio4->addTank( $tankRepo->getTankByName( 'T57' ));
         $radio4->addTank( $tankRepo->getTankByName( 'M2 Light Tank' ));
@@ -97,13 +73,7 @@ class LoadAmericanRadioData extends AbstractFixture implements OrderedFixtureInt
         $manager->persist( $radio4 );
 
 //        "IV","USA","SCR 210","325 m",0,"80 kg","T2 Light Tank, MTLS-1G14"
-        $radio5 = new Radio();
-        $radio5->setTier( $tier4 );
-        $radio5->setNationality( $nationality );
-        $radio5->setName( 'SCR 210' );
-        $radio5->setSignalRange( 325 );
-        $radio5->setCost( 0 );
-        $radio5->setWeight( 80 );
+        $radio5 = new Radio( 'SCR 210', $tier4, $nationality, 0, 80, 325 );
         $radio5->addTank( $tankRepo->getTankByName( 'T2 Light Tank' )); //gold
         $radio5->addTank( $tankRepo->getTankByName( 'MTLS-1G14' )); //gold
         $manager->persist( $radio5 );

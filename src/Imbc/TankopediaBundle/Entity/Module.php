@@ -64,8 +64,15 @@ abstract class Module
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $name = null, $tier = null, $nationality = null,
+            $cost = null, $weight = null )
     {
+        if( $name !== null ) $this->name = $name;
+        if( $tier !== null ) $this->tier = $tier;
+        if( $nationality !== null ) $this->nationality = $nationality;
+        if( $cost !== null ) $this->cost = $cost;
+        if( $weight !== null ) $this->weight = $weight;
+
         $this->tanks = new ArrayCollection();
     }
 

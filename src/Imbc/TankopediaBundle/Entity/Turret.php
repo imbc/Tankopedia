@@ -3,7 +3,6 @@
 namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TurretRepository")
@@ -40,6 +39,21 @@ class Turret extends Module
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Gun", mappedBy="turret")
      */
     protected $guns;
+
+    /**
+     * Constructor
+     */
+    public function __construct( $name = null, $tier = null, $nationality = null,
+            $cost = null, $weight = null, $armorFront = null, $armorSide = null,
+            $armorRear = null, $traverseSpeed = null, $viewRange = null )
+    {
+        parent::__construct( $name, $tier, $nationality, $cost, $weight );
+        if( $armorFront !== null ) $this->armorFront = $armorFront;
+        if( $armorSide !== null ) $this->armorSide = $armorSide;
+        if( $armorRear !== null ) $this->armorRear = $armorRear;
+        if( $traverseSpeed !== null ) $this->traverseSpeed = $traverseSpeed;
+        if( $viewRange !== null ) $this->viewRange = $viewRange;
+    }
 
     /**
      * Add guns

@@ -21,6 +21,17 @@ class Track extends Module
     private $traverseSpeed;
 
     /**
+     * Constructor
+     */
+    public function __construct( $name = null, $tier = null, $nationality = null,
+            $cost = null, $weight = null, $loadLimit = null, $traverseSpeed = null )
+    {
+        parent::__construct( $name, $tier, $nationality, $cost, $weight );
+        if( $loadLimit !== null ) $this->loadLimit = $loadLimit;
+        if( $traverseSpeed !== null ) $this->traverseSpeed = $traverseSpeed;
+    }
+
+    /**
      * Set loadLimit
      *
      * @param integer $loadLimit

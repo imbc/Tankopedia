@@ -92,6 +92,36 @@ class Gun extends Module
     private $turret;
 
     /**
+     * Constructor
+     */
+    public function __construct( $name = null, $tier = null, $nationality = null,
+            $cost = null, $weight = null, $ammoCapacity = null, $damageAP = null,
+            $damageAPCR = null, $damageHE = null, $penetrationAP = null,
+            $penetrationAPCR = null, $penetrationHE = null, $shell = null,
+            $rateOfFire = null, $accuratie = null, $aimTimeMin = null,
+            $aimTimeMax = null, $elevationMin = null, $elevationMax = null,
+            $requiresTurret = null, $turret = null )
+    {
+        parent::__construct( $name, $tier, $nationality, $cost, $weight );
+        if( $ammoCapacity !== null ) $this->ammoCapacity = $ammoCapacity;
+        if( $damageAP !== null ) $this->damageAP = $damageAP;
+        if( $damageAPCR !== null ) $this->damageAPCR = $damageAPCR;
+        if( $damageHE !== null ) $this->damageHE = $damageHE;
+        if( $penetrationAP !== null ) $this->penetrationAP = $penetrationAP;
+        if( $penetrationAPCR !== null ) $this->penetrationAPCR = $penetrationAPCR;
+        if( $penetrationHE !== null ) $this->penetrationHE = $penetrationHE;
+        if( $shell !== null ) $this->shell = $shell;
+        if( $rateOfFire !== null ) $this->rateOfFire = $rateOfFire;
+        if( $accuratie !== null ) $this->accuratie = $accuratie;
+        if( $aimTimeMin !== null ) $this->aimTimeMin = $aimTimeMin;
+        if( $aimTimeMax !== null ) $this->aimTimeMax = $aimTimeMax;
+        if( $elevationMin !== null ) $this->elevationMin = $elevationMin;
+        if( $elevationMax !== null ) $this->elevationMax = $elevationMax;
+        if( $requiresTurret !== null ) $this->requiresTurret = $requiresTurret;
+        if( $turret !== null ) $this->turret = $turret;
+    }
+
+    /**
      * Set requiresTurret
      *
      * @param boolean $requiresTurret

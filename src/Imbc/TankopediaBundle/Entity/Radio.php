@@ -16,6 +16,16 @@ class Radio extends Module
     private $signalRange;
 
     /**
+     * Constructor
+     */
+    public function __construct( $name = null, $tier = null, $nationality = null,
+            $cost = null, $weight = null, $signalRange = null )
+    {
+        parent::__construct( $name, $tier, $nationality, $cost, $weight );
+        if( $signalRange !== null ) $this->signalRange = $signalRange;
+    }
+
+    /**
      * Set signalRange
      *
      * @param integer $signalRange
