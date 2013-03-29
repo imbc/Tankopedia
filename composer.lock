@@ -8,12 +8,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Abhoryo/APYDataGridBundle.git",
-                "reference": "dddefb50fa04fc0a7fc166a4f5421ca33a6e7fc4"
+                "reference": "58c7258dd311722e66e2219f9d76a7f9666ca242"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Abhoryo/APYDataGridBundle/zipball/dddefb50fa04fc0a7fc166a4f5421ca33a6e7fc4",
-                "reference": "dddefb50fa04fc0a7fc166a4f5421ca33a6e7fc4",
+                "url": "https://api.github.com/repos/Abhoryo/APYDataGridBundle/zipball/58c7258dd311722e66e2219f9d76a7f9666ca242",
+                "reference": "58c7258dd311722e66e2219f9d76a7f9666ca242",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "datagrid",
                 "symfony"
             ],
-            "time": "2013-03-20 08:51:54"
+            "time": "2013-03-25 09:36:07"
         },
         {
             "name": "doctrine/annotations",
@@ -2445,7 +2445,9 @@
             "time": "2013-02-09 18:21:53"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+
+    ],
     "aliases": [
 
     ],
@@ -2461,5 +2463,11 @@
         "apy/datagrid-bundle": 20,
         "elao/web-profiler-extra-bundle": 20,
         "leaseweb/version-information-bundle": 20
-    }
+    },
+    "platform": {
+        "php": ">=5.3.3"
+    },
+    "platform-dev": [
+
+    ]
 }
