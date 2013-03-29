@@ -16,6 +16,7 @@ class LoadRadioData extends AbstractFixture implements OrderedFixtureInterface
 
     public function load( ObjectManager $manager )
     {
+//        $tankRepo = $manager->getRepository( 'ImbcTankopediaBundle:Tank' );
         //ref for tier
 //        $tier1 = $this->getReference( 'tier-1' );
 //        $tier2 = $this->getReference( 'tier-2' );
@@ -35,6 +36,15 @@ class LoadRadioData extends AbstractFixture implements OrderedFixtureInterface
 //        $ussr = $this->getReference( 'ussr' );
 //        $france = $this->getReference( 'fr' );
 
+//        $radio1 = new Radio();
+//        $radio1->setTier(  );
+//        $radio1->setNationality( $nationality );
+//        $radio1->setName( '' );
+//        $radio1->setSignalRange(  );
+//        $radio1->setCost(  );
+//        $radio1->setWeight(  );
+//        $radio1->addTank( $tankRepo->getTankByName( '' ));
+//        $manager->persist( $radio1 );
     }
 //
 //    "I","USA","Signal Flags","90 m",0,"1 kg","T1 Cunningham"

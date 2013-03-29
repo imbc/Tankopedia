@@ -106,7 +106,7 @@ class LoadBritishTankData extends AbstractFixture implements OrderedFixtureInter
          * medium tanks
          */
         $mt1 = new Tank();
-        $mt1->setName( 'Vickers Medium Mk. ' );
+        $mt1->setName( 'Vickers Medium Mk. I' );
         $mt1->setTier( $tier1 );
         $mt1->setNationality( $nationality );
         $mt1->setClass( $medium );

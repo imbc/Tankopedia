@@ -16,6 +16,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 
     public function load( ObjectManager $manager )
     {
+        $tankRepo = $manager->getRepository( 'ImbcTankopediaBundle:Tank' );
         //ref for tier
         $tier1 = $this->getReference( 'tier-1' );
         $tier2 = $this->getReference( 'tier-2' );
@@ -73,7 +74,8 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio3->addTank( $tankRepo->getTankByName( 'Cruiser Mk. II' ));
         $radio3->addTank( $tankRepo->getTankByName( 'Vickers Medium Mk. III' ));
         $radio3->addTank( $tankRepo->getTankByName( 'Cruiser Mk. IV' ));
-        $radio3->addTank( $tankRepo->getTankByName( 'Valentine, Matilda' ));
+        $radio3->addTank( $tankRepo->getTankByName( 'Valentine' ));
+        $radio3->addTank( $tankRepo->getTankByName( 'Matilda' ));
         $manager->persist( $radio3 );
 
 //        "V","UK","WS No. 9","375 m",3600,"40 kg","Cruiser Mk. I, 
@@ -214,7 +216,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $radio10->addTank( $tankRepo->getTankByName( 'Conqueror' ));
         $manager->persist( $radio10 );
 
-        //"X","UK","SR C45","750 m",45600,"40 kg","FV4202, FV215b"
+//        "X","UK","SR C45","750 m",45600,"40 kg","FV4202, FV215b"
         $radio11 = new Radio();
         $radio11->setTier( $tier10 );
         $radio11->setNationality( $nationality );
