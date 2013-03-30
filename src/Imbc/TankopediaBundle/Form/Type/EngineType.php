@@ -31,9 +31,35 @@ class EngineType extends AbstractType
             'empty_value' => 'Pick Fuel Type',
             'empty_data'  => null
         ));
-        $builder->add( 'tier' );
-        $builder->add( 'nationality' );
-        $builder->add( 'tanks' );
+        $builder->add( 'tier', 'entity', array(
+            'empty_data'    => null,
+            'empty_value'   => '(Choose a Tier)',
+            'required'      => true,
+            'class'         => 'ImbcTankopediaBundle:Tier',
+            'property'      => 'name',
+            'label'         => 'Tier',
+//            'expanded'      => true,
+        ));
+        $builder->add( 'nationality', 'entity', array(
+            'empty_data'    => null,
+            'empty_value'   => '(Choose a Nationality)',
+            'required'      => true,
+            'class'         => 'ImbcTankopediaBundle:Nationality',
+            'property'      => 'name',
+            'label'         => 'Nationality',
+//            'expanded'      => true,
+        ));
+        $builder->add( 'tanks', 'entity', array(
+//            'empty_data'    => null,
+//            'empty_value'   => '(Choose one or more Tanks)',
+            'required'      => false,
+            'class'         => 'ImbcTankopediaBundle:Tank',
+            'property'      => 'name',
+            'label'         => 'Tank Compatible',
+            'multiple'      => true,
+//            'group_by'      => 'type'
+//            'expanded'      => true,
+        ));
     }
 
     public function setDefaultOptions( OptionsResolverInterface $resolver )

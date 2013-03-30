@@ -20,9 +20,9 @@ class Tier
     protected $id;
 
     /**
-     * @ORM\Column(name="value", type="string")
+     * @ORM\Column(name="name", type="string")
      */
-    protected $value;
+    protected $name;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="tier")
@@ -40,7 +40,7 @@ class Tier
     protected $matchMaker;
 
     /**
-     * @Gedmo\Slug(fields={"value"})
+     * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(length=128, unique=true)
      */
     protected $slug;
@@ -48,8 +48,9 @@ class Tier
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $name = null )
     {
+        if( $name !== null ) $this->name = $name;
         $this->modules = new ArrayCollection();
         $this->tanks = new ArrayCollection();
         $this->matchMaker = new ArrayCollection();
@@ -66,26 +67,26 @@ class Tier
     }
 
     /**
-     * Set value
+     * Set name
      *
-     * @param string $value
+     * @param string $name
      * @return Tier
      */
-    public function setValue( $value )
+    public function setName( $name )
     {
-        $this->value = $value;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get value
+     * Get name
      *
      * @return string
      */
-    public function getValue()
+    public function getName()
     {
-        return $this->value;
+        return $this->name;
     }
 
     /**
@@ -185,8 +186,13 @@ class Tier
         return $this->slug;
     }
 
+    /**
+     * __toString overriding method
+     *
+     * @return string
+     */
     public function __toString()
     {
-        return (string)$this->value;
+        return $this->name;
     }
 }

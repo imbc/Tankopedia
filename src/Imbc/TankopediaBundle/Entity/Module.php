@@ -240,6 +240,11 @@ abstract class Module
         return $this->tanks;
     }
 
+    /**
+     * Get the Slug
+     *
+     * @return string
+     */
     public function getSlug()
     {
         return $this->slug;

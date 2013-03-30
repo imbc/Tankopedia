@@ -48,8 +48,10 @@ class Nationality
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $abbreviation = null, $name = null )
     {
+        if( $abbreviation !== null ) $this->abreviation = $abbreviation;
+        if( $name !== null ) $this->name = $name;
         $this->modules = new ArrayCollection();
         $this->tanks = new ArrayCollection();
     }

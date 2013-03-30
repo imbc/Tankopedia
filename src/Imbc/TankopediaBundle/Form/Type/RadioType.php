@@ -28,7 +28,7 @@ class RadioType extends AbstractType
             'empty_value'   => '(Choose a Tier)',
             'required'      => true,
             'class'         => 'ImbcTankopediaBundle:Tier',
-            'property'      => 'value',
+            'property'      => 'name',
             'label'         => 'Tier',
 //            'expanded'      => true,
         ));

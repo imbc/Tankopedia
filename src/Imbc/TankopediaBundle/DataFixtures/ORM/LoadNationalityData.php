@@ -16,39 +16,27 @@ class LoadNationalityData extends AbstractFixture implements OrderedFixtureInter
 
     public function load( ObjectManager $manager )
     {
-        $usa = new Nationality();
-        $usa->setAbreviation( 'USA' );
-        $usa->setName( 'United States' );
+        $usa = new Nationality( 'USA', 'United States' );
 //        $usa->setImage( 'img/nations/usa.png' );
         $manager->persist( $usa );
 
-        $ussr = new Nationality();
-        $ussr->setAbreviation( 'USSR' );
-        $ussr->setName( 'Soviet Union' );
+        $ussr = new Nationality( 'USSR', 'Soviet Union' );
 //        $ussr->setImage( 'img/nations/ussr.png' );
         $manager->persist( $ussr );
 
-        $uk = new Nationality();
-        $uk->setAbreviation( 'UK' );
-        $uk->setName( 'Great Britain' );
+        $uk = new Nationality( 'UK','Great Britain'  );
 //        $uk->setImage( 'img/nations/uk.png' );
         $manager->persist( $uk );
 
-        $fr = new Nationality();
-        $fr->setAbreviation( 'FR' );
-        $fr->setName( 'France' );
+        $fr = new Nationality( 'FR', 'France' );
 //        $fr->setImage( 'img/nations/france.png' );
         $manager->persist( $fr );
 
-        $de = new Nationality();
-        $de->setAbreviation( 'DE' );
-        $de->setName( 'Germany' );
+        $de = new Nationality( 'DE', 'Germany' );
 //        $de->setImage( 'img/nations/germany.png' );
         $manager->persist( $de );
 
-        $cn = new Nationality();
-        $cn->setAbreviation( 'CN' );
-        $cn->setName( 'China' );
+        $cn = new Nationality( 'CN', 'China' );
 //        $cn->setImage( 'img/nations/china.png' );
         $manager->persist( $cn );
 
