@@ -33,25 +33,13 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 
 //        "Tier","Nation","Name","Signal Range","Price","Weight","Compatibility"
 //        "I","UK","Signal flags","90 m",0,"1 kg","Vickers Medium Mk. I"
-        $radio1 = new Radio();
-        $radio1->setTier( $tier1 );
-        $radio1->setNationality( $nationality );
-        $radio1->setName( 'Signal flags' );
-        $radio1->setSignalRange( 90 );
-        $radio1->setCost( 0 );
-        $radio1->setWeight( 1 );
+        $radio1 = new Radio( 'Signal flags', $tier1, $nationality, 0, 1, 90 );
         $radio1->addTank( $tankRepo->getTankByName( 'Vickers Medium Mk. I' ));
         $manager->persist( $radio1 );
 
 //        "II","UK","WS No. 14","250 m",180,"40 kg","Vickers Medium Mk. I, 
 //        Cruiser Mk. I, Vickers Medium Mk. II, Vickers Medium Mk. III"
-        $radio2 = new Radio();
-        $radio2->setTier( $tier2 );
-        $radio2->setNationality( $nationality );
-        $radio2->setName( 'WS No. 14' );
-        $radio2->setSignalRange( 250 );
-        $radio2->setCost( 180 );
-        $radio2->setWeight( 40 );
+        $radio2 = new Radio( 'WS No. 14', $tier2, $nationality, 180, 40, 250 );
         $radio2->addTank( $tankRepo->getTankByName( 'Vickers Medium Mk. I' ));
         $radio2->addTank( $tankRepo->getTankByName( 'Cruiser Mk. I' ));
         $radio2->addTank( $tankRepo->getTankByName( 'Vickers Medium Mk. II' ));
@@ -62,13 +50,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 //        "III","UK","WS No. 11","350 m",600,"40 kg","Cruiser Mk. I, 
 //         Vickers Medium Mk. II, Cruiser Mk. III, Cruiser Mk. II, 
 //         Vickers Medium Mk. III, Cruiser Mk. IV, Valentine, Matilda"
-        $radio3 = new Radio();
-        $radio3->setTier( $tier3 );
-        $radio3->setNationality( $nationality );
-        $radio3->setName( 'WS No. 11' );
-        $radio3->setSignalRange( 350 );
-        $radio3->setCost( 600 );
-        $radio3->setWeight( 40 );
+        $radio3 = new Radio( 'WS No. 11', $tier3, $nationality, 600, 40, 350 );
         $radio3->addTank( $tankRepo->getTankByName( 'Cruiser Mk. I' ));
         $radio3->addTank( $tankRepo->getTankByName( 'Vickers Medium Mk. II' ));
         $radio3->addTank( $tankRepo->getTankByName( 'Cruiser Mk. III' ));
@@ -86,13 +68,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 //         Vickers Medium Mk. II, Cruiser Mk. III, Cruiser Mk. II, 
 //         Vickers Medium Mk. III, Cruiser Mk. IV, Covenanter, Valentine, 
 //         Matilda, Crusader"
-        $radio4 = new Radio();
-        $radio4->setTier( $tier5 );
-        $radio4->setNationality( $nationality );
-        $radio4->setName( 'WS No. 9' );
-        $radio4->setSignalRange( 375 );
-        $radio4->setCost( 3600 );
-        $radio4->setWeight( 40 );
+        $radio4 = new Radio( 'WS No. 9', $tier5, $nationality, 3600, 40, 375 );
         $radio4->addTank( $tankRepo->getTankByName( 'Cruiser Mk. I' ));
         $radio4->addTank( $tankRepo->getTankByName( 'Vickers Medium Mk. II' ));
         $radio4->addTank( $tankRepo->getTankByName( 'Cruiser Mk. III' ));
@@ -111,13 +87,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 //        "VI","UK","WS No. 19 Mk. I","400 m",15000,"40 kg","Cruiser Mk. III, 
 //         Cruiser Mk. II, Cruiser Mk. IV, Covenanter, Valentine, Matilda, 
 //         Churchill I, Crusader, Cromwell, Churchill VII"
-        $radio5 = new Radio();
-        $radio5->setTier( $tier6 );
-        $radio5->setNationality( $nationality );
-        $radio5->setName( '"WS No. 19 Mk. I' );
-        $radio5->setSignalRange( 400 );
-        $radio5->setCost( 15000 );
-        $radio5->setWeight( 40 );
+        $radio5 = new Radio( 'WS No. 19 Mk. I', $tier6, $nationality, 15000, 40, 400 );
         $radio5->addTank( $tankRepo->getTankByName( 'Cruiser Mk. III' ));
         $radio5->addTank( $tankRepo->getTankByName( 'Cruiser Mk. II' ));
         $radio5->addTank( $tankRepo->getTankByName( 'Cruiser Mk. IV' ));
@@ -138,13 +108,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 //        "VII","UK","WS No. 19 Mk. II","450 m",21000,"40 kg","Cruiser Mk. III, 
 //         Cruiser Mk. II, Cruiser Mk. IV, Covenanter, Valentine, Matilda, 
 //         Churchill I, Crusader, Cromwell, Churchill VII, Comet, Black Prince"
-        $radio6 = new Radio();
-        $radio6->setTier( $tier7 );
-        $radio6->setNationality( $nationality );
-        $radio6->setName( 'WS No. 19 Mk. II' );
-        $radio6->setSignalRange( 450 );
-        $radio6->setCost( 21000 );
-        $radio6->setWeight( 40 );
+        $radio6 = new Radio( 'WS No. 19 Mk. II', $tier7, $nationality, 21000, 40, 450 );
         $radio6->addTank( $tankRepo->getTankByName( 'Cruiser Mk. III' ));
         $radio6->addTank( $tankRepo->getTankByName( 'Cruiser Mk. II' ));
         $radio6->addTank( $tankRepo->getTankByName( 'Cruiser Mk. IV' ));
@@ -168,13 +132,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 //        "VIII","UK","WS No. 19 Mk. III","550 m",22000,"40 kg","Covenanter, 
 //         Churchill I, Crusader, Cromwell, Churchill VII, Comet, Black Prince, 
 //         Centurion Mk. I, Caernarvon, Centurion Mk. 7/1, Conqueror"
-        $radio7 = new Radio();
-        $radio7->setTier( $tier8 );
-        $radio7->setNationality( $nationality );
-        $radio7->setName( 'WS No. 19 Mk. III' );
-        $radio7->setSignalRange( 550 );
-        $radio7->setCost( 22000 );
-        $radio7->setWeight( 40 );
+        $radio7 = new Radio( 'WS No. 19 Mk. III', $tier8, $nationality, 22000, 40, 550 );
         $radio7->addTank( $tankRepo->getTankByName( 'Covenanter' ));
         $radio7->addTank( $tankRepo->getTankByName( 'Churchill I' ));
         $radio7->addTank( $tankRepo->getTankByName( 'Crusader' ));
@@ -196,13 +154,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 
 //        "VIII","UK","WS No. 22","700 m",25000,"40 kg","Comet, Black Prince, 
 //         Centurion Mk. I, Caernarvon, Centurion Mk. 7/1, Conqueror"
-        $radio8 = new Radio();
-        $radio8->setTier( $tier8 );
-        $radio8->setNationality( $nationality );
-        $radio8->setName( 'WS No. 22' );
-        $radio8->setSignalRange( 700 );
-        $radio8->setCost( 25000 );
-        $radio8->setWeight( 40 );
+        $radio8 = new Radio( 'WS No. 22', $tier8, $nationality, 25000, 40, 700 );
         $radio8->addTank( $tankRepo->getTankByName( 'Comet' ));
         $radio8->addTank( $tankRepo->getTankByName( 'Black Prince' ));
         $radio8->addTank( $tankRepo->getTankByName( 'Centurion Mk. I' ));
@@ -216,13 +168,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 
 //        "IX","UK","WS No. 19 Special","570 m",0,"40 kg","Matilda Black Prince, 
 //         TOG II*, AT-15A"
-        $radio9 = new Radio();
-        $radio9->setTier( $tier9 );
-        $radio9->setNationality( $nationality );
-        $radio9->setName( 'WS No. 19 Special' );
-        $radio9->setSignalRange( 570 );
-        $radio9->setCost( 0 );
-        $radio9->setWeight( 40 );
+        $radio9 = new Radio( 'WS No. 19 Special', $tier9, $nationality, 0, 40, 570 );
         $radio9->addTank( $tankRepo->getTankByName( 'Matilda Black Prince' ));
         $radio9->addTank( $tankRepo->getTankByName( 'TOG II*' ));
         $radio9->addTank( $tankRepo->getTankByName( 'AT-15A' ));
@@ -230,13 +176,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
 
 //        "X","UK","SR C42","750 m",54000,"40 kg","Centurion Mk. I, Caernarvon, 
 //         Centurion Mk. 7/1, Conqueror"
-        $radio10 = new Radio();
-        $radio10->setTier( $tier10 );
-        $radio10->setNationality( $nationality );
-        $radio10->setName( 'SR C42' );
-        $radio10->setSignalRange( 750 );
-        $radio10->setCost( 54000 );
-        $radio10->setWeight( 40 );
+        $radio10 = new Radio( 'SR C42', $tier10, $nationality, 54000, 40, 750 );
         $radio10->addTank( $tankRepo->getTankByName( 'Centurion Mk. I' ));
         $radio10->addTank( $tankRepo->getTankByName( 'Caernarvon' ));
         $radio10->addTank( $tankRepo->getTankByName( 'Centurion Mk. 7/1' ));
@@ -246,13 +186,7 @@ class LoadBritishRadioData extends AbstractFixture implements OrderedFixtureInte
         $manager->persist( $radio10 );
 
 //        "X","UK","SR C45","750 m",45600,"40 kg","FV4202, FV215b"
-        $radio11 = new Radio();
-        $radio11->setTier( $tier10 );
-        $radio11->setNationality( $nationality );
-        $radio11->setName( 'SR C45' );
-        $radio11->setSignalRange( 750 );
-        $radio11->setCost( 45600 );
-        $radio11->setWeight( 40 );
+        $radio11 = new Radio( 'SR C45', $tier10, $nationality, 45600, 40, 750 );
         $radio11->addTank( $tankRepo->getTankByName( 'FV4202' ));
         $radio11->addTank( $tankRepo->getTankByName( 'FV215b' ));
         $radio11->addTank( $tankRepo->getTankByName( 'FV215b (183)' ));
