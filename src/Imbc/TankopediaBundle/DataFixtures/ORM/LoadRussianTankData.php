@@ -39,601 +39,211 @@ class LoadRussianTankData extends AbstractFixture implements OrderedFixtureInter
         /**
          * light tanks
          */
-        $lt1 = new Tank();
-        $lt1->setName( 'MS-1' );
-        $lt1->setTier( $tier1 );
-        $lt1->setNationality( $nationality );
-        $lt1->setClass( $light );
-        $lt1->setPremium( FALSE );
-        $lt1->setReward( FALSE );
+        $lt1 = new Tank( 'MS-1', $light, $tier1, $nationality, FALSE, FALSE );
         $manager->persist( $lt1 );
 
-        $lt2 = new Tank();
-        $lt2->setName( 'BT-2' );
-        $lt2->setTier( $tier2 );
-        $lt2->setNationality( $nationality );
-        $lt2->setClass( $light );
-        $lt2->setPremium( FALSE );
-        $lt2->setReward( FALSE );
+        $lt2 = new Tank( 'BT-2', $light, $tier2, $nationality, FALSE, FALSE );
         $manager->persist( $lt2 );
 
-        $lt3 = new Tank();
-        $lt3->setName( 'Tetrarch' );
-        $lt3->setTier( $tier2 );
-        $lt3->setNationality( $nationality );
-        $lt3->setClass( $light );
-        $lt3->setPremium( TRUE );
-        $lt3->setReward( TRUE );
+        $lt3 = new Tank( 'Tetrarch', $light, $tier2, $nationality, TRUE, TRUE );
         $manager->persist( $lt3 );
 
-        $lt4 = new Tank();
-        $lt4->setName( 'T-26' );
-        $lt4->setTier( $tier2 );
-        $lt4->setNationality( $nationality );
-        $lt4->setClass( $light );
-        $lt4->setPremium( FALSE );
-        $lt4->setReward( FALSE );
+        $lt4 = new Tank( 'T-26', $light, $tier2, $nationality, FALSE, FALSE );
         $manager->persist( $lt4 );
 
-        $lt5 = new Tank();
-        $lt5->setName( 'BT-7' );
-        $lt5->setTier( $tier3 );
-        $lt5->setNationality( $nationality );
-        $lt5->setClass( $light );
-        $lt5->setPremium( FALSE );
-        $lt5->setReward( FALSE );
+        $lt5 = new Tank( 'BT-7', $light, $tier3, $nationality, FALSE, FALSE );
         $manager->persist( $lt5 );
 
-        $lt6 = new Tank();
-        $lt6->setName( 'BT-SV' );
-        $lt6->setTier( $tier3 );
-        $lt6->setNationality( $nationality );
-        $lt6->setClass( $light );
-        $lt6->setPremium( TRUE );
-        $lt6->setReward( TRUE );
+        $lt6 = new Tank( 'BT-SV', $light, $tier3, $nationality, TRUE, TRUE );
         $manager->persist( $lt6 );
 
-        $lt7 = new Tank();
-        $lt7->setName( 'M3 Stuart Lend Lease' );
-        $lt7->setTier( $tier3 );
-        $lt7->setNationality( $nationality );
-        $lt7->setClass( $light );
-        $lt7->setPremium( TRUE );
-        $lt7->setReward( TRUE );
+        $lt7 = new Tank( 'M3 Stuart Lend Lease', $light, $tier3, $nationality, TRUE, TRUE );
         $manager->persist( $lt7 );
 
-        $lt8 = new Tank();
-        $lt8->setName( 'T-127' );
-        $lt8->setTier( $tier3 );
-        $lt8->setNationality( $nationality );
-        $lt8->setClass( $light );
-        $lt8->setPremium( TRUE );
-        $lt8->setReward( FALSE );
+        $lt8 = new Tank( 'T-127', $light, $tier3, $nationality, TRUE, FALSE );
         $manager->persist( $lt8 );
 
-        $lt9 = new Tank();
-        $lt9->setName( 'T-46' );
-        $lt9->setTier( $tier3 );
-        $lt9->setNationality( $nationality );
-        $lt9->setClass( $light );
-        $lt9->setPremium( FALSE );
-        $lt9->setReward( FALSE );
+        $lt9 = new Tank( 'T-46', $light, $tier3, $nationality, FALSE, FALSE );
         $manager->persist( $lt9 );
 
-        $lt10 = new Tank();
-        $lt10->setName( 'A-20' );
-        $lt10->setTier( $tier4 );
-        $lt10->setNationality( $nationality );
-        $lt10->setClass( $light );
-        $lt10->setPremium( FALSE );
-        $lt10->setReward( FALSE );
+        $lt10 = new Tank( 'A-20', $light, $tier4, $nationality, FALSE, FALSE );
         $manager->persist( $lt10 );
 
-        $lt11 = new Tank();
-        $lt11->setName( 'T-50' );
-        $lt11->setTier( $tier4 );
-        $lt11->setNationality( $nationality );
-        $lt11->setClass( $light );
-        $lt11->setPremium( FALSE );
-        $lt11->setReward( FALSE );
+        $lt11 = new Tank( 'T-50', $light, $tier4, $nationality, FALSE, FALSE );
         $manager->persist( $lt11 );
 
-        $lt12 = new Tank();
-        $lt12->setName( 'Valentine II' );
-        $lt12->setTier( $tier4 );
-        $lt12->setNationality( $nationality );
-        $lt12->setClass( $light );
-        $lt12->setPremium( TRUE );
-        $lt12->setReward( FALSE );
+        $lt12 = new Tank( 'Valentine II', $light, $tier4, $nationality, TRUE, FALSE );
         $manager->persist( $lt12 );
 
-        $lt13 = new Tank();
-        $lt13->setName( 'T-50-2' );
-        $lt13->setTier( $tier5 );
-        $lt13->setNationality( $nationality );
-        $lt13->setClass( $light );
-        $lt13->setPremium( FALSE );
-        $lt13->setReward( FALSE );
+        $lt13 = new Tank( 'T-50-2', $light, $tier5, $nationality, FALSE, FALSE );
         $manager->persist( $lt13 );
 
         /**
          * medium tanks
          */
-        $mt1 = new Tank();
-        $mt1->setName( 'A-32' );
-        $mt1->setTier( $tier4 );
-        $mt1->setNationality( $nationality );
-        $mt1->setClass( $medium );
-        $mt1->setPremium( TRUE );
-        $mt1->setReward( TRUE );
+        $mt1 = new Tank( 'A-32', $medium, $tier4, $nationality, TRUE, TRUE );
         $manager->persist( $mt1 );
 
-        $mt2 = new Tank();
-        $mt2->setName( 'T-28' );
-        $mt2->setTier( $tier4 );
-        $mt2->setNationality( $nationality );
-        $mt2->setClass( $medium );
-        $mt2->setPremium( FALSE );
-        $mt2->setReward( FALSE );
+        $mt2 = new Tank( 'T-28', $medium, $tier4, $nationality, FALSE, FALSE );
         $manager->persist( $mt2 );
 
-        $mt3 = new Tank();
-        $mt3->setName( 'Matilda IV' );
-        $mt3->setTier( $tier5 );
-        $mt3->setNationality( $nationality );
-        $mt3->setClass( $medium );
-        $mt3->setPremium( TRUE );
-        $mt3->setReward( FALSE );
+        $mt3 = new Tank( 'Matilda IV', $medium, $tier5, $nationality, TRUE, FALSE );
         $manager->persist( $mt3 );
 
-        $mt4 = new Tank();
-        $mt4->setName( 'T-34' );
-        $mt4->setTier( $tier5 );
-        $mt4->setNationality( $nationality );
-        $mt4->setClass( $medium );
-        $mt4->setPremium( FALSE );
-        $mt4->setReward( FALSE );
+        $mt4 = new Tank( 'T-34', $medium, $tier5, $nationality, FALSE, FALSE );
         $manager->persist( $mt4 );
 
-        $mt5 = new Tank();
-        $mt5->setName( 'T-34-85' );
-        $mt5->setTier( $tier6 );
-        $mt5->setNationality( $nationality );
-        $mt5->setClass( $medium );
-        $mt5->setPremium( FALSE );
-        $mt5->setReward( FALSE );
+        $mt5 = new Tank( 'T-34-85', $medium, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $mt5 );
 
-        $mt6 = new Tank();
-        $mt6->setName( 'KV-13' );
-        $mt6->setTier( $tier7 );
-        $mt6->setNationality( $nationality );
-        $mt6->setClass( $medium );
-        $mt6->setPremium( FALSE );
-        $mt6->setReward( FALSE );
+        $mt6 = new Tank( 'KV-13', $medium, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $mt6 );
 
-        $mt7 = new Tank();
-        $mt7->setName( 'T-43' );
-        $mt7->setTier( $tier7 );
-        $mt7->setNationality( $nationality );
-        $mt7->setClass( $medium );
-        $mt7->setPremium( FALSE );
-        $mt7->setReward( FALSE );
+        $mt7 = new Tank( 'T-43', $medium, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $mt7 );
 
-        $mt8 = new Tank();
-        $mt8->setName( 'T-44' );
-        $mt8->setTier( $tier8 );
-        $mt8->setNationality( $nationality );
-        $mt8->setClass( $medium );
-        $mt8->setPremium( FALSE );
-        $mt8->setReward( FALSE );
+        $mt8 = new Tank( 'T-44', $medium, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $mt8 );
 
-        $mt9 = new Tank();
-        $mt9->setName( 'T-54' );
-        $mt9->setTier( $tier9 );
-        $mt9->setNationality( $nationality );
-        $mt9->setClass( $medium );
-        $mt9->setPremium( FALSE );
-        $mt9->setReward( FALSE );
+        $mt9 = new Tank( 'T-54', $medium, $tier9, $nationality, FALSE, FALSE );
         $manager->persist( $mt9 );
 
-        $mt10 = new Tank();
-        $mt10->setName( 'T-62A' );
-        $mt10->setTier( $tier10 );
-        $mt10->setNationality( $nationality );
-        $mt10->setClass( $medium );
-        $mt10->setPremium( FALSE );
-        $mt10->setReward( FALSE );
+        $mt10 = new Tank( 'T-62A', $medium, $tier10, $nationality, FALSE, FALSE );
         $manager->persist( $mt10 );
 
         /**
          * heavy tanks
          */
-        $ht1 = new Tank();
-        $ht1->setName( 'Churchill III' );
-        $ht1->setTier( $tier5 );
-        $ht1->setNationality( $nationality );
-        $ht1->setClass( $heavy );
-        $ht1->setPremium( TRUE );
-        $ht1->setReward( FALSE );
+        $ht1 = new Tank( 'Churchill III', $heavy, $tier5, $nationality, TRUE, FALSE );
         $manager->persist( $ht1 );
 
-        $ht2 = new Tank();
-        $ht2->setName( 'KV' );
-        $ht2->setTier( $tier5 );
-        $ht2->setNationality( $nationality );
-        $ht2->setClass( $heavy );
-        $ht2->setPremium( TRUE );
-        $ht2->setReward( TRUE );
+        $ht2 = new Tank( 'KV', $heavy, $tier5, $nationality, TRUE, TRUE );
         $manager->persist( $ht2 );
 
-        $ht3 = new Tank();
-        $ht3->setName( 'KV-1' );
-        $ht3->setTier( $tier5 );
-        $ht3->setNationality( $nationality );
-        $ht3->setClass( $heavy );
-        $ht3->setPremium( FALSE );
-        $ht3->setReward( FALSE );
+        $ht3 = new Tank( 'KV-1', $heavy, $tier5, $nationality, FALSE, FALSE );
         $manager->persist( $ht3 );
 
-        $ht4 = new Tank();
-        $ht4->setName( 'KV-220' );
-        $ht4->setTier( $tier5 );
-        $ht4->setNationality( $nationality );
-        $ht4->setClass( $heavy );
-        $ht4->setPremium( TRUE );
-        $ht4->setReward( TRUE );
+        $ht4 = new Tank( 'KV-220', $heavy, $tier5, $nationality, TRUE, TRUE );
         $manager->persist( $ht4 );
 
-        $ht5 = new Tank();
-        $ht5->setName( 'KV-220 Beta-Test' );
-        $ht5->setTier( $tier5 );
-        $ht5->setNationality( $nationality );
-        $ht5->setClass( $heavy );
-        $ht5->setPremium( TRUE );
-        $ht5->setReward( TRUE );
+        $ht5 = new Tank( 'KV-220 Beta-Test', $heavy, $tier5, $nationality, TRUE, TRUE );
         $manager->persist( $ht5 );
 
-        $ht6 = new Tank();
-        $ht6->setName( 'KV-1S' );
-        $ht6->setTier( $tier6 );
-        $ht6->setNationality( $nationality );
-        $ht6->setClass( $heavy );
-        $ht6->setPremium( FALSE );
-        $ht6->setReward( FALSE );
+        $ht6 = new Tank( 'KV-1S', $heavy, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $ht6 );
 
-        $ht7 = new Tank();
-        $ht7->setName( 'KV-2' );
-        $ht7->setTier( $tier6 );
-        $ht7->setNationality( $nationality );
-        $ht7->setClass( $heavy );
-        $ht7->setPremium( FALSE );
-        $ht7->setReward( FALSE );
+        $ht7 = new Tank( 'KV-2', $heavy, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $ht7 );
 
-        $ht8 = new Tank();
-        $ht8->setName( 'T-150' );
-        $ht8->setTier( $tier6 );
-        $ht8->setNationality( $nationality );
-        $ht8->setClass( $heavy );
-        $ht8->setPremium( FALSE );
-        $ht8->setReward( FALSE );
+        $ht8 = new Tank( 'T-150', $heavy, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $ht8 );
 
-        $ht9 = new Tank();
-        $ht9->setName( 'IS' );
-        $ht9->setTier( $tier7 );
-        $ht9->setNationality( $nationality );
-        $ht9->setClass( $heavy );
-        $ht9->setPremium( FALSE );
-        $ht9->setReward( FALSE );
+        $ht9 = new Tank( 'IS', $heavy, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $ht9 );
 
-        $ht10 = new Tank();
-        $ht10->setName( 'KV-3' );
-        $ht10->setTier( $tier7 );
-        $ht10->setNationality( $nationality );
-        $ht10->setClass( $heavy );
-        $ht10->setPremium( FALSE );
-        $ht10->setReward( FALSE );
+        $ht10 = new Tank( 'KV-3', $heavy, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $ht10 );
 
-        $ht11 = new Tank();
-        $ht11->setName( 'IS-3' );
-        $ht11->setTier( $tier8 );
-        $ht11->setNationality( $nationality );
-        $ht11->setClass( $heavy );
-        $ht11->setPremium( FALSE );
-        $ht11->setReward( FALSE );
+        $ht11 = new Tank( 'IS-3', $heavy, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $ht11 );
 
-        $ht12 = new Tank();
-        $ht12->setName( 'IS-6' );
-        $ht12->setTier( $tier8 );
-        $ht12->setNationality( $nationality );
-        $ht12->setClass( $heavy );
-        $ht12->setPremium( TRUE );
-        $ht12->setReward( FALSE );
+        $ht12 = new Tank( 'IS-6', $heavy, $tier8, $nationality, TRUE, FALSE );
         $manager->persist( $ht12 );
 
-        $ht13 = new Tank();
-        $ht13->setName( 'KV-4' );
-        $ht13->setTier( $tier8 );
-        $ht13->setNationality( $nationality );
-        $ht13->setClass( $heavy );
-        $ht13->setPremium( FALSE );
-        $ht13->setReward( FALSE );
+        $ht13 = new Tank( 'KV-4', $heavy, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $ht13 );
 
-        $ht14 = new Tank();
-        $ht14->setName( 'KV-5' );
-        $ht14->setTier( $tier8 );
-        $ht14->setNationality( $nationality );
-        $ht14->setClass( $heavy );
-        $ht14->setPremium( TRUE );
-        $ht14->setReward( TRUE );
+        $ht14 = new Tank( 'KV-5', $heavy, $tier8, $nationality, TRUE, TRUE );
         $manager->persist( $ht14 );
 
-        $ht15 = new Tank();
-        $ht15->setName( 'IS-8' );
-        $ht15->setTier( $tier9 );
-        $ht15->setNationality( $nationality );
-        $ht15->setClass( $heavy );
-        $ht15->setPremium( FALSE );
-        $ht15->setReward( FALSE );
+        $ht15 = new Tank( 'IS-8', $heavy, $tier9, $nationality, FALSE, FALSE );
         $manager->persist( $ht15 );
 
-        $ht16 = new Tank();
-        $ht16->setName( 'ST-I' );
-        $ht16->setTier( $tier9 );
-        $ht16->setNationality( $nationality );
-        $ht16->setClass( $heavy );
-        $ht16->setPremium( FALSE );
-        $ht16->setReward( FALSE );
+        $ht16 = new Tank( 'ST-I', $heavy, $tier9, $nationality, FALSE, FALSE );
         $manager->persist( $ht16 );
 
-        $ht17 = new Tank();
-        $ht17->setName( 'IS-4' );
-        $ht17->setTier( $tier10 );
-        $ht17->setNationality( $nationality );
-        $ht17->setClass( $heavy );
-        $ht17->setPremium( FALSE );
-        $ht17->setReward( FALSE );
+        $ht17 = new Tank( 'IS-4', $heavy, $tier10, $nationality, FALSE, FALSE );
         $manager->persist( $ht17 );
 
-        $ht18 = new Tank();
-        $ht18->setName( 'IS-7' );
-        $ht18->setTier( $tier10 );
-        $ht18->setNationality( $nationality );
-        $ht18->setClass( $heavy );
-        $ht18->setPremium( FALSE );
-        $ht18->setReward( FALSE );
+        $ht18 = new Tank( 'IS-7', $heavy, $tier10, $nationality, FALSE, FALSE );
         $manager->persist( $ht18 );
 
         /**
          * tank destroyers
          */
-        $td1 = new Tank();
-        $td1->setName( 'AT-1' );
-        $td1->setTier( $tier2 );
-        $td1->setNationality( $nationality );
-        $td1->setClass( $td );
-        $td1->setPremium( FALSE );
-        $td1->setReward( FALSE );
+        $td1 = new Tank( 'AT-1', $td, $tier2, $nationality, FALSE, FALSE );
         $manager->persist( $td1 );
 
-        $td2 = new Tank();
-        $td2->setName( 'SU-76' );
-        $td2->setTier( $tier3 );
-        $td2->setNationality( $nationality );
-        $td2->setClass( $td );
-        $td2->setPremium( FALSE );
-        $td2->setReward( FALSE );
+        $td2 = new Tank( 'SU-76', $td, $tier3, $nationality, FALSE, FALSE );
         $manager->persist( $td2 );
 
-        $td3 = new Tank();
-        $td3->setName( 'SU-85B' );
-        $td3->setTier( $tier4 );
-        $td3->setNationality( $nationality );
-        $td3->setClass( $td );
-        $td3->setPremium( FALSE );
-        $td3->setReward( FALSE );
+        $td3 = new Tank( 'SU-85B', $td, $tier4, $nationality, FALSE, FALSE );
         $manager->persist( $td3 );
 
-        $td4 = new Tank();
-        $td4->setName( 'SU-85' );
-        $td4->setTier( $tier5 );
-        $td4->setNationality( $nationality );
-        $td4->setClass( $td );
-        $td4->setPremium( FALSE );
-        $td4->setReward( FALSE );
+        $td4 = new Tank( 'SU-85', $td, $tier5, $nationality, FALSE, FALSE );
         $manager->persist( $td4 );
 
-        $td5 = new Tank();
-        $td5->setName( 'SU-85I' );
-        $td5->setTier( $tier5 );
-        $td5->setNationality( $nationality );
-        $td5->setClass( $td );
-        $td5->setPremium( TRUE );
-        $td5->setReward( TRUE );
+        $td5 = new Tank( 'SU-85I', $td, $tier5, $nationality, TRUE, TRUE );
         $manager->persist( $td5 );
 
-        $td6 = new Tank();
-        $td6->setName( 'SU-100' );
-        $td6->setTier( $tier6 );
-        $td6->setNationality( $nationality );
-        $td6->setClass( $td );
-        $td6->setPremium( FALSE );
-        $td6->setReward( FALSE );
+        $td6 = new Tank( 'SU-100', $td, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $td6 );
 
-        $td7 = new Tank();
-        $td7->setName( 'SU-100Y' );
-        $td7->setTier( $tier6 );
-        $td7->setNationality( $nationality );
-        $td7->setClass( $td );
-        $td7->setPremium( TRUE );
-        $td7->setReward( FALSE );
+        $td7 = new Tank( 'SU-100Y', $td, $tier6, $nationality, TRUE, FALSE );
         $manager->persist( $td7 );
 
-        $td8 = new Tank();
-        $td8->setName( 'SU-100M1' );
-        $td8->setTier( $tier7 );
-        $td8->setNationality( $nationality );
-        $td8->setClass( $td );
-        $td8->setPremium( FALSE );
-        $td8->setReward( FALSE );
+        $td8 = new Tank( 'SU-100M1', $td, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $td8 );
 
-        $td9 = new Tank();
-        $td9->setName( 'SU-122-44' );
-        $td9->setTier( $tier7 );
-        $td9->setNationality( $nationality );
-        $td9->setClass( $td );
-        $td9->setPremium( TRUE );
-        $td9->setReward( FALSE );
+        $td9 = new Tank( 'SU-122-44', $td, $tier7, $nationality, TRUE, FALSE );
         $manager->persist( $td9 );
 
-        $td10 = new Tank();
-        $td10->setName( 'SU-152' );
-        $td10->setTier( $tier7 );
-        $td10->setNationality( $nationality );
-        $td10->setClass( $td );
-        $td10->setPremium( FALSE );
-        $td10->setReward( FALSE );
+        $td10 = new Tank( 'SU-152', $td, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $td10 );
 
-        $td11 = new Tank();
-        $td11->setName( 'ISU-152' );
-        $td11->setTier( $tier8 );
-        $td11->setNationality( $nationality );
-        $td11->setClass( $td );
-        $td11->setPremium( FALSE );
-        $td11->setReward( FALSE );
+        $td11 = new Tank( 'ISU-152', $td, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $td11 );
 
-        $td12 = new Tank();
-        $td12->setName( 'SU-101' );
-        $td12->setTier( $tier8 );
-        $td12->setNationality( $nationality );
-        $td12->setClass( $td );
-        $td12->setPremium( FALSE );
-        $td12->setReward( FALSE );
+        $td12 = new Tank( 'SU-101', $td, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $td12 );
 
-        $td13 = new Tank();
-        $td13->setName( 'Object 704' );
-        $td13->setTier( $tier9 );
-        $td13->setNationality( $nationality );
-        $td13->setClass( $td );
-        $td13->setPremium( FALSE );
-        $td13->setReward( FALSE );
+        $td13 = new Tank( 'Object 704', $td, $tier9, $nationality, FALSE, FALSE );
         $manager->persist( $td13 );
 
-        $td14 = new Tank();
-        $td14->setName( 'SU-122-54' );
-        $td14->setTier( $tier9 );
-        $td14->setNationality( $nationality );
-        $td14->setClass( $td );
-        $td14->setPremium( FALSE );
-        $td14->setReward( FALSE );
+        $td14 = new Tank( 'SU-122-54', $td, $tier9, $nationality, FALSE, FALSE );
         $manager->persist( $td14 );
 
-        $td15 = new Tank();
-        $td15->setName( 'Object 263' );
-        $td15->setTier( $tier10 );
-        $td15->setNationality( $nationality );
-        $td15->setClass( $td );
-        $td15->setPremium( FALSE );
-        $td15->setReward( FALSE );
+        $td15 = new Tank( 'Object 263', $td, $tier10, $nationality, FALSE, FALSE );
         $manager->persist( $td15 );
 
-        $td16 = new Tank();
-        $td16->setName( 'Object 268' );
-        $td16->setTier( $tier10 );
-        $td16->setNationality( $nationality );
-        $td16->setClass( $td );
-        $td16->setPremium( FALSE );
-        $td16->setReward( FALSE );
+        $td16 = new Tank( 'Object 268', $td, $tier10, $nationality, FALSE, FALSE );
         $manager->persist( $td16 );
 
         /**
          * artillery
          */
-        $spg1 = new Tank();
-        $spg1->setName( 'SU-18' );
-        $spg1->setTier( $tier2 );
-        $spg1->setNationality( $nationality );
-        $spg1->setClass( $spg );
-        $spg1->setPremium( FALSE );
-        $spg1->setReward( FALSE );
+        $spg1 = new Tank( 'SU-18', $spg, $tier2, $nationality, FALSE, FALSE );
         $manager->persist( $spg1 );
 
-        $spg2 = new Tank();
-        $spg2->setName( 'SU-26' );
-        $spg2->setTier( $tier3 );
-        $spg2->setNationality( $nationality );
-        $spg2->setClass( $spg );
-        $spg2->setPremium( FALSE );
-        $spg2->setReward( FALSE );
+        $spg2 = new Tank( 'SU-26', $spg, $tier3, $nationality, FALSE, FALSE );
         $manager->persist( $spg2 );
 
-        $spg3 = new Tank();
-        $spg3->setName( 'SU-5' );
-        $spg3->setTier( $tier4 );
-        $spg3->setNationality( $nationality );
-        $spg3->setClass( $spg );
-        $spg3->setPremium( FALSE );
-        $spg3->setReward( FALSE );
+        $spg3 = new Tank( 'SU-5', $spg, $tier4, $nationality, FALSE, FALSE );
         $manager->persist( $spg3 );
 
-        $spg4 = new Tank();
-        $spg4->setName( 'SU-8' );
-        $spg4->setTier( $tier5 );
-        $spg4->setNationality( $nationality );
-        $spg4->setClass( $spg );
-        $spg4->setPremium( FALSE );
-        $spg4->setReward( FALSE );
+        $spg4 = new Tank( 'SU-8', $spg, $tier5, $nationality, FALSE, FALSE );
         $manager->persist( $spg4 );
 
-        $spg5 = new Tank();
-        $spg5->setName( 'S-51' );
-        $spg5->setTier( $tier6 );
-        $spg5->setNationality( $nationality );
-        $spg5->setClass( $spg );
-        $spg5->setPremium( FALSE );
-        $spg5->setReward( FALSE );
+        $spg5 = new Tank( 'S-51', $spg, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $spg5 );
 
-        $spg6 = new Tank();
-        $spg6->setName( 'SU-14' );
-        $spg6->setTier( $tier6 );
-        $spg6->setNationality( $nationality );
-        $spg6->setClass( $spg );
-        $spg6->setPremium( FALSE );
-        $spg6->setReward( FALSE );
+        $spg6 = new Tank( 'SU-14', $spg, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $spg6 );
 
-        $spg7 = new Tank();
-        $spg7->setName( 'Object 212' );
-        $spg7->setTier( $tier7 );
-        $spg7->setNationality( $nationality );
-        $spg7->setClass( $spg );
-        $spg7->setPremium( FALSE );
-        $spg7->setReward( FALSE );
+        $spg7 = new Tank( 'Object 212', $spg, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $spg7 );
 
-        $spg8 = new Tank();
-        $spg8->setName( 'Object 261' );
-        $spg8->setTier( $tier8 );
-        $spg8->setNationality( $nationality );
-        $spg8->setClass( $spg );
-        $spg8->setPremium( FALSE );
-        $spg8->setReward( FALSE );
+        $spg8 = new Tank( 'Object 261', $spg, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $spg8 );
 
         $manager->flush();
