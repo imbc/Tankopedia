@@ -48,7 +48,7 @@ class LoadRussianEngineData extends AbstractFixture implements OrderedFixtureInt
         $engine3->addTank( $tankRepo->getTankByName( 'SU-18' ));
         $manager->persist( $engine3 );
 
-        $engine4 = new Engine( 'T-26', $tier1, $nationality , 770, 545, 90, 20, $gazoline);
+        $engine4 = new Engine( 'T-26', $tier1, $nationality, 770, 545, 90, 20, $gazoline);
         $engine4->addTank( $tankRepo->getTankByName( 'AT-1' ));
         $engine4->addTank( $tankRepo->getTankByName( 'T-26' ));
         $engine4->addTank( $tankRepo->getTankByName( 'SU-26' ));
@@ -110,7 +110,7 @@ class LoadRussianEngineData extends AbstractFixture implements OrderedFixtureInt
         $engine16->addTank( $tankRepo->getTankByName( 'T-127' ));
         $manager->persist( $engine16 );
 
-        $engine17 = new Engine( 'M-17F', $tier4, $nationality, 13460, 500, 20, $gazoline );
+        $engine17 = new Engine( 'M-17F', $tier4, $nationality, 13460, 610, 500, 20, $gazoline );
         $engine17->addTank( $tankRepo->getTankByName( 'BT-7' ));
         $engine17->addTank( $tankRepo->getTankByName( 'T-28' ));
         $engine17->addTank( $tankRepo->getTankByName( 'KV-1' ));
