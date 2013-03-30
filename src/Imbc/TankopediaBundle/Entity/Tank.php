@@ -99,7 +99,7 @@ class Tank
     /**
      * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(length=128, unique=true)
-     * 
+     *
      * @GRID\Column(visible=false)
      */
     private $slug;
@@ -107,8 +107,15 @@ class Tank
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $name = null, $class = null, $tier = null, $nationality = null,
+            $premium = null, $reward = null )
     {
+        if( $name !== null ) $this->name = $name;
+        if( $class !== null ) $this->class = $class;
+        if( $tier !== null ) $this->tier = $tier;
+        if( $nationality !== null ) $this->nationality = $nationality;
+        if( $premium !== null ) $this->premium = $premium;
+        if( $reward !== null ) $this->reward = $reward;
         $this->modules = new ArrayCollection();
         $this->parents = new ArrayCollection();
         $this->children = new ArrayCollection();
