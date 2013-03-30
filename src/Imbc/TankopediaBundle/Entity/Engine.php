@@ -3,7 +3,6 @@
 namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\EngineRepository")
@@ -30,7 +29,16 @@ class Engine extends Module
     private $fuelType;
 
     /**
-     * Constructor
+     * Constructpr
+     *
+     * @param type $name
+     * @param type $tier
+     * @param type $nationality
+     * @param type $cost
+     * @param type $weight
+     * @param type $power
+     * @param type $fireChance
+     * @param type $fuelType
      */
     public function __construct( $name = null, $tier = null, $nationality = null,
             $cost = null, $weight = null, $power = null, $fireChance = null,
