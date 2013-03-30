@@ -29,7 +29,7 @@ class TankGrid
         $source = new Entity( 'ImbcTankopediaBundle:Tank' );
 //        $this->grid->setColumns( $this->presetColumns() );
         $this->grid->setSource( $source );
-        $this->grid->setDefaultOrder( 'tier.value', 'asc' );
+        $this->grid->setDefaultOrder( 'tier.name', 'asc' );
         $this->addActionColumn();
 //        $this->grid->hideColumns( 'id' );
 //        $this->setFilters();

@@ -26,7 +26,7 @@ class Tank
      * @ORM\Column(name="name", type="string")
      *
      * @GRID\Column(title="Tank", type="text", size="-1")
-     * @GRID\Column(title="Name",filter="select", selectFrom="source", operatorsVisible=false, align="center")
+     * @GRID\Column(title="Name", filter="select", selectFrom="source", operatorsVisible=false, align="center")
      */
     protected $name;
 
@@ -42,7 +42,7 @@ class Tank
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
      * @ORM\JoinColumn(name="tier_id", referencedColumnName="id")
      *
-     * @GRID\Column(field="tier.value", title="Tier", filter="select", operatorsVisible=false, align="center")
+     * @GRID\Column(field="tier.name", title="Tier", filter="select", operatorsVisible=false, align="center")
      */
     protected $tier;
 
@@ -62,14 +62,14 @@ class Tank
     /**
      * @ORM\Column(name="premium", type="boolean", nullable=true)
      *
-     * @GRID\Column(title="Premium", type="boolean", size="-1")
+     * @GRID\Column(title="Premium", type="boolean", size="-1", align="center")
      */
     protected $premium;
 
     /**
      * @ORM\Column(name="reward", type="boolean", nullable=true)
      *
-     * @GRID\Column(title="Reward", type="boolean", size="-1")
+     * @GRID\Column(title="Reward", type="boolean", size="-1", align="center")
      */
     protected $reward;
 
