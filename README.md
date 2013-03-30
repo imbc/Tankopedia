@@ -2,7 +2,7 @@ Tank'O'pedia
 ========================
 
 This is just a side project to better understand the use of [Symfony2] (http://symfony.com/).
-The interface is using the default [twitter bootstrap] for now. (http://twitter.github.com/bootstrap/)
+The interface is using the default [twitter bootstrap] (http://twitter.github.com/bootstrap/)for now.
 
 The data is from [World of Tanks] (http://wiki.worldoftanks.eu) (online video game around tank warfare)
 
@@ -68,6 +68,6 @@ TODO:
 13. add way to compare 3-4 tanks as tables side by side
 14. investigate scrapping data directly from wot for player and save that to local db.
 15. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
-16. add [gedmo slug] behaviour (https://github.com/l3pp4rd/DoctrineExtensions) through [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
+16. add [gedmo slug] (https://github.com/l3pp4rd/DoctrineExtensions) behaviour through [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
     - ~~Tank~~, ~~TankClass~~, ~~Nationality~~, Tier, Modules
 17. investigate use of Graph data structure for the 'tech tree' (parents-children on tank entity); might have to use OrientDB
