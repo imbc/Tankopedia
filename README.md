@@ -1,10 +1,10 @@
 Tank'O'pedia
 ========================
 
-This is just a side project to better understand the use of Symfony2 http://symfony.com/.
-The interface is using the default twitter bootstrap for now. http://twitter.github.com/bootstrap/
+This is just a side project to better understand the use of [Symfony2] (http://symfony.com/).
+The interface is using the default [twitter bootstrap] for now. (http://twitter.github.com/bootstrap/)
 
-The data is from http://wiki.worldoftanks.eu (online video game around tank warfare)
+The data is from [World of Tanks] (http://wiki.worldoftanks.eu) (online video game around tank warfare)
 
 installation:
 
@@ -34,11 +34,11 @@ TODO:
      - ~~remove delete control~~ (not needed)
      - remove new/update
      - refactor edit
-2. use DataGridBundle for tank index template https://github.com/Abhoryo/APYDataGridBundle
+2. use [DataGridBundle](https://github.com/Abhoryo/APYDataGridBundle) for tank index template
 3. use DataFixtures to allow to load all data regarding the tanks and modules (need to retrieve info for 8.4 tank update)
     - ~~tank~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
     - modules:
-        * engine: ~~usa~~, ~~ussr~~, uk, fr, de, cn
+        * ~~engine~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
         * gun: usa, ussr, uk, fr, de, cn
         * ~~radio~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
         * track: usa, ussr, uk, fr, de, cn
@@ -50,24 +50,24 @@ TODO:
     - add to Tank/Tier entity
     - add ref to DataFixtures
     - display on indexes
-7. display some chart for the different indexes using d3 http://d3js.org/
+7. display some chart for the different indexes using [d3] (http://d3js.org/)
     - ~~create new branch~~
     - add pie charts
     - pretty them
     - add dynamic values
 8. refactor edit/new forms
-     - use chosen javascript library for multiselect http://harvesthq.github.com/chosen/
+     - use chosen javascript library for [multiselect] (http://harvesthq.github.com/chosen/)
      - use slider
 9. add custom icons for tanks/tier/class/modules/equipment
-     - use LiipImagineBundle for icon display (might be an overkill though) https://github.com/liip/LiipImagineBundle
-     - investigate the possibility to use Gaufrette instead https://github.com/KnpLabs/KnpGaufretteBundle
+     - use [LiipImagineBundle] (https://github.com/liip/LiipImagineBundle) for icon display (might be an overkill though)
+     - investigate the possibility to use [Gaufrette] (https://github.com/KnpLabs/KnpGaufretteBundle) instead
 10. add crew specialization
 11. add consummables
 12. customize bootstrap theme
     - use font awesome for icons (installed)
 13. add way to compare 3-4 tanks as tables side by side
 14. investigate scrapping data directly from wot for player and save that to local db.
-15. add breadcrumb using white-october bundle https://github.com/whiteoctober/BreadcrumbsBundle
-16. add gedmo slug behaviour https://github.com/l3pp4rd/DoctrineExtensions && https://github.com/stof/StofDoctrineExtensionsBundle
+15. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
+16. add [gedmo slug] behaviour (https://github.com/l3pp4rd/DoctrineExtensions) through [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
     - ~~Tank~~, ~~TankClass~~, ~~Nationality~~, Tier, Modules
 17. investigate use of Graph data structure for the 'tech tree' (parents-children on tank entity); might have to use OrientDB

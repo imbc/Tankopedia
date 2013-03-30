@@ -1,43 +1,43 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Nationality list</h1>
+<h1>Nationality list</h1>
 
-    <table class="table table-condensed table-hover table-striped records_list">
-        <thead>
-            <tr>
-                <th>Abreviation</th>
-                <th>Name</th>
-                <th>Number of Tanks</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for nationality in nationalities %}
-            <tr>
-                <td>{{ nationality.abreviation }}</td>
-                <td>{{ nationality.name }}</td>
-                <td>{{ nationality.tanks | length }}</td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_nationality_show', { 'slug': nationality.slug }) }}">show</a>
-                        </button>
-                        <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_nationality_edit', { 'slug': nationality.slug }) }}">edit</a>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<table class="table table-condensed table-hover table-striped records_list">
+    <thead>
+        <tr>
+            <th>Abreviation</th>
+            <th>Name</th>
+            <th>Number of Tanks</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for nationality in nationalities %}
+        <tr>
+            <td>{{ nationality.abreviation }}</td>
+            <td>{{ nationality.name }}</td>
+            <td>{{ nationality.tanks | length }}</td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-mini">
+                        <a href="{{ path('tankopedia_nationality_show', { 'slug': nationality.slug }) }}">show</a>
+                    </button>
+                    <button class="btn btn-mini">
+                        <a href="{{ path('tankopedia_nationality_edit', { 'slug': nationality.slug }) }}">edit</a>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
-        <ul>
-        <li>
-            <a href="{{ path('tankopedia_nationality_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
-    {% endblock %}
+<ul>
+    <li>
+        <a href="{{ path('tankopedia_nationality_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{% endblock %}
