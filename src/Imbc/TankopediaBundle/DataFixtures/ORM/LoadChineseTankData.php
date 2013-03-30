@@ -35,195 +35,69 @@ class LoadChineseTankData extends AbstractFixture implements OrderedFixtureInter
         $nationality = $this->getReference( 'cn' );
 
         // light tanks
-        $lt1 = new Tank();
-        $lt1->setName( 'Renault NC-31' );
-        $lt1->setTier( $tier1 );
-        $lt1->setNationality( $nationality );
-        $lt1->setClass( $light );
-        $lt1->setPremium( FALSE );
-        $lt1->setReward( FALSE );
+        $lt1 = new Tank( 'Renault NC-31', $light, $tier1, $nationality, FALSE, FALSE );
         $manager->persist( $lt1 );
 
-        $lt2 = new Tank();
-        $lt2->setName( 'Vickers Mk. E Type B' );
-        $lt2->setTier( $tier2 );
-        $lt2->setNationality( $nationality );
-        $lt2->setClass( $light );
-        $lt2->setPremium( FALSE );
-        $lt2->setReward( FALSE );
+        $lt2 = new Tank( 'Vickers Mk. E Type B', $light, $tier2, $nationality, FALSE, FALSE );
         $manager->persist( $lt2 );
 
-        $lt3 = new Tank();
-        $lt3->setName( 'Type 2597 Chi-Ha' );
-        $lt3->setTier( $tier3 );
-        $lt3->setNationality( $nationality );
-        $lt3->setClass( $light );
-        $lt3->setPremium( FALSE );
-        $lt3->setReward( FALSE );
+        $lt3 = new Tank( 'Type 2597 Chi-Ha', $light, $tier3, $nationality, FALSE, FALSE );
         $manager->persist( $lt3 );
 
-        $lt4 = new Tank();
-        $lt4->setName( 'M5A1 Stuart' );
-        $lt4->setTier( $tier4 );
-        $lt4->setNationality( $nationality );
-        $lt4->setClass( $light );
-        $lt4->setPremium( FALSE );
-        $lt4->setReward( FALSE );
+        $lt4 = new Tank( 'M5A1 Stuart', $light, $tier4, $nationality, FALSE, FALSE );
         $manager->persist( $lt4 );
 
-        $lt5 = new Tank();
-        $lt5->setName( '59-16' );
-        $lt5->setTier( $tier6 );
-        $lt5->setNationality( $nationality );
-        $lt5->setClass( $light );
-        $lt5->setPremium( FALSE );
-        $lt5->setReward( FALSE );
+        $lt5 = new Tank( '59-16', $light, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $lt5 );
 
-        $lt6 = new Tank();
-        $lt6->setName( 'Type 62' );
-        $lt6->setTier( $tier7 );
-        $lt6->setNationality( $nationality );
-        $lt6->setClass( $light );
-        $lt6->setPremium( TRUE );
-        $lt6->setReward( TRUE );
+        $lt6 = new Tank( 'Type 62', $light, $tier7, $nationality, TRUE, TRUE );
         $manager->persist( $lt6 );
 
-        $lt7 = new Tank();
-        $lt7->setName( 'WZ-131' );
-        $lt7->setTier( $tier7 );
-        $lt7->setNationality( $nationality );
-        $lt7->setClass( $light );
-        $lt7->setPremium( FALSE );
-        $lt7->setReward( FALSE );
+        $lt7 = new Tank( 'WZ-131', $light, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $lt7 );
 
-        $lt8 = new Tank();
-        $lt8->setName( 'WZ-132' );
-        $lt8->setTier( $tier8 );
-        $lt8->setNationality( $nationality );
-        $lt8->setClass( $light );
-        $lt8->setPremium( FALSE );
-        $lt8->setReward( FALSE );
+        $lt8 = new Tank( 'WZ-132', $light, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $lt8 );
 
         // medium tanks
-        $mt1 = new Tank();
-        $mt1->setName( 'Type T-34' );
-        $mt1->setTier( $tier5 );
-        $mt1->setNationality( $nationality );
-        $mt1->setClass( $medium );
-        $mt1->setPremium( FALSE );
-        $mt1->setReward( FALSE );
+        $mt1 = new Tank( 'Type T-34', $medium, $tier5, $nationality, FALSE, FALSE );
         $manager->persist( $mt1 );
 
-        $mt2 = new Tank();
-        $mt2->setName( 'Type 58' );
-        $mt2->setTier( $tier6 );
-        $mt2->setNationality( $nationality );
-        $mt2->setClass( $medium );
-        $mt2->setPremium( FALSE );
-        $mt2->setReward( FALSE );
+        $mt2 = new Tank( 'Type 58', $medium, $tier6, $nationality, FALSE, FALSE );
         $manager->persist( $mt2 );
 
-        $mt3 = new Tank();
-        $mt3->setName( 'T-34-1' );
-        $mt3->setTier( $tier7 );
-        $mt3->setNationality( $nationality );
-        $mt3->setClass( $medium );
-        $mt3->setPremium( FALSE );
-        $mt3->setReward( FALSE );
+        $mt3 = new Tank( 'T-34-1', $medium, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $mt3 );
 
-        $mt4 = new Tank();
-        $mt4->setName( 'T-34-2' );
-        $mt4->setTier( $tier8 );
-        $mt4->setNationality( $nationality );
-        $mt4->setClass( $medium );
-        $mt4->setPremium( FALSE );
-        $mt4->setReward( FALSE );
+        $mt4 = new Tank( 'T-34-2', $medium, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $mt4 );
 
-        $mt5 = new Tank();
-        $mt5->setName( 'Type 59' );
-        $mt5->setTier( $tier8 );
-        $mt5->setNationality( $nationality );
-        $mt5->setClass( $medium );
-        $mt5->setPremium( TRUE );
-        $mt5->setReward( TRUE );
+        $mt5 = new Tank( 'Type 59', $medium, $tier8, $nationality, TRUE, TRUE );
         $manager->persist( $mt5 );
 
-        $mt6 = new Tank();
-        $mt6->setName( 'Type 59 G' );
-        $mt6->setTier( $tier8 );
-        $mt6->setNationality( $nationality );
-        $mt6->setClass( $medium );
-        $mt6->setPremium( TRUE );
-        $mt6->setReward( TRUE );
+        $mt6 = new Tank( 'Type 59 G', $medium, $tier8, $nationality, TRUE, TRUE );
         $manager->persist( $mt6 );
 
-        $mt7 = new Tank();
-        $mt7->setName( 'WZ-120' );
-        $mt7->setTier( $tier9 );
-        $mt7->setNationality( $nationality );
-        $mt7->setClass( $medium );
-        $mt7->setPremium( FALSE );
-        $mt7->setReward( FALSE );
+        $mt7 = new Tank( 'WZ-120', $medium, $tier9, $nationality, FALSE, FALSE );
         $manager->persist( $mt7 );
 
-        $mt8 = new Tank();
-        $mt8->setName( '121' );
-        $mt8->setTier( $tier10 );
-        $mt8->setNationality( $nationality );
-        $mt8->setClass( $medium );
-        $mt8->setPremium( FALSE );
-        $mt8->setReward( FALSE );
+        $mt8 = new Tank( '121', $medium, $tier10, $nationality, FALSE, FALSE );
         $manager->persist( $mt8 );
 
         // heavy tanks
-        $ht1 = new Tank();
-        $ht1->setName( 'IS-2' );
-        $ht1->setTier( $tier7 );
-        $ht1->setNationality( $nationality );
-        $ht1->setClass( $heavy );
-        $ht1->setPremium( FALSE );
-        $ht1->setReward( FALSE );
+        $ht1 = new Tank( 'IS-2', $heavy, $tier7, $nationality, FALSE, FALSE );
         $manager->persist( $ht1 );
 
-        $ht2 = new Tank();
-        $ht2->setName( '110' );
-        $ht2->setTier( $tier8 );
-        $ht2->setNationality( $nationality );
-        $ht2->setClass( $heavy );
-        $ht2->setPremium( FALSE );
-        $ht2->setReward( FALSE );
+        $ht2 = new Tank( '110', $heavy, $tier8, $nationality, FALSE, FALSE );
         $manager->persist( $ht2 );
 
-        $ht3 = new Tank();
-        $ht3->setName( 'WZ-111' );
-        $ht3->setTier( $tier8 );
-        $ht3->setNationality( $nationality );
-        $ht3->setClass( $heavy );
-        $ht3->setPremium( TRUE );
-        $ht3->setReward( TRUE );
+        $ht3 = new Tank( 'WZ-111', $heavy, $tier8, $nationality, TRUE, TRUE );
         $manager->persist( $ht3 );
 
-        $ht4 = new Tank();
-        $ht4->setName( 'WZ-111 model 1-4' );
-        $ht4->setTier( $tier9 );
-        $ht4->setNationality( $nationality );
-        $ht4->setClass( $heavy );
-        $ht4->setPremium( FALSE );
-        $ht4->setReward( FALSE );
+        $ht4 = new Tank( 'WZ-111 model 1-4', $heavy, $tier9, $nationality, FALSE, FALSE );
         $manager->persist( $ht4 );
 
-        $ht5 = new Tank();
-        $ht5->setName( '113' );
-        $ht5->setTier( $tier10 );
-        $ht5->setNationality( $nationality );
-        $ht5->setClass( $heavy );
-        $ht5->setPremium( FALSE );
-        $ht5->setReward( FALSE );
+        $ht5 = new Tank( '113', $heavy, $tier10, $nationality, FALSE, FALSE );
         $manager->persist( $ht5 );
 
         $manager->flush();
