@@ -33,25 +33,13 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 
 //        "Tier","Nation","Name","Signal Range","Price","Weight","Compatibility"
 //        "I","DE","Signal Flags","90 m",0,"1 kg","Leichttraktor"
-        $radio1 = new Radio();
-        $radio1->setTier( $tier1 );
-        $radio1->setNationality( $nationality );
-        $radio1->setName( 'Signal Range' );
-        $radio1->setSignalRange( 90 );
-        $radio1->setCost( 0 );
-        $radio1->setWeight( 1 );
+        $radio1 = new Radio( 'Signal Range', $tier1, $nationality, 0, 1, 90 );
         $radio1->addTank( $tankRepo->getTankByName( 'Leichttraktor' ));
         $manager->persist( $radio1 );
 
 //        "II","DE","FuG 2","265 m",180,"40 kg","Leichttraktor, PzKpfw II, 
 //         Panzerjäger I, Sturmpanzer I Bison, Marder II"
-        $radio2 = new Radio();
-        $radio2->setTier( $tier2 );
-        $radio2->setNationality( $nationality );
-        $radio2->setName( 'FuG 2' );
-        $radio2->setSignalRange( 265 );
-        $radio2->setCost( 180 );
-        $radio2->setWeight( 40 );
+        $radio2 = new Radio( 'FuG 2', $tier2, $nationality, 180, 40, 265 );
         $radio2->addTank( $tankRepo->getTankByName( 'Leichttraktor' ));
         $radio2->addTank( $tankRepo->getTankByName( 'PzKpfw II' ));
         $radio2->addTank( $tankRepo->getTankByName( 'Panzerjäger I' ));
@@ -61,13 +49,7 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 
 //        "II","DE","FuG 37","290 m",180,"40 kg","PzKpfw 35 (t), PzKpfw 38 (t), 
 //         Hetzer, PzKpfw 38 nA, Grille"
-        $radio3 = new Radio();
-        $radio3->setTier( $tier2 );
-        $radio3->setNationality( $nationality );
-        $radio3->setName( 'FuG 37' );
-        $radio3->setSignalRange( 290 );
-        $radio3->setCost( 180 );
-        $radio3->setWeight( 40 );
+        $radio3 = new Radio( 'FuG 37', $tier2, $nationality, 180, 40, 290 );
         $radio3->addTank( $tankRepo->getTankByName( 'PzKpfw 35 (t)' ));
         $radio3->addTank( $tankRepo->getTankByName( 'PzKpfw 38 (t)' ));
         $radio3->addTank( $tankRepo->getTankByName( 'Hetzer' ));
@@ -82,13 +64,7 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 //         PzKpfw III/IV, PzKpfw IV, StuG III, Hummel, VK 3001 (H), 
 //         JagdPz IV, VK 3001 (P), VK 3601 (H), GW Panther, VK 3002 (DB), 
 //         GW Tiger, GW Typ E"
-        $radio4 = new Radio();
-        $radio4->setTier( $tier3 );
-        $radio4->setNationality( $nationality );
-        $radio4->setName( 'FuG 5' );
-        $radio4->setSignalRange( 310 );
-        $radio4->setCost( 630 );
-        $radio4->setWeight( 50 );
+        $radio4 = new Radio( 'FuG 5', $tier3, $nationality, 630, 50, 310 );
         $radio4->addTank( $tankRepo->getTankByName( 'Panzerjäger I' ));
         $radio4->addTank( $tankRepo->getTankByName( 'Sturmpanzer I Bison' ));
         $radio4->addTank( $tankRepo->getTankByName( 'PzKpfw 35 (t)' ));
@@ -116,25 +92,13 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
         $manager->persist( $radio4 );
 
 //        "IV","DE","FuG 6","345 m",0,"70 kg","PzKpfw II Ausf. J"
-        $radio5 = new Radio();
-        $radio5->setTier( $tier4 );
-        $radio5->setNationality( $nationality );
-        $radio5->setName( 'FuG 6' );
-        $radio5->setSignalRange( 345 );
-        $radio5->setCost( 0 );
-        $radio5->setWeight( 70 );
+        $radio5 = new Radio( 'FuG 6', $tier4, $nationality, 0, 70, 345 );
         $radio5->addTank( $tankRepo->getTankByName( 'PzKpfw II Ausf. J' ));
         $manager->persist( $radio5 );
 
 //        "VI","DE","FuG5 mit 20 WS.E.","620 m",,"50 kg","Dicker Max, 
 //         PzKpfw IV Schmalturm"
-        $radio6 = new Radio();
-        $radio6->setTier( $tier6 );
-        $radio6->setNationality( $nationality );
-        $radio6->setName( 'FuG5 mit 20 WS.E.' );
-        $radio6->setSignalRange( 620 );
-        $radio6->setCost( 0 );
-        $radio6->setWeight( 50 );
+        $radio6 = new Radio( 'FuG5 mit 20 WS.E.', $tier6, $nationality, 0, 50, 620 );
         $radio6->addTank( $tankRepo->getTankByName( 'Dicker Max' ));
         $radio6->addTank( $tankRepo->getTankByName( 'PzKpfw IV Schmalturm' ));
         $manager->persist( $radio6 );
@@ -147,13 +111,7 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 //         PzKpfw VI Tiger (P), GW Tiger, Panther II, VK 4502 (P) Ausf. A, 
 //         PzKpfw VIB Tiger II, Jagdpanther II, Ferdinand, GW Typ E, E-50, 
 //         Jagdtiger, E-75, VK 4502 (P) Ausf. B"
-        $radio7 = new Radio();
-        $radio7->setTier( $tier6 );
-        $radio7->setNationality( $nationality );
-        $radio7->setName( 'FuG 7' );
-        $radio7->setSignalRange( 415 );
-        $radio7->setCost( 8160 );
-        $radio7->setWeight( 70 );
+        $radio7 = new Radio( 'FuG 7', $tier6, $nationality, 8160, 70, 415 );
         $radio7->addTank( $tankRepo->getTankByName( 'PzKpfw II' ));
         $radio7->addTank( $tankRepo->getTankByName( 'PzKpfw III Ausf. A' ));
         $radio7->addTank( $tankRepo->getTankByName( 'PzKpfw II Luchs' ));
@@ -191,13 +149,7 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 //        "VI","DE","FuG 7 Ausf. F","710 m",0,"70 kg","T-15, T-25, 
 //         PzKpfw IV Hydraulic, PzKpfw V-IV Alpha, PzKpfw V-IV, 
 //         Panther-M10, 8.8 cm PaK 43 Jagdtiger"
-        $radio8 = new Radio();
-        $radio8->setTier( $tier6 );
-        $radio8->setNationality( $nationality );
-        $radio8->setName( 'FuG 7 Ausf. F' );
-        $radio8->setSignalRange( 710 );
-        $radio8->setCost( 0 );
-        $radio8->setWeight( 70 );
+        $radio8 = new Radio( 'FuG 7 Ausf. F', $tier6, $nationality, 0, 70, 710 );
         $radio8->addTank( $tankRepo->getTankByName( 'T-15' ));
         $radio8->addTank( $tankRepo->getTankByName( 'T-25' ));
         $radio8->addTank( $tankRepo->getTankByName( 'PzKpfw IV Hydraulic' ));
@@ -208,25 +160,13 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
         $manager->persist( $radio8 );
 
 //        "VII","DE","FuG 10","455 m",21600,"100 kg","Hetzer"
-        $radio9 = new Radio();
-        $radio9->setTier( $tier7 );
-        $radio9->setNationality( $nationality );
-        $radio9->setName( 'FuG 10' );
-        $radio9->setSignalRange( 455 );
-        $radio9->setCost( 21600 );
-        $radio9->setWeight( 100 );
+        $radio9 = new Radio( 'FuG 10', $tier7, $nationality, 21600, 100, 455 );
         $radio9->addTank( $tankRepo->getTankByName( 'Hetzer' ));
         $manager->persist( $radio9 );
 
 //        "VII","DE","FuG Spr. 1","455 m",21600,"150 kg","PzKpfw II, 
 //         PzKpfw III Ausf. A, PzKpfw II Luchs, Wespe, Sturmpanzer II"
-        $radio10 = new Radio();
-        $radio10->setTier( $tier7 );
-        $radio10->setNationality( $nationality );
-        $radio10->setName( 'FuG Spr. 1' );
-        $radio10->setSignalRange( 455 );
-        $radio10->setCost( 21600 );
-        $radio10->setWeight( 150 );
+        $radio10 = new Radio( 'FuG Spr. 1', $tier7, $nationality, 21600, 150, 455 );
         $radio10->addTank( $tankRepo->getTankByName( 'PzKpfw II' ));
         $radio10->addTank( $tankRepo->getTankByName( 'PzKpfw III Ausf. A' ));
         $radio10->addTank( $tankRepo->getTankByName( 'PzKpfw II Luchs' ));
@@ -236,13 +176,7 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 
 //        "VIII","DE","FuG 8","525 m",24240,"50 kg","PzKpfw 35 (t), 
 //         PzKpfw 38 (t), PzKpfw 38 nA"
-        $radio11 = new Radio();
-        $radio11->setTier( $tier8 );
-        $radio11->setNationality( $nationality );
-        $radio11->setName( 'FuG 8' );
-        $radio11->setSignalRange( 525 );
-        $radio11->setCost( 24240 );
-        $radio11->setWeight( 50 );
+        $radio11 = new Radio( 'FuG 8', $tier8, $nationality, 24240, 50, 525 );
         $radio11->addTank( $tankRepo->getTankByName( 'PzKpfw 35 (t)' ));
         $radio11->addTank( $tankRepo->getTankByName( 'PzKpfw 38 (t)' ));
         $radio11->addTank( $tankRepo->getTankByName( 'PzKpfw 38 nA' ));
@@ -250,13 +184,7 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 
 //        "VIII","DE","FuG 8","525 m",0,"50 kg","PzKpfw 38H735 (f), 
 //         PzKpfw S35 739 (f), PzKpfw B2 740 (f)"
-        $radio12 = new Radio();
-        $radio12->setTier( $tier8 );
-        $radio12->setNationality( $nationality );
-        $radio12->setName( 'FuG 8' );
-        $radio12->setSignalRange( 525 );
-        $radio12->setCost( 0 );
-        $radio12->setWeight( 50 );
+        $radio12 = new Radio( 'FuG 8', $tier8, $nationality, 0, 50, 525 );
         $radio12->addTank( $tankRepo->getTankByName( 'PzKpfw 38H735 (f)' ));
         $radio12->addTank( $tankRepo->getTankByName( 'PzKpfw S35 739 (f)' ));
         $radio12->addTank( $tankRepo->getTankByName( 'PzKpfw B2 740 (f)' ));
@@ -264,25 +192,13 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 
 //        "VIII","DE","FuG Spr. A","700 m",27000,"150 kg","VK 1602 Leopard, 
 //         VK 2801"
-        $radio13 = new Radio();
-        $radio13->setTier( $tier8 );
-        $radio13->setNationality( $nationality );
-        $radio13->setName( 'FuG Spr. A' );
-        $radio13->setSignalRange( 700 );
-        $radio13->setCost( 27000 );
-        $radio13->setWeight( 150 );
+        $radio13 = new Radio( 'FuG Spr. A', $tier8, $nationality, 27000, 150, 700 );
         $radio13->addTank( $tankRepo->getTankByName( 'VK 1602 Leopard' ));
         $radio13->addTank( $tankRepo->getTankByName( 'VK 2801' ));
         $manager->persist( $radio13 );
 
 //        "IX","DE","FuG 11","615 m",33600,"70 kg","Hetzer"
-        $radio14 = new Radio();
-        $radio14->setTier( $tier9 );
-        $radio14->setNationality( $nationality );
-        $radio14->setName( 'FuG 11' );
-        $radio14->setSignalRange( 615 );
-        $radio14->setCost( 33600 );
-        $radio14->setWeight( 70 );
+        $radio14 = new Radio( 'FuG 11', $tier9, $nationality, 33600, 70, 615 );
         $radio14->addTank( $tankRepo->getTankByName( 'Hetzer' ));
         $manager->persist( $radio14 );
 
@@ -292,13 +208,7 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
 //         PzKpfw V Panther, PzKpfw VI Tiger, PzKpfw VI Tiger (P), GW Tiger, 
 //         Panther II, VK 4502 (P) Ausf. A, PzKpfw VIB Tiger II, Jagdpanther II, 
 //         Ferdinand, GW Typ E, E-50, Jagdtiger, E-75, VK 4502 (P) Ausf. B"
-        $radio15 = new Radio();
-        $radio15->setTier( $tier9 );
-        $radio15->setNationality( $nationality );
-        $radio15->setName( 'FuG 12' );
-        $radio15->setSignalRange( 710 );
-        $radio15->setCost( 43200 );
-        $radio15->setWeight( 150 );
+        $radio15 = new Radio( 'FuG 12', $tier9, $nationality, 43200, 150, 710 );
         $radio15->addTank( $tankRepo->getTankByName( 'PzKpfw III' ));
         $radio15->addTank( $tankRepo->getTankByName( 'Grille' ));
         $radio15->addTank( $tankRepo->getTankByName( 'PzKpfw III/IV' ));
@@ -328,25 +238,13 @@ class LoadGermanRadioData extends AbstractFixture implements OrderedFixtureInter
         $manager->persist( $radio15 );
 
 //        "IX","DE","FuG 12A","710 m",,"150 kg","Löwe"
-        $radio16 = new Radio();
-        $radio16->setTier( $tier9 );
-        $radio16->setNationality( $nationality );
-        $radio16->setName( 'FuG 12A' );
-        $radio16->setSignalRange( 710 );
-        $radio16->setCost( 0 );
-        $radio16->setWeight( 150 );
+        $radio16 = new Radio( 'FuG 12A', $tier9, $nationality, 0, 150, 710 );
         $radio16->addTank( $tankRepo->getTankByName( 'Löwe' ));
         $manager->persist( $radio16 );
 
 //        "X","DE","10WSc","720 m",51600,"160 kg","E-50 Ausf. M, E-100, Maus, 
 //         JagdPz E-100"
-        $radio17 = new Radio();
-        $radio17->setTier( $tier10 );
-        $radio17->setNationality( $nationality );
-        $radio17->setName( '10WSc' );
-        $radio17->setSignalRange( 720 );
-        $radio17->setCost( 51600 );
-        $radio17->setWeight( 160 );
+        $radio17 = new Radio( '10WSc', $tier10, $nationality, 51600, 160, 720 );
         $radio17->addTank( $tankRepo->getTankByName( 'E-50 Ausf. M' ));
         $radio17->addTank( $tankRepo->getTankByName( 'E-100' ));
         $radio17->addTank( $tankRepo->getTankByName( 'Maus' ));
