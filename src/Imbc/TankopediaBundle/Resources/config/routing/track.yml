@@ -3,7 +3,7 @@ tankopedia_track:
     defaults: { _controller: "ImbcTankopediaBundle:Track:index" }
 
 tankopedia_track_show:
-    pattern:  /{id}/show
+    pattern:  /{slug}/show
     defaults: { _controller: "ImbcTankopediaBundle:Track:show" }
 
 tankopedia_track_new:
@@ -11,5 +11,5 @@ tankopedia_track_new:
     defaults: { _controller: "ImbcTankopediaBundle:Track:edit" }
 
 tankopedia_track_edit:
-    pattern:  /{id}/edit
+    pattern:  /{slug}/edit
     defaults: { _controller: "ImbcTankopediaBundle:Track:edit" }

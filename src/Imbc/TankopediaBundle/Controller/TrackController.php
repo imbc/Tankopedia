@@ -8,10 +8,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Imbc\TankopediaBundle\Entity\Track;
 use Imbc\TankopediaBundle\Form\Type\TrackType;
 
-/**
- * Track controller.
- *
- */
 class TrackController extends Controller
 {
     public function indexAction( Request $request )

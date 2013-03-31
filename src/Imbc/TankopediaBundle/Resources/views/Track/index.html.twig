@@ -10,8 +10,8 @@
                 <th>Name</th>
                 <th>Cost</th>
                 <th>Weight</th>
-                <th>Loadlimit</th>
-                <th>Traversespeed</th>
+                <th>Load Limit</th>
+                <th>Traverse Speed</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -20,10 +20,15 @@
             <tr>
                 <td>{{ track.tier }}</td>
                 <td>{{ track.name }}</td>
-                <td>{{ track.cost }}</td>
-                <td>{{ track.weight }}</td>
-                <td>{{ track.loadLimit }}</td>
-                <td>{{ track.traverseSpeed }}</td>
+                <td>{% if track.cost != 0 %}
+                        {{ track.cost }}
+                    {% else %}
+                        <i class="icon-star"></i>
+                    {% endif %}
+                </td>
+                <td>{{ track.weight }} kg</td>
+                <td>{{ track.loadLimit }} t</td>
+                <td>{{ track.traverseSpeed }} deg/sec</td>
                 <td>
                     <div class="btn-group">
                         <button class="btn btn-mini">

@@ -11,12 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Track extends Module
 {
     /**
-     * @ORM\Column(name="loadLimit", type="integer")
+     * @ORM\Column(name="loadLimit", type="decimal", precision=6, scale=2)
      */
     private $loadLimit;
 
     /**
-     * @ORM\Column(name="traverseSpeed", type="integer")
+     * @ORM\Column(name="traverseSpeed", type="decimal", precision=6, scale=2)
      */
     private $traverseSpeed;
 

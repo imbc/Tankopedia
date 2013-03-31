@@ -45,7 +45,7 @@ TODO:
         * ~~engine~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
         * gun: usa, ussr, uk, fr, de, cn
         * ~~radio~~: ~~usa~~, ~~ussr~~, ~~uk~~, ~~fr~~, ~~de~~, ~~cn~~
-        * track: usa, ussr, uk, fr, de, cn
+        * track: ~~usa~~, ussr, uk, fr, de, cn
         * turret: usa, ussr, uk, fr, de, cn
 4. create join entity TankModule to hold ManyToOne and OneToMany relatioship AND xp value
 5. add hull details on Tank with properties armor (front, side, rear) -> might need new Hull module entity
@@ -54,7 +54,7 @@ TODO:
     - add to Tank/Tier entity
     - add ref to DataFixtures
     - display on indexes
-7. ~~add Shell relationship to Gun, and refactor the latter (info based on [worldoftanksguide.com]~~ (http://www.worldoftanksguide.com/ref-gun-database.shtml))
+7. ~~add Shell relationship to Gun, and refactor the latter~~ (info based on [worldoftanksguide.com] (http://www.worldoftanksguide.com/ref-gun-database.shtml))
 8. display some chart for the different indexes using [d3] (http://d3js.org/)
     - ~~create new branch~~
     - add pie charts
