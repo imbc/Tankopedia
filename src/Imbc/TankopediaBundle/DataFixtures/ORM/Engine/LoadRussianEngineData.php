@@ -1,6 +1,6 @@
 <?php
 
-namespace Imbc\TankopediaBundle\DataFixtures\ORM;
+namespace Imbc\TankopediaBundle\DataFixtures\ORM\Engine;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;

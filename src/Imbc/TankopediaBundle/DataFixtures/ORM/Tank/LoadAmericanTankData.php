@@ -1,6 +1,6 @@
 <?php
 
-namespace Imbc\TankopediaBundle\DataFixtures\ORM;
+namespace Imbc\TankopediaBundle\DataFixtures\ORM\Tank;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
@@ -16,13 +16,30 @@ class LoadAmericanTankData extends AbstractFixture implements OrderedFixtureInte
 
     public function load( ObjectManager $manager )
     {
+        $tierRepo = $manager->getRepository( 'ImbcTankopediaBundle:Tier' );
+        $classRepo = $manager->getRepository( 'ImbcTankopediaBundle:TankClass' );
         // ref for tankclass
+//        $light = $classRepo->getTankClassByName( 'lt' );
+//        $medium = $classRepo->getTankClassByName( 'mt' );
+//        $heavy = $classRepo->getTankClassByName( 'ht' );
+//        $td = $classRepo->getTankClassByName( 'td' );
+//        $spg = $classRepo->getTankClassByName( 'spg' );
         $light = $this->getReference( 'light' );
         $medium = $this->getReference( 'medium' );
         $heavy = $this->getReference( 'heavy' );
         $td = $this->getReference( 'td' );
         $spg = $this->getReference( 'spg' );
         // ref for tier
+//        $tier1 = $tierRepo->getTierByName( 'I' );
+//        $tier2 = $tierRepo->getTierByName( 'II' );
+//        $tier3 = $tierRepo->getTierByName( 'III' );
+//        $tier4 = $tierRepo->getTierByName( 'IV' );
+//        $tier5 = $tierRepo->getTierByName( 'V' );
+//        $tier6 = $tierRepo->getTierByName( 'VI' );
+//        $tier7 = $tierRepo->getTierByName( 'VII' );
+//        $tier8 = $tierRepo->getTierByName( 'VIII' );
+//        $tier9 = $tierRepo->getTierByName( 'IX' );
+//        $tier10 = $tierRepo->getTierByName( 'X' );
         $tier1 = $this->getReference( 'tier-1' );
         $tier2 = $this->getReference( 'tier-2' );
         $tier3 = $this->getReference( 'tier-3' );

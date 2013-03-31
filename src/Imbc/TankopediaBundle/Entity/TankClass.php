@@ -25,6 +25,11 @@ class TankClass
     private $name;
 
     /**
+     * @ORM\Column(name="abbreviation", type="string")
+     */
+    private $abbreviation;
+
+    /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="class")
      **/
     private $tanks;
@@ -51,6 +56,29 @@ class TankClass
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set abbreviation
+     *
+     * @param string $abbreviation
+     * @return Type
+     */
+    public function setAbbreviation( $abbreviation )
+    {
+        $this->abbreviation = $abbreviation;
+
+        return $this;
+    }
+
+    /**
+     * Get abbreviation
+     *
+     * @return string
+     */
+    public function getAbbreviation()
+    {
+        return $this->abbreviation;
     }
 
     /**

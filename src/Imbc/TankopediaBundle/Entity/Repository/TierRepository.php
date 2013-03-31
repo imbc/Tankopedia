@@ -12,7 +12,7 @@ class TierRepository extends EntityRepository
      * @param string $name
      * @return \Imbc\TankopediaBundle\Entity\Tier
      */
-    public function getTierByValue( $name )
+    public function getTierByName( $name )
     {
         $qb = $this->_em->createQueryBuilder();
         $qb->select( 't' );
