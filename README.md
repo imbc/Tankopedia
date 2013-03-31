@@ -44,7 +44,7 @@ TODO:
         * track: usa, ussr, uk, fr, de, cn
         * turret: usa, ussr, uk, fr, de, cn
 4. create join entity TankModule to hold ManyToOne and OneToMany relatioship AND xp value
-5. add hull details on Tank with properties armor (front, side, rear)
+5. add hull details on Tank with properties armor (front, side, rear) -> might need new Hull module entity
 6. add battle range for tanks
     - create new branch
     - add to Tank/Tier entity
@@ -66,7 +66,7 @@ TODO:
 12. customize bootstrap theme
     - use font awesome for icons (installed)
 13. add way to compare 3-4 tanks as tables side by side
-14. investigate scrapping data directly from wot for player and save that to local db.
+14. investigate scrapping data directly from wot for player and save that to local db, (example: [wotdb] (https://github.com/imbc/wotdb) and [tanklab] (https://github.com/imbc/tanklab))
 15. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
 16. add [gedmo slug] (https://github.com/l3pp4rd/DoctrineExtensions) behaviour through [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
     - ~~Tank~~, ~~TankClass~~, ~~Nationality~~, Tier, Modules
