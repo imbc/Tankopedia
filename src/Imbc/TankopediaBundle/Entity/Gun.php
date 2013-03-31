@@ -3,6 +3,7 @@
 namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\GunRepository")
@@ -13,104 +14,70 @@ class Gun extends Module
     /**
      * @ORM\Column(name="ammoCapacity", type="integer")
      */
-    private $ammoCapacity;
+    protected $ammoCapacity;
 
     /**
-     * @ORM\Column(name="damageAP", type="integer", nullable=true)
+     * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Shell", mappedBy="gun")
      */
-    private $damageAP;
-
-    /**
-     * @ORM\Column(name="damageAPCR", type="integer", nullable=true)
-     */
-    private $damageAPCR;
-
-    /**
-     * @ORM\Column(name="damageHE", type="integer", nullable=true)
-     */
-    private $damageHE;
-
-    /**
-     * @ORM\Column(name="penetrationAP", type="integer", nullable=true)
-     */
-    private $penetrationAP;
-
-    /**
-     * @ORM\Column(name="penetrationAPCR", type="integer", nullable=true)
-     */
-    private $penetrationAPCR;
-
-    /**
-     * @ORM\Column(name="penetrationHE", type="integer", nullable=true)
-     */
-    private $penetrationHE;
-
-    /**
-     * @ORM\Column(name="shell", type="string")
-     */
-    private $shell;
+    protected $shells;
 
     /**
      * @ORM\Column(name="rateOfFire", type="float")
      */
-    private $rateOfFire;
+    protected $rateOfFire;
 
     /**
      * @ORM\Column(name="accuratie", type="float")
      */
-    private $accuratie;
+    protected $accuratie;
 
     /**
      * @ORM\Column(name="aimTimeMin", type="float")
      */
-    private $aimTimeMin;
+    protected $aimTimeMin;
 
     /**
      * @ORM\Column(name="aimTimeMax", type="float", nullable=true)
      */
-    private $aimTimeMax;
+    protected $aimTimeMax;
 
     /**
      * @ORM\Column(name="elevationMin", type="integer")
      */
-    private $elevationMin;
+    protected $elevationMin;
 
     /**
      * @ORM\Column(name="elevationMax", type="integer")
      */
-    private $elevationMax;
+    protected $elevationMax;
 
     /**
      * @ORM\Column(name="requiresTurret", type="boolean", nullable=true)
      */
-    private $requiresTurret;
+    protected $requiresTurret;
+
+    /**
+     * @ORM\Column(name="caliber", type="float")
+     */
+    protected $caliber;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Turret", inversedBy="guns");
      * @ORM\JoinColumn(name="turret_id", referencedColumnName="id")
      */
-    private $turret;
+    protected $turret;
 
     /**
      * Constructor
      */
     public function __construct( $name = null, $tier = null, $nationality = null,
-            $cost = null, $weight = null, $ammoCapacity = null, $damageAP = null,
-            $damageAPCR = null, $damageHE = null, $penetrationAP = null,
-            $penetrationAPCR = null, $penetrationHE = null, $shell = null,
+            $cost = null, $weight = null, $ammoCapacity = null,
             $rateOfFire = null, $accuratie = null, $aimTimeMin = null,
             $aimTimeMax = null, $elevationMin = null, $elevationMax = null,
-            $requiresTurret = null, $turret = null )
+            $requiresTurret = null, $turret = null, $caliber = null )
     {
         parent::__construct( $name, $tier, $nationality, $cost, $weight );
         if( $ammoCapacity !== null ) $this->ammoCapacity = $ammoCapacity;
-        if( $damageAP !== null ) $this->damageAP = $damageAP;
-        if( $damageAPCR !== null ) $this->damageAPCR = $damageAPCR;
-        if( $damageHE !== null ) $this->damageHE = $damageHE;
-        if( $penetrationAP !== null ) $this->penetrationAP = $penetrationAP;
-        if( $penetrationAPCR !== null ) $this->penetrationAPCR = $penetrationAPCR;
-        if( $penetrationHE !== null ) $this->penetrationHE = $penetrationHE;
-        if( $shell !== null ) $this->shell = $shell;
         if( $rateOfFire !== null ) $this->rateOfFire = $rateOfFire;
         if( $accuratie !== null ) $this->accuratie = $accuratie;
         if( $aimTimeMin !== null ) $this->aimTimeMin = $aimTimeMin;
@@ -119,6 +86,8 @@ class Gun extends Module
         if( $elevationMax !== null ) $this->elevationMax = $elevationMax;
         if( $requiresTurret !== null ) $this->requiresTurret = $requiresTurret;
         if( $turret !== null ) $this->turret = $turret;
+        if( $caliber !== null ) $this->caliber = $caliber;
+        $this->shells = new ArrayCollection();
     }
 
     /**
@@ -191,154 +160,32 @@ class Gun extends Module
     }
 
     /**
-     * Set damageAP
+     * Add shells
      *
-     * @param integer $damageAP
-     * @return Gun
+     * @param \Imbc\ShellopediaBundle\Entity\Shell $shell
+     * @return \Imbc\ShellopediaBundle\Entity\Module
      */
-    public function setDamageAP( $damageAP )
+    public function addShell( \Imbc\ShellopediaBundle\Entity\Shell $shell )
     {
-        $this->damageAP = $damageAP;
+        if( !$this->shells->contains( $shell ))
+        {
+            $this->shells->add( $shell );
+        }
 
         return $this;
     }
 
     /**
-     * Get damageAP
+     * Remove shells
      *
-     * @return integer
+     * @param \Imbc\ShellopediaBundle\Entity\Shell $shell
      */
-    public function getDamageAP()
+    public function removeShell( \Imbc\ShellopediaBundle\Entity\Shell $shell )
     {
-        return $this->damageAP;
-    }
-
-    /**
-     * Set damageAPCR
-     *
-     * @param integer $damageAPCR
-     * @return Gun
-     */
-    public function setDamageAPCR( $damageAPCR )
-    {
-        $this->damageAPCR = $damageAPCR;
-
-        return $this;
-    }
-
-    /**
-     * Get damageAPCR
-     *
-     * @return integer
-     */
-    public function getDamageAPCR()
-    {
-        return $this->damageAPCR;
-    }
-
-    /**
-     * Set damageHE
-     *
-     * @param integer $damageHE
-     * @return Gun
-     */
-    public function setDamageHE( $damageHE )
-    {
-        $this->damageHE = $damageHE;
-
-        return $this;
-    }
-
-    /**
-     * Get damageHE
-     *
-     * @return integer
-     */
-    public function getDamageHE()
-    {
-        return $this->damageHE;
-    }
-
-    /**
-     * Set penetrationAP
-     *
-     * @param integer $penetrationAP
-     * @return Gun
-     */
-    public function setPenetrationAP( $penetrationAP )
-    {
-        $this->penetrationAP = $penetrationAP;
-
-        return $this;
-    }
-
-    /**
-     * Get penetrationAP
-     *
-     * @return integer
-     */
-    public function getPenetrationAP()
-    {
-        return $this->penetrationAP;
-    }
-
-    /**
-     * Set penetrationAPCR
-     *
-     * @param integer $penetrationAPCR
-     * @return Gun
-     */
-    public function setPenetrationAPCR( $penetrationAPCR )
-    {
-        $this->penetrationAPCR = $penetrationAPCR;
-
-        return $this;
-    }
-
-    /**
-     * Get penetrationAPCR
-     *
-     * @return integer
-     */
-    public function getPenetrationAPCR()
-    {
-        return $this->penetrationAPCR;
-    }
-
-    /**
-     * Set penetrationHE
-     *
-     * @param integer $penetrationHE
-     * @return Gun
-     */
-    public function setPenetrationHE( $penetrationHE )
-    {
-        $this->penetrationHE = $penetrationHE;
-
-        return $this;
-    }
-
-    /**
-     * Get penetrationHE
-     *
-     * @return integer
-     */
-    public function getPenetrationHE()
-    {
-        return $this->penetrationHE;
-    }
-
-    /**
-     * Set shell
-     *
-     * @param string $shell
-     * @return Gun
-     */
-    public function setShell( $shell )
-    {
-        $this->shell = $shell;
-
-        return $this;
+        if( $this->shells->contains( $shell ))
+        {
+            $this->shells->removeElement( $shell );
+        }
     }
 
     /**
@@ -348,7 +195,7 @@ class Gun extends Module
      */
     public function getShell()
     {
-        return $this->shell;
+        return $this->shells;
     }
 
     /**
@@ -487,5 +334,38 @@ class Gun extends Module
     public function getElevationMax()
     {
         return $this->elevationMax;
+    }
+
+    /**
+     * Set caliber
+     *
+     * @param integer $caliber
+     * @return Gun
+     */
+    public function setCaliber( $caliber )
+    {
+        $this->caliber = $caliber;
+
+        return $this;
+    }
+
+    /**
+     * Get caliber
+     *
+     * @return integer
+     */
+    public function getCaliber()
+    {
+        return $this->caliber;
+    }
+
+    /**
+     * __toString overriding method
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->caliber . ' ' . $this->name;
     }
 }

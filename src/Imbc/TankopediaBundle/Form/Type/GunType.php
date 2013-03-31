@@ -19,25 +19,6 @@ class GunType extends AbstractType
         $builder->add( 'ammoCapacity', 'number', array(
                     'label' => 'Ammo Capacity',
         ));
-        $builder->add( 'damageAP', 'number', array(
-                    'label' => 'AP Damage',
-        ));
-        $builder->add( 'damageAPCR', 'number', array(
-                    'label' => 'APCR  Damage',
-        ));
-        $builder->add( 'damageHE', 'number', array(
-                    'label' => 'HE  Damage',
-        ));
-        $builder->add( 'penetrationAP', 'number', array(
-                    'label' => 'AP Penetration',
-        ));
-        $builder->add( 'penetrationAPCR', 'number', array(
-                    'label' => 'APCR Penetration',
-        ));
-        $builder->add( 'penetrationHE', 'number', array(
-                    'label' => 'HE Penetration',
-        ));
-        $builder->add( 'shell' );
         $builder->add( 'rateOfFire', 'number', array(
                     'label' => 'Rate for Fire',
         ));

@@ -50,14 +50,14 @@ TODO:
     - add to Tank/Tier entity
     - add ref to DataFixtures
     - display on indexes
-7. add Shell relationship to Gun, and refactor the latter (info based on [www.worldoftanksguide.com] (http://www.worldoftanksguide.com/ref-gun-database.shtml)
+7. add Shell relationship to Gun, and refactor the latter (info based on [worldoftanksguide.com] (http://www.worldoftanksguide.com/ref-gun-database.shtml))
 8. display some chart for the different indexes using [d3] (http://d3js.org/)
     - ~~create new branch~~
     - add pie charts
     - pretty them
     - add dynamic values
 9. refactor edit/new forms
-     - use chosen javascript library for [multiselect] (http://harvesthq.github.com/chosen/)
+     - use [chosen javascript library] (http://harvesthq.github.com/chosen/) for multiselect
      - use slider
 10. add custom icons for tanks/tier/class/modules/equipment
      - use [LiipImagineBundle] (https://github.com/liip/LiipImagineBundle) for icon display (might be an overkill though)
@@ -67,7 +67,7 @@ TODO:
 13. customize bootstrap theme
     - use font awesome for icons (installed)
 14. add way to compare 3-4 tanks as tables side by side
-    - calculate tank performance (see [www.worldoftanksguide.com] (http://www.worldoftanksguide.com/cgi-bin/tank_analyzer.cgi) for example
+    - calculate tank performance (see [worldoftanksguide.com] (http://www.worldoftanksguide.com/cgi-bin/tank_analyzer.cgi) for example)
 15. investigate scrapping data directly from wot for player and save that to local db, (example: [wotdb] (https://github.com/imbc/wotdb) and [tanklab] (https://github.com/imbc/tanklab))
 16. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
 17. add [gedmo slug] (https://github.com/l3pp4rd/DoctrineExtensions) behaviour through [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
