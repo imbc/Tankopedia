@@ -1,6 +1,6 @@
 <?php
 
-namespace IMBC\OTMBundle\Entity;
+namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
@@ -17,33 +17,33 @@ class Font
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    
+
     /**
      * @ORM\Column(type="string")
-     * @var string 
-     */    
+     * @var string
+     */
     protected $name;
-    
+
     /**
      * @ORM\Column(type="integer")
      */
     protected $size;
-    
+
     /**
      * @ORM\Column(type="string")
-     */    
+     */
     protected $align;
-    
+
     /**
      * @ORM\Column(type="boolean")
-     */    
+     */
     protected $bold;
-    
+
     /**
      * @ORM\Column(type="boolean")
-     */    
+     */
     protected $italic;
-    
+
     /**
      * Get id
      * @return integer
@@ -52,7 +52,7 @@ class Font
     {
         return $this->id;
     }
-    
+
     /**
      * Get name
      * @return string

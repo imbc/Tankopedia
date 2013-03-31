@@ -1,6 +1,6 @@
 <?php
 
-namespace Imbc\OverTargetMarkerBundle\Entity;
+namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
 class PlayerPanel
 {

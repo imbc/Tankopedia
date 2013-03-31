@@ -1,6 +1,6 @@
 <?php
 
-namespace Imbc\OverTargetMarkerBundle\Entity;
+namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
