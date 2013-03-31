@@ -11,11 +11,15 @@ installation:
 1. create your virtual host
     - new file in ```/etc/apache2/sites-available/``` for the config of the virtual host
     - symlink to this file in ```/etc/apache2/site-enabled```
-    - vhosts's url added to /etc/hosts
+    - vhosts's url added to ```/etc/hosts``` on line reading ```127.0.0.1```
     - restart apache service
 2. check the database setting and adjust accordingly
 3. run composer to fetch all dependencies
 4. run the following command to create the tables:
+```
+    php app/console doctrine:schema:update --force
+```
+    or update them
 ```
     php app/console doctrine:schema:update --dump-sql
 ```
@@ -50,7 +54,7 @@ TODO:
     - add to Tank/Tier entity
     - add ref to DataFixtures
     - display on indexes
-7. add Shell relationship to Gun, and refactor the latter (info based on [worldoftanksguide.com] (http://www.worldoftanksguide.com/ref-gun-database.shtml))
+7. ~~add Shell relationship to Gun, and refactor the latter (info based on [worldoftanksguide.com]~~ (http://www.worldoftanksguide.com/ref-gun-database.shtml))
 8. display some chart for the different indexes using [d3] (http://d3js.org/)
     - ~~create new branch~~
     - add pie charts
@@ -67,9 +71,14 @@ TODO:
 13. customize bootstrap theme
     - use font awesome for icons (installed)
 14. add way to compare 3-4 tanks as tables side by side
-    - calculate tank performance (see [worldoftanksguide.com] (http://www.worldoftanksguide.com/cgi-bin/tank_analyzer.cgi) for example)
+    - calculate [tank performance] (http://www.worldoftanksguide.com/ref-tank-analyzer-explain.shtml) (see [worldoftanksguide.com] (http://www.worldoftanksguide.com/cgi-bin/tank_analyzer.cgi) for example)
 15. investigate scrapping data directly from wot for player and save that to local db, (example: [wotdb] (https://github.com/imbc/wotdb) and [tanklab] (https://github.com/imbc/tanklab))
 16. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
 17. add [gedmo slug] (https://github.com/l3pp4rd/DoctrineExtensions) behaviour through [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
     - ~~Tank~~, ~~TankClass~~, ~~Nationality~~, Tier, Modules
-18. investigate use of Graph data structure for the 'tech tree' (parents-children on tank entity); might have to use OrientDB
+18. investigate use of Graph data structure for the 'tech tree' (parents-children on tank entity);
+    - might have to use OrientDB
+    - might be able to use [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
+19. add a user management
+20. add an access level control
+21. add an Admin interface for manual data maintenance
