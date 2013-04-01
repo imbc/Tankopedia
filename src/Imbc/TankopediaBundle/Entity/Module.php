@@ -15,6 +15,12 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 abstract class Module
 {
+    const TYPE_ENGINE = 'engine';
+    const TYPE_GUN = 'gun';
+    const TYPE_RADIO = 'radio';
+    const TYPE_TRACK = 'track';
+    const TYPE_TURRET = 'turret';
+
     /**
      * @ORM\Id
      * @ORM\Column(name="id", type="integer")
@@ -239,6 +245,11 @@ abstract class Module
     {
         return $this->tanks;
     }
+
+    /**
+     *  Get type
+     */
+    abstract public function getType();
 
     /**
      * Get the Slug

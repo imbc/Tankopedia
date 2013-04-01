@@ -208,4 +208,14 @@ class Turret extends Module
     {
         return $this->viewRange;
     }
+
+    /**
+     * Get Type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return parent::TYPE_ENGINE;
+    }
 }

@@ -368,4 +368,14 @@ class Gun extends Module
     {
         return $this->caliber . ' ' . $this->name;
     }
+
+    /**
+     * Get Type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return parent::TYPE_ENGINE;
+    }
 }

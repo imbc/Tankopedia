@@ -76,4 +76,14 @@ class Track extends Module
     {
         return $this->traverseSpeed;
     }
+
+    /**
+     * Get Type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return parent::TYPE_ENGINE;
+    }
 }
