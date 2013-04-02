@@ -88,3 +88,4 @@ TODO:
 21. add an Admin interface for manual data maintenance
 22. add version (game version that is) in order to track tank/modules properties
     - create a loading system for xml files based on [WoTModTools] (https://github.com/imbc/WoTModTools)
+23. add 3d viewer (see [gamemodels3d.com/worldoftanks]  (http://gamemodels3d.com/worldoftanks/) for example)
