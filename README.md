@@ -48,7 +48,9 @@ TODO:
         * track: ~~usa~~, ussr, uk, fr, de, cn
         * turret: usa, ussr, uk, fr, de, cn
 4. create join entity TankModule to hold ManyToOne and OneToMany relatioship AND xp value
-5. add hull details on Tank with properties armor (front, side, rear) -> might need new Hull module entity
+5. add additional tank related information
+    - hull details on Tank with properties armor (front, side, rear) -> might need new Hull module entity
+    - cammo value [see this post] (http://forum.worldoftanks.com/index.php?/topic/147120-083-tank-camouflage-tables/)
 6. add battle range for tanks
     - create new branch
     - add to Tank/Tier entity
@@ -71,6 +73,8 @@ TODO:
 13. customize bootstrap theme
     - use font awesome for icons (installed)
 14. add way to compare 3-4 tanks as tables side by side
+    - implement 3 way to compare tanks [example] (http://tank-compare.com)
+    - implement comparator by tier/class [example] (http://wotatank.com/)
     - calculate [tank performance] (http://www.worldoftanksguide.com/ref-tank-analyzer-explain.shtml) (see [worldoftanksguide.com] (http://www.worldoftanksguide.com/cgi-bin/tank_analyzer.cgi) for example)
 15. investigate scrapping data directly from wot for player and save that to local db, (example: [wotdb] (https://github.com/imbc/wotdb) and [tanklab] (https://github.com/imbc/tanklab))
 16. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
