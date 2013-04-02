@@ -78,7 +78,7 @@ TODO:
     - ~~Tank~~, ~~TankClass~~, ~~Nationality~~, Tier, Modules
 18. investigate use of Graph data structure for the 'tech tree' (parents-children on tank entity);
     - might have to use OrientDB
-    - might be able to use [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
+    - might be able to use [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle) see Closure Table
 19. add a user management
 20. add an access level control
 21. add an Admin interface for manual data maintenance
