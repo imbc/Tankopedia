@@ -23,6 +23,8 @@ class AppKernel extends Kernel
             new APY\DataGridBundle\APYDataGridBundle(),
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new HWI\OAuthBundle\HWIOAuthBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

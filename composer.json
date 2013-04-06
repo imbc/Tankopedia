@@ -4,6 +4,9 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/userfriendly/SocialUserBundle" }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.2.*",
@@ -28,7 +31,8 @@
         "stof/doctrine-extensions-bundle": "dev-master",
         "apy/datagrid-bundle": "dev-master",
         "elao/web-profiler-extra-bundle" : "dev-master",
-        "leaseweb/version-information-bundle": "dev-master"
+        "leaseweb/version-information-bundle": "dev-master",
+        "userfriendly/social-user-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
@@ -47,7 +51,7 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

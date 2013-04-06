@@ -73,8 +73,8 @@ TODO:
 13. customize bootstrap theme
     - use font awesome for icons (installed)
 14. add way to compare 3-4 tanks as tables side by side
-    - implement 3 way to compare tanks [example] (http://tank-compare.com)
-    - implement comparator by tier/class [example] (http://wotatank.com/)
+    - implement 3 way to compare tanks (see [tank-compare.com] (http://tank-compare.com) for example)
+    - implement comparator by tier/class (see [wotatank.com] (http://wotatank.com/) for example) 
     - calculate [tank performance] (http://www.worldoftanksguide.com/ref-tank-analyzer-explain.shtml) (see [worldoftanksguide.com] (http://www.worldoftanksguide.com/cgi-bin/tank_analyzer.cgi) for example)
 15. investigate scrapping data directly from wot for player and save that to local db, (example: [wotdb] (https://github.com/imbc/wotdb) and [tanklab] (https://github.com/imbc/tanklab))
 16. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
