@@ -5,7 +5,8 @@
         "psr-0": { "": "src/" }
     },
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/userfriendly/SocialUserBundle" }
+        { "type": "vcs", "url": "https://github.com/userfriendly/SocialUserBundle" },
+        { "type": "vcs", "url": "https://github.com/userfriendly/UtilityBundle" }
     ],
     "require": {
         "php": ">=5.3.3",
@@ -32,6 +33,9 @@
         "apy/datagrid-bundle": "dev-master",
         "elao/web-profiler-extra-bundle" : "dev-master",
         "leaseweb/version-information-bundle": "dev-master",
+        "raulfraile/ladybug-bundle": "dev-master",
+        "friendsofsymfony/user-bundle": "dev-master",
+        "userfriendly/utility-bundle": "dev-master",
         "userfriendly/social-user-bundle": "dev-master"
     },
     "scripts": {
@@ -51,7 +55,7 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
