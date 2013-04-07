@@ -21,19 +21,21 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new APY\DataGridBundle\APYDataGridBundle(),
-            new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-//            new FOS\UserBundle\FOSUserBundle(),
-//            new HWI\OAuthBundle\HWIOAuthBundle(),
+            new Userfriendly\Bundle\SocialUserBundle\UserfriendlySocialUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new HWI\OAuthBundle\HWIOAuthBundle(),
+            // application bundle
+            new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-            $bundles[] = new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle();
-            $bundles[] = new Lsw\VersionInformationBundle\LswVersionInformationBundle();
-            $bundles[] = new Elao\WebProfilerExtraBundle\WebProfilerExtraBundle();
+            $bundles[] = new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(); // custom var_dump
+            $bundles[] = new Lsw\VersionInformationBundle\LswVersionInformationBundle(); // git watch
+            $bundles[] = new Elao\WebProfilerExtraBundle\WebProfilerExtraBundle(); // extra info
         }
 
         return $bundles;
