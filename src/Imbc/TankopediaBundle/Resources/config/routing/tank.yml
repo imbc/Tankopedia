@@ -13,3 +13,11 @@ tankopedia_tank_new:
 tankopedia_tank_edit:
     pattern:  /{slug}/edit
     defaults: { _controller: "ImbcTankopediaBundle:Tank:edit" }
+
+tankopedia_tank_datatables:
+    pattern:  /datatables
+    defaults: { _controller: "ImbcTankopediaBundle:Tank:datatables" }
+
+tankopedia_tank_grid:
+    pattern:  /grid
+    defaults: { _controller: "ImbcTankopediaBundle:Tank:grid" }

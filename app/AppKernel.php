@@ -23,6 +23,8 @@ class AppKernel extends Kernel
             new APY\DataGridBundle\APYDataGridBundle(),
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+//            new LanKit\DatatablesBundle\LanKitDatatablesBundle(),
+            new Ali\DatatableBundle\AliDatatableBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

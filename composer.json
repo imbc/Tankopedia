@@ -28,7 +28,8 @@
         "stof/doctrine-extensions-bundle": "dev-master",
         "apy/datagrid-bundle": "dev-master",
         "elao/web-profiler-extra-bundle" : "dev-master",
-        "leaseweb/version-information-bundle": "dev-master"
+        "leaseweb/version-information-bundle": "dev-master",
+        "ali/datatable": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
@@ -49,6 +50,7 @@
     },
     "minimum-stability": "alpha",
     "extra": {
+        "symfony-assets-install": "symlink",
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "branch-alias": {

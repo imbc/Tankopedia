@@ -13,6 +13,49 @@ use Imbc\TankopediaBundle\Form\Type\TankType;
  */
 class TankController extends Controller
 {
+   /**
+    * set datatable configs
+    *
+    * @return \Ali\DatatableBundle\Util\Datatable
+    */
+    private function _datatable()
+    {
+        $dt = $this->get( 'datatable' );
+        $dt->setDatatableId( 'dta-unique-id' );
+        $dt->setEntity( 'ImbcTankopediaBundle:Tank', 't' );
+        $dt->setFields( array(
+                               'ID' => 't.id',
+                               'Name' => 't.name',
+                               '_identifier_'  => 't.id'
+        ));
+        $dt->setWhere( 't.id = :id', array(
+                    'id' => '*',
+        ));
+        $dt->setOrder( 't.id', 'asc' );
+        $dt->setHasAction( false );
+
+        return $dt;
+    }
+
+    /**
+    * Grid action
+    * @return Response
+    */
+    public function gridAction()
+    {
+        return $this->_datatable()->execute();
+    }
+
+    /**
+     * Lists all entities.
+     * @return Response
+     */
+    public function datatablesAction()
+    {
+        $this->_datatable();
+        return $this->render( 'ImbcTankopediaBundle:Tank:grid.html.twig' );
+    }
+
     public function indexAction( Request $request )
     {
         $em = $this->getDoctrine()->getManager();
@@ -52,9 +95,7 @@ class TankController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository( 'ImbcTankopediaBundle:Tank' );
-        if ( null === $tank = $repo->findOneBy( array(
-                        'slug' => $request->get( 'slug' ))
-                ))
+        if ( null === $tank = $repo->findOneBy( array( 'slug' => $request->get( 'slug' )) ))
         {
             throw $this->createNotFoundException( 'Tank does not exist' );
         }
