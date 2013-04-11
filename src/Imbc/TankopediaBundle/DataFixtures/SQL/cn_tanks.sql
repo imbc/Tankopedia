@@ -1,4 +1,4 @@
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(1,1,6,"Renault NC-31",0,0),
@@ -10,7 +10,7 @@ VALUES
 	(1,7,6,"WZ-131",0,0),
 	(1,8,6,"WZ-132",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(2,5,6,"Type T-34",0,0),
@@ -22,7 +22,7 @@ VALUES
 	(2,9,6,"WZ-120",0,0),
 	(2,10,6,"121",0,0);
 
-INSERT INTO `tanks__tank`
+INSERT INTO `top__tank`
 	(class_id, tier_id, nationality_id, name, premium, reward)
 VALUES
 	(3,7,6,"IS-2",0,0),

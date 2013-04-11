@@ -4,7 +4,7 @@
 <h1>Class list</h1>
 <div class="chart"></div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
+<script type="text/javascript">
 
 var width = 960,
     height = 500,
@@ -53,7 +53,6 @@ var svg = d3.select(".chart").append("svg")
 <table class="table table-condensed table-hover table-striped records_list">
     <thead>
         <tr>
-            <th>Id</th>
             <th>Name</th>
             <th>Number of Tanks</th>
             <th>Actions</th>
@@ -62,16 +61,15 @@ var svg = d3.select(".chart").append("svg")
     <tbody>
     {% for class in classes %}
         <tr>
-            <td><a href="{{ path('tankopedia_class_show', { 'id': class.id }) }}">{{ class.id }}</a></td>
             <td>{{ class.name }}</td>
             <td>{{ class.tanks | length }}</td>
             <td>
                 <div class="btn-group">
                     <button class="btn btn-mini">
-                        <a href="{{ path('tankopedia_class_show', { 'id': class.id }) }}">show</a>
+                        <a href="{{ path('tankopedia_class_show', { 'slug': class.slug }) }}">show</a>
                     </button>
                     <button class="btn btn-mini">
-                        <a href="{{ path('tankopedia_class_edit', { 'id': class.id }) }}">edit</a>
+                        <a href="{{ path('tankopedia_class_edit', { 'slug': class.slug }) }}">edit</a>
                     </button>
                 </div>
             </td>
@@ -82,7 +80,7 @@ var svg = d3.select(".chart").append("svg")
 
 <ul>
     <li>
-        <a href="{{ path('tankopedia_class_new') }}">
+        <a class="btn" href="{{ path('tankopedia_class_new') }}">
             Create a new entry
         </a>
     </li>

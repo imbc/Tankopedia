@@ -2,13 +2,14 @@
 
 namespace Imbc\TankopediaBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use APY\DataGridBundle\Grid\Mapping as GRID;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TankRepository")
- * @ORM\Table(name="tanks__tank")
+ * @ORM\Table(name="top__tank")
  */
 class Tank
 {
@@ -19,15 +20,15 @@ class Tank
      *
      * @GRID\Column(visible=false)
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(name="name", type="string")
      *
      * @GRID\Column(title="Tank", type="text", size="-1")
-     * @GRID\Column(title="Name",filter="select", selectFrom="source", operatorsVisible=false, align="center")
+     * @GRID\Column(title="Name", filter="select", selectFrom="source", operatorsVisible=false, align="center")
      */
-    private $name;
+    protected $name;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\TankClass", inversedBy="tanks")
@@ -35,13 +36,13 @@ class Tank
      *
      * @GRID\Column(field="class.name", title="Class", filter="select", selectFrom="source", operatorsVisible=false, align="center")
      */
-    private $class;
+    protected $class;
 
     /**
      * @ORM\ManyToOne(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="tanks")
      * @ORM\JoinColumn(name="tier_id", referencedColumnName="id")
      *
-     * @GRID\Column(field="tier.value", title="Tier", filter="select", operatorsVisible=false, align="center")
+     * @GRID\Column(field="tier.name", title="Tier", filter="select", operatorsVisible=false, align="center")
      */
     protected $tier;
 
@@ -51,49 +52,74 @@ class Tank
      *
      * @GRID\Column(field="nationality.name", title="Nation", filter="select", type="text", operatorsVisible=false, align="center")
      */
-    private $nationality;
+    protected $nationality;
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="tanks")
      */
-    private $modules;
+    protected $modules;
 
     /**
      * @ORM\Column(name="premium", type="boolean", nullable=true)
      *
-     * @GRID\Column(title="Premium", type="boolean", size="-1")
+     * @GRID\Column(title="Premium", type="boolean", size="-1", align="center")
      */
-    private $premium;
+    protected $premium;
 
     /**
      * @ORM\Column(name="reward", type="boolean", nullable=true)
      *
-     * @GRID\Column(title="Reward", type="boolean", size="-1")
+     * @GRID\Column(title="Reward", type="boolean", size="-1", align="center")
      */
-    private $reward;
+    protected $reward;
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="children")
-     * */
-    private $parents;
+     */
+    protected $parents;
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="parents")
-     * @ORM\JoinTable(name="tanks__parent_child",
+     * @ORM\JoinTable(name="top__tank_relastionship",
      *      joinColumns={@ORM\JoinColumn(name="parent_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="child_id", referencedColumnName="id")}
      *      )
-     * */
-    private $children;
+     */
+    protected $children;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tier", inversedBy="matchMaker")
+     * @ORM\JoinTable(name="top__matchmaking",
+     *      joinColumns={@ORM\JoinColumn(name="tank_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="tier_id", referencedColumnName="id")}
+     *      )
+     */
+    protected $matchMaker;
+
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=true)
+     *
+     * @GRID\Column(visible=false)
+     */
+    private $slug;
 
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $name = null, $class = null, $tier = null, $nationality = null,
+            $premium = null, $reward = null )
     {
+        if( $name !== null ) $this->name = $name;
+        if( $class !== null ) $this->class = $class;
+        if( $tier !== null ) $this->tier = $tier;
+        if( $nationality !== null ) $this->nationality = $nationality;
+        if( $premium !== null ) $this->premium = $premium;
+        if( $reward !== null ) $this->reward = $reward;
         $this->modules = new ArrayCollection();
         $this->parents = new ArrayCollection();
         $this->children = new ArrayCollection();
+        $this->matchMaker = new ArrayCollection();
     }
 
     /**
@@ -110,7 +136,7 @@ class Tank
      * Set name
      *
      * @param string $name
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setName( $name )
     {
@@ -132,24 +158,29 @@ class Tank
     /**
      * Add modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
-     * @return Tank
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
-    public function addModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function addModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules[] = $modules;
-
+        if( !$this->modules->contains( $module ))
+        {
+            $this->modules->add( $module );
+        }
         return $this;
     }
 
     /**
      * Remove modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      */
-    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules->removeElement( $modules );
+        if( $this->modules->contains( $module ))
+        {
+            $this->modules->removeElement( $module );
+        }
     }
 
     /**
@@ -166,7 +197,7 @@ class Tank
      * Add parent
      *
      * @param \Imbc\TankopediaBundle\Entity\Tank $parent
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function addParent( \Imbc\TankopediaBundle\Entity\Tank $parent )
     {
@@ -205,7 +236,7 @@ class Tank
      * Add child
      *
      * @param \Imbc\TankopediaBundle\Entity\Tank $child
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function addChildren( \Imbc\TankopediaBundle\Entity\Tank $child )
     {
@@ -244,7 +275,7 @@ class Tank
      * Set class
      *
      * @param \Imbc\TankopediaBundle\Entity\TankClass $class
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setClass( \Imbc\TankopediaBundle\Entity\TankClass $class = null )
     {
@@ -267,7 +298,7 @@ class Tank
      * Set tier
      *
      * @param \Imbc\TankopediaBundle\Entity\Tier $tier
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setTier( \Imbc\TankopediaBundle\Entity\Tier $tier = null )
     {
@@ -290,7 +321,7 @@ class Tank
      * Set nationality
      *
      * @param \Imbc\TankopediaBundle\Entity\Nationality $nationality
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setNationality( \Imbc\TankopediaBundle\Entity\Nationality $nationality = null )
     {
@@ -313,7 +344,7 @@ class Tank
      * Set premium
      *
      * @param boolean $premium
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setPremium( $premium = FALSE )
     {
@@ -336,7 +367,7 @@ class Tank
      * Set reward
      *
      * @param boolean $reward
-     * @return Tank
+     * @return \Imbc\TankopediaBundle\Entity\Tank
      */
     public function setReward( $reward  = FALSE )
     {
@@ -353,6 +384,60 @@ class Tank
     public function getReward()
     {
         return $this->reward;
+    }
+
+    /**
+     * Get matchMaker
+     *
+     * @return array
+     */
+    public function getBattleRange()
+    {
+        return $this->matchMaker;
+    }
+
+    /**
+     * Set matchMaker
+     *
+     * @param ArrayCollection $matchMaker
+     * @return \Imbc\TankopediaBundle\Entity\Tank
+     */
+    public function setBattleRange( ArrayCollection $matchMaker)
+    {
+        $this->matchMaker = $matchMaker;
+
+        return $this;
+    }
+
+    /**
+     * Add tier
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tier $battleTier
+     */
+    public function addBattleTier( \Imbc\TankopediaBundle\Entity\Tier $battleTier )
+    {
+        if( !$this->matchMaker->contains( $battleTier ))
+        {
+            $this->matchMaker->add( $battleTier );
+        }
+    }
+
+    /**
+     * Remove tier
+     *
+     * @param \Imbc\TankopediaBundle\Entity\Tier $battleTier
+     */
+    public function removeBattleTier( \Imbc\TankopediaBundle\Entity\Tier $battleTier )
+    {
+        if( $this->matchMaker->contains( $battleTier ))
+        {
+            $this->matchMaker->remove( $battleTier );
+        }
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     public function __toString()

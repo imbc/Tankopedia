@@ -22,7 +22,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new APY\DataGridBundle\APYDataGridBundle(),
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
-            new Lsw\VersionInformationBundle\LswVersionInformationBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             $bundles[] = new Elao\WebProfilerExtraBundle\WebProfilerExtraBundle();
+            $bundles[] = new Lsw\VersionInformationBundle\LswVersionInformationBundle();
         }
 
         return $bundles;

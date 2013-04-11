@@ -8,31 +8,34 @@
             <tr>
                 <th>Tier</th>
                 <th>Name</th>
-                <th>Xp</th>
                 <th>Cost</th>
                 <th>Weight</th>
-                <th>Loadlimit</th>
-                <th>Traversespeed</th>
+                <th>Load Limit</th>
+                <th>Traverse Speed</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for entity in entities %}
+        {% for track in tracks %}
             <tr>
-                <td>{{ entity.tier }}</td>
-                <td>{{ entity.name }}</td>
-                <td>{{ entity.xp }}</td>
-                <td>{{ entity.cost }}</td>
-                <td>{{ entity.weight }}</td>
-                <td>{{ entity.loadLimit }}</td>
-                <td>{{ entity.traverseSpeed }}</td>
+                <td>{{ track.tier }}</td>
+                <td>{{ track.name }}</td>
+                <td>{% if track.cost != 0 %}
+                        {{ track.cost }}
+                    {% else %}
+                        <i class="icon-star"></i>
+                    {% endif %}
+                </td>
+                <td>{{ track.weight }} kg</td>
+                <td>{{ track.loadLimit }} t</td>
+                <td>{{ track.traverseSpeed }} deg/sec</td>
                 <td>
                     <div class="btn-group">
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_track_show', { 'id': entity.id }) }}">show</a>
+                            <a href="{{ path('tankopedia_track_show', { 'slug': track.slug }) }}">show</a>
                         </button>
                         <button class="btn btn-mini">
-                            <a href="{{ path('tankopedia_track_edit', { 'id': entity.id }) }}">edit</a>
+                            <a href="{{ path('tankopedia_track_edit', { 'slug': track.slug }) }}">edit</a>
                         </button>
                     </div>
                 </td>

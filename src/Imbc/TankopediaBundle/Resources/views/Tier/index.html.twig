@@ -61,17 +61,17 @@
         </tr>
     </thead>
     <tbody>
-    {% for tier in entities %}
+    {% for tier in tiers %}
         <tr>
-            <td>{{ tier.value }}</td>
+            <td>{{ tier.name }}</td>
             <td>{{ tier.tanks | length }}</td>
             <td>
                 <div class="btn-group">
                     <button class="btn btn-mini">
-                        <a href="{{ path('tankopedia_tier_show', { 'id': tier.id }) }}">show</a>
+                        <a href="{{ path('tankopedia_tier_show', { 'slug': tier.slug }) }}">show</a>
                     </button>
                     <button class="btn btn-mini">
-                        <a href="{{ path('tankopedia_tier_edit', { 'id': tier.id }) }}">edit</a>
+                        <a href="{{ path('tankopedia_tier_edit', { 'slug': tier.slug }) }}">edit</a>
                     </button>
                 </div>
             </td>

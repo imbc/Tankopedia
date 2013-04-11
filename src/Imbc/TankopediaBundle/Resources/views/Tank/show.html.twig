@@ -3,11 +3,8 @@
 {% block body -%}
 <h1>{{ tank.name }}</h1>
 <div class="btn-group pull-right">
-    <a class="btn btn-mini" href="{{ path('tankopedia_tank_edit', { 'id': tank.id }) }}">
+    <a class="btn btn-mini" href="{{ path('tankopedia_tank_edit', { 'slug': tank.slug }) }}">
         <i class="icon-wrench"></i> Edit
-    </a>
-    <a class="btn btn-mini" href="#">
-        <i class="icon-trash"></i> Delete
     </a>
 </div>
 
@@ -28,9 +25,9 @@
         {% for module in tank.modules %}
         <tr>
             <td>{{ module.name }}</td>
-            <td>{{ module.xp }}</td>
+            <td></td>
             <td>{{ module.cost }}</td>
-            <td>{{ module.type }}</td>
+            <td></td>
         </tr>
         {% endfor %}
     </tbody>

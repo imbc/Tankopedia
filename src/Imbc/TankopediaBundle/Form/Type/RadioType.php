@@ -14,9 +14,6 @@ class RadioType extends AbstractType
         $builder->add( 'name', 'text', array(
             'label' => 'Name',
         ));
-        $builder->add( 'xp', 'text', array(
-            'label' => 'Experience Needed',
-        ));
         $builder->add( 'cost', 'text', array(
             'label' => 'Cost',
         ));
@@ -31,7 +28,7 @@ class RadioType extends AbstractType
             'empty_value'   => '(Choose a Tier)',
             'required'      => true,
             'class'         => 'ImbcTankopediaBundle:Tier',
-            'property'      => 'value',
+            'property'      => 'name',
             'label'         => 'Tier',
 //            'expanded'      => true,
         ));

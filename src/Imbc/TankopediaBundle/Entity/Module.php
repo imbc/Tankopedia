@@ -2,18 +2,25 @@
 
 namespace Imbc\TankopediaBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\ModuleRepository")
- * @ORM\Table(name="tanks__module")
+ * @ORM\Table(name="top__module")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
  * @ORM\DiscriminatorMap({"engine" = "Engine", "gun" = "Gun", "radio" = "Radio", "track" = "Track", "turret" = "Turret"})
  */
 abstract class Module
 {
+    const TYPE_ENGINE = 'engine';
+    const TYPE_GUN = 'gun';
+    const TYPE_RADIO = 'radio';
+    const TYPE_TRACK = 'track';
+    const TYPE_TURRET = 'turret';
+
     /**
      * @ORM\Id
      * @ORM\Column(name="id", type="integer")
@@ -39,11 +46,6 @@ abstract class Module
     private $nationality;
 
     /**
-     * @ORM\Column(name="xp", type="integer")
-     */
-    protected $xp;
-
-    /**
      * @ORM\Column(name="cost", type="integer")
      */
     protected $cost;
@@ -55,15 +57,28 @@ abstract class Module
 
     /**
      * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", inversedBy="modules")
-     * @ORM\JoinTable(name="tanks__tanks_modules")
+     * @ORM\JoinTable(name="top__tank_module")
      **/
     protected $tanks;
 
     /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    protected $slug;
+
+    /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $name = null, $tier = null, $nationality = null,
+            $cost = null, $weight = null )
     {
+        if( $name !== null ) $this->name = $name;
+        if( $tier !== null ) $this->tier = $tier;
+        if( $nationality !== null ) $this->nationality = $nationality;
+        if( $cost !== null ) $this->cost = $cost;
+        if( $weight !== null ) $this->weight = $weight;
+
         $this->tanks = new ArrayCollection();
     }
 
@@ -81,7 +96,7 @@ abstract class Module
      * Set name
      *
      * @param string $name
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setName( $name )
     {
@@ -104,7 +119,7 @@ abstract class Module
      * Set nationality
      *
      * @param \Imbc\TankopediaBundle\Entity\Nationality $nationality
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setNationality( \Imbc\TankopediaBundle\Entity\Nationality $nationality = null )
     {
@@ -127,7 +142,7 @@ abstract class Module
      * Set tier
      *
      * @param \Imbc\TankopediaBundle\Entity\Nationality $nationality
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setTier( \Imbc\TankopediaBundle\Entity\Tier $tier )
     {
@@ -147,33 +162,10 @@ abstract class Module
     }
 
     /**
-     * Set xp
-     *
-     * @param integer $xp
-     * @return Module
-     */
-    public function setXp( $xp )
-    {
-        $this->xp = $xp;
-
-        return $this;
-    }
-
-    /**
-     * Get xp
-     *
-     * @return integer
-     */
-    public function getXp()
-    {
-        return $this->xp;
-    }
-
-    /**
      * Set cost
      *
      * @param integer $cost
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setCost( $cost )
     {
@@ -196,7 +188,7 @@ abstract class Module
      * Set weight
      *
      * @param integer $weight
-     * @return Module
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
     public function setWeight( $weight )
     {
@@ -218,12 +210,15 @@ abstract class Module
     /**
      * Add tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     * @return Module
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
+     * @return \Imbc\TankopediaBundle\Entity\Module
      */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->add( $tank );
+        }
 
         return $this;
     }
@@ -231,11 +226,14 @@ abstract class Module
     /**
      * Remove tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks->removeElement($tanks);
+        if( $this->tanks->contains( $tank ))
+        {
+            $this->tanks->removeElement($tank);
+        }
     }
 
     /**
@@ -246,5 +244,28 @@ abstract class Module
     public function getTanks()
     {
         return $this->tanks;
+    }
+
+    /**
+     *  Get type
+     */
+    abstract public function getType();
+
+    /**
+     * Get the Slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * __toString overriding method
+     */
+    public function __toString()
+    {
+        return $this->name;
     }
 }

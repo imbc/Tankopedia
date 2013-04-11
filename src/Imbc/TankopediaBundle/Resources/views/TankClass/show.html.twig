@@ -1,38 +1,162 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Type</h1>
+<h1>{{ class.name }}</h1>
 
-    <table class="table table-condensed table-hover table-striped record_properties">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ class.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ class.name }}</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="panel">
+    <div class="frame">
+        <div class="header">American</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.nationality.abreviation == 'USA' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
+                                {{ tank.name }}
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
 
-        <ul class="record_actions">
+<div class="panel">
+    <div class="frame">
+        <div class="header">British</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.nationality.abreviation == 'UK' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
+                                {{ tank.name }}
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">German</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.nationality.abreviation == 'DE' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
+                                {{ tank.name }}
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">French</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.nationality.abreviation == 'FR' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
+                                {{ tank.name }}
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">Russian</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.nationality.abreviation == 'USSR' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
+                                {{ tank.name }}
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">Chinese</div>
+        <div class="content">
+        {% for tank in tanks %}
+        <ul class="block-list">
+            {% if tank.nationality.abreviation == 'CN' %}
+                <li>
+                    <div class="block-list-item">
+                        <div>{{ tank.tier }}</div>
+                        <div>
+                            <a href="{{ path( 'tankopedia_tank_show', { 'slug': tank.slug }) }}">
+                                {{ tank.name }}
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<ul class="record_actions">
     <li>
         <a href="{{ path('tankopedia_class') }}">
             Back to the list
         </a>
     </li>
     <li>
-        <a href="{{ path('tankopedia_class_edit', { 'id': class.id }) }}">
+        <a href="{{ path('tankopedia_class_edit', { 'slug': class.slug }) }}">
             Edit
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_class_delete', { 'id': class.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
     </li>
 </ul>
 {% endblock %}

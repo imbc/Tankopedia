@@ -2,12 +2,13 @@
 
 namespace Imbc\TankopediaBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\NationalityRepository")
- * @ORM\Table(name="tanks__nationality")
+ * @ORM\Table(name="top__nationality")
  */
 class Nationality
 {
@@ -39,10 +40,18 @@ class Nationality
     protected $tanks;
 
     /**
+     * @Gedmo\Slug(fields={"abreviation"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    private $slug;
+
+    /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $abbreviation = null, $name = null )
     {
+        if( $abbreviation !== null ) $this->abreviation = $abbreviation;
+        if( $name !== null ) $this->name = $name;
         $this->modules = new ArrayCollection();
         $this->tanks = new ArrayCollection();
     }
@@ -107,12 +116,15 @@ class Nationality
     /**
      * Add modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      * @return Nationality
      */
-    public function addModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function addModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules[] = $modules;
+        if( !$this->modules->contains( $module ))
+        {
+            $this->modules->add( $module );
+        }
 
         return $this;
     }
@@ -120,11 +132,15 @@ class Nationality
     /**
      * Remove modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      */
-    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules->removeElement($modules);
+        if( !$this->modules->contains( $module ))
+        {
+            $this->modules->removeElement( $module );
+        }
+
     }
 
     /**
@@ -140,12 +156,15 @@ class Nationality
     /**
      * Add tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      * @return Nationality
      */
-    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
+    public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->add( $tank );
+        }
 
         return $this;
     }
@@ -153,11 +172,14 @@ class Nationality
     /**
      * Remove tanks
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
+     * @param \Imbc\TankopediaBundle\Entity\Tank $tank
      */
-    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
+    public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tank )
     {
-        $this->tanks->removeElement($tanks);
+        if( !$this->tanks->contains( $tank ))
+        {
+            $this->tanks->removeElement( $tank );
+        }
     }
 
     /**
@@ -168,6 +190,11 @@ class Nationality
     public function getTanks()
     {
         return $this->tanks;
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     public function __toString()

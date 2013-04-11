@@ -16,44 +16,34 @@ class LoadTierData extends AbstractFixture implements OrderedFixtureInterface
 
     public function load( ObjectManager $manager )
     {
-        $tier1 = new Tier();
-        $tier1->setValue( 'I' );
+        $tier1 = new Tier( 'I' );
         $manager->persist( $tier1 );
 
-        $tier2 = new Tier();
-        $tier2->setValue( 'II' );
+        $tier2 = new Tier( 'II' );
         $manager->persist( $tier2 );
 
-        $tier3 = new Tier();
-        $tier3->setValue( 'III' );
+        $tier3 = new Tier( 'III' );
         $manager->persist( $tier3 );
 
-        $tier4 = new Tier();
-        $tier4->setValue( 'IV' );
+        $tier4 = new Tier( 'IV' );
         $manager->persist( $tier4 );
 
-        $tier5 = new Tier();
-        $tier5->setValue( 'V' );
+        $tier5 = new Tier( 'V' );
         $manager->persist( $tier5 );
 
-        $tier6 = new Tier();
-        $tier6->setValue( 'VI' );
+        $tier6 = new Tier( 'VI' );
         $manager->persist( $tier6 );
 
-        $tier7 = new Tier();
-        $tier7->setValue( 'VII' );
+        $tier7 = new Tier( 'VII' );
         $manager->persist( $tier7 );
 
-        $tier8 = new Tier();
-        $tier8->setValue( 'VIII' );
+        $tier8 = new Tier( 'VIII' );
         $manager->persist( $tier8 );
 
-        $tier9 = new Tier();
-        $tier9->setValue( 'IX' );
+        $tier9 = new Tier( 'IX' );
         $manager->persist( $tier9 );
 
-        $tier10 = new Tier();
-        $tier10->setValue( 'X' );
+        $tier10 = new Tier( 'X' );
         $manager->persist( $tier10 );
 
         $manager->flush();

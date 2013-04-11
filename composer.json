@@ -25,6 +25,7 @@
         "jms/serializer-bundle": "0.11",
         "kriswallsmith/assetic": "1.1.*@dev",
         "gedmo/doctrine-extensions": "master-dev",
+        "stof/doctrine-extensions-bundle": "dev-master",
         "apy/datagrid-bundle": "dev-master",
         "elao/web-profiler-extra-bundle" : "dev-master",
         "leaseweb/version-information-bundle": "dev-master"

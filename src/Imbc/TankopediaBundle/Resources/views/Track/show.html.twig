@@ -7,31 +7,27 @@
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ entity.id }}</td>
+                <td>{{ track.id }}</td>
             </tr>
             <tr>
                 <th>Name</th>
-                <td>{{ entity.name }}</td>
-            </tr>
-            <tr>
-                <th>Xp</th>
-                <td>{{ entity.xp }}</td>
+                <td>{{ track.name }}</td>
             </tr>
             <tr>
                 <th>Cost</th>
-                <td>{{ entity.cost }}</td>
+                <td>{{ track.cost }}</td>
             </tr>
             <tr>
                 <th>Weight</th>
-                <td>{{ entity.weight }}</td>
+                <td>{{ track.weight }}</td>
             </tr>
             <tr>
                 <th>Loadlimit</th>
-                <td>{{ entity.loadLimit }}</td>
+                <td>{{ track.loadLimit }}</td>
             </tr>
             <tr>
                 <th>Traversespeed</th>
-                <td>{{ entity.traverseSpeed }}</td>
+                <td>{{ track.traverseSpeed }}</td>
             </tr>
         </tbody>
     </table>
@@ -43,16 +39,9 @@
         </a>
     </li>
     <li>
-        <a href="{{ path('tankopedia_track_edit', { 'id': entity.id }) }}">
+        <a href="{{ path('tankopedia_track_edit', { 'slug': track.slug }) }}">
             Edit
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_track_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
     </li>
 </ul>
 {% endblock %}

@@ -3,62 +3,70 @@
 namespace Imbc\TankopediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TurretRepository")
- * @ORM\Table(name="tanks__module_turret")
+ * @ORM\Table(name="top__module_turret")
  */
 class Turret extends Module
 {
     /**
      * @ORM\Column(name="armorFront", type="integer")
      */
-    private $armorFront;
+    protected $armorFront;
 
     /**
      * @ORM\Column(name="armorSide", type="integer")
      */
-    private $armorSide;
+    protected $armorSide;
 
     /**
      * @ORM\Column(name="armorRear", type="integer")
      */
-    private $armorRear;
+    protected $armorRear;
 
     /**
      * @ORM\Column(name="traverseSpeed", type="integer")
      */
-    private $traverseSpeed;
+    protected $traverseSpeed;
 
     /**
      * @ORM\Column(name="viewRange", type="integer")
      */
-    private $viewRange;
+    protected $viewRange;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Gun", mappedBy="turret")
      */
-    private $guns;
+    protected $guns;
 
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $name = null, $tier = null, $nationality = null,
+            $cost = null, $weight = null, $armorFront = null, $armorSide = null,
+            $armorRear = null, $traverseSpeed = null, $viewRange = null )
     {
-        $this->guns = new ArrayCollection();
-        $this->tanks = new ArrayCollection();
+        parent::__construct( $name, $tier, $nationality, $cost, $weight );
+        if( $armorFront !== null ) $this->armorFront = $armorFront;
+        if( $armorSide !== null ) $this->armorSide = $armorSide;
+        if( $armorRear !== null ) $this->armorRear = $armorRear;
+        if( $traverseSpeed !== null ) $this->traverseSpeed = $traverseSpeed;
+        if( $viewRange !== null ) $this->viewRange = $viewRange;
     }
 
     /**
      * Add guns
      *
-     * @param \Imbc\TankopediaBundle\Entity\Gun $guns
+     * @param \Imbc\TankopediaBundle\Entity\Gun $gun
      * @return Turret
      */
-    public function addGun(\Imbc\TankopediaBundle\Entity\Gun $guns)
+    public function addGun( \Imbc\TankopediaBundle\Entity\Gun $gun )
     {
-        $this->guns[] = $guns;
+        if( !$this->guns->contains( $gun ))
+        {
+            $this->guns->add( $gun );
+        }
 
         return $this;
     }
@@ -66,11 +74,14 @@ class Turret extends Module
     /**
      * Remove guns
      *
-     * @param \Imbc\TankopediaBundle\Entity\Gun $guns
+     * @param \Imbc\TankopediaBundle\Entity\Gun $gun
      */
-    public function removeGun(\Imbc\TankopediaBundle\Entity\Gun $guns)
+    public function removeGun( \Imbc\TankopediaBundle\Entity\Gun $gun )
     {
-        $this->guns->removeElement($guns);
+        if( $this->guns->contains( $gun ))
+        {
+            $this->guns->removeElement($gun);
+        }
     }
 
     /**
@@ -81,141 +92,6 @@ class Turret extends Module
     public function getGuns()
     {
         return $this->guns;
-    }
-
-    /**
-     * Add tanks
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     * @return Turret
-     */
-    public function addTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
-    {
-        $this->tanks[] = $tanks;
-
-        return $this;
-    }
-
-    /**
-     * Remove tanks
-     *
-     * @param \Imbc\TankopediaBundle\Entity\Tank $tanks
-     */
-    public function removeTank(\Imbc\TankopediaBundle\Entity\Tank $tanks)
-    {
-        $this->tanks->removeElement($tanks);
-    }
-
-    /**
-     * Get tanks
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getTanks()
-    {
-        return $this->tanks;
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     * @return Turret
-     */
-    public function setName( $name )
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Set xp
-     *
-     * @param integer $xp
-     * @return Turret
-     */
-    public function setXp( $xp )
-    {
-        $this->xp = $xp;
-
-        return $this;
-    }
-
-    /**
-     * Get xp
-     *
-     * @return integer
-     */
-    public function getXp()
-    {
-        return $this->xp;
-    }
-
-    /**
-     * Set cost
-     *
-     * @param integer $cost
-     * @return Turret
-     */
-    public function setCost( $cost )
-    {
-        $this->cost = $cost;
-
-        return $this;
-    }
-
-    /**
-     * Get cost
-     *
-     * @return integer
-     */
-    public function getCost()
-    {
-        return $this->cost;
-    }
-
-    /**
-     * Set weight
-     *
-     * @param integer $weight
-     * @return Turret
-     */
-    public function setWeight( $weight )
-    {
-        $this->weight = $weight;
-
-        return $this;
-    }
-
-    /**
-     * Get weight
-     *
-     * @return integer
-     */
-    public function getWeight()
-    {
-        return $this->weight;
     }
 
     /**
@@ -334,33 +210,12 @@ class Turret extends Module
     }
 
     /**
-     * Set tier
+     * Get Type
      *
-     * @param \Imbc\TankopediaBundle\Entity\Tier $tier
-     * @return Turret
+     * @return string
      */
-    public function setTier( \Imbc\TankopediaBundle\Entity\Tier $tier = null )
+    public function getType()
     {
-        $this->tier = $tier;
-
-        return $this;
-    }
-
-    /**
-     * Get tier
-     *
-     * @return \Imbc\TankopediaBundle\Entity\Tier
-     */
-    public function getTier()
-    {
-        return $this->tier;
-    }
-
-    /**
-     * __toString overriding method
-     */
-    public function __toString()
-    {
-        return $this->name;
+        return parent::TYPE_ENGINE;
     }
 }

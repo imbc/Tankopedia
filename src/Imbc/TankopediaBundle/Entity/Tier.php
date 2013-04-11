@@ -2,12 +2,13 @@
 
 namespace Imbc\TankopediaBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TierRepository")
- * @ORM\Table(name="tanks__tier")
+ * @ORM\Table(name="top__tier")
  */
 class Tier
 {
@@ -16,31 +17,43 @@ class Tier
      * @ORM\Column(name="id", type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
-     *
-     * @ORM\Column(name="value", type="string")
+     * @ORM\Column(name="name", type="string")
      */
-    private $value;
+    protected $name;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Module", mappedBy="tier")
      * */
-    private $modules;
+    protected $modules;
 
     /**
      * @ORM\OneToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="tier")
      * */
-    private $tanks;
+    protected $tanks;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Imbc\TankopediaBundle\Entity\Tank", mappedBy="matchMaker")
+     */
+    protected $matchMaker;
+
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    protected $slug;
 
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct( $name = null )
     {
+        if( $name !== null ) $this->name = $name;
         $this->modules = new ArrayCollection();
         $this->tanks = new ArrayCollection();
+        $this->matchMaker = new ArrayCollection();
     }
 
     /**
@@ -54,49 +67,54 @@ class Tier
     }
 
     /**
-     * Set value
+     * Set name
      *
-     * @param string $value
+     * @param string $name
      * @return Tier
      */
-    public function setValue( $value )
+    public function setName( $name )
     {
-        $this->value = $value;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get value
+     * Get name
      *
      * @return string
      */
-    public function getValue()
+    public function getName()
     {
-        return $this->value;
+        return $this->name;
     }
 
     /**
      * Add modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      * @return Tier
      */
-    public function addModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function addModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules[] = $modules;
-
+        if( !$this->modules->contains( $module ))
+        {
+            $this->modules->add( $module );
+        }
         return $this;
     }
 
     /**
      * Remove modules
      *
-     * @param \Imbc\TankopediaBundle\Entity\Module $modules
+     * @param \Imbc\TankopediaBundle\Entity\Module $module
      */
-    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $modules )
+    public function removeModule( \Imbc\TankopediaBundle\Entity\Module $module )
     {
-        $this->modules->removeElement( $modules );
+        if( $this->modules->contains( $module ))
+        {
+            $this->modules->removeElement( $module );
+        }
     }
 
     /**
@@ -117,7 +135,10 @@ class Tier
      */
     public function addTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
     {
-        $this->tanks[] = $tanks;
+        if( !$this->tanks->contains( $tanks ))
+        {
+            $this->tanks->add( $tanks );
+        }
 
         return $this;
     }
@@ -129,7 +150,10 @@ class Tier
      */
     public function removeTank( \Imbc\TankopediaBundle\Entity\Tank $tanks )
     {
-        $this->tanks->removeElement( $tanks );
+        if( $this->tanks->contains( $tanks ))
+        {
+            $this->tanks->removeElement( $tanks );
+        }
     }
 
     /**
@@ -142,8 +166,33 @@ class Tier
         return $this->tanks;
     }
 
+    /**
+     * Get matchMaker
+     *
+     * @return ArrayCollection
+     */
+    public function getMatchMaker()
+    {
+        return $this->matchMaker;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * __toString overriding method
+     *
+     * @return string
+     */
     public function __toString()
     {
-        return (string)$this->value;
+        return $this->name;
     }
 }

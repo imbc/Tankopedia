@@ -1,0 +1,71 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">Nation</div>
+        <div class="content">
+        {% for nationality in nationalities %}
+        <ul class="block-list">
+            <li>
+                <div class="block-list-item">
+                    <div>{{ nationality.abreviation }}</div>
+                    <div>
+                        <a href="{{ path( 'tankopedia_nationality_show', { 'slug': nationality.slug }) }}">
+                            {{ nationality.name }}
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">Class</div>
+        <div class="content">
+        {% for class in classes %}
+        <ul class="block-list">
+            <li>
+                <div class="block-list-item">
+                    <div>
+                        <a href="{{ path( 'tankopedia_class_show', { 'slug': class.slug }) }}">
+                            {{ class.name }}
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
+        <div class="header">Tier</div>
+        <div class="content">
+        {% for tier in tiers %}
+        <ul class="block-list">
+            <li>
+                <div class="block-list-item">
+                    <div>
+                        <a href="{{ path( 'tankopedia_tier_show', { 'slug': tier.slug }) }}">
+                            {{ tier.name }}
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

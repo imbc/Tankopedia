@@ -1,0 +1,1924 @@
+
+
+AMERICAN
+
+
+ = new Track("Cunningham E1", $tier1, $nationality, 0, 2,000, 7.6, 34);
+->addTank( $tankRepo->getTankByName("T1 Cunningham"));
+$manager->persist(  );
+
+ = new Track("T18E1", $tier1, $nationality, 270, 3,000, 14, 28);
+->addTank( $tankRepo->getTankByName("T18"));
+$manager->persist(  );
+
+ = new Track("Vickers E", $tier1, $nationality,  0, 2,000, 11.1, 42);
+->addTank( $tankRepo->getTankByName("T1E6"));
+$manager->persist(  );
+
+ = new Track("VVSS T36E6", $tier1, $nationality, 270, 3,300, 15.2, 18);
+->addTank( $tankRepo->getTankByName("T57"));
+$manager->persist(  );
+
+ = new Track("VVSS T16E1", $tier1, $nationality, 330, 3,300, 11.5, 36);
+->addTank( $tankRepo->getTankByName("M2 Light Tank"));
+$manager->persist(  );
+
+ = new Track("T2E1", $tier1, $nationality, 340, 4,300, 15.6, 38);
+->addTank( $tankRepo->getTankByName("T2 Medium Tank"));
+$manager->persist(  );
+
+ = new Track("Cunningham E2", $tier2, $nationality, 500, 2,000, 8.3, 38);
+->addTank( $tankRepo->getTankByName("T1 Cunningham"));
+$manager->persist(  );
+
+ = new Track("T16E2", $tier2, $nationality,  0, 1,800, 8.3, 47);
+->addTank( $tankRepo->getTankByName("T2 Light Tank"));
+$manager->persist(  );
+
+ = new Track("T18E2", $tier2, $nationality, 580, 3,000, 15, 30);
+->addTank( $tankRepo->getTankByName("T18"));
+$manager->persist(  );
+
+ = new Track("VVSS T55E1", $tier2, $nationality, 550, 3,300, 16.3, 20);
+->addTank( $tankRepo->getTankByName("T57"));
+$manager->persist(  );
+
+ = new Track("VVSS T16E2", $tier2, $nationality, 620, 3,300, 11.5, 40);
+->addTank( $tankRepo->getTankByName("M2 Light Tank"));
+$manager->persist(  );
+
+ = new Track("T2E4", $tier2, $nationality, 650, 4,300, 16.2, 40);
+->addTank( $tankRepo->getTankByName("T2 Medium Tank"));
+$manager->persist(  );
+
+ = new Track("T82T55E2", $tier2, $nationality, 1850, 3,000, 14, 30);
+->addTank( $tankRepo->getTankByName("T82"));
+$manager->persist(  );
+
+ = new Track("T48", $tier2, $nationality, 670, 4,800, 21.5, 35);
+->addTank( $tankRepo->getTankByName("M2 Medium Tank"));
+$manager->persist(  );
+
+ = new Track("Stuart E1", $tier2, $nationality, 660, 3,000, 12.5, 40);
+->addTank( $tankRepo->getTankByName("M3 Stuart"));
+$manager->persist(  );
+
+ = new Track("T85E1", $tier2, $nationality, 690, 5,100, 16, 18);
+->addTank( $tankRepo->getTankByName("M37"));
+$manager->persist(  );
+
+ = new Track("VVST78", $tier3, $nationality,  0, 1,200, 7.59, 40);
+->addTank( $tankRepo->getTankByName("M22 Locust"));
+$manager->persist(  );
+
+ = new Track("T82T55E4", $tier3, $nationality, 740, 3,000, 15.8, 32);
+->addTank( $tankRepo->getTankByName("T82"));
+$manager->persist(  );
+
+ = new Track("T49", $tier3, $nationality, 2100, 4,800, 23.5, 40);
+->addTank( $tankRepo->getTankByName("M2 Medium Tank"));
+$manager->persist(  );
+
+ = new Track("Stuart E2", $tier3, $nationality, 1850, 3,000, 14.5, 45);
+->addTank( $tankRepo->getTankByName("M3 Stuart"));
+$manager->persist(  );
+
+ = new Track("T85E2", $tier3, $nationality, 1950, 5,100, 23.6, 20);
+->addTank( $tankRepo->getTankByName("M37"));
+$manager->persist(  );
+
+ = new Track("T40T41", $tier3, $nationality, 1850, 6,200, 22.5, 30);
+->addTank( $tankRepo->getTankByName("T40"));
+$manager->persist(  );
+
+ = new Track("VVSS T41", $tier3, $nationality, 1870, 5,000, 28.7, 40);
+->addTank( $tankRepo->getTankByName("M3 Lee"));
+$manager->persist(  );
+
+ = new Track("VVS T16", $tier3, $nationality, 1850, 3,000, 16.2, 35);
+->addTank( $tankRepo->getTankByName("M8A1"));
+$manager->persist(  );
+
+ = new Track("VVSS T16E3", $tier3, $nationality, 1500, 3,000, 15.5, 40);
+->addTank( $tankRepo->getTankByName("M5 Stuart"));
+$manager->persist(  );
+
+ = new Track("VVSS T49", $tier3, $nationality, 1180, 6,200, 22.66, 18);
+->addTank( $tankRepo->getTankByName("M7 Priest"));
+$manager->persist(  );
+
+ = new Track("T40T48", $tier4, $nationality, 4500, 6,200, 24, 32);
+->addTank( $tankRepo->getTankByName("T40"));
+$manager->persist(  );
+
+ = new Track("VVSS T48", $tier4, $nationality, 4650, 5,000, 29.9, 43);
+->addTank( $tankRepo->getTankByName("M3 Lee"));
+$manager->persist(  );
+
+ = new Track("T36 E6", $tier4, $nationality, 5850, 3,000, 17.5, 40);
+->addTank( $tankRepo->getTankByName("M8A1"));
+$manager->persist(  );
+
+ = new Track("VVSS T36E8", $tier4, $nationality, 5050, 3,000, 17.4, 45);
+->addTank( $tankRepo->getTankByName("M5 Stuart"));
+$manager->persist(  );
+
+ = new Track("VVSS T51", $tier4, $nationality, 4750, 6,200, 23.96, 20);
+->addTank( $tankRepo->getTankByName("M7 Priest"));
+$manager->persist(  );
+
+ = new Track("T41", $tier4, $nationality, 4450, 8,000, 30, 35);
+->addTank( $tankRepo->getTankByName("M4 Sherman"));
+$manager->persist(  );
+
+ = new Track("VVSS T48", $tier4, $nationality, 4450, 4,000, 24.5, 46);
+->addTank( $tankRepo->getTankByName("M7"));
+$manager->persist(  );
+
+ = new Track("M10T41", $tier4, $nationality, 4300, 2,000, 13.65, 30);
+->addTank( $tankRepo->getTankByName("T49"));
+$manager->persist(  );
+
+ = new Track("M10T41", $tier4, $nationality, 4300, 7,000, 28.49, 28);
+->addTank( $tankRepo->getTankByName("M10 Wolverine"));
+$manager->persist(  );
+
+ = new Track("HVSS T31", $tier4, $nationality, 4050, 10,600, 57.88, 20);
+->addTank( $tankRepo->getTankByName("T1 Heavy Tank"));
+$manager->persist(  );
+
+ = new Track("M24T91", $tier4, $nationality, 4450, 4,200, 18.3, 42);
+->addTank( $tankRepo->getTankByName("M24 Chaffee"));
+$manager->persist(  );
+
+ = new Track("T72", $tier4, $nationality, 4300, 6,200, 19.2, 18);
+->addTank( $tankRepo->getTankByName("M41"));
+$manager->persist(  );
+
+ = new Track("M4A2E4T42", $tier5, $nationality,  0, 8,000, 33.3, 37);
+->addTank( $tankRepo->getTankByName("M4A2E4"));
+$manager->persist(  );
+
+ = new Track("VVSS WE210", $tier5, $nationality,  0, 8,300, 31, 37);
+->addTank( $tankRepo->getTankByName("Ram-II"));
+$manager->persist(  );
+
+ = new Track("T42", $tier5, $nationality, 8300, 8,000, 32.3, 37);
+->addTank( $tankRepo->getTankByName("M4 Sherman"));
+$manager->persist(  );
+
+ = new Track("VVSS T48A", $tier5, $nationality, 8000, 4,000, 25.5, 48);
+->addTank( $tankRepo->getTankByName("M7"));
+$manager->persist(  );
+
+ = new Track("VVSS T48M1A1", $tier5, $nationality, 8300, 5,300, 23.2, 58);
+->addTank( $tankRepo->getTankByName("T21"));
+$manager->persist(  );
+
+ = new Track("T49E2", $tier5, $nationality, 10200, 2,000, 16.4, 32);
+->addTank( $tankRepo->getTankByName("T49"));
+$manager->persist(  );
+
+ = new Track("M10T42", $tier5, $nationality, 10000, 7,000, 31.7, 30);
+->addTank( $tankRepo->getTankByName("M10 Wolverine"));
+$manager->persist(  );
+
+ = new Track("HVSS T35", $tier5, $nationality, 9600, 10,600, 61.5, 25);
+->addTank( $tankRepo->getTankByName("T1 Heavy Tank"));
+$manager->persist(  );
+
+ = new Track("M24T95", $tier5, $nationality, 9750, 4,200, 21, 46);
+->addTank( $tankRepo->getTankByName("M24 Chaffee"));
+$manager->persist(  );
+
+ = new Track("T72E1", $tier5, $nationality, 8700, 6,200, 25.2, 20);
+->addTank( $tankRepo->getTankByName("M41"));
+$manager->persist(  );
+
+ = new Track("M36T41", $tier5, $nationality, 6400, 7,000, 28.89, 28);
+->addTank( $tankRepo->getTankByName("M36 Jackson"));
+$manager->persist(  );
+
+ = new Track("HVS1", $tier5, $nationality, 9700, 15,000, 57.6, 21);
+->addTank( $tankRepo->getTankByName("M6"));
+$manager->persist(  );
+
+ = new Track("NVSS T66", $tier5, $nationality, 9600, 8,300, 33, 37);
+->addTank( $tankRepo->getTankByName("M4A3E8 Sherman"));
+$manager->persist(  );
+
+ = new Track("M18 T67", $tier5, $nationality, 8600, 4,000, 17.95, 30);
+->addTank( $tankRepo->getTankByName("M18 Hellcat"));
+$manager->persist(  );
+
+ = new Track("VVSST48E2", $tier5, $nationality, 9630, 8,300, 34, 30);
+->addTank( $tankRepo->getTankByName("M4A3E2 Sherman Jumbo"));
+$manager->persist(  );
+
+ = new Track("M12T48", $tier5, $nationality, 7300, 4,200, 22.5, 18);
+->addTank( $tankRepo->getTankByName("M12"));
+$manager->persist(  );
+
+ = new Track("MTLS T1", $tier6, $nationality,  0, 2,000, 17.35, 40);
+->addTank( $tankRepo->getTankByName("MTLS-1G14"));
+$manager->persist(  );
+
+ = new Track("T14", $tier6, $nationality,  0, 14,800, 49.8, 20);
+->addTank( $tankRepo->getTankByName("T14"));
+$manager->persist(  );
+
+ = new Track("M36T42", $tier6, $nationality, 22100, 7,000, 30.5, 30);
+->addTank( $tankRepo->getTankByName("M36 Jackson"));
+$manager->persist(  );
+
+ = new Track("HVS2", $tier6, $nationality, 15900, 15,000, 61, 25);
+->addTank( $tankRepo->getTankByName("M6"));
+$manager->persist(  );
+
+ = new Track("NVSS T80", $tier6, $nationality, 16300, 8,300, 34.5, 40);
+->addTank( $tankRepo->getTankByName("M4A3E8 Sherman"));
+$manager->persist(  );
+
+ = new Track("M18 T69", $tier6, $nationality, 17000, 4,000, 21.8, 30);
+->addTank( $tankRepo->getTankByName("M18 Hellcat"));
+$manager->persist(  );
+
+ = new Track("VVSS T48M1A2", $tier6, $nationality, 16000, 5,300, 26.0, 60);
+->addTank( $tankRepo->getTankByName("T21"));
+$manager->persist(  );
+
+ = new Track("VVSST51E2", $tier6, $nationality, 16350, 8,300, 38.5, 32);
+->addTank( $tankRepo->getTankByName("M4A3E2 Sherman Jumbo"));
+$manager->persist(  );
+
+ = new Track("M12T51", $tier6, $nationality, 17300, 4,200, 28.95, 20);
+->addTank( $tankRepo->getTankByName("M12"));
+$manager->persist(  );
+
+ = new Track("T25T1", $tier6, $nationality, 15000, 10,200, 39.21, 30);
+->addTank( $tankRepo->getTankByName("T25 AT"));
+$manager->persist(  );
+
+ = new Track("HVSS T48", $tier6, $nationality, 11900, 5,400, 30, 37);
+->addTank( $tankRepo->getTankByName("T20"));
+$manager->persist(  );
+
+ = new Track("T71", $tier6, $nationality, 15000, 4,500, 18, 54);
+->addTank( $tankRepo->getTankByName("T71"));
+$manager->persist(  );
+
+ = new Track("T84E1", $tier6, $nationality, 13400, 11,500, 63.5, 20);
+->addTank( $tankRepo->getTankByName("T29"));
+$manager->persist(  );
+
+ = new Track("M40", $tier6, $nationality, 19070, 4,200, 35.6, 20);
+->addTank( $tankRepo->getTankByName("M40/M43"));
+$manager->persist(  );
+
+ = new Track("HVSS T51", $tier7, $nationality, 17900, 5,400, 34, 37);
+->addTank( $tankRepo->getTankByName("T20"));
+$manager->persist(  );
+
+ = new Track("T25/2T1", $tier7, $nationality, 19200, 10,200, 43.805, 30);
+->addTank( $tankRepo->getTankByName("T25/2"));
+$manager->persist(  );
+
+ = new Track("T25/2T4", $tier7, $nationality, 19200, 10,200, 45.8, 30);
+->addTank( $tankRepo->getTankByName("T25/2"));
+$manager->persist(  );
+
+ = new Track("T71A1", $tier7, $nationality, 18000, 4,500, 20, 56);
+->addTank( $tankRepo->getTankByName("T71"));
+$manager->persist(  );
+
+ = new Track("T84E3", $tier7, $nationality, 22000, 11,500, 66.8, 25);
+->addTank( $tankRepo->getTankByName("T29"));
+$manager->persist(  );
+
+ = new Track("M43", $tier7, $nationality, 30000, 4,200, 40.7, 22);
+->addTank( $tankRepo->getTankByName("M40/M43"));
+$manager->persist(  );
+
+ = new Track("M26T80E1", $tier7, $nationality, 16300, 10,000, 42.35, 36);
+->addTank( $tankRepo->getTankByName("M26 Pershing"));
+$manager->persist(  );
+
+ = new Track("T28VVSS T46", $tier7, $nationality, 16500, 12,000, 59.8, 18);
+->addTank( $tankRepo->getTankByName("T28"));
+$manager->persist(  );
+
+ = new Track("T84E1", $tier7, $nationality, 16300, 8,000, 34.56, 35);
+->addTank( $tankRepo->getTankByName("T69"));
+$manager->persist(  );
+
+ = new Track("T84E1A", $tier7, $nationality, 20200, 12,000, 54.83, 20);
+->addTank( $tankRepo->getTankByName("T32"));
+$manager->persist(  );
+
+ = new Track("T28P E2", $tier7, $nationality, 16000, 12,000, 68.8, 18);
+->addTank( $tankRepo->getTankByName("T28 Prototype"));
+$manager->persist(  );
+
+ = new Track("T92 T80E1", $tier7, $nationality, 16000, 10,200, 57.69, 20);
+->addTank( $tankRepo->getTankByName("T92"));
+$manager->persist(  );
+
+ = new Track("T25T2", $tier8, $nationality, 32720, 10,200, 43.8, 30);
+->addTank( $tankRepo->getTankByName("T25 AT"));
+$manager->persist(  );
+
+ = new Track("М26Т80Е1", $tier8, $nationality, 0, 10,000, 52.5, 32);
+->addTank( $tankRepo->getTankByName("T26E4 Super Pershing"));
+$manager->persist(  );
+
+ = new Track("M6A2E1HVSS", $tier8, $nationality,  0, 15,000, 70.5, 24);
+->addTank( $tankRepo->getTankByName("M6A2E1"));
+$manager->persist(  );
+
+ = new Track("T80E3", $tier8, $nationality, 0, 10,000, 71.85, 22);
+->addTank( $tankRepo->getTankByName("T34"));
+$manager->persist(  );
+
+ = new Track("M26T81", $tier8, $nationality, 30250, 10,000, 45.05, 38);
+->addTank( $tankRepo->getTankByName("M26 Pershing"));
+$manager->persist(  );
+
+ = new Track("T28VVSS T56", $tier8, $nationality, 33300, 12,000, 62.45, 20);
+->addTank( $tankRepo->getTankByName("T28"));
+$manager->persist(  );
+
+ = new Track("T54E1", $tier8, $nationality, 31700, 10,000, 54.5, 44);
+->addTank( $tankRepo->getTankByName("T54E1"));
+$manager->persist(  );
+
+ = new Track("T84E3A", $tier8, $nationality, 38100, 12,000, 60.5, 25);
+->addTank( $tankRepo->getTankByName("T32"));
+$manager->persist(  );
+
+ = new Track("T28P E4", $tier8, $nationality, 35000, 12,000, 76.8, 20);
+->addTank( $tankRepo->getTankByName("T28 Prototype"));
+$manager->persist(  );
+
+ = new Track("T92 T82E4", $tier8, $nationality, 39100, 10,200, 60.6, 22);
+->addTank( $tankRepo->getTankByName("T92"));
+$manager->persist(  );
+
+ = new Track("M46T80E1", $tier8, $nationality, 31700, 10,000, 41.2, 36);
+->addTank( $tankRepo->getTankByName("M46 Patton"));
+$manager->persist(  );
+
+ = new Track("T95", $tier8, $nationality, 33000, 8,000, 36.56, 40);
+->addTank( $tankRepo->getTankByName("T69"));
+$manager->persist(  );
+
+ = new Track("T95HVSS", $tier8, $nationality, 29300, 18,000, 86.89, 16);
+->addTank( $tankRepo->getTankByName("T95"));
+$manager->persist(  );
+
+ = new Track("T80E3A", $tier8, $nationality, 42500, 10,000, 64.05, 20);
+->addTank( $tankRepo->getTankByName("T30"));
+$manager->persist(  );
+
+ = new Track("T97E1", $tier8, $nationality, 31500, 8,000, 57.5, 26);
+->addTank( $tankRepo->getTankByName("M103"));
+$manager->persist(  );
+
+ = new Track("M46T81", $tier9, $nationality, 60500, 10,000, 45.05, 38);
+->addTank( $tankRepo->getTankByName("M46 Patton"));
+$manager->persist(  );
+
+ = new Track("T54E1M2", $tier9, $nationality, 61000, 10,000, 57.5, 46);
+->addTank( $tankRepo->getTankByName("T54E1"));
+$manager->persist(  );
+
+ = new Track("T95HVSSM2", $tier9, $nationality, 62500, 18,000, 91.89, 18);
+->addTank( $tankRepo->getTankByName("T95"));
+$manager->persist(  );
+
+ = new Track("T84E38", $tier9, $nationality, 60000, 10,000, 69.05, 22);
+->addTank( $tankRepo->getTankByName("T30"));
+$manager->persist(  );
+
+ = new Track("T97E2", $tier9, $nationality, 61500, 8,000, 62.5, 28);
+->addTank( $tankRepo->getTankByName("M103"));
+$manager->persist(  );
+
+ = new Track("T97", $tier10, $nationality, 82500, 11,000, 58.0, 30);
+->addTank( $tankRepo->getTankByName("T57 Heavy Tank"));
+$manager->persist(  );
+
+ = new Track("T97E2", $tier10, $nationality, 82500, 8,000, 50.35, 50);
+->addTank( $tankRepo->getTankByName("M48A1"));
+$manager->persist(  );
+
+ = new Track("T110E27", $tier10, $nationality, 82500, 8,000, 60.05, 30);
+->addTank( $tankRepo->getTankByName("T110E5"));
+$manager->persist(  );
+
+ = new Track("T110E4", $tier10, $nationality, 82500, 8,000, 67, 26);
+->addTank( $tankRepo->getTankByName("T110E4"));
+$manager->persist(  );
+
+ = new Track("T110E3", $tier10, $nationality, 82500, 8,000, 78, 24);
+->addTank( $tankRepo->getTankByName("T110E3"));
+$manager->persist(  );
+
+
+BRITISH
+
+
+ = new Track("Vickers Medium Mk. I", $tier1, $nationality, 0, 3,000, 12.2, 26);
+->addTank( $tankRepo->getTankByName("Vickers Medium Mk. I"));
+$manager->persist(  );
+
+ = new Track("A9 Mk. I", $tier1, $nationality, 330, 3,000, 13, 30);
+->addTank( $tankRepo->getTankByName("Cruiser Mk. I"));
+$manager->persist(  );
+
+ = new Track("Vickers Medium Mk. II", $tier1, $nationality, 330, 3,500, 13.9, 26);
+->addTank( $tankRepo->getTankByName("Vickers Medium Mk. II"));
+$manager->persist(  );
+
+ = new Track("Cruiser Mk. III", $tier1, $nationality, 330, 4,500, 14.5, 32);
+->addTank( $tankRepo->getTankByName("Cruiser Mk. III"));
+$manager->persist(  );
+
+ = new Track("Universal Carrier Mk. I", $tier1, $nationality, 0, 1,500, 4.5, 36);
+->addTank( $tankRepo->getTankByName("Universal Carrier 2-pdr"));
+$manager->persist(  );
+
+ = new Track("Vickers Medium Mk. IA", $tier2, $nationality, 500, 3,000, 13.2, 28);
+->addTank( $tankRepo->getTankByName("Vickers Medium Mk. I"));
+$manager->persist(  );
+
+ = new Track("A9 Mk. II", $tier2, $nationality, 600, 3,000, 14.1, 32);
+->addTank( $tankRepo->getTankByName("Cruiser Mk. I"));
+$manager->persist(  );
+
+ = new Track("Vickers Medium Mk. IIA", $tier2, $nationality, 620, 3,500, 15.2, 28);
+->addTank( $tankRepo->getTankByName("Vickers Medium Mk. II"));
+$manager->persist(  );
+
+ = new Track("Cruiser Mk. III*", $tier2, $nationality, 610, 4,500, 17, 35);
+->addTank( $tankRepo->getTankByName("Cruiser Mk. III"));
+$manager->persist(  );
+
+ = new Track("A10 Mk. I", $tier2, $nationality, 670, 3,000, 14.5, 32);
+->addTank( $tankRepo->getTankByName("Cruiser Mk. II"));
+$manager->persist(  );
+
+ = new Track("Vickers Medium А6Е1", $tier2, $nationality, 670, 4,000, 18, 30);
+->addTank( $tankRepo->getTankByName("Vickers Medium Mk. III"));
+$manager->persist(  );
+
+ = new Track("Cruiser Mk. IV", $tier2, $nationality, 670, 4,500, 15, 35);
+->addTank( $tankRepo->getTankByName("Cruiser Mk. IV"));
+$manager->persist(  );
+
+ = new Track("Universal Carrier Mk. II", $tier2, $nationality, 580, 1,500, 7, 40);
+->addTank( $tankRepo->getTankByName("Universal Carrier 2-pdr"));
+$manager->persist(  );
+
+ = new Track("A10 Mk. II", $tier3, $nationality, 1700, 3,000, 16.7, 34);
+->addTank( $tankRepo->getTankByName("Cruiser Mk. II"));
+$manager->persist(  );
+
+ = new Track("Vickers Medium A6Е3", $tier3, $nationality, 1800, 4,000, 19.5, 32);
+->addTank( $tankRepo->getTankByName("Vickers Medium Mk. III"));
+$manager->persist(  );
+
+ = new Track("Cruiser Mk. IVA", $tier3, $nationality, 1900, 4,500, 17.1, 38);
+->addTank( $tankRepo->getTankByName("Cruiser Mk. IV"));
+$manager->persist(  );
+
+ = new Track("Covenanter Mk. I", $tier3, $nationality, 1500, 4,500, 18.2, 38);
+->addTank( $tankRepo->getTankByName("Covenanter"));
+$manager->persist(  );
+
+ = new Track("Valentine Mk. I", $tier3, $nationality, 1420, 3,200, 16.5, 40);
+->addTank( $tankRepo->getTankByName("Valentine"));
+$manager->persist(  );
+
+ = new Track("Mk. II", $tier3, $nationality, 2270, 7,200, 27, 34);
+->addTank( $tankRepo->getTankByName("Matilda"));
+$manager->persist(  );
+
+ = new Track("Valentine AT Mk. I", $tier3, $nationality, 0, 3,200, 15, 34);
+->addTank( $tankRepo->getTankByName("Valentine AT"));
+$manager->persist(  );
+
+ = new Track("Valentine AT Mk. II", $tier3, $nationality, 400, 3,200, 17, 38);
+->addTank( $tankRepo->getTankByName("Valentine AT"));
+$manager->persist(  );
+
+ = new Track("Alecto Mk. I", $tier3, $nationality, 0, 1,800, 8.2, 38);
+->addTank( $tankRepo->getTankByName("Alecto"));
+$manager->persist(  );
+
+ = new Track("Covenanter Mk. III", $tier4, $nationality, 4200, 4,500, 20.5, 40);
+->addTank( $tankRepo->getTankByName("Covenanter"));
+$manager->persist(  );
+
+ = new Track("Valentine Mk. VI", $tier4, $nationality, 4700, 3,200, 20, 42);
+->addTank( $tankRepo->getTankByName("Valentine"));
+$manager->persist(  );
+
+ = new Track("Mk. IIA", $tier4, $nationality, 4800, 7,200, 29, 36);
+->addTank( $tankRepo->getTankByName("Matilda"));
+$manager->persist(  );
+
+ = new Track("Churchill Mk. I", $tier4, $nationality, 4050, 8,150, 39, 20);
+->addTank( $tankRepo->getTankByName("Churchill I"));
+$manager->persist(  );
+
+ = new Track("Crusader Mk. I", $tier4, $nationality, 2000, 6,200, 19.3, 38);
+->addTank( $tankRepo->getTankByName("Crusader"));
+$manager->persist(  );
+
+ = new Track("Alecto Mk. IV", $tier4, $nationality, 4700, 1,800, 10.2, 42);
+->addTank( $tankRepo->getTankByName("Alecto"));
+$manager->persist(  );
+
+ = new Track("AT 2", $tier4, $nationality, 4050, 11,000, 41.0, 18);
+->addTank( $tankRepo->getTankByName("AT 2"));
+$manager->persist(  );
+
+ = new Track("AT 8", $tier4, $nationality, 13000, 11,000, 41.5, 18);
+->addTank( $tankRepo->getTankByName("AT 8"));
+$manager->persist(  );
+
+ = new Track("AT 8 Mk. II", $tier4, $nationality, 16000, 11,000, 44.5, 20);
+->addTank( $tankRepo->getTankByName("AT 8"));
+$manager->persist(  );
+
+ = new Track("Matilda Black Prince", $tier5, $nationality,  0, 7,200, 31.95, 35);
+->addTank( $tankRepo->getTankByName("Matilda Black Prince"));
+$manager->persist(  );
+
+ = new Track("Churchill Mk. III", $tier5, $nationality, 8500, 8,150, 43, 22);
+->addTank( $tankRepo->getTankByName("Churchill I"));
+$manager->persist(  );
+
+ = new Track("Crusader Mk. III", $tier5, $nationality, 9500, 6,200, 21, 40);
+->addTank( $tankRepo->getTankByName("Crusader"));
+$manager->persist(  );
+
+ = new Track("A27L", $tier5, $nationality, 4000, 6,500, 28, 34);
+->addTank( $tankRepo->getTankByName("Cromwell"));
+$manager->persist(  );
+
+ = new Track("A22", $tier5, $nationality, 8600, 8,150, 40.15, 18);
+->addTank( $tankRepo->getTankByName("Churchill VII"));
+$manager->persist(  );
+
+ = new Track("AT 2 Mk. II", $tier5, $nationality, 9000, 11,000, 44.0, 20);
+->addTank( $tankRepo->getTankByName("AT 2"));
+$manager->persist(  );
+
+ = new Track("Churchill Gun Carrier", $tier5, $nationality, 8600, 8,150, 40.0, 22);
+->addTank( $tankRepo->getTankByName("Churchill Gun Carrier"));
+$manager->persist(  );
+
+ = new Track("A27M", $tier6, $nationality, 19000, 6,500, 29.5, 36);
+->addTank( $tankRepo->getTankByName("Cromwell"));
+$manager->persist(  );
+
+ = new Track("A22F", $tier6, $nationality, 18000, 8,150, 43, 20);
+->addTank( $tankRepo->getTankByName("Churchill VII"));
+$manager->persist(  );
+
+ = new Track("Churchill Gun Carrier Mk. II", $tier6, $nationality, 12860, 8,150, 43.0, 24);
+->addTank( $tankRepo->getTankByName("Churchill Gun Carrier"));
+$manager->persist(  );
+
+ = new Track("A34", $tier6, $nationality, 11690, 7,000, 32, 34);
+->addTank( $tankRepo->getTankByName("Comet"));
+$manager->persist(  );
+
+ = new Track("Black Prince", $tier6, $nationality, 13000, 10,000, 51, 18);
+->addTank( $tankRepo->getTankByName("Black Prince"));
+$manager->persist(  );
+
+ = new Track("TOG II", $tier6, $nationality,  0, 20,000, 85, 20);
+->addTank( $tankRepo->getTankByName("TOG II*"));
+$manager->persist(  );
+
+ = new Track("A34A", $tier7, $nationality, 18000, 7,000, 34, 36);
+->addTank( $tankRepo->getTankByName("Comet"));
+$manager->persist(  );
+
+ = new Track("Black Prince Mk. II", $tier7, $nationality, 18000, 10,000, 53, 20);
+->addTank( $tankRepo->getTankByName("Black Prince"));
+$manager->persist(  );
+
+ = new Track("Centurion Mk. I", $tier7, $nationality, 20200, 10,000, 43, 34);
+->addTank( $tankRepo->getTankByName("Centurion Mk. I"));
+$manager->persist(  );
+
+ = new Track("FV221", $tier7, $nationality, 20200, 12,000, 60, 22);
+->addTank( $tankRepo->getTankByName("Caernarvon"));
+$manager->persist(  );
+
+ = new Track("AT-15A", $tier7, $nationality,  0, 12,000, 68, 24);
+->addTank( $tankRepo->getTankByName("AT-15A"));
+$manager->persist(  );
+
+ = new Track("Centurion Mk. III", $tier8, $nationality, 33000, 10,000, 48, 36);
+->addTank( $tankRepo->getTankByName("Centurion Mk. I"));
+$manager->persist(  );
+
+ = new Track("FV221A", $tier8, $nationality, 30500, 12,000, 63, 24);
+->addTank( $tankRepo->getTankByName("Caernarvon"));
+$manager->persist(  );
+
+ = new Track("Centurion Mk. 7", $tier8, $nationality, 31500, 11,000, 51.5, 30);
+->addTank( $tankRepo->getTankByName("Centurion Mk. 7/1"));
+$manager->persist(  );
+
+ = new Track("FV214", $tier8, $nationality, 31500, 12,000, 65, 24);
+->addTank( $tankRepo->getTankByName("Conqueror"));
+$manager->persist(  );
+
+ = new Track("Centurion Mk. 9", $tier9, $nationality, 63000, 11,000, 54, 32);
+->addTank( $tankRepo->getTankByName("Centurion Mk. 7/1"));
+$manager->persist(  );
+
+ = new Track("FV214A", $tier9, $nationality, 62000, 12,000, 68, 26);
+->addTank( $tankRepo->getTankByName("Conqueror"));
+$manager->persist(  );
+
+ = new Track("FV4202", $tier10, $nationality, 82500, 8,500, 42.5, 50);
+->addTank( $tankRepo->getTankByName("FV4202"));
+$manager->persist(  );
+
+ = new Track("FV215", $tier10, $nationality, 82500, 12,000, 73, 38);
+->addTank( $tankRepo->getTankByName("FV215b"));
+$manager->persist(  );
+
+
+GERMAN
+
+
+ = new Track("Leichttraktorketten", $tier1, $nationality, 0, 2,000, 9.2, 36);
+->addTank( $tankRepo->getTankByName("Leichttraktor"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-II-Ketten Ausf. A", $tier1, $nationality, 300, 2,800, 9.5, 35);
+->addTank( $tankRepo->getTankByName("PzKpfw II"));
+$manager->persist(  );
+
+ = new Track("PzJg-Ketten I", $tier1, $nationality, 280, 2,000, 7.1, 32);
+->addTank( $tankRepo->getTankByName("Panzerjäger I"));
+$manager->persist(  );
+
+ = new Track("Sturmpanzerketten I", $tier1, $nationality, 280, 2,000, 8.5, 16);
+->addTank( $tankRepo->getTankByName("Sturmpanzer I Bison"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-35-(t)-Standardketten", $tier1, $nationality, 360, 3,200, 11, 40);
+->addTank( $tankRepo->getTankByName("PzKpfw 35 (t)"));
+$manager->persist(  );
+
+ = new Track("Leichttraktorketten Ausf. B", $tier2, $nationality, 540, 2,000, 9.5, 40);
+->addTank( $tankRepo->getTankByName("Leichttraktor"));
+$manager->persist(  );
+
+ = new Track("H35-Ketten", $tier2, $nationality,  0, 3,050, 14.5, 40);
+->addTank( $tankRepo->getTankByName("PzKpfw 38H735 (f)"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-II-Ketten Ausf. B", $tier2, $nationality, 600, 2,900, 10.8, 40);
+->addTank( $tankRepo->getTankByName("PzKpfw II"));
+$manager->persist(  );
+
+ = new Track("PzJg-Ketten II", $tier2, $nationality, 570, 2,000, 7.8, 34);
+->addTank( $tankRepo->getTankByName("Panzerjäger I"));
+$manager->persist(  );
+
+ = new Track("Sturmpanzerketten II", $tier2, $nationality, 580, 2,000, 8.9, 18);
+->addTank( $tankRepo->getTankByName("Sturmpanzer I Bison"));
+$manager->persist(  );
+
+ = new Track("PzKpfw 35 (t) verstärkte Ketten", $tier2, $nationality, 630, 3,200, 12.3, 43);
+->addTank( $tankRepo->getTankByName("PzKpfw 35 (t)"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-38-(t)-Standardketten", $tier2, $nationality, 620, 3,200, 9.9, 32);
+->addTank( $tankRepo->getTankByName("PzKpfw 38 (t)"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-III-Ketten Ausf. A", $tier2, $nationality, 660, 7,000, 15.45, 40);
+->addTank( $tankRepo->getTankByName("PzKpfw III Ausf. A"));
+$manager->persist(  );
+
+ = new Track("Marder-II-Ketten Ausf. A", $tier2, $nationality, 590, 2,100, 10.8, 34);
+->addTank( $tankRepo->getTankByName("Marder II"));
+$manager->persist(  );
+
+ = new Track("Wespe-Ketten Ausf. A", $tier2, $nationality, 600, 2,500, 11.8, 22);
+->addTank( $tankRepo->getTankByName("Wespe"));
+$manager->persist(  );
+
+ = new Track("StPz-Ketten Ausf. A", $tier2, $nationality, 630, 2,800, 11.2, 20);
+->addTank( $tankRepo->getTankByName("Sturmpanzer II"));
+$manager->persist(  );
+
+ = new Track("T-15 Ketten", $tier3, $nationality,  0, 1,200, 12.2, 46);
+->addTank( $tankRepo->getTankByName("T-15"));
+$manager->persist(  );
+
+ = new Track("S-35-Ketten", $tier3, $nationality,  0, 5,950, 21.3, 40);
+->addTank( $tankRepo->getTankByName("PzKpfw S35 739 (f)"));
+$manager->persist(  );
+
+ = new Track("PzKpfw 38 (t) verstärkte Ketten", $tier3, $nationality, 1620, 3,200, 12.3, 35);
+->addTank( $tankRepo->getTankByName("PzKpfw 38 (t)"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-III-Ketten Ausf. B", $tier3, $nationality, 2050, 7,000, 19.35, 44);
+->addTank( $tankRepo->getTankByName("PzKpfw III Ausf. A"));
+$manager->persist(  );
+
+ = new Track("Luchsketten Ausf. A", $tier3, $nationality, 1840, 3,000, 12.25, 35);
+->addTank( $tankRepo->getTankByName("PzKpfw II Luchs"));
+$manager->persist(  );
+
+ = new Track("Marder-II-Ketten Ausf. B", $tier3, $nationality, 1750, 2,100, 12.8, 36);
+->addTank( $tankRepo->getTankByName("Marder II"));
+$manager->persist(  );
+
+ = new Track("Wespe-Ketten Ausf. B", $tier3, $nationality, 1860, 2,500, 13.2, 24);
+->addTank( $tankRepo->getTankByName("Wespe"));
+$manager->persist(  );
+
+ = new Track("StPz-Ketten Ausf. B", $tier3, $nationality, 1780, 2,800, 13.1, 22);
+->addTank( $tankRepo->getTankByName("Sturmpanzer II"));
+$manager->persist(  );
+
+ = new Track("Hetzer-Ketten Ausf. A", $tier3, $nationality, 1950, 2,500, 16.8, 28);
+->addTank( $tankRepo->getTankByName("Hetzer"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-III-Ketten Ausf. J", $tier3, $nationality, 1900, 7,000, 19.25, 40);
+->addTank( $tankRepo->getTankByName("PzKpfw III"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-38-nA-Standardketten", $tier3, $nationality, 1900, 3,200, 11.9, 32);
+->addTank( $tankRepo->getTankByName("PzKpfw 38 nA"));
+$manager->persist(  );
+
+ = new Track("Grille-Ketten Ausf. A", $tier3, $nationality, 1800, 3,200, 11.7, 20);
+->addTank( $tankRepo->getTankByName("Grille"));
+$manager->persist(  );
+
+ = new Track("StuG-III-Ketten Ausf. A", $tier3, $nationality, 1660, 5,350, 19.8, 37);
+->addTank( $tankRepo->getTankByName("StuG III"));
+$manager->persist(  );
+
+ = new Track("PzKpfw II Ausf. J", $tier6, $nationality,  0, 4,200, 18.85, 32);
+->addTank( $tankRepo->getTankByName("PzKpfw II Ausf. J"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-IV-Ketten Ausf. C", $tier6, $nationality,  0, 8,000, 32.8, 38);
+->addTank( $tankRepo->getTankByName("PzKpfw IV Hydraulic"));
+$manager->persist(  );
+
+ = new Track("VK-2801-Ketten Ausf. B", $tier6, $nationality, 15000, 7,200, 28.8, 48);
+->addTank( $tankRepo->getTankByName("VK 2801"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-V-IV-Ketten", $tier6, $nationality,  0, 12,050, 45.5, 29);
+->addTank( $tankRepo->getTankByName("PzKpfw V-IV Alpha"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-V-IV-Ketten", $tier6, $nationality,  0, 12,050, 45.5, 29);
+->addTank( $tankRepo->getTankByName("PzKpfw V-IV"));
+$manager->persist(  );
+
+ = new Track("B.W.-Laufwerk", $tier6, $nationality,  0, 5,750, 26.7, 35);
+->addTank( $tankRepo->getTankByName("Dicker Max"));
+$manager->persist(  );
+
+ = new Track("VK-3001-(H)-Ketten Ausf. B", $tier6, $nationality, 16720, 9,950, 36.3, 40);
+->addTank( $tankRepo->getTankByName("VK 3001 (H)"));
+$manager->persist(  );
+
+ = new Track("JagdPz-IV-Ostketten", $tier6, $nationality, 12860, 7,800, 26.8, 35);
+->addTank( $tankRepo->getTankByName("JagdPz IV"));
+$manager->persist(  );
+
+ = new Track("VK-3001-(P)-Ketten Ausf. B", $tier6, $nationality, 15000, 9,050, 39.9, 28);
+->addTank( $tankRepo->getTankByName("VK 3001 (P)"));
+$manager->persist(  );
+
+ = new Track("VK-3601-(H)-Ketten Ausf. B", $tier6, $nationality, 15440, 13,250, 42.9, 27);
+->addTank( $tankRepo->getTankByName("VK 3601 (H)"));
+$manager->persist(  );
+
+ = new Track("GW-Panther-Ketten Ausf. B", $tier6, $nationality, 22070, 12,000, 51, 28);
+->addTank( $tankRepo->getTankByName("GW Panther"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-V-Ketten Ausf. 1943", $tier6, $nationality, 15000, 12,050, 45, 25);
+->addTank( $tankRepo->getTankByName("PzKpfw V Panther"));
+$manager->persist(  );
+
+ = new Track("Transportketten", $tier6, $nationality, 15000, 18,000, 58.9, 22);
+->addTank( $tankRepo->getTankByName("PzKpfw VI Tiger"));
+$manager->persist(  );
+
+ = new Track("Tiger-(P)-Ketten Ausf. A", $tier6, $nationality, 15100, 18,000, 60.5, 20);
+->addTank( $tankRepo->getTankByName("PzKpfw VI Tiger (P)"));
+$manager->persist(  );
+
+ = new Track("GW-Tiger-Ketten Ausf. A", $tier6, $nationality, 20080, 19,000, 58.8, 12);
+->addTank( $tankRepo->getTankByName("GW Tiger"));
+$manager->persist(  );
+
+ = new Track("Luchsketten Ausf. B", $tier4, $nationality, 4650, 3,000, 15.85, 38);
+->addTank( $tankRepo->getTankByName("PzKpfw II Luchs"));
+$manager->persist(  );
+
+ = new Track("B2-740-(f)-Ketten", $tier4, $nationality,  0, 8,050, 33.3, 45);
+->addTank( $tankRepo->getTankByName("PzKpfw B2 740 (f)"));
+$manager->persist(  );
+
+ = new Track("Hetzer-Ketten Ausf. B", $tier4, $nationality, 4370, 2,500, 18.5, 30);
+->addTank( $tankRepo->getTankByName("Hetzer"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-III-Ostketten", $tier4, $nationality, 4650, 7,000, 22.65, 45);
+->addTank( $tankRepo->getTankByName("PzKpfw III"));
+$manager->persist(  );
+
+ = new Track("PzKpfw 38 nA verstärkte Ketten", $tier4, $nationality, 3900, 3,200, 14.96, 35);
+->addTank( $tankRepo->getTankByName("PzKpfw 38 nA"));
+$manager->persist(  );
+
+ = new Track("Grille-Ketten Ausf. B", $tier4, $nationality, 4710, 3,200, 13.2, 22);
+->addTank( $tankRepo->getTankByName("Grille"));
+$manager->persist(  );
+
+ = new Track("Leopardketten Ausf. A", $tier4, $nationality, 4230, 7,200, 22.25, 30);
+->addTank( $tankRepo->getTankByName("VK 1602 Leopard"));
+$manager->persist(  );
+
+ = new Track("PzKpfw III-IV", $tier4, $nationality, 4430, 5,000, 24.95, 34);
+->addTank( $tankRepo->getTankByName("PzKpfw III/IV"));
+$manager->persist(  );
+
+ = new Track("BW Ausf. G", $tier4, $nationality, 4510, 7,800, 25.4, 30);
+->addTank( $tankRepo->getTankByName("PzKpfw IV"));
+$manager->persist(  );
+
+ = new Track("StuG-III-Ostketten", $tier4, $nationality, 4740, 5,850, 22.4, 44);
+->addTank( $tankRepo->getTankByName("StuG III"));
+$manager->persist(  );
+
+ = new Track("Hummel Ausf. A", $tier4, $nationality, 4510, 7,500, 24.2, 30);
+->addTank( $tankRepo->getTankByName("Hummel"));
+$manager->persist(  );
+
+ = new Track("VK-2801-Ketten Ausf. A", $tier4, $nationality, 4450, 7,200, 22.5, 44);
+->addTank( $tankRepo->getTankByName("VK 2801"));
+$manager->persist(  );
+
+ = new Track("Leopardketten Ausf. B", $tier5, $nationality, 10740, 7,200, 25.55, 33);
+->addTank( $tankRepo->getTankByName("VK 1602 Leopard"));
+$manager->persist(  );
+
+ = new Track("T-25 Ketten", $tier5, $nationality,  0, 4,000, 23.5, 30);
+->addTank( $tankRepo->getTankByName("T-25"));
+$manager->persist(  );
+
+ = new Track("PzKpfw III IV Ausf. B", $tier5, $nationality, 8310, 5,000, 27.8, 36);
+->addTank( $tankRepo->getTankByName("PzKpfw III/IV"));
+$manager->persist(  );
+
+ = new Track("BW Ausf. Н", $tier5, $nationality, 7910, 7,800, 27.5, 32);
+->addTank( $tankRepo->getTankByName("PzKpfw IV"));
+$manager->persist(  );
+
+ = new Track("Hummel Ausf. B", $tier5, $nationality, 8480, 7,500, 26.5, 32);
+->addTank( $tankRepo->getTankByName("Hummel"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-IV-Ketten Ausf. G", $tier5, $nationality,  0, 7,800, 32, 36);
+->addTank( $tankRepo->getTankByName("PzKpfw IV Schmalturm"));
+$manager->persist(  );
+
+ = new Track("VK 3001 (H)", $tier5, $nationality, 10170, 9,950, 36, 38);
+->addTank( $tankRepo->getTankByName("VK 3001 (H)"));
+$manager->persist(  );
+
+ = new Track("JagdPz-IV-Ketten Ausf. A", $tier5, $nationality, 9610, 7,800, 24.2, 32);
+->addTank( $tankRepo->getTankByName("JagdPz IV"));
+$manager->persist(  );
+
+ = new Track("VK 3001 (P)", $tier5, $nationality, 9380, 9,050, 36.6, 28);
+->addTank( $tankRepo->getTankByName("VK 3001 (P)"));
+$manager->persist(  );
+
+ = new Track("VK-3601-(H)-Ketten", $tier5, $nationality, 9970, 13,250, 41.8, 24);
+->addTank( $tankRepo->getTankByName("VK 3601 (H)"));
+$manager->persist(  );
+
+ = new Track("GW-Panther-Ketten Ausf. A", $tier5, $nationality, 11700, 12,000, 47.9, 26);
+->addTank( $tankRepo->getTankByName("GW Panther"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-V-Ketten Ausf. 1943", $tier7, $nationality,  0, 12,500, 49, 38);
+->addTank( $tankRepo->getTankByName("Panther-M10"));
+$manager->persist(  );
+
+ = new Track("JgPz-V-Ketten Ausf. A", $tier7, $nationality, 19390, 15,550, 47.5, 26);
+->addTank( $tankRepo->getTankByName("Jagdpanther"));
+$manager->persist(  );
+
+ = new Track("VK-3002-(DB)-Standardketten", $tier7, $nationality, 18000, 10,050, 36.7, 36);
+->addTank( $tankRepo->getTankByName("VK 3002 (DB)"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-V-Ketten Ausf. 1945", $tier7, $nationality, 18200, 12,500, 49.3, 28);
+->addTank( $tankRepo->getTankByName("PzKpfw V Panther"));
+$manager->persist(  );
+
+ = new Track("Breitketten", $tier7, $nationality, 21600, 18,000, 59.2, 24);
+->addTank( $tankRepo->getTankByName("PzKpfw VI Tiger"));
+$manager->persist(  );
+
+ = new Track("Tiger-(P)-Ketten Ausf. C", $tier7, $nationality, 17750, 18,000, 65.2, 22);
+->addTank( $tankRepo->getTankByName("PzKpfw VI Tiger (P)"));
+$manager->persist(  );
+
+ = new Track("GW-Tiger-Ketten Ausf. B", $tier7, $nationality, 30400, 19,000, 62, 14);
+->addTank( $tankRepo->getTankByName("GW Tiger"));
+$manager->persist(  );
+
+ = new Track("Panther-II-Ketten Ausf. A", $tier7, $nationality, 17400, 12,000, 48.4, 26);
+->addTank( $tankRepo->getTankByName("Panther II"));
+$manager->persist(  );
+
+ = new Track("VK-4502-(A)-Ketten Ausf. A", $tier7, $nationality, 16550, 7,600, 54.18, 25);
+->addTank( $tankRepo->getTankByName("VK 4502 (P) Ausf. A"));
+$manager->persist(  );
+
+ = new Track("PzKpfw-VIB-Standardketten", $tier7, $nationality, 20080, 19,000, 68.5, 23);
+->addTank( $tankRepo->getTankByName("PzKpfw VIB Tiger II"));
+$manager->persist(  );
+
+ = new Track("Panther-II-Ketten Ausf. F", $tier7, $nationality, 18860, 12,000, 53.4, 28);
+->addTank( $tankRepo->getTankByName("Jagdpanther II"));
+$manager->persist(  );
+
+ = new Track("Ferdinand Standardketten", $tier7, $nationality, 18860, 20,750, 66.4, 18);
+->addTank( $tankRepo->getTankByName("Ferdinand"));
+$manager->persist(  );
+
+ = new Track("Fgst E-100", $tier7, $nationality, 18000, 42,000, 100, 14);
+->addTank( $tankRepo->getTankByName("GW Typ E"));
+$manager->persist(  );
+
+ = new Track("JgPz-V-Ketten Ausf. B", $tier8, $nationality, 32720, 15,550, 48.95, 29);
+->addTank( $tankRepo->getTankByName("Jagdpanther"));
+$manager->persist(  );
+
+ = new Track("VK 3002 (DB) verstärkte Ketten", $tier8, $nationality, 33930, 10,050, 46.2, 40);
+->addTank( $tankRepo->getTankByName("VK 3002 (DB)"));
+$manager->persist(  );
+
+ = new Track("Verstärkte Ketten", $tier8, $nationality,  0, 18,000, 74.85, 22, 8.8 cm PaK 43 Jagdtiger"));
+$manager->persist(  );
+
+ = new Track("Löweketten", $tier8, $nationality,  0, 22,000, 99.85, 24);
+->addTank( $tankRepo->getTankByName("Löwe"));
+$manager->persist(  );
+
+ = new Track("Panther-II-Ketten Ausf. B", $tier8, $nationality, 30350, 12,000, 51.4, 29);
+->addTank( $tankRepo->getTankByName("Panther II"));
+$manager->persist(  );
+
+ = new Track("VK-4502-(A)-Ketten Ausf. C", $tier8, $nationality, 33400, 7,600, 59.2, 28);
+->addTank( $tankRepo->getTankByName("VK 4502 (P) Ausf. A"));
+$manager->persist(  );
+
+ = new Track("PzKpfw VIB verstärkte Ketten", $tier8, $nationality, 37520, 19,000, 72.97, 26);
+->addTank( $tankRepo->getTankByName("PzKpfw VIB Tiger II"));
+$manager->persist(  );
+
+ = new Track("Panther-II-Ketten Ausf. G", $tier8, $nationality, 34200, 12,000, 59.4, 30);
+->addTank( $tankRepo->getTankByName("Jagdpanther II"));
+$manager->persist(  );
+
+ = new Track("Ferdinand verstärkte Ketten", $tier8, $nationality, 32234, 20,550, 68.95, 21);
+->addTank( $tankRepo->getTankByName("Ferdinand"));
+$manager->persist(  );
+
+ = new Track("Sd. Fgst. E-100", $tier8, $nationality, 39000, 42,000, 115, 16);
+->addTank( $tankRepo->getTankByName("GW Typ E"));
+$manager->persist(  );
+
+ = new Track("E-50-Ketten Ausf. A", $tier8, $nationality, 32900, 9,000, 64, 24);
+->addTank( $tankRepo->getTankByName("E-50"));
+$manager->persist(  );
+
+ = new Track("Jagdtiger-Standardketten", $tier8, $nationality, 28100, 18,450, 73.1, 18);
+->addTank( $tankRepo->getTankByName("Jagdtiger"));
+$manager->persist(  );
+
+ = new Track("MAN-Ketten Ausf. A", $tier8, $nationality, 28000, 15,000, 87.5, 18);
+->addTank( $tankRepo->getTankByName("E-75"));
+$manager->persist(  );
+
+ = new Track("VK-4502-(P)-Standardketten", $tier8, $nationality, 31500, 19,000, 75.5, 17);
+->addTank( $tankRepo->getTankByName("VK 4502 (P) Ausf. B"));
+$manager->persist(  );
+
+ = new Track("E-50-Ketten Ausf. C", $tier9, $nationality, 62900, 9,000, 67, 26);
+->addTank( $tankRepo->getTankByName("E-50"));
+$manager->persist(  );
+
+ = new Track("Jagdtiger verstärkte Ketten", $tier9, $nationality, 62000, 18,450, 75.5, 21);
+->addTank( $tankRepo->getTankByName("Jagdtiger"));
+$manager->persist(  );
+
+ = new Track("MAN-Ketten Ausf. B", $tier9, $nationality, 60150, 15,000, 94.5, 21);
+->addTank( $tankRepo->getTankByName("E-75"));
+$manager->persist(  );
+
+ = new Track("VK 4502 (P) verstärkte Ketten", $tier9, $nationality, 60000, 19,000, 80.8, 20);
+->addTank( $tankRepo->getTankByName("VK 4502 (P) Ausf. B"));
+$manager->persist(  );
+
+ = new Track("E-50M-Ketten Ausf. A", $tier10, $nationality, 82500, 9,000, 67, 44);
+->addTank( $tankRepo->getTankByName("E-50 Ausf. M"));
+$manager->persist(  );
+
+ = new Track("E-100-Ketten", $tier10, $nationality, 82500, 30,000, 150, 22);
+->addTank( $tankRepo->getTankByName("E-100"));
+$manager->persist(  );
+
+ = new Track("Mausketten", $tier10, $nationality, 82500, 37,250, 192.9, 15);
+->addTank( $tankRepo->getTankByName("Maus"));
+$manager->persist(  );
+
+ = new Track("JagdPz E-100-Ketten", $tier10, $nationality, 82500, 30,000, 150, 20);
+->addTank( $tankRepo->getTankByName("JagdPz E-100"));
+$manager->persist(  );
+
+
+FRENCH
+
+ = new Track("M17", $tier1, $nationality, 0, 1,200, 4.89, 28);
+->addTank( $tankRepo->getTankByName("RenaultFT"));
+$manager->persist(  );
+
+ = new Track("RenaultFT AC", $tier1, $nationality, 240, 1,200, 4.89, 28);
+->addTank( $tankRepo->getTankByName("RenaultFT AC"));
+$manager->persist(  );
+
+ = new Track("RenaultBS M17", $tier1, $nationality, 250, 1,200, 7.8, 18);
+->addTank( $tankRepo->getTankByName("RenaultBS"));
+$manager->persist(  );
+
+ = new Track("D1a", $tier1, $nationality, 340, 1,200, 12.19, 32);
+->addTank( $tankRepo->getTankByName("D1"));
+$manager->persist(  );
+
+ = new Track("H35", $tier1, $nationality, 250, 3,000, 9.6, 32);
+->addTank( $tankRepo->getTankByName("Hotchkiss H35"));
+$manager->persist(  );
+
+ = new Track("M26/27", $tier2, $nationality, 560, 1,200, 6.8, 30);
+->addTank( $tankRepo->getTankByName("RenaultFT"));
+$manager->persist(  );
+
+ = new Track("RenaultFT AC Bis", $tier2, $nationality, 560, 1,200, 6.89, 30);
+->addTank( $tankRepo->getTankByName("RenaultFT AC"));
+$manager->persist(  );
+
+ = new Track("RenaultBS M26/M27", $tier2, $nationality, 560, 1,200, 8.2, 20);
+->addTank( $tankRepo->getTankByName("RenaultBS"));
+$manager->persist(  );
+
+ = new Track("D1b", $tier2, $nationality, 620, 1,200, 14.25, 34);
+->addTank( $tankRepo->getTankByName("D1"));
+$manager->persist(  );
+
+ = new Track("H35b", $tier2, $nationality, 560, 3,000, 10.5, 34);
+->addTank( $tankRepo->getTankByName("Hotchkiss H35"));
+$manager->persist(  );
+
+ = new Track("AMX38", $tier2, $nationality, 500, 3,000, 16, 30);
+->addTank( $tankRepo->getTankByName("AMX 38"));
+$manager->persist(  );
+
+ = new Track("D2a", $tier2, $nationality, 540, 5,000, 19.32, 36);
+->addTank( $tankRepo->getTankByName("D2"));
+$manager->persist(  );
+
+ = new Track("Renault UE", $tier2, $nationality, 440, 500, 7.8, 28);
+->addTank( $tankRepo->getTankByName("Renault UE 57"));
+$manager->persist(  );
+
+ = new Track("Lorraine39 L AM", $tier2, $nationality, 1730, 1,200, 6.54, 20);
+->addTank( $tankRepo->getTankByName("Lorraine39 L AM"));
+$manager->persist(  );
+
+ = new Track("FCM B1", $tier3, $nationality,  0, 2,000, 14.6, 37);
+->addTank( $tankRepo->getTankByName("FCM36 PaK40"));
+$manager->persist(  );
+
+ = new Track("AMX38B", $tier3, $nationality, 1850, 3,000, 18, 32);
+->addTank( $tankRepo->getTankByName("AMX 38"));
+$manager->persist(  );
+
+ = new Track("D2b", $tier3, $nationality, 1800, 5,000, 20.9, 38);
+->addTank( $tankRepo->getTankByName("D2"));
+$manager->persist(  );
+
+ = new Track("Renault UE Bis", $tier3, $nationality, 1800, 500, 7.8, 30);
+->addTank( $tankRepo->getTankByName("Renault UE 57"));
+$manager->persist(  );
+
+ = new Track("Lorraine39 L AM Bis", $tier3, $nationality, 1730, 1,200, 7.4, 22);
+->addTank( $tankRepo->getTankByName("Lorraine39 L AM"));
+$manager->persist(  );
+
+ = new Track("Somua Sau 40", $tier3, $nationality, 1660, 5,350, 24.5, 28);
+->addTank( $tankRepo->getTankByName("Somua SAu-40"));
+$manager->persist(  );
+
+ = new Track("AMX40", $tier3, $nationality, 1750, 4,200, 20.23, 28);
+->addTank( $tankRepo->getTankByName("AMX 40"));
+$manager->persist(  );
+
+ = new Track("AMX 105a", $tier3, $nationality, 1800, 2,000, 16.8, 22);
+->addTank( $tankRepo->getTankByName("AMX 105AM"));
+$manager->persist(  );
+
+ = new Track("B1", $tier3, $nationality, 1900, 8,050, 33.3, 26);
+->addTank( $tankRepo->getTankByName("B1"));
+$manager->persist(  );
+
+ = new Track("leFH18B2", $tier4, $nationality,  0, 8,050, 34, 22, 105 leFH18B2"));
+$manager->persist(  );
+
+ = new Track("Somua Sau 40 Bis", $tier4, $nationality, 4760, 5,350, 26, 30);
+->addTank( $tankRepo->getTankByName("Somua SAu-40"));
+$manager->persist(  );
+
+ = new Track("AMX40 Bis", $tier4, $nationality, 4750, 4,200, 25.23, 30);
+->addTank( $tankRepo->getTankByName("AMX 40"));
+$manager->persist(  );
+
+ = new Track("AMX 105b", $tier4, $nationality, 4800, 2,000, 18.8, 24);
+->addTank( $tankRepo->getTankByName("AMX 105AM"));
+$manager->persist(  );
+
+ = new Track("B1Bis", $tier4, $nationality, 4680, 8,050, 39.3, 28);
+->addTank( $tankRepo->getTankByName("B1"));
+$manager->persist(  );
+
+ = new Track("ELC AMX A", $tier4, $nationality, 4200, 1,500, 7.3, 36);
+->addTank( $tankRepo->getTankByName("ELC AMX"));
+$manager->persist(  );
+
+ = new Track("BDR G1B", $tier4, $nationality, 4050, 8,000, 34, 22);
+->addTank( $tankRepo->getTankByName("BDR G1B"));
+$manager->persist(  );
+
+ = new Track("S-35CA", $tier4, $nationality, 4660, 5,350, 19.8, 26);
+->addTank( $tankRepo->getTankByName("S-35 CA"));
+$manager->persist(  );
+
+ = new Track("AMX 13 F3AM", $tier4, $nationality, 4300, 2,200, 15.5, 22);
+->addTank( $tankRepo->getTankByName("AMX 13 F3 AM"));
+$manager->persist(  );
+
+ = new Track("ELC AMX B", $tier5, $nationality, 9510, 1,500, 7.95, 38);
+->addTank( $tankRepo->getTankByName("ELC AMX"));
+$manager->persist(  );
+
+ = new Track("BDR G1B Bis", $tier5, $nationality, 10550, 8,000, 40, 24);
+->addTank( $tankRepo->getTankByName("BDR G1B"));
+$manager->persist(  );
+
+ = new Track("S-35CA Bis", $tier5, $nationality, 7660, 5,350, 22.8, 28);
+->addTank( $tankRepo->getTankByName("S-35 CA"));
+$manager->persist(  );
+
+ = new Track("AMX 13 F3AM B", $tier5, $nationality, 8300, 2,200, 19.7, 24);
+->addTank( $tankRepo->getTankByName("AMX 13 F3 AM"));
+$manager->persist(  );
+
+ = new Track("AMX 12t", $tier5, $nationality, 10000, 3,200, 12.35, 36);
+->addTank( $tankRepo->getTankByName("AMX 12t"));
+$manager->persist(  );
+
+ = new Track("ARL V39", $tier5, $nationality, 9100, 8,500, 25, 22);
+->addTank( $tankRepo->getTankByName("ARL V39"));
+$manager->persist(  );
+
+ = new Track("ARL 44", $tier5, $nationality, 8600, 14,200, 46.96, 18);
+->addTank( $tankRepo->getTankByName("ARL 44"));
+$manager->persist(  );
+
+ = new Track("Lorraine155 50", $tier5, $nationality, 7300, 7,700, 31.2, 24);
+->addTank( $tankRepo->getTankByName("Lorraine155 50"));
+$manager->persist(  );
+
+ = new Track("AMX 13 75A", $tier5, $nationality, 7350, 1,500, 14.65, 38);
+->addTank( $tankRepo->getTankByName("AMX 13 75"));
+$manager->persist(  );
+
+ = new Track("AMX 12t Bis", $tier6, $nationality, 16250, 3,200, 13.5, 38);
+->addTank( $tankRepo->getTankByName("AMX 12t"));
+$manager->persist(  );
+
+ = new Track("ARL V39 Bis", $tier6, $nationality, 16890, 8,500, 28.4, 24);
+->addTank( $tankRepo->getTankByName("ARL V39"));
+$manager->persist(  );
+
+ = new Track("ARL 44 Bis", $tier6, $nationality, 15420, 14,200, 50.5, 20);
+->addTank( $tankRepo->getTankByName("ARL 44"));
+$manager->persist(  );
+
+ = new Track("Lorraine155 50 Bis", $tier6, $nationality, 21000, 7,700, 42.7, 26);
+->addTank( $tankRepo->getTankByName("Lorraine155 50"));
+$manager->persist(  );
+
+ = new Track("AMX AC Mle 1946", $tier6, $nationality, 18860, 11,000, 56, 24);
+->addTank( $tankRepo->getTankByName("AMX AC Mle. 1946"));
+$manager->persist(  );
+
+ = new Track("AMX M4", $tier6, $nationality, 9550, 8,000, 53, 22);
+->addTank( $tankRepo->getTankByName("AMX M4(1945)"));
+$manager->persist(  );
+
+ = new Track("Lorraine155 51", $tier6, $nationality, 20080, 7,700, 31.2, 22);
+->addTank( $tankRepo->getTankByName("Lorraine155 51"));
+$manager->persist(  );
+
+ = new Track("AMX 13 90A", $tier6, $nationality, 9250, 1,400, 15.61, 38);
+->addTank( $tankRepo->getTankByName("AMX 13 90"));
+$manager->persist(  );
+
+ = new Track("AMX 13 75B", $tier7, $nationality, 19540, 1,500, 16.35, 40);
+->addTank( $tankRepo->getTankByName("AMX 13 75"));
+$manager->persist(  );
+
+ = new Track("AMX AC Mle 1946 Bis", $tier7, $nationality, 26260, 11,000, 63, 26);
+->addTank( $tankRepo->getTankByName("AMX AC Mle. 1946"));
+$manager->persist(  );
+
+ = new Track("AMX M4 Bis", $tier7, $nationality, 18500, 8,000, 60, 24);
+->addTank( $tankRepo->getTankByName("AMX M4(1945)"));
+$manager->persist(  );
+
+ = new Track("Lorraine155 51 Bis", $tier7, $nationality, 30000, 7,700, 40.7, 24);
+->addTank( $tankRepo->getTankByName("Lorraine155 51"));
+$manager->persist(  );
+
+ = new Track("AMX 50 100", $tier7, $nationality, 16450, 11,000, 50, 30);
+->addTank( $tankRepo->getTankByName("AMX 50 100"));
+$manager->persist(  );
+
+ = new Track("Suspension Mle. 1948", $tier7, $nationality, 18860, 11,000, 56.9, 26);
+->addTank( $tankRepo->getTankByName("AMX AC Mle. 1948"));
+$manager->persist(  );
+
+ = new Track("Bat Chatillon 155", $tier7, $nationality, 18000, 4,100, 34.6, 26);
+->addTank( $tankRepo->getTankByName("Bat Chatillon 155"));
+$manager->persist(  );
+
+ = new Track("Mle. A", $tier7, $nationality, 16300, 7,700, 38.8, 30);
+->addTank( $tankRepo->getTankByName("Lorraine 40 t"));
+$manager->persist(  );
+
+ = new Track("AMX 13 90B", $tier8, $nationality, 26000, 1,400, 17.84, 40);
+->addTank( $tankRepo->getTankByName("AMX 13 90"));
+$manager->persist(  );
+
+ = new Track("AMX 50 100 B", $tier8, $nationality, 37250, 11,000, 57, 32);
+->addTank( $tankRepo->getTankByName("AMX 50 100"));
+$manager->persist(  );
+
+ = new Track("Suspension Mle. 1949", $tier8, $nationality, 29500, 11,000, 59.3, 28);
+->addTank( $tankRepo->getTankByName("AMX AC Mle. 1948"));
+$manager->persist(  );
+
+ = new Track("Bat Chatillon 155 Bis", $tier8, $nationality, 24000, 4,100, 37, 28);
+->addTank( $tankRepo->getTankByName("Bat Chatillon 155"));
+$manager->persist(  );
+
+ = new Track("Mle. B", $tier8, $nationality, 68000, 7,700, 40.8, 32);
+->addTank( $tankRepo->getTankByName("Lorraine 40 t"));
+$manager->persist(  );
+
+ = new Track("AMX 50 120 A", $tier8, $nationality, 31200, 11,000, 60, 30);
+->addTank( $tankRepo->getTankByName("AMX 50 120"));
+$manager->persist(  );
+
+ = new Track("FCM 50, $tier8, $nationality,  0, 10,000, 57.5, 40);
+->addTank( $tankRepo->getTankByName("FCM 50 t"));
+$manager->persist(  );
+
+ = new Track("AMX 50 Foch", $tier8, $nationality, 27650, 11,000, 59.56, 26);
+->addTank( $tankRepo->getTankByName("AMX 50 Foch"));
+$manager->persist(  );
+
+ = new Track("AMX 50 120 B", $tier9, $nationality, 66500, 11,000, 65, 32);
+->addTank( $tankRepo->getTankByName("AMX 50 120"));
+$manager->persist(  );
+
+ = new Track("AMX 50 Foch Mle.2", $tier9, $nationality, 64000, 11,000, 62.56, 28);
+->addTank( $tankRepo->getTankByName("AMX 50 Foch"));
+$manager->persist(  );
+
+ = new Track("Bat Chatillon 25t B", $tier10, $nationality, 68200, 4,100, 28, 42);
+->addTank( $tankRepo->getTankByName("Bat Chatillon 25 t"));
+$manager->persist(  );
+
+ = new Track("AMX 50B", $tier10, $nationality, 82500, 11,000, 68, 36);
+->addTank( $tankRepo->getTankByName("AMX 50B"));
+$manager->persist(  );
+
+ = new Track("Suspension mle.1953", $tier10, $nationality, 82500, 11,000, 59.56, 30);
+->addTank( $tankRepo->getTankByName("AMX-50 Foch (155)"));
+$manager->persist(  );
+
+
+RUSSIAN
+
+ = new Track("MS-1", $tier1, $nationality, 0, 1,200, 4.89, 34);
+->addTank( $tankRepo->getTankByName("MS-1"));
+$manager->persist(  );
+
+ = new Track("SU-18", $tier1, $nationality, 270, 1,200, 6, 20);
+->addTank( $tankRepo->getTankByName("SU-18"));
+$manager->persist(  );
+
+ = new Track("T-26", $tier1, $nationality, 340, 1,880, 10.2, 50);
+->addTank( $tankRepo->getTankByName("T-26"));
+$manager->persist(  );
+
+ = new Track("T-18", $tier2, $nationality, 480, 1,200, 6.5, 38);
+->addTank( $tankRepo->getTankByName("MS-1"));
+$manager->persist(  );
+
+ = new Track("Tetrarch", $tier2, $nationality,  0, 1,000, 7.9, 47);
+->addTank( $tankRepo->getTankByName("Tetrarch"));
+$manager->persist(  );
+
+ = new Track("AT-1", $tier2, $nationality, 560, 1,550, 9.9, 30);
+->addTank( $tankRepo->getTankByName("AT-1"));
+$manager->persist(  );
+
+ = new Track("SU-18 bis", $tier2, $nationality, 540, 1,200, 8.5, 22);
+->addTank( $tankRepo->getTankByName("SU-18"));
+$manager->persist(  );
+
+ = new Track("BT-2", $tier2, $nationality, 260, 3,300, 11.5, 36);
+->addTank( $tankRepo->getTankByName("BT-2"));
+$manager->persist(  );
+
+ = new Track("BT-2 Bis", $tier2, $nationality, 520, 3,300, 11.8, 40);
+->addTank( $tankRepo->getTankByName("BT-2"));
+$manager->persist(  );
+
+ = new Track("T-26M", $tier2, $nationality, 680, 1,880, 12.7, 52);
+->addTank( $tankRepo->getTankByName("T-26"));
+$manager->persist(  );
+
+ = new Track("Stuart E1", $tier2, $nationality,  0, 3,000, 12.5, 40);
+->addTank( $tankRepo->getTankByName("M3 Stuart Lend Lease"));
+$manager->persist(  );
+
+ = new Track("SU-76", $tier2, $nationality, 580, 3,000, 11, 32);
+->addTank( $tankRepo->getTankByName("SU-76"));
+$manager->persist(  );
+
+ = new Track("BT-5", $tier2, $nationality, 600, 4,000, 14.2, 48);
+->addTank( $tankRepo->getTankByName("BT-7"));
+$manager->persist(  );
+
+ = new Track("T-46 model 1", $tier2, $nationality, 660, 4,200, 17, 52);
+->addTank( $tankRepo->getTankByName("T-46"));
+$manager->persist(  );
+
+ = new Track("SU-26A", $tier2, $nationality, 680, 1,880, 8.2, 20);
+->addTank( $tankRepo->getTankByName("SU-26"));
+$manager->persist(  );
+
+ = new Track("AT-1 bis", $tier3, $nationality, 1790, 1,550, 10.8, 32);
+->addTank( $tankRepo->getTankByName("AT-1"));
+$manager->persist(  );
+
+ = new Track("T-127", $tier3, $nationality,  0, 3,200, 14, 34);
+->addTank( $tankRepo->getTankByName("T-127"));
+$manager->persist(  );
+
+ = new Track("BT-SV", $tier3, $nationality,  0, 2,000, 14.5, 33);
+->addTank( $tankRepo->getTankByName("BT-SV"));
+$manager->persist(  );
+
+ = new Track("SU-76M", $tier3, $nationality, 1730, 3,000, 13.3, 34);
+->addTank( $tankRepo->getTankByName("SU-76"));
+$manager->persist(  );
+
+ = new Track("BT-7", $tier3, $nationality, 1700, 4,000, 15.5, 50);
+->addTank( $tankRepo->getTankByName("BT-7"));
+$manager->persist(  );
+
+ = new Track("T-46 model 2", $tier3, $nationality, 1840, 4,200, 17.3, 55);
+->addTank( $tankRepo->getTankByName("T-46"));
+$manager->persist(  );
+
+ = new Track("SU-26B", $tier3, $nationality, 1800, 1,880, 10.5, 22);
+->addTank( $tankRepo->getTankByName("SU-26"));
+$manager->persist(  );
+
+ = new Track("SU-85A", $tier3, $nationality, 1800, 3,000, 12.1, 38);
+->addTank( $tankRepo->getTankByName("SU-85B"));
+$manager->persist(  );
+
+ = new Track("A-20 mod. 1938", $tier3, $nationality, 1420, 5,000, 19.5, 44);
+->addTank( $tankRepo->getTankByName("A-20"));
+$manager->persist(  );
+
+ = new Track("T-28", $tier3, $nationality, 2270, 5,160, 18.9, 35);
+->addTank( $tankRepo->getTankByName("T-28"));
+$manager->persist(  );
+
+ = new Track("T-50", $tier3, $nationality, 1700, 2,000, 13.5, 44);
+->addTank( $tankRepo->getTankByName("T-50"));
+$manager->persist(  );
+
+ = new Track("Valentine MK I", $tier4, $nationality,  0, 4,000, 16.85, 50);
+->addTank( $tankRepo->getTankByName("Valentine II"));
+$manager->persist(  );
+
+ = new Track("SU-85B", $tier4, $nationality, 4510, 3,000, 14.5, 40);
+->addTank( $tankRepo->getTankByName("SU-85B"));
+$manager->persist(  );
+
+ = new Track("A-20 mod. 1941", $tier4, $nationality, 3580, 5,000, 19.95, 46);
+->addTank( $tankRepo->getTankByName("A-20"));
+$manager->persist(  );
+
+ = new Track("T-28A", $tier4, $nationality, 5250, 5,300, 32.3, 40);
+->addTank( $tankRepo->getTankByName("T-28"));
+$manager->persist(  );
+
+ = new Track("SU-5", $tier4, $nationality, 1800, 1,880, 10.49, 28);
+->addTank( $tankRepo->getTankByName("SU-5"));
+$manager->persist(  );
+
+ = new Track("SU-5 bis", $tier4, $nationality, 4750, 1,880, 12.5, 30);
+->addTank( $tankRepo->getTankByName("SU-5"));
+$manager->persist(  );
+
+ = new Track("T-50M", $tier4, $nationality, 4750, 2,000, 17.5, 48);
+->addTank( $tankRepo->getTankByName("T-50"));
+$manager->persist(  );
+
+ = new Track("Mod. 1940 (4-speed gearbox)", $tier4, $nationality, 2680, 8,000, 30, 37);
+->addTank( $tankRepo->getTankByName("T-34"));
+$manager->persist(  );
+
+ = new Track("Mod. 1940", $tier4, $nationality, 4020, 10,600, 47.8, 18);
+->addTank( $tankRepo->getTankByName("KV-1"));
+$manager->persist(  );
+
+ = new Track("Mod. 1940 (4-speed gearbox)", $tier4, $nationality, 3800, 7,600, 31.4, 33);
+->addTank( $tankRepo->getTankByName("SU-85"));
+$manager->persist(  );
+
+ = new Track("SU-8", $tier4, $nationality, 4250, 5,160, 21.8, 18);
+->addTank( $tankRepo->getTankByName("SU-8"));
+$manager->persist(  );
+
+ = new Track("T-50-2", $tier4, $nationality, 4800, 2,000, 14, 36);
+->addTank( $tankRepo->getTankByName("T-50-2"));
+$manager->persist(  );
+
+ = new Track("KV-2 Mod. 40", $tier4, $nationality, 4020, 10,600, 56.8, 18);
+->addTank( $tankRepo->getTankByName("KV-2"));
+$manager->persist(  );
+
+ = new Track("A-32", $tier5, $nationality,  0, 5,000, 21.3, 40);
+->addTank( $tankRepo->getTankByName("A-32"));
+$manager->persist(  );
+
+ = new Track("Churchill", $tier5, $nationality,  0, 9,000, 41.95, 20);
+->addTank( $tankRepo->getTankByName("Churchill III"));
+$manager->persist(  );
+
+ = new Track("Matilda II", $tier5, $nationality,  0, 7,000, 31, 35);
+->addTank( $tankRepo->getTankByName("Matilda IV"));
+$manager->persist(  );
+
+ = new Track("Mod. 1942 (5-speed gearbox)", $tier5, $nationality, 7960, 8,000, 31.3, 40);
+->addTank( $tankRepo->getTankByName("T-34"));
+$manager->persist(  );
+
+ = new Track("Mod. 1941", $tier5, $nationality, 9550, 10,600, 55.8, 20);
+->addTank( $tankRepo->getTankByName("KV-1"));
+$manager->persist(  );
+
+ = new Track("Mod. 1942 (5-speed gearbox)", $tier5, $nationality, 8640, 7,600, 32.4, 35);
+->addTank( $tankRepo->getTankByName("SU-85"));
+$manager->persist(  );
+
+ = new Track("SU-8A", $tier5, $nationality, 8600, 5,160, 24.5, 20);
+->addTank( $tankRepo->getTankByName("SU-8"));
+$manager->persist(  );
+
+ = new Track("T-150", $tier5, $nationality, 10720, 10,600, 51, 16);
+->addTank( $tankRepo->getTankByName("T-150"));
+$manager->persist(  );
+
+ = new Track("KV-1S", $tier5, $nationality, 9100, 11,500, 42.8, 28);
+->addTank( $tankRepo->getTankByName("KV-1S"));
+$manager->persist(  );
+
+ = new Track("SU-100", $tier5, $nationality, 9100, 8,500, 37.4, 34);
+->addTank( $tankRepo->getTankByName("SU-100"));
+$manager->persist(  );
+
+ = new Track("T-34-85", $tier5, $nationality, 7730, 7,800, 35, 36);
+->addTank( $tankRepo->getTankByName("T-34-85"));
+$manager->persist(  );
+
+ = new Track("S-51", $tier5, $nationality, 7300, 12,500, 50.5, 18);
+->addTank( $tankRepo->getTankByName("S-51"));
+$manager->persist(  );
+
+ = new Track("SU-14", $tier5, $nationality, 11370, 15,000, 64, 12);
+->addTank( $tankRepo->getTankByName("SU-14"));
+$manager->persist(  );
+
+ = new Track("KV-220", $tier6, $nationality,  0, 15,000, 70.4, 20);
+->addTank( $tankRepo->getTankByName("KV-220 Beta-Test"));
+$manager->persist(  );
+
+ = new Track("KV-220", $tier6, $nationality,  0, 15,000, 70.4, 20);
+->addTank( $tankRepo->getTankByName("KV-220"));
+$manager->persist(  );
+
+ = new Track("SU-85I", $tier6, $nationality,  0, 7,600, 32.4, 46);
+->addTank( $tankRepo->getTankByName("SU-85I"));
+$manager->persist(  );
+
+ = new Track("T-50-2M", $tier6, $nationality, 17100, 2,000, 18, 38);
+->addTank( $tankRepo->getTankByName("T-50-2"));
+$manager->persist(  );
+
+ = new Track("T-150M", $tier6, $nationality, 16400, 10,600, 58.8, 18);
+->addTank( $tankRepo->getTankByName("T-150"));
+$manager->persist(  );
+
+ = new Track("KV-1S bis", $tier6, $nationality, 15390, 11,500, 48.2, 30);
+->addTank( $tankRepo->getTankByName("KV-1S"));
+$manager->persist(  );
+
+ = new Track("SU-100-60", $tier6, $nationality, 16830, 8,500, 38.7, 36);
+->addTank( $tankRepo->getTankByName("SU-100"));
+$manager->persist(  );
+
+ = new Track("T-34-85-60", $tier6, $nationality, 9500, 7,800, 35.3, 38);
+->addTank( $tankRepo->getTankByName("T-34-85"));
+$manager->persist(  );
+
+ = new Track("KV-2 Mod. 41", $tier6, $nationality, 15900, 10,600, 60.8, 20);
+->addTank( $tankRepo->getTankByName("KV-2"));
+$manager->persist(  );
+
+ = new Track("S-51 bis", $tier6, $nationality, 17300, 12,500, 52.5, 20);
+->addTank( $tankRepo->getTankByName("S-51"));
+$manager->persist(  );
+
+ = new Track("SU-14 bis", $tier6, $nationality, 17310, 15,000, 66, 14);
+->addTank( $tankRepo->getTankByName("SU-14"));
+$manager->persist(  );
+
+ = new Track("T-43", $tier6, $nationality, 11690, 6,400, 34, 36);
+->addTank( $tankRepo->getTankByName("T-43"));
+$manager->persist(  );
+
+ = new Track("KV-13", $tier6, $nationality, 12250, 8,000, 32.7, 38);
+->addTank( $tankRepo->getTankByName("KV-13"));
+$manager->persist(  );
+
+ = new Track("KV-3", $tier6, $nationality, 10720, 14,200, 68.25, 16);
+->addTank( $tankRepo->getTankByName("KV-3"));
+$manager->persist(  );
+
+ = new Track("IS-1", $tier6, $nationality, 12990, 11,500, 47.5, 32);
+->addTank( $tankRepo->getTankByName("IS"));
+$manager->persist(  );
+
+ = new Track("Object 212", $tier6, $nationality, 15300, 15,000, 55, 14);
+->addTank( $tankRepo->getTankByName("Object 212"));
+$manager->persist(  );
+
+ = new Track("T-44B", $tier7, $nationality,  0, 7,700, 35, 42);
+->addTank( $tankRepo->getTankByName("SU-122-44"));
+$manager->persist(  );
+
+ = new Track("SU-152", $tier7, $nationality, 20090, 12,000, 45.9, 20);
+->addTank( $tankRepo->getTankByName("SU-152"));
+$manager->persist(  );
+
+ = new Track("T-43M", $tier7, $nationality, 17720, 6,400, 37.3, 38);
+->addTank( $tankRepo->getTankByName("T-43"));
+$manager->persist(  );
+
+ = new Track("SU-100M1", $tier7, $nationality, 9000, 8,500, 32.2, 32);
+->addTank( $tankRepo->getTankByName("SU-100M1"));
+$manager->persist(  );
+
+ = new Track("KV-13M", $tier7, $nationality, 17050, 8,000, 36.9, 40);
+->addTank( $tankRepo->getTankByName("KV-13"));
+$manager->persist(  );
+
+ = new Track("KV-3 bis", $tier7, $nationality, 18200, 14,200, 71.8, 18);
+->addTank( $tankRepo->getTankByName("KV-3"));
+$manager->persist(  );
+
+ = new Track("IS-2M", $tier7, $nationality, 18080, 11,500, 48.4, 35);
+->addTank( $tankRepo->getTankByName("IS"));
+$manager->persist(  );
+
+ = new Track("Object 212M", $tier7, $nationality, 29700, 15,000, 57.5, 16);
+->addTank( $tankRepo->getTankByName("Object 212"));
+$manager->persist(  );
+
+ = new Track("KV-5", $tier7, $nationality,  0, 12,000, 105, 18);
+->addTank( $tankRepo->getTankByName("KV-5"));
+$manager->persist(  );
+
+ = new Track("T-44", $tier7, $nationality, 16070, 7,700, 33, 42);
+->addTank( $tankRepo->getTankByName("T-44"));
+$manager->persist(  );
+
+ = new Track("KV-4", $tier7, $nationality, 17780, 20,000, 102.56, 16);
+->addTank( $tankRepo->getTankByName("KV-4"));
+$manager->persist(  );
+
+ = new Track("ISU-152", $tier7, $nationality, 22040, 12,000, 48.6, 18);
+->addTank( $tankRepo->getTankByName("ISU-152"));
+$manager->persist(  );
+
+ = new Track("SU-101", $tier7, $nationality, 22200, 8,500, 34.5, 34);
+->addTank( $tankRepo->getTankByName("SU-101"));
+$manager->persist(  );
+
+ = new Track("IS-3", $tier7, $nationality, 17780, 10,000, 50.56, 27);
+->addTank( $tankRepo->getTankByName("IS-3"));
+$manager->persist(  );
+
+ = new Track("Object 261", $tier7, $nationality, 18000, 22,000, 59.9, 20);
+->addTank( $tankRepo->getTankByName("Object 261"));
+$manager->persist(  );
+
+ = new Track("SU-152M", $tier8, $nationality, 32710, 12,000, 48.3, 23);
+->addTank( $tankRepo->getTankByName("SU-152"));
+$manager->persist(  );
+
+ = new Track("SU-100M1B", $tier8, $nationality, 31000, 8,500, 34, 34);
+->addTank( $tankRepo->getTankByName("SU-100M1"));
+$manager->persist(  );
+
+ = new Track("IS-6", $tier8, $nationality,  0, 11,000, 59.9, 26);
+->addTank( $tankRepo->getTankByName("IS-6"));
+$manager->persist(  );
+
+ = new Track("T-44/54", $tier8, $nationality, 30200, 7,700, 35.3, 44);
+->addTank( $tankRepo->getTankByName("T-44"));
+$manager->persist(  );
+
+ = new Track("KV-4 Bis", $tier8, $nationality, 33600, 20,000, 112.56, 18);
+->addTank( $tankRepo->getTankByName("KV-4"));
+$manager->persist(  );
+
+ = new Track("ISU-152M", $tier8, $nationality, 34100, 12,000, 54.4, 21);
+->addTank( $tankRepo->getTankByName("ISU-152"));
+$manager->persist(  );
+
+ = new Track("SU-101M", $tier8, $nationality, 35000, 8,500, 37.5, 36);
+->addTank( $tankRepo->getTankByName("SU-101"));
+$manager->persist(  );
+
+ = new Track("IS-3M", $tier8, $nationality, 31450, 10,000, 53.9, 30);
+->addTank( $tankRepo->getTankByName("IS-3"));
+$manager->persist(  );
+
+ = new Track("Object 261M", $tier8, $nationality, 39500, 22,000, 62.2, 22);
+->addTank( $tankRepo->getTankByName("Object 261"));
+$manager->persist(  );
+
+ = new Track("T-54", $tier8, $nationality, 31700, 7,700, 38.7, 46);
+->addTank( $tankRepo->getTankByName("T-54"));
+$manager->persist(  );
+
+ = new Track("SU-122-54M1", $tier8, $nationality, 28150, 7,700, 37.15, 38);
+->addTank( $tankRepo->getTankByName("SU-122-54"));
+$manager->persist(  );
+
+ = new Track("T-10", $tier8, $nationality, 27920, 10,000, 50.9, 28);
+->addTank( $tankRepo->getTankByName("IS-8"));
+$manager->persist(  );
+
+ = new Track("ST-I", $tier8, $nationality, 27900, 11,000, 58.9, 24);
+->addTank( $tankRepo->getTankByName("ST-I"));
+$manager->persist(  );
+
+ = new Track("Object 704", $tier8, $nationality, 28150, 10,000, 48.86, 19);
+->addTank( $tankRepo->getTankByName("Object 704"));
+$manager->persist(  );
+
+ = new Track("T-54M", $tier9, $nationality, 62500, 7,700, 39.8, 48);
+->addTank( $tankRepo->getTankByName("T-54"));
+$manager->persist(  );
+
+ = new Track("SU-122-54M2", $tier9, $nationality, 63000, 7,700, 39.2, 40);
+->addTank( $tankRepo->getTankByName("SU-122-54"));
+$manager->persist(  );
+
+ = new Track("T-10М", $tier9, $nationality, 66500, 10,000, 58.9, 30);
+->addTank( $tankRepo->getTankByName("IS-8"));
+$manager->persist(  );
+
+ = new Track("ST-I M", $tier9, $nationality, 65000, 11,000, 63.5, 26);
+->addTank( $tankRepo->getTankByName("ST-I"));
+$manager->persist(  );
+
+ = new Track("Object 704M", $tier9, $nationality, 62000, 10,000, 50.9, 22);
+->addTank( $tankRepo->getTankByName("Object 704"));
+$manager->persist(  );
+
+ = new Track("Type T-62", $tier10, $nationality, 82500, 7,800, 39.8, 56);
+->addTank( $tankRepo->getTankByName("T-62A"));
+$manager->persist(  );
+
+ = new Track("Object 260", $tier10, $nationality, 82500, 11,000, 62.5, 32);
+->addTank( $tankRepo->getTankByName("Object 263"));
+$manager->persist(  );
+
+ = new Track("T-10M-S", $tier10, $nationality, 82500, 10,000, 53.9, 30);
+->addTank( $tankRepo->getTankByName("Object 268"));
+$manager->persist(  );
+
+ = new Track("IS-4", $tier10, $nationality, 61350, 11,000, 66.3, 26);
+->addTank( $tankRepo->getTankByName("IS-4"));
+$manager->persist(  );
+
+ = new Track("IS-7", $tier10, $nationality, 82500, 11,000, 70.95, 28);
+->addTank( $tankRepo->getTankByName("IS-7));
+$manager->persist(  );
+
+
+CHINESE
+
+
+ = new Track("M24/26", $tier1, $nationality, 0, 800, 6.6, 36);
+->addTank( $tankRepo->getTankByName("Renault NC-31"));
+$manager->persist(  );
+
+ = new Track("Vickers Mk. E Type B", $tier1, $nationality, 340, 1880, 7.5, 50);
+->addTank( $tankRepo->getTankByName("Vickers Mk. E Type B"));
+$manager->persist(  );
+
+ = new Track("T-26-2", $tier2, $nationality, 620, 1880, 10, 52);
+->addTank( $tankRepo->getTankByName("Vickers Mk. E Type B"));
+$manager->persist(  );
+
+ = new Track("M26/27", $tier2, $nationality, 450, 800, 8.6, 38);
+->addTank( $tankRepo->getTankByName("Renault NC-31"));
+$manager->persist(  );
+
+ = new Track("Type 97", $tier2, $nationality, 1270, 4500, 15.9, 30);
+->addTank( $tankRepo->getTankByName("Type 2597 Chi-Ha"));
+$manager->persist(  );
+
+ = new Track("Type 97-Kai", $tier3, $nationality, 1850, 4500, 18, 32);
+->addTank( $tankRepo->getTankByName("Type 2597 Chi-Ha"));
+$manager->persist(  );
+
+ = new Track("VVSS T36E6", $tier3, $nationality, 1500, 3550, 15.75, 36);
+->addTank( $tankRepo->getTankByName("M5A1 Stuart"));
+$manager->persist(  );
+
+ = new Track("VVSS T55E1", $tier4, $nationality, 4700, 3550, 18, 38);
+->addTank( $tankRepo->getTankByName("M5A1 Stuart"));
+$manager->persist(  );
+
+ = new Track("Type T-34", $tier4, $nationality, 2680, 7800, 29, 40);
+->addTank( $tankRepo->getTankByName("Type T-34"));
+$manager->persist(  );
+
+ = new Track("Type T-34M", $tier5, $nationality, 9800, 7800, 32, 42);
+->addTank( $tankRepo->getTankByName("Type T-34"));
+$manager->persist(  );
+
+ = new Track("T-34-85", $tier5, $nationality, 7730, 7800, 32.5, 40);
+->addTank( $tankRepo->getTankByName("Type 58"));
+$manager->persist(  );
+
+ = new Track("131", $tier5, $nationality, 7730, 4500, 16.5, 52);
+->addTank( $tankRepo->getTankByName("59-16""));
+$manager->persist(  );
+
+ = new Track("Type 58", $tier6, $nationality, 15600, 7800, 35, 42);
+->addTank( $tankRepo->getTankByName("Type 58"));
+$manager->persist(  );
+
+ = new Track("T-34-1", $tier6, $nationality, 7730, 7800, 32, 40);
+->addTank( $tankRepo->getTankByName("T-34-1"));
+$manager->persist(  );
+
+ = new Track("WZ-131", $tier6, $nationality, 9500, 5500, 21.5, 52);
+->addTank( $tankRepo->getTankByName("WZ-131"));
+$manager->persist(  );
+
+ = new Track("131 model 2", $tier6, $nationality, 17300, 4500, 19, 54);
+->addTank( $tankRepo->getTankByName("59-16""));
+$manager->persist(  );
+
+ = new Track("IS-2 early", $tier6, $nationality, 12990, 11500, 46.1, 36);
+->addTank( $tankRepo->getTankByName("IS-2"));
+$manager->persist(  );
+
+ = new Track("T-34-1 model 2", $tier7, $nationality, 18600, 7800, 35, 42);
+->addTank( $tankRepo->getTankByName("T-34-1"));
+$manager->persist(  );
+
+ = new Track("IS-2 late", $tier7, $nationality, 19400, 11500, 49, 38);
+->addTank( $tankRepo->getTankByName("IS-2"));
+$manager->persist(  );
+
+ = new Track("WZ-131 model 2", $tier7, $nationality, 18500, 5500, 24, 54);
+->addTank( $tankRepo->getTankByName("WZ-131"));
+$manager->persist(  );
+
+ = new Track("110", $tier7, $nationality, 17780, 11500, 47, 28);
+->addTank( $tankRepo->getTankByName("110""));
+$manager->persist(  );
+
+ = new Track("T-34-2", $tier7, $nationality, 11690, 7800, 33.5, 44);
+->addTank( $tankRepo->getTankByName("T-34-2"));
+$manager->persist(  );
+
+ = new Track("WZ-131-1", $tier7, $nationality, 16500, 5500, 24, 54);
+->addTank( $tankRepo->getTankByName("WZ-132"));
+$manager->persist(  );
+
+ = new Track("Type 62 A", $tier7, $nationality, 0, 5,500, 24, 54);
+->addTank( $tankRepo->getTankByName("Type 62"));
+$manager->persist(  );
+
+ = new Track("110-1", $tier8, $nationality, 35000, 11500, 54, 30,)
+->addTank( $tankRepo->getTankByName("110""));
+$manager->persist(  );
+
+ = new Track("T-34-2 model 2", $tier8, $nationality, 34000, 7800, 36.5, 46);
+->addTank( $tankRepo->getTankByName("T-34-2"));
+$manager->persist(  );
+
+ = new Track("WZ-132", $tier8, $nationality, 32000, 5500, 26.5, 56);
+->addTank( $tankRepo->getTankByName("WZ-132"));
+$manager->persist(  );
+
+ = new Track("Type 59 A", $tier8, $nationality, 0, 7,700, 39.8, 46);
+->addTank( $tankRepo->getTankByName("Type 59"));
+$manager->persist(  );
+
+ = new Track("WZ-120", $tier8, $nationality, 31700, 7700, 36.7, 44);
+->addTank( $tankRepo->getTankByName("WZ-120"));
+$manager->persist(  );
+
+ = new Track("WZ-111", $tier8, $nationality, 27920, 10000, 44.7, 26);
+->addTank( $tankRepo->getTankByName("WZ-111 model 1-4"));
+$manager->persist(  );
+
+ = new Track("WZ-111", $tier8, $nationality, 0, 10000, 53.95, 28);
+->addTank( $tankRepo->getTankByName("WZ-111"));
+$manager->persist(  );
+
+ = new Track("WZ-111 model 4", $tier9, $nationality, 61000, 10000, 48, 48);
+->addTank( $tankRepo->getTankByName("WZ-111 model 1-4"));
+$manager->persist(  );
+
+ = new Track("WZ-120 model 3", $tier9, $nationality, 62000, 7700, 40.2, 46);
+->addTank( $tankRepo->getTankByName("WZ-120"));
+$manager->persist(  );
+
+ = new Track("113", $tier10, $nationality, 61350, 10000, 48, 36);
+->addTank( $tankRepo->getTankByName("113"));
+$manager->persist(  );
+
+ = new Track("121", $tier10, $nationality, 82500, 7700, 42, 50);
+->addTank( $tankRepo->getTankByName("121"));
+$manager->persist(  );

@@ -17,22 +17,27 @@ class LoadTankClassData extends AbstractFixture implements OrderedFixtureInterfa
     public function load( ObjectManager $manager )
     {
         $light = new TankClass();
+        $light->setAbbreviation( 'lt' );
         $light->setName( 'Light Tank' );
         $manager->persist( $light );
 
         $medium = new TankClass();
+        $medium->setAbbreviation( 'mt' );
         $medium->setName( 'Medium Tank' );
         $manager->persist( $medium );
 
         $heavy = new TankClass();
+        $heavy->setAbbreviation( 'ht' );
         $heavy->setName( 'Heavy Tank' );
         $manager->persist( $heavy );
 
         $td = new TankClass();
+        $td->setAbbreviation( 'td' );
         $td->setName( 'Tank Destroyer' );
         $manager->persist( $td );
 
         $spg = new TankClass();
+        $spg->setAbbreviation( 'spg' );
         $spg->setName( 'Self-Propelled Gun' );
         $manager->persist( $spg );
 

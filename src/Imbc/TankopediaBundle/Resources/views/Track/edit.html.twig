@@ -1,28 +1,83 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Track edit</h1>
 
-    <form action="{{ path('tankopedia_track_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-        <input type="hidden" name="_method" value="PUT" />
-        {{ form_widget(edit_form) }}
-        <p>
-            <button type="submit">Edit</button>
-        </p>
-    </form>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('tankopedia_track') }}">
-            Back to the list
+{% if edit == true %}
+    <h1>Editing existing Track</h1>
+{% else %}
+    <h1>New Track</h1>
+{% endif %}
+<form class="form-horizontal" method="POST" action="">
+    <div class="form-horizontal">
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( track.name ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( track.name ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( track.cost ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( track.cost ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( track.weight ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( track.weight ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( track.loadLimit ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( track.loadLimit ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( track.traverseSpeed ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( track.traverseSpeed ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( track.tier ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( track.tier ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( track.nationality ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( track.nationality ) }}
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control-label">
+                {{ form_label( track.tanks ) }}
+            </div>
+            <div class="controls">
+                {{ form_widget( track.tanks ) }}
+            </div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <a type="submit" class="btn btn-mini">
+            <i class="icon-ok"></i> Save Form
         </a>
-    </li>
-    <li>
-        <form action="{{ path('tankopedia_track_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+    </div>
+</form>
 {% endblock %}
