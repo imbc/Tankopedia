@@ -22,12 +22,14 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new APY\DataGridBundle\APYDataGridBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new Userfriendly\Bundle\SocialUserBundle\UserfriendlySocialUserBundle(),
+//            new Userfriendly\Bundle\SocialUserBundle\UserfriendlySocialUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+//            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             //new HWI\OAuthBundle\HWIOAuthBundle(),
             // application bundle
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
+            new Imbc\UserBundle\ImbcUserBundle(),
+            new Imbc\WebsiteBundle\ImbcWebsiteBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
