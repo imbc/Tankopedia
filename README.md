@@ -74,7 +74,7 @@ TODO:
     - use font awesome for icons (installed)
 14. add way to compare 3-4 tanks as tables side by side
     - implement 3 way to compare tanks (see [tank-compare.com] (http://tank-compare.com) for example)
-    - implement comparator by tier/class (see [wotatank.com] (http://wotatank.com/) for example) 
+    - implement comparator by tier/class (see [wotatank.com] (http://wotatank.com/) for example)
     - calculate [tank performance] (http://www.worldoftanksguide.com/ref-tank-analyzer-explain.shtml) (see [worldoftanksguide.com] (http://www.worldoftanksguide.com/cgi-bin/tank_analyzer.cgi) for example)
 15. investigate scrapping data directly from wot for player and save that to local db, (example: [wotdb] (https://github.com/imbc/wotdb) and [tanklab] (https://github.com/imbc/tanklab))
 16. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
@@ -86,3 +86,6 @@ TODO:
 19. add a user management
 20. add an access level control
 21. add an Admin interface for manual data maintenance
+22. add version (game version that is) in order to track tank/modules properties
+    - create a loading system for xml files based on [WoTModTools] (https://github.com/imbc/WoTModTools)
+23. add 3d viewer (see [gamemodels3d.com/worldoftanks]  (http://gamemodels3d.com/worldoftanks/) for example)
