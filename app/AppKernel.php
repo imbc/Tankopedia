@@ -24,7 +24,8 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Userfriendly\Bundle\SocialUserBundle\UserfriendlySocialUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new HWI\OAuthBundle\HWIOAuthBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            //new HWI\OAuthBundle\HWIOAuthBundle(),
             // application bundle
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
         );
