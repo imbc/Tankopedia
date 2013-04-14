@@ -4,7 +4,6 @@ namespace Imbc\SecurityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-
 use Symfony\Component\Security\Core\Role\RoleInterface;
 
 /**
@@ -103,20 +102,20 @@ class Role implements RoleInterface
         return $this->description;
     }
 
+    /**
+     * Get role name
+     *
+     * @return string
+     */
     public function getRole()
     {
         return $this->getName();
     }
 
-    public function __toString()
-    {
-        return $this->getDescription();
-    }
-
     /**
      * Add child
      *
-     * @param Imbc\SecurityBundle\Entity\Role $child
+     * @param \Imbc\SecurityBundle\Entity\Role $child
      */
     public function addRole( Role $child )
     {
@@ -151,5 +150,10 @@ class Role implements RoleInterface
     public function getParent()
     {
         return $this->parent;
+    }
+
+    public function __toString()
+    {
+        return $this->getDescription();
     }
 }

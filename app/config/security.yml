@@ -4,13 +4,17 @@ jms_security_extra:
 
 security:
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
+        Imbc\SecurityBundle\Entity\User: sha512
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     providers:
+        main:
+            entity: { class: ImbcSecurityBundle:User, property: username }
+#        administrators:
+#            entity: { class: ImbcSecurityBundle:User }
         in_memory:
             memory:
                 users:
