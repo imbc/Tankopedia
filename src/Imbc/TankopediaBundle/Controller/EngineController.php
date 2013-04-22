@@ -82,7 +82,7 @@ class EngineController extends Controller
      * Deletes a Engine entity.
      *
      */
-    public function deleteAction(Request $request, $id)
+    public function deleteAction( Request $request, $id )
     {
         // to be implemented
     }

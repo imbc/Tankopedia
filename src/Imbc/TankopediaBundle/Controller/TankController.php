@@ -26,6 +26,7 @@ class TankController extends Controller
         $dt->setFields( array(
                                'ID' => 't.id',
                                'Name' => 't.name',
+                               'Slug' => 't.slug',
                                '_identifier_'  => 't.id'
         ));
         $dt->setWhere( 't.id = :id', array(
