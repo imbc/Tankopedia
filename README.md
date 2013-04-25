@@ -77,6 +77,7 @@ TODO:
     - implement comparator by tier/class (see [wotatank.com] (http://wotatank.com/) for example)
     - calculate [tank performance] (http://www.worldoftanksguide.com/ref-tank-analyzer-explain.shtml) (see [worldoftanksguide.com] (http://www.worldoftanksguide.com/cgi-bin/tank_analyzer.cgi) for example)
 15. investigate scrapping data directly from wot for player and save that to local db, (example: [wotdb] (https://github.com/imbc/wotdb) and [tanklab] (https://github.com/imbc/tanklab))
+    - see https://github.com/thunder-spb/wot-api-description for api description 
 16. add breadcrumb using white-october [BreadCrumbsBundle] (https://github.com/whiteoctober/BreadcrumbsBundle)
 17. add [gedmo slug] (https://github.com/l3pp4rd/DoctrineExtensions) behaviour through [StofDoctrineExtensionsBundle] (https://github.com/stof/StofDoctrineExtensionsBundle)
     - ~~Tank~~, ~~TankClass~~, ~~Nationality~~, Tier, Modules
