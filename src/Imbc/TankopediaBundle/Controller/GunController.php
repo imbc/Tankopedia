@@ -4,7 +4,6 @@ namespace Imbc\TankopediaBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use Imbc\TankopediaBundle\Entity\Gun;
 use Imbc\TankopediaBundle\Form\Type\GunType;
 
@@ -21,18 +20,19 @@ class GunController extends Controller
         $guns = $repo->findAll();
         $thisGun = new Gun();
         $form = $this->createForm( new GunType(), $thisGun );
-        if ( null !== $request->get( $form->getName() ) )
+        if( null !== $request->get( $form->getName() ))
         {
             $form->bind( $request );
-            if ( $form->isValid() )
+            if( $form->isValid() )
             {
                 $em->persist( $thisGun );
                 $em->flush();
-                return $this->redirect( $this->generateUrl( 'tankopedia_gun' ) );
+                return $this->redirect( $this->generateUrl( 'tankopedia_gun' ));
             }
         }
-        return $this->render( 'ImbcTankopediaBundle:Gun:index.html.twig', array(
-            'guns' => $guns,
+
+        return $this>render( 'ImbcTankopediaBundle:Gun:index.html.twig', array(
+            'guns'  => $guns,
             'form'  => $form->createView(),
         ));
     }
@@ -41,7 +41,7 @@ class GunController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository( 'ImbcTankopediaBundle:Gun' );
-        if ( null === $gun = $repo->find( $request->get( 'id' ) ))
+        if( null === $gun = $repo->find( $request->get( 'id' ) ))
         {
             throw $this->createNotFoundException( 'Gun does not exist' );
         }
@@ -56,16 +56,16 @@ class GunController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository( 'ImbcTankopediaBundle:Gun' );
         $gun = new Gun();
-        if ( $request->get( 'id' ) )
+        if( $request->get( 'id' ))
         {
             $edit = true;
             $gun = $repo->find( $request->get( 'id' ));
         }
         $form = $this->createForm( new GunType(), $gun );
-        if ( null !== $request->get( $form->getName() ))
+        if( null !== $request->get( $form->getName() ))
         {
             $form->bind( $request );
-            if ( $form->isValid() )
+            if( $form->isValid() )
             {
                 $em->persist( $gun );
                 $em->flush();
@@ -75,7 +75,7 @@ class GunController extends Controller
 
         return $this->render( 'ImbcTankopediaBundle:Gun:edit.html.twig', array(
             'edit'  => $edit,
-            'gun'  => $form->createView(),
+            'gun'   => $form->createView(),
         ));
     }
 }

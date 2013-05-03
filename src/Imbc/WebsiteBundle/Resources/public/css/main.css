@@ -5,12 +5,10 @@
     Description:
         Purpose of the stylesheet follows.
 */
-
 root {
-    display: block;
+	display: block;
 }
 
 .socials {
-    padding: 10px;
+	padding: 10px;
 }
-

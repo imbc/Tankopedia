@@ -4,7 +4,6 @@ namespace Imbc\TankopediaBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use Imbc\TankopediaBundle\Entity\Tank;
 use Imbc\TankopediaBundle\Form\Type\TankType;
 
@@ -20,30 +19,34 @@ class TankController extends Controller
         $tanks = $repo->findAll();
         $newTank = new Tank();
         $tankForm = $this->createForm( new TankType(), $newTank );
-        if ( null !== $request->get( $tankForm->getName() ) )
+        if( null !== $request->get( $tankForm->getName() ) )
         {
             $tankForm->bind( $request );
-            if ( $tankForm->isValid() )
+            if( $tankForm->isValid() )
             {
                 $em->persist( $newTank );
                 $em->flush();
+
                 return $this->redirect( $this->generateUrl( 'tankopedia_tank' ) );
             }
         }
 
         $gridService = $this->get( 'imbc.grid.tank' );
         $grid = $gridService->getGrid();
-        if ( $grid->isReadyForRedirect() )
+        if( $grid->isReadyForRedirect() )
         {
-            if ( $grid->isReadyForExport() ) return $grid->getGridResponse();
+            if( $grid->isReadyForExport() )
+            {
+                return $grid->getGridResponse();
+            }
+
             return $this->redirect( $grid->getRouteUrl() );
         }
         else
         {
             return $this->render( 'ImbcTankopediaBundle:Tank:index.html.twig', array(
-                'grid'  => $grid,
-                'tanks' => $tanks,
-                'form'  => $tankForm->createView(),
+                'grid' => $grid, 'tanks' => $tanks,
+                'form' => $tankForm->createView(),
             ));
         }
     }
@@ -52,9 +55,7 @@ class TankController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository( 'ImbcTankopediaBundle:Tank' );
-        if ( null === $tank = $repo->findOneBy( array(
-                        'slug' => $request->get( 'slug' ))
-                ))
+        if( null === $tank = $repo->findOneBy( array( 'slug' => $request->get( 'slug' )) ))
         {
             throw $this->createNotFoundException( 'Tank does not exist' );
         }
@@ -69,18 +70,16 @@ class TankController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository( 'ImbcTankopediaBundle:Tank' );
         $tank = new Tank();
-        if ( $request->get( 'slug' ) )
+        if( $request->get( 'slug' ))
         {
             $edit = true;
-            $tank = $repo->findOneBy( array(
-                        'slug' => $request->get( 'slug' )
-            ));
+            $tank = $repo->findOneBy( array( 'slug' => $request->get( 'slug' ) ));
         }
         $form = $this->createForm( new TankType(), $tank );
-        if ( null !== $request->get( $form->getName() ))
+        if( null !== $request->get( $form->getName() ))
         {
             $form->bind( $request );
-            if ( $form->isValid() )
+            if( $form->isValid() )
             {
                 $em->persist( $tank );
                 $em->flush();
@@ -89,8 +88,8 @@ class TankController extends Controller
         }
 
         return $this->render( 'ImbcTankopediaBundle:Tank:edit.html.twig', array(
-            'edit'  => $edit,
-            'tank'  => $form->createView(),
+            'edit' => $edit,
+            'tank' => $form->createView(),
         ));
     }
 }

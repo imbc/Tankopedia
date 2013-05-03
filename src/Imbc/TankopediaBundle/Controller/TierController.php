@@ -1,7 +1,6 @@
 <?php
 
 namespace Imbc\TankopediaBundle\Controller;
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

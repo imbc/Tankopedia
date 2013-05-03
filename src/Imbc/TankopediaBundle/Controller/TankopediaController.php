@@ -16,10 +16,11 @@ class TankopediaController extends Controller
         $tiers = $tierRepo->findAll();
         $classRepo = $em->getRepository( 'ImbcTankopediaBundle:TankClass' );
         $classes = $classRepo->findAll();
+
         return $this->render( 'ImbcTankopediaBundle:Tankopedia:index.html.twig', array(
-            'nationalities'  => $nationalities,
-            'tiers' => $tiers,
-            'classes'  => $classes
+            'nationalities' => $nationalities,
+            'tiers'         => $tiers,
+            'classes'       => $classes,
         ));
     }
 }
