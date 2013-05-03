@@ -47,7 +47,10 @@ class TankType extends AbstractType
             'property'      => 'name',
             'label'         => 'Nationality',
         ));
-        $builder->add( 'parents' );
+        $builder->add( 'parents', 'multiselect', array(
+            'label'         => 'Parent',
+            'class'         => 'ImbcTankopediaBundle:Tank',
+        ));
         $builder->add( 'children' );
     }
 
