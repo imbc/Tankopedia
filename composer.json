@@ -33,6 +33,7 @@
         "apy/datagrid-bundle": "dev-master",
         "elao/web-profiler-extra-bundle" : "dev-master",
         "leaseweb/version-information-bundle": "dev-master",
+        "neutron/form-bundle":"dev-master",
         "raulfraile/ladybug-bundle": "dev-master",
         "userfriendly/social-user-bundle": "*",
         "userfriendly/utility-bundle": "*"

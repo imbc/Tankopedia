@@ -2,6 +2,11 @@
 {#% extends '::base.html.twig' %#}
 
 {% block multiselect_widget %}
+    <script type="text/javascript" src="{{ asset('bundles/imbcwebsite/js/jquery-1.9.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/imbcwebsite/js/jquery-ui.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/imbcwebsite/js/jquery.ui.widget.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/imbcwebsite/js/jquery.multiselect.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/imbcwebsite/js/jquery.multiselect.filter.min.js') }}"></script>
 {% spaceless %}
     <select {{ block('widget_attributes') }} multiple="multiple" class="jquery-multiselect">
         {% if empty_value is not none %}
@@ -18,9 +23,15 @@
         {{ block('choice_widget_options') }}
     </select>
 {% endspaceless %}
+    <script>
+    $(document).ready(function(){
+    //$(function(){
+        $( '.jquery-multiselect' ).multiselect();
+    });
+    </script>
 {% endblock %}
 
-{% block javascript %}
+{#% block javascript %}
     {{ parent() }}
     <script type="text/javascript" src="{{ asset('bundles/imbcwebsite/js/jquery.multiselect.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bundles/imbcwebsite/js/jquery.multiselect.filter.min.js') }}"></script>
@@ -29,4 +40,4 @@
         $( 'jquery-multiselect' ).multiselect();
     });
     </script>
-{% endblock %}
+{% endblock %#}
