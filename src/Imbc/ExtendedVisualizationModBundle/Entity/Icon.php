@@ -2,8 +2,18 @@
 
 namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
+/**
+ * General parameters for the battle interface
+ * @ORM\Entity(repositoryClass="Imbc\ExtendedVisualizationModBundle\Entity\Repository\IconRepository")
+ * @ORM\Table(name="xvm__icon")
+ */
 class Icon
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     protected $id;
     //   false – Disable Team/Clan logos in Battle Loading Screen
     protected $show;

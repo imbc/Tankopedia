@@ -2,8 +2,18 @@
 
 namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
+/**
+ * General parameters for the battle interface
+ * @ORM\Entity(repositoryClass="Imbc\ExtendedVisualizationModBundle\Entity\Repository\CaptureTeamRepository")
+ * @ORM\Table(name="xvm__captureteam")
+ */
 class CaptureTeam
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     protected $id;
     // Upper textfield
     protected $primaryTitleFormat;

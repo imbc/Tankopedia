@@ -2,8 +2,18 @@
 
 namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
+/**
+ * General parameters for the battle interface
+ * @ORM\Entity(repositoryClass="Imbc\ExtendedVisualizationModBundle\Entity\Repository\MinimapRepository")
+ * @ORM\Table(name="xvm__minimap")
+ */
 class Minimap
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     protected $id;
     // On/off modification switch
     protected $enabled;

@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * General parameters for the battle interface
- * @ORM\Entity
- * @ORM\Table(name="otm_battle")
+ * @ORM\Entity(repositoryClass="Imbc\ExtendedVisualizationModBundle\Entity\Repository\BattleRepository")
+ * @ORM\Table(name="xvm__battle")
  */
 class Battle
 {

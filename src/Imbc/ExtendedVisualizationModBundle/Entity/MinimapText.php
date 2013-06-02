@@ -2,8 +2,18 @@
 
 namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
+/**
+ * General parameters for the battle interface
+ * @ORM\Entity(repositoryClass="Imbc\ExtendedVisualizationModBundle\Entity\Repository\MinimapTextRepository")
+ * @ORM\Table(name="xvm__minimaptext")
+ */
 class MinimapText
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     protected $id;
     // Ally
     protected $ally;

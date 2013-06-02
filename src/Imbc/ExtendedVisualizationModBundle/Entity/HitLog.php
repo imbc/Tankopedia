@@ -2,8 +2,18 @@
 
 namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
+/**
+ * General parameters for the battle interface
+ * @ORM\Entity(repositoryClass="Imbc\ExtendedVisualizationModBundle\Entity\Repository\HitlogRepository")
+ * @ORM\Table(name="xvm__hitlog")
+ */
 class HitLog
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     protected $id;
     // on/off switch
     protected $enabled;

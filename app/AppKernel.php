@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new APY\DataGridBundle\APYDataGridBundle(),
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
+            new Imbc\ExtendedVisualizationModBundle\ImbcExtendedVisualizationModBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         );
 

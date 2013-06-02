@@ -2,17 +2,32 @@
 
 namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
+/**
+ * General parameters for the battle interface
+ * @ORM\Entity(repositoryClass="Imbc\ExtendedVisualizationModBundle\Entity\Repository\CaptureBar")
+ * @ORM\Table(name="xvm__capturebar")
+ */
 class CaptureBar
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     protected $id;
+
     // On/off switch
     protected $enabled;
+
     // Upper textfield offset in case of big font size
     protected $primaryTitleOffset;
+
     // append plus to three capturers. Cant calculate more than three.
     protected $appendPlus;
+
     // Capture format (macros allowed, see readme-en.txt)
     protected $enemy;
+
     protected $ally;
 
     public function getId()

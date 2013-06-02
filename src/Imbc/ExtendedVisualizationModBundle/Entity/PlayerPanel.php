@@ -2,8 +2,18 @@
 
 namespace Imbc\ExtendedVisualizationModBundle\Entity;
 
+/**
+ * General parameters for the battle interface
+ * @ORM\Entity(repositoryClass="Imbc\ExtendedVisualizationModBundle\Entity\Repository\PlayerPanelRepository")
+ * @ORM\Table(name="xvm__playerpanel")
+ */
 class PlayerPanel
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     protected $id;
     // Opacity percentage of the panels. (0 – transparent ... 100 – opaque)
     protected $alpha;
