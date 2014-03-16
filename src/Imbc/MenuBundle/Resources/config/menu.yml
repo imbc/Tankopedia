@@ -1,0 +1,130 @@
+parameters:
+    imbc.menu.config:
+#        main:
+#            classes:
+#                ul: navigation main
+#            items:
+#                home:
+#                    label:  Home
+#                    classes:
+#                        li: no-menu
+#                        a:  main
+#                    route:  home
+#                reports:
+#                    label:  Reports
+#                    classes:
+#                        li: sibling menu
+#                        a:  main
+#                    items:
+#                        employeereport:
+#                            label:  Employee DB Report
+#                            classes:
+#                                a:  submenuitem
+#                            route:  employeedb_report
+#                        capacityreports:
+#                            label:  Capacity Reports
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_capacityreports
+#                        hipreports:
+#                            label:  HIP Reports
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_hipreports
+#                        fsatreports:
+#                            label:  FSAT Reports
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_fsatreports
+#                        icdrmetrics:
+#                            label:  ICDR Metrics
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_icdrmetrics
+#                        engagementmetrics:
+#                            label:  Engagement Metrics
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_engagementmetrics
+#                        compliancereports:
+#                            label:  Compliance Reports
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_compliancereports
+#                tools:
+#                    label:  Tools
+#                    classes:
+#                        li: sibling menu
+#                        a:  main
+#                    items:
+#                        accountlookup:
+#                            label:  Shared Account Lookup
+#                            classes:
+#                                a:  submenuitem
+#                            route:  sharedaccount_lookup
+#                        activitytracker:
+#                            label:  Activity Tracker
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_activitytracker
+#                        acdtool:
+#                            label:  ACD Tool
+#                            classes:
+#                                a:  submenuitem
+#                            route:  employeedb_actionrequests
+#                        entitlement:
+#                            label:  Entitlement
+#                            classes:
+#                                a:  submenuitem
+#                            route:  entitlement
+#                        icdrsearch:
+#                            label:  Search
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_icdrsearch
+#                        feedback:
+#                            label:  Triage Feedback
+#                            classes:
+#                                a:  submenuitem
+#                            route:  feedback
+#                        casereviews:
+#                            label:  Case Review Tool
+#                            classes:
+#                                a:  submenuitem
+#                            route:  cisco_audits
+#                admin:
+#                    label:  Site Admin
+#                    classes:
+#                        li: sibling menu
+#                        a:  main
+#                    items:
+#                        siteissues:
+#                            label:  Website Issues
+#                            classes:
+#                                a:  submenuitem
+#                            route:  issuelist
+#                        usagestats:
+#                            label:  Usage Statistics
+#                            classes:
+#                                a:  submenuitem
+#                            route:  usagestats
+#                        users:
+#                            label:  User Management
+#                            classes:
+#                                a:  submenuitem
+#                            route:  admin_users
+#                        roles:
+#                            label:  User Roles
+#                            classes:
+#                                a:  submenuitem
+#                            route:  admin_roles
+#                        access:
+#                            label:  Access Control
+#                            classes:
+#                                a:  submenuitem
+#                            route:  admin_security
+#                        legacyadmin:
+#                            label:  Old Site Admin
+#                            classes:
+#                                a:  submenuitem
+#                            route:  legacy_siteadmin

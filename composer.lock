@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b4963aa7fa9c38ef11f7e7715e7d01c9",
+    "hash": "fa3f3d92a2ab610cd3712de772daec5c",
     "packages": [
         {
             "name": "apy/datagrid-bundle",
@@ -3352,50 +3352,6 @@
                 "issues": "https://github.com/userfriendly/UtilityBundle/issues"
             },
             "time": "2013-03-14 16:52:40"
-        },
-        {
-            "name": "writtengames/menu-bundle",
-            "version": "dev-master",
-            "target-dir": "WG/MenuBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WrittenGames/MenuBundle.git",
-                "reference": "148357baab85b980156c0b766f0b069856655417"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WrittenGames/MenuBundle/zipball/148357baab85b980156c0b766f0b069856655417",
-                "reference": "148357baab85b980156c0b766f0b069856655417",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/symfony": ">=2.1"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "WG\\MenuBundle": ""
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Moritz Kraft",
-                    "email": "mo@writtengames.com"
-                }
-            ],
-            "description": "Symfony WGMenuBundle",
-            "keywords": [
-                "menu",
-                "navigation"
-            ],
-            "support": {
-                "source": "https://github.com/WrittenGames/MenuBundle/tree/master",
-                "issues": "https://github.com/WrittenGames/MenuBundle/issues"
-            },
-            "time": "2012-11-04 19:12:44"
         }
     ],
     "packages-dev": [

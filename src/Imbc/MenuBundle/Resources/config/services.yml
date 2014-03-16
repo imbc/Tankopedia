@@ -1,0 +1,19 @@
+parameters:
+    imbc.menu.class:                 Imbc\MenuBundle\Navigation\Menu
+    imbc.twig.menu_extension.class:  Imbc\MenuBundle\Twig\Extension\MenuExtension
+
+services:
+    imbc.menu:
+        class: %imbc.menu.class%
+        arguments:
+            - '@router'
+            - '@request'
+#            - '@imbc.security.access_control'
+            - %imbc.menu.config%
+        scope: request
+    imbc.twig.menu_extension:
+        class: %imbc.twig.menu_extension.class%
+        arguments:
+            - '@service_container'
+        tags:
+            - { name: twig.extension }
