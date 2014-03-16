@@ -22,7 +22,7 @@ class MenuExtension extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            'render_menu' => new Twig_Function_Method( $this, 'renderMenu', array(
+            'menu' => new Twig_Function_Method( $this, 'renderMenu', array(
                 'is_safe' => array( 'html' ),
             )),
         );

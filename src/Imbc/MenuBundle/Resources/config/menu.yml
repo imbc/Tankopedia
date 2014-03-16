@@ -1,75 +1,39 @@
 parameters:
     imbc.menu.config:
         main:
-            classes:
-                a: navigation main
+            label:  IMBC
+            route:  landing_page_index
             items:
-                home:
-                    label:  IMBC
-                    classes:
-                        li: no-menu
-                        a:  main
-                    route:  landing_page_index
-                tankopedia:
-                    label:  Tanks
-                    classes:
-                        li: siblings menu
-                        a:  main
-                    route:  tankopedia_index
                 tanks:
                     label:  Tanks
-                    classes:
-                        li: siblings menu
-                        a:  main
                     items:
                         tanks:
                             label:  Tanks
-                            classes:
-                                a:  submenuitem
                             route:  tankopedia_tank
                         tier:
                             label:  Tiers
-                            classes:
-                                a:  submenuitem
                             route:  tankopedia_tier
                         nationality:
                             label:  Nationality
-                            classes:
-                                a:  submenuitem
                             route:  tankopedia_nationality
                         class:
                             label:  Class
-                            classes:
-                                a:  submenuitem
                             route:  tankopedia_class
                 modules:
                     label:  Modules
-                    classes:
-                        li: siblings menu
-                        a:  main
                     items:
                         engines:
                             label:  Engines
-                            classes:
-                                a:  submenuitem
                             route:  tankopedia_engine
                         guns:
                             label:  Guns
-                            classes:
-                                a:  submenuitem
                             route:  tankopedia_gun
                         radios:
                             label:  Radios
-                            classes:
-                                a:  submenuitem
                             route:  tankopedia_radio
                         tracks:
                             label:  Tracks
-                            classes:
-                                a:  submenuitem
                             route:  tankopedia_track
                         turrets:
                             label:  Turrets
-                            classes:
-                                a:  submenitem
                             route:  tankopedia_turret
