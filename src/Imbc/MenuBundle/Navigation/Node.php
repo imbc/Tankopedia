@@ -6,12 +6,14 @@ class Node
 {
     protected $label;
     protected $route;
+    protected $class;
     protected $children;
 
-    function __construct( $label, $route, $children = array() )
+    function __construct( $label, $route, $class, $children = array() )
     {
         $this->label = $label;
         $this->route = $route;
+        $this->class = $class;
         $this->children = $children;
     }
 
@@ -35,6 +37,18 @@ class Node
     public function setRoute( $route )
     {
         $this->route = $route;
+
+        return $this;
+    }
+
+    public function getClass()
+    {
+        return $this->class;
+    }
+
+    public function setClass( $class )
+    {
+        $this->class = $class;
 
         return $this;
     }

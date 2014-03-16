@@ -42,8 +42,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="{{ path( 'landing_page_index' ) }}">IMBC</a>
-                    <div class="nav-collapse collapse">
+
+                    {{ menu( 'main' ) }}
+{#                    <a class="brand" href="{{ path( 'landing_page_index' ) }}">IMBC</a>#}
+                    {#<div class="nav-collapse collapse">
                         <ul class="nav">
                             <li>
                                 <a href="{{ path( 'tankopedia_index' ) }}">Tank'O'pedia</a>
@@ -86,7 +88,7 @@
                                 </ul>
                             </li>
                         </ul>
-                    </div><!--/.nav-collapse -->
+                    </div><!--/.nav-collapse -->#}
                     <div class="pull-right">
                         <ul class="nav pull-right">
                             <li>
@@ -123,7 +125,6 @@
                 </div>
             </div>
         </div>
-        {{ menu( 'main' ) }}
         {% endblock %}
 
 {#        {% block menu %}

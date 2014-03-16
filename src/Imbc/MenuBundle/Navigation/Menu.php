@@ -47,6 +47,7 @@ class Menu
     {
         $label = ( array_key_exists( 'label', $config )) ? $config['label'] : null;
         $route = ( array_key_exists( 'route', $config )) ? $config['route'] : null;
+        $class = ( array_key_exists( 'class', $config )) ? $config['class'] : null;
         $children = array();
         if( array_key_exists( 'items', $config ))
         {
@@ -56,6 +57,6 @@ class Menu
             }
         }
 
-        return new Node( $label, $route, $children );
+        return new Node( $label, $route, $class, $children );
     }
 }
