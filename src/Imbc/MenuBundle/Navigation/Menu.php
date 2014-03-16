@@ -11,28 +11,28 @@ class Menu
 {
     protected $router;
     protected $currentRoute;
-    protected $accessibleRoutes;
+//    protected $accessibleRoutes;
     protected $configuration;
 
-    public function __construct( Router $router, Request $request, AccessControl $accessControl, $configuration )
+    public function __construct( Router $router, Request $request, $configuration )
     {
         $this->router = $router;
         $this->currentRoute = $request->get( '_route' );
-        $this->accessibleRoutes = $accessControl->getAccessibleRoutes();
+//        $this->accessibleRoutes = $accessControl->getAccessibleRoutes();
         $this->configuration = $configuration;
     }
 
     public function render( $key )
     {
-        if ( !array_key_exists( $key, $this->configuration ))
+        if( !array_key_exists( $key, $this->configuration ))
         {
             $msg = 'Specified key does not exist in menu configuration';
             throw new \InvalidArgumentException( $msg );
         }
         $config = $this->configuration[$key];
-        if ( !array_key_exists( 'items', $config )) return '';
+        if( !array_key_exists( 'items', $config )) return '';
         $ul = $this->createDomNode( 'ul' );
-        if ( array_key_exists( 'classes', $config ) )
+        if( array_key_exists( 'classes', $config ) )
         {
             if ( array_key_exists( 'ul', $config['classes'] ) )
             {
@@ -43,30 +43,32 @@ class Menu
         {
             $ul = $this->append( $ul, $this ->renderNode( $itemConfig ));
         }
+
         return $ul;
     }
 
     protected function renderNode( $config )
     {
+
         $route = array_key_exists( 'route', $config ) ? $config['route'] : false;
-        if ( $route )
-        {
-            if ( !in_array( $route, $this->accessibleRoutes )) return '';
-        }
+//        if ( $route )
+//        {
+//            if ( !in_array( $route, $this->accessibleRoutes )) return '';
+//        }
         $li = $this->createDomNode( 'li' );
         $a = $this->createDomNode( 'a' );
-        if ( array_key_exists( 'classes', $config ))
+        if( array_key_exists( 'classes', $config ))
         {
-            if ( array_key_exists( 'li', $config['classes'] ))
+            if( array_key_exists( 'li', $config['classes'] ))
             {
                 $li = $this->addAttribute( $li, 'class', $config['classes']['li'] );
             }
-            if ( array_key_exists( 'a', $config['classes'] ))
+            if( array_key_exists( 'a', $config['classes'] ))
             {
                 $a = $this->addAttribute( $a, 'class', $config['classes']['a'] );
             }
         }
-        if ( array_key_exists( 'icon', $config ))
+        if( array_key_exists( 'icon', $config ))
         {
             $a = $this->append( $a, $this->createDomNode( 'img', false, array( 'src' => $config['icon'] ), true ));
         }
@@ -77,7 +79,7 @@ class Menu
         }
         $a = $this->append( $a, $config['label'] );
         // Has route or items?
-        if ( $route )
+        if( $route )
         {
             if ( $route == $this->currentRoute )
             {
@@ -90,7 +92,7 @@ class Menu
             }
             $li = $this->append( $li, $a );
         }
-        elseif ( array_key_exists( 'items', $config ))
+        elseif( array_key_exists( 'items', $config ))
         {
             // Has items itself
             $listNodes = '';
@@ -103,7 +105,7 @@ class Menu
             $li = $this->append( $li, $a );
             $li = $this->append( $li, $ul );
         }
-        if ( !array_key_exists( 'route', $config ) && !array_key_exists( 'items', $config ))
+        if( !array_key_exists( 'route', $config ) && !array_key_exists( 'items', $config ))
         {
             $msg  = 'Malformed menu configuration, expected either ';
             $msg .= 'a route name or sub-items for item ' . $config['label'];
@@ -121,6 +123,7 @@ class Menu
         {
             $node = $this->addAttribute( $node, $key, $value, $shorthand );
         }
+
         return $node;
     }
 
@@ -133,6 +136,7 @@ class Menu
             $tagEnd = substr( $parent, $pos );
             $parent = $tagStart . $child . $tagEnd;
         }
+
         return $parent;
     }
 
@@ -147,6 +151,7 @@ class Menu
             $tagEnd = substr( $node, $pos );
             $node = $tagStart . ' ' . $key . '="' . $value . '"' . $tagEnd;
         }
+
         return $node;
     }
 
@@ -165,6 +170,7 @@ class Menu
         {
             $this->addAttribute( $node, 'class', $class );
         }
+
         return $node;
     }
 }

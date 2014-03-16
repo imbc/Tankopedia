@@ -15,5 +15,6 @@ class ImbcMenuExtension extends Extension
         $loader = new Loader\YamlFileLoader( $container, $fileLocator );
         $loader->load( 'services.yml' );
         $loader->load( 'menu.yml' );
+        $loader->load( 'config.yml' );
     }
 }

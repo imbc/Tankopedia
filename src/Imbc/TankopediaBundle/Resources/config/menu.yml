@@ -1,0 +1,22 @@
+
+label:  Tanks
+classes:
+    li: siblings menu
+    a:  main
+route:  tankopedia_index
+items:
+    tanks:
+        label:  Tanks
+        classes:
+            a:  submenuitem
+        route:  tankopedia_tank
+    tier:
+        label:  Tiers
+        classes:
+            a:  submenuitem
+        route:  tankopedia_tier
+    nationality:
+        label:  Nationality
+        classes:
+            a:  submenuitem
+        route:  tankopedia_nationality
