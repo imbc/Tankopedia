@@ -22,12 +22,12 @@ class AppKernel extends Kernel
             new APY\DataGridBundle\APYDataGridBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
 //            new Userfriendly\Bundle\SocialUserBundle\UserfriendlySocialUserBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
+//            new FOS\UserBundle\FOSUserBundle(),
 //            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 //            new HWI\OAuthBundle\HWIOAuthBundle(),
             // application bundle
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
-            new Imbc\UserBundle\ImbcUserBundle(),
+//            new Imbc\UserBundle\ImbcUserBundle(),
             new Imbc\WebsiteBundle\ImbcWebsiteBundle(),
         );
 

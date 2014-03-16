@@ -70,14 +70,14 @@ stof_doctrine_extensions:
             sluggable: true
             sortable: true
 
-fos_user:
-    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
-    firewall_name: main
-    # Permet de renseigner la nouvelle entity utilisateur
-    user_class: Imbc\UserBundle\Entity\User
-    registration:
-      form:
-          type: imbc_user_registration
+#fos_user:
+#    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+#    firewall_name: main
+#    # Permet de renseigner la nouvelle entity utilisateur
+#    user_class: Imbc\UserBundle\Entity\User
+#    registration:
+#      form:
+#          type: imbc_user_registration
 
 #userfriendly_social_user:
 #    db_driver: orm
