@@ -1,0 +1,27 @@
+{% block menu %}
+    {% spaceless %}
+    <a class="{{ root.class }}" href="{{ path( root.route ) }}">{{ root.label }}</a>
+    <div class="nav-collapse collapse">
+        <ul class="nav">
+        {% if root.children | length > 0 %}
+            {% for category in root.children %}
+            <li class="dropdown">
+            <a href="{% if category.route == null %}#" data-toggle="dropdown"{% else %}{{ path( category.route ) }}"{% endif %}
+            {% if category.class != null %}class="{{ category.class }}"{% endif %}>
+            {{ category.label }}{% if category.route == null %}<b class="caret"></b>{% endif %}</a>
+                {% if category.children | length > 0 %}
+                <ul class="dropdown-menu">
+                    {% for item in category.children %}
+                    <li>
+                        <a href="{{ path( item.route ) }}">{{ item.label }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        {% endif %}
+        </ul>
+    </div>
+    {% endspaceless %}
+{% endblock menu %}

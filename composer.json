@@ -5,7 +5,6 @@
         "psr-0": { "": "src/" }
     },
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/WrittenGames/MenuBundle" },
         { "type": "vcs", "url": "https://github.com/userfriendly/SocialUserBundle" },
         { "type": "vcs", "url": "https://github.com/userfriendly/UtilityBundle" }
     ],
@@ -36,7 +35,6 @@
         "elao/web-profiler-extra-bundle" : "dev-master",
         "leaseweb/version-information-bundle": "dev-master",
         "raulfraile/ladybug-bundle": "dev-master",
-        "writtengames/menu-bundle": "*",
         "userfriendly/social-user-bundle": "*",
         "userfriendly/utility-bundle": "*"
     },

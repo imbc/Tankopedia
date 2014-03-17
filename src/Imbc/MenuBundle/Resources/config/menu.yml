@@ -1,0 +1,45 @@
+parameters:
+    imbc.menu.config:
+        main:
+            label:  IMBC
+            class:  brand
+            route:  landing_page_index
+            items:
+                tankopedia:
+                    label:  Tank'O'pedia
+                    route:  tankopedia_index
+                tanks:
+                    label:  Tanks
+                    class:  dropdown-toggle
+                    items:
+                        tanks:
+                            label:  By Tanks
+                            route:  tankopedia_tank
+                        tier:
+                            label:  By Tiers
+                            route:  tankopedia_tier
+                        nationality:
+                            label:  By Nationality
+                            route:  tankopedia_nationality
+                        class:
+                            label:  By Class
+                            route:  tankopedia_class
+                modules:
+                    label:  Modules
+                    class:  dropdown-toggle
+                    items:
+                        engines:
+                            label:  Engines
+                            route:  tankopedia_engine
+                        guns:
+                            label:  Guns
+                            route:  tankopedia_gun
+                        radios:
+                            label:  Radios
+                            route:  tankopedia_radio
+                        tracks:
+                            label:  Tracks
+                            route:  tankopedia_track
+                        turrets:
+                            label:  Turrets
+                            route:  tankopedia_turret
