@@ -38,7 +38,7 @@ class Menu
 
 //        ladybug_dump_die( $this->nodes['main'] );
 
-        return $this->templating->render( 'ImbcMenuBundle:Menu:menu.html.twig', array(
+        return $this->templating->render( 'ImbcMenuBundle:Navigation:menu.html.twig', array(
             'root' => $this->nodes['main'],
         ));
     }
