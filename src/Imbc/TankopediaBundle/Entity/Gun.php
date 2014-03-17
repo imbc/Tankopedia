@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\GunRepository")
  * @ORM\Table(name="top__module_gun")
+ * @ORM\DiscriminatorEntry(value="gun")
  */
 class Gun extends Module
 {

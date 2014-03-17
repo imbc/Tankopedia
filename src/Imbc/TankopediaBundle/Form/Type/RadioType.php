@@ -11,6 +11,9 @@ class RadioType extends AbstractType
 
     public function buildForm( FormBuilderInterface $builder, array $options )
     {
+        $builder->add( 'id', 'hidden', array(
+            'mapped' => false
+        ));
         $builder->add( 'name', 'text', array(
             'label' => 'Name',
         ));
@@ -21,7 +24,7 @@ class RadioType extends AbstractType
             'label' => 'Weight',
         ));
         $builder->add( 'signalRange', 'text', array(
-            'label' => 'Name',
+            'label' => 'Signal Range',
         ));
         $builder->add( 'tier', 'entity', array(
             'empty_data'    => null,

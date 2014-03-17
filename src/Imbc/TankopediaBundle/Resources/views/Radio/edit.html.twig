@@ -7,7 +7,7 @@
 {% else %}
     <h1>New Radio</h1>
 {% endif %}
-<form class="form-horizontal" method="POST" action="">
+<form class="form-horizontal" method="POST" action="{#{ path( 'tankopedia_radio_edit', { 'id': radio.id }) }#}">
     <div class="form-horizontal">
         <div class="control-group">
             <div class="control-label">
@@ -31,14 +31,6 @@
             </div>
             <div class="controls">
                 {{ form_widget( radio.weight ) }}
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="control-label">
-                {{ form_label( radio.signalRange ) }}
-            </div>
-            <div class="controls">
-                {{ form_widget( radio.signalRange ) }}
             </div>
         </div>
         <div class="control-group">
@@ -75,9 +67,9 @@
         </div>
     </div>
     <div class="btn-group">
-        <a type="submit" class="btn btn-mini">
+        <input type="submit" class="btn btn-mini">
             <i class="icon-ok"></i> Save Form
-        </a>
+        </input>
     </div>
 </form>
 {% endblock %}

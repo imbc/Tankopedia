@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
             new Imbc\UserBundle\ImbcUserBundle(),
             new Imbc\WebsiteBundle\ImbcWebsiteBundle(),
+            new Imbc\DoctrineBundle\ImbcDoctrineBundle(),
         );
 
         if( in_array( $this->getEnvironment(), array( 'dev', 'test' ) ) )

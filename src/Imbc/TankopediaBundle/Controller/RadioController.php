@@ -23,6 +23,7 @@ class RadioController extends Controller
             {
                 $em->persist( $thisRadio );
                 $em->flush();
+                
                 return $this->redirect( $this->generateUrl( 'tankopedia_radio' ));
             }
         }

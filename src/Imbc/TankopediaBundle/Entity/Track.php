@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TrackRepository")
  * @ORM\Table(name="top__module_track")
+ * @ORM\DiscriminatorEntry(value="track")
  */
 class Track extends Module
 {

@@ -7,9 +7,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Imbc\TankopediaBundle\Entity\Tank;
 use Imbc\TankopediaBundle\Form\Type\TankType;
 
-/**
- * Tank controller.
- */
 class TankController extends Controller
 {
     public function indexAction( Request $request )
@@ -59,6 +56,7 @@ class TankController extends Controller
         {
             throw $this->createNotFoundException( 'Tank does not exist' );
         }
+
         return $this->render( 'ImbcTankopediaBundle:Tank:show.html.twig', array(
             'tank' => $tank,
         ));
@@ -83,6 +81,7 @@ class TankController extends Controller
             {
                 $em->persist( $tank );
                 $em->flush();
+
                 return $this->redirect( $this->generateUrl( 'tankopedia_tank' ));
             }
         }

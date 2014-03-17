@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\TurretRepository")
  * @ORM\Table(name="top__module_turret")
+ * @ORM\DiscriminatorEntry(value="turret")
  */
 class Turret extends Module
 {
