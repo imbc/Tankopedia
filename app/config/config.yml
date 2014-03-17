@@ -14,9 +14,13 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
-    trust_proxy_headers: false # Deprecated in 2.0; will be removed in 2.3 (used trusted_proxies instead)
+    trusted_hosts:   ~
     trusted_proxies: ~
-    session:         ~
+    session:
+        # handler_id set to null will use default session handler from php.ini
+        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
 
 # Twig Configuration
 twig:
@@ -69,28 +73,3 @@ stof_doctrine_extensions:
             timestampable: true
             sluggable: true
             sortable: true
-
-fos_user:
-    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
-    firewall_name: main
-    # Permet de renseigner la nouvelle entity utilisateur
-    user_class: Imbc\UserBundle\Entity\User
-    registration:
-      form:
-          type: imbc_user_registration
-
-#userfriendly_social_user:
-#    db_driver: orm
-#    firewall_name: main
-#    user_class: Imbc\UserBundle\Entity\User
-###    group_class: Acme\UserBundle\Entity\Group
-#    resource_owners:
-#        facebook:
-#            type:                facebook
-#            client_id:           %facebook_client_id%
-#            client_secret:       %facebook_client_secret%
-#            scope:               "email"
-#        twitter:
-#            type:                twitter
-#            client_id:           %twitter_client_id%
-#            client_secret:       %twitter_client_secret%

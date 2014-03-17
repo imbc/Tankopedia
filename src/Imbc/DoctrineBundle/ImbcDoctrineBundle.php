@@ -10,8 +10,8 @@ class ImbcDoctrineBundle extends Bundle
     public function boot()
     {
         // Initialize Doctrine, provide the options / config yourself!
-        $em = DoctrineORMEntityManager::create( $connectionOptions, $config );
-        $em->getEventManager()->addEventSubscriber( new NamespaceToTheDiscriminatorListener( $em ) );
+//        $em = DoctrineORMEntityManager::create( $connectionOptions, $config );
+//        $em->getEventManager()->addEventSubscriber( new NamespaceToTheDiscriminatorListener( $em ) );
 //        // get the doctrine 2 entity manager
 //        $em = $this->container->get('doctrine.orm.default_entity_manager');
 //
