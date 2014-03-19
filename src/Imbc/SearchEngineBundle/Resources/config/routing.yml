@@ -1,0 +1,3 @@
+search_engine_index:
+    pattern:  /
+    defaults: { _controller: "ImbcSearchEngineBundle:Search:index" }

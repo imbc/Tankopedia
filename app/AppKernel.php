@@ -32,6 +32,7 @@ class AppKernel extends Kernel
 //            new Imbc\UserBundle\ImbcUserBundle(),
             new Imbc\WebsiteBundle\ImbcWebsiteBundle(),
             new Imbc\DoctrineBundle\ImbcDoctrineBundle(),
+            new Imbc\SearchEngineBundle\ImbcSearchEngineBundle(),
         );
 
         if( in_array( $this->getEnvironment(), array( 'dev', 'test' ) ) )

@@ -1,11 +1,14 @@
-imbc_tankopedia:
-    resource:   "@ImbcTankopediaBundle/Resources/config/routing.yml"
-    prefix:     /tankopedia
-
 imbc_landing_page:
     resource:   "@ImbcLandingPageBundle/Resources/config/routing.yml"
     prefix:     /
 
+imbc_search_engine:
+    resource:   "@ImbcSearchEngineBundle/Resources/config/routing.yml"
+    prefix:     /search
+
+imbc_tankopedia:
+    resource:   "@ImbcTankopediaBundle/Resources/config/routing.yml"
+    prefix:     /tankopedia
 #fos_user_security:
 #    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 #

@@ -7,7 +7,6 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="Imbc\TankopediaBundle\Entity\Repository\RadioRepository")
  * @ORM\Table(name="top__module_radio")
- * @ORM\DiscriminatorEntry(value="radio")
  */
 class Radio extends Module
 {

@@ -1,4 +1,5 @@
 <?php
+
 namespace Imbc\DoctrineBundle\Doctrine\Mapping;
 
 /**
