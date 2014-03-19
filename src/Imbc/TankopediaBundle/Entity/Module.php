@@ -11,7 +11,6 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Table(name="top__module")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
- * @ORM\DiscriminatorEntry(value="module")
  * @ORM\DiscriminatorMap({"engine" = "Engine", "gun" = "Gun", "radio" = "Radio", "track" = "Track", "turret" = "Turret"})
  */
 abstract class Module
