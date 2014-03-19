@@ -65,7 +65,6 @@ class Node
         return $this;
     }
 
-
     public function getChildren()
     {
         return $this->children;
@@ -82,9 +81,9 @@ class Node
     {
         if( !array_key_exists( $node->getKey(), $this->children ))
         {
-                $this->children[] = $node ;
+            $this->children[] = $node ;
 
-                return $this;
+            return $this;
         }
 
         return false;
