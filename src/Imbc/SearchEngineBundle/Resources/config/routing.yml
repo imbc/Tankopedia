@@ -1,3 +1,3 @@
-search_engine_index:
+search_engine_autocomplete:
     pattern:  /
-    defaults: { _controller: "ImbcSearchEngineBundle:Search:index" }
+    defaults: { _controller: "ImbcSearchEngineBundle:Search:autocomplete" }
