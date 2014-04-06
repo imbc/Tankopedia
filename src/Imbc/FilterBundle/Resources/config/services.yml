@@ -1,0 +1,8 @@
+parameters:
+    imbc.filter.filters.class:        Imbc\FilterBundle\Filter\Filters
+
+services:
+    imbc.filter.filters:
+        class:  '%imbc.filter.filters.class%'
+        arguments:
+            - '@doctrine.orm.entity_manager'

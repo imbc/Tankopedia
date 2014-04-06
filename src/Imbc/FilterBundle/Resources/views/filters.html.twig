@@ -1,0 +1,93 @@
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset( 'bundles/imbcfilter/js/filters.js' ) }}"></script>
+{% endblock %}
+
+{% block reportfilter %}
+
+    <style>
+        #reportfilter-chkbox {
+            float: right;
+        }
+    </style>
+
+    <p class="info">
+        Use the filters below to create the exact report that you want.
+        Certain options may depend on or be incompatible with each other -
+        clicking a disabled field will show you what you need to do in
+        order to enable it.
+    </p>
+
+    <form method="post">
+        <div id="detail-report-filter-div" class="table-container input row report-filter">
+            {% set lastGroup = '' %}
+            {% for key, element in filters %}
+                {% if lastGroup != element.group %}
+                    {% if false == loop.first %}</div>{% endif %}
+                    <div class="imbc-filter-group {{ element.group }}">
+                    {% set lastGroup = element.group %}
+                {% endif %}
+                {% if element.options|length > 0 %}
+                    <div>
+                        <select name="{{ key }}"
+                                {% if element.label        is defined %}data-label="{{        element.label                  }}"{% endif %}
+                                {% if element.disables     is defined %}data-disables="{{     element.disables    |join(' ') }}"{% endif %}
+                                {% if element.enables      is defined %}data-enables="{{      element.enables     |join(' ') }}"{% endif %}
+                                {% if element.limits       is defined %}data-limits="{{       element.limits      |join(' ') }}"{% endif %}
+                                {% if element.dependencies is defined %}data-dependencies="{{ element.dependencies|join(' ') }}"{% endif %}
+                                {% if element.reset        is defined %}data-reset="{{        element.reset       |join(' ') }}"{% endif %}
+                                data-mandatory="{% if element.mandatory %}mandatory{% else %}optional{% endif %}"
+                                class="imbc-filter {{ key }}">
+{#                                class="imbc-filter {{ key }}{% if element.chosen is defined and element.chosen %} chosen-select{% endif %}">#}
+                            {% if element.empty is defined %}
+                                <option value="" class="empty">{{ element.empty }}</option>
+                            {% endif %}
+                            {% set openOptgroup = false %}
+                            {% for option in element.options %}
+                                {% if option.optgroup is defined and option.optgroup %}
+                                    {% if openOptgroup %}</optgroup>{% endif %}
+                                    {% set openOptgroup = true %}
+                                    <optgroup
+                                        {% if option.name is defined  %}data-name="{{ option.name }}"{% endif %}
+                                        {% if option['limited-by'] is defined %}data-limited-by="{{ option['limited-by'] }}"{% endif %}
+                                        {% if option['limited-by-optgroup'] is defined %}data-limited-by-optgroup="{{ option['limited-by-optgroup'] }}"{% endif %}
+                                        label="{{ option.label }}">{{ option.label }}
+                                {% else %}
+                                    <option value="{{ option.value }}"
+                                        {% if option['limited-by'] is defined %}data-limited-by="{{ option['limited-by'] }}"{% endif %}
+                                        {% if option['limited-by-optgroup'] is defined %}data-limited-by-optgroup="{{ option['limited-by-optgroup'] }}"{% endif %}
+                                        {% if option.value == element.selected %}selected{% endif %}>
+                                        {{ option.label }}
+                                    </option>
+                                {% endif %}
+                                {% if loop.last and openOptgroup %}</optgroup>{% endif %}
+                            {% endfor %}
+                        </select>
+                        <a class="imbc-filter-reset">X</a>
+                    </div>
+                {% endif %}
+                {% if loop.last %}</div>{% endif %}
+            {% endfor %}
+
+            <div class="formbutton filter">
+                {% for input in inputs %}
+                    {% if input.type == 'checkbox' %}<label id="{{ input.label }}">{% endif %}
+                        <input id="{{ input.id }}" type="{{ input.type }}" value="{{ input.value }}" class="{{ input.class }}" name="{{ input.name }}"/>
+                    {% if input.type == 'checkbox' %}Export </label>{% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </form>
+
+    {% if exception %}
+        <p class="error">
+            {{ exception }}
+        </p>
+    {% endif %}
+
+    <script type="text/javascript">
+        var dataLength = {{ data | length }};
+        <!-- used for creating the export button -->
+    </script>
+
+{% endblock %}

@@ -22,4 +22,17 @@ class TankClassRepository extends EntityRepository
 
         return $qb->getQuery()->getSingleResult();
     }
+
+    public function getTankClasses()
+    {
+        $data = array();
+        $entities = $this->createQueryBuilder( 'tc' )
+                         ->orderBy( 'n.name', 'DESC' )
+                         ->getQuery()->getResult();
+         foreach( $entities as $e )
+         {
+             $data[$e->getAbreviation()] = $e->getName();
+         }
+         return $data;
+    }
 }

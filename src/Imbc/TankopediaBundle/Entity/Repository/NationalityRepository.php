@@ -12,5 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class NationalityRepository extends EntityRepository
 {
-
+    public function getNationalities()
+    {
+        $data = array();
+        $entities = $this->createQueryBuilder( 'n' )
+                         ->orderBy( 'n.name', 'DESC' )
+                         ->getQuery()->getResult();
+         foreach( $entities as $e )
+         {
+             $data[$e->getAbreviation()] = $e->getName();
+         }
+         return $data;
+    }
 }
