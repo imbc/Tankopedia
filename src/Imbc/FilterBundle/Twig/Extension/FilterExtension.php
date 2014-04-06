@@ -30,6 +30,7 @@ class FilterExtension extends Twig_Extension
 
     public function renderFilters()
     {
-        return $this->container->get( 'imbc.filter' )->render();
+        return 'foo';
+//        return $this->container->get( 'imbc.filter' )->render();
     }
 }
