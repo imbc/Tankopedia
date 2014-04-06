@@ -11,6 +11,7 @@ services:
             - '@templating'
             - %imbc.menu.config%
         scope: request
+
     imbc.twig.menu_extension:
         class: %imbc.twig.menu_extension.class%
         arguments:

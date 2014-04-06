@@ -27,6 +27,7 @@ class AppKernel extends Kernel
 //            new HWI\OAuthBundle\HWIOAuthBundle(),
             // application bundle
             new Imbc\LandingPageBundle\ImbcLandingPageBundle(),
+            new Imbc\FilterBundle\ImbcFilterBundle(),
             new Imbc\MenuBundle\ImbcMenuBundle(),
             new Imbc\TankopediaBundle\ImbcTankopediaBundle(),
 //            new Imbc\UserBundle\ImbcUserBundle(),

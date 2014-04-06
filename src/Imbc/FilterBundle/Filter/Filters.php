@@ -11,28 +11,37 @@ class Filters
     protected $om;
     protected $request;
     protected $environment;
-    protected $configuration;
+//    protected $configuration;
     protected $template;
 
+    const DEFAULT_TEMPLATE  = 'ImbcFilterBundle::filters.html.twig';
     const SELECT_TIER       = 'tier';
     const SELECT_NATION     = 'nation';
     const SELECT_CLASS      = 'class';
     const SELECT_TANK       = 'tank';
 
-    public function __construct( ObjectManager $om, Request $request, Twig $environment , $configuration)
+    public function __construct( ObjectManager $om, Request $request, Twig $environment )
     {
         $this->om = $om;
         $this->request = $request;
         $this->environment = $environment;
-        $this->configuration = $configuration;
+//        $this->configuration = $configuration;
     }
 
     public function render( $template )
     {
+        ladybug_dump_die( 'Foo' );
+        if( null === $template )
+        {
+            $template = self::DEFAULT_TEMPLATE;
+        }
+
+        ladybug_dump_die( $template );
+
         $this->template = $this->environment->loadTemplate( $template );
 
-        return $this->template->renderBlock( 'acme_block', array(
-            'filters' => $this->getFilters( $request, $type ),
+        return $this->template->renderBlock( 'filters', array(
+            'filters' => $this->getFilters( $type ),
         ));
     }
 

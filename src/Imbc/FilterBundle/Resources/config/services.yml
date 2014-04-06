@@ -1,8 +1,18 @@
 parameters:
-    imbc.filter.filters.class:        Imbc\FilterBundle\Filter\Filters
+    imbc.filter.class:                  Imbc\FilterBundle\Filter\Filters
+    imbc.twig.filter_extension.class:   Imbc\FilterBundle\Twig\Extension\FilterExtension
 
 services:
-    imbc.filter.filters:
-        class:  '%imbc.filter.filters.class%'
+    imbc.filter:
+        class:  '%imbc.filter.class%'
         arguments:
             - '@doctrine.orm.entity_manager'
+            - '@request'
+            - '@twig'
+
+    imbc.twig.filter_extension:
+        class: %imbc.twig.filter_extension.class%
+        arguments:
+            - '@service_container'
+        tags:
+            - { name: twig.extension }
