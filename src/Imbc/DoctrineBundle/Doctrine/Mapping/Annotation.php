@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * prolly coming from there:
+ * @see http://thoughtsofthree.com/2011/04/defining-discriminator-maps-at-child-level-in-doctrine-2-0/
+ */
+
 namespace Imbc\DoctrineBundle\Doctrine\Mapping;
 
 use Doctrine\Common\Annotations\Annotation;
