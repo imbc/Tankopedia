@@ -6,14 +6,14 @@ class Node
 {
     protected $label;
     protected $route;
-    protected $class;
+    protected $classes;
     protected $children;
 
-    function __construct( $label, $route, $class, $children = array() )
+    function __construct( $label, $route, $classes = array(), $children = array() )
     {
         $this->label = $label;
         $this->route = $route;
-        $this->class = $class;
+        $this->classes = $classes;
         $this->children = $children;
     }
 
@@ -41,16 +41,32 @@ class Node
         return $this;
     }
 
-    public function getClass()
+    public function getClasses()
     {
-        return $this->class;
+        return $this->classes;
     }
 
-    public function setClass( $class )
+    public function setClasses( $classes = array() )
     {
-        $this->class = $class;
+        $this->classes = $classes;
 
         return $this;
+    }
+
+    public function addClass( $class )
+    {
+        if( !in_array( $class, $this->classes ) )
+        {
+            $this->classes[] = $class;
+        }
+    }
+
+    public function removeClass( $class )
+    {
+        if( in_array( $class, $this->classes ) )
+        {
+            unset( $this->classes[array_search( $class, $this->classes )] );
+        }
     }
 
     public function getIcon()

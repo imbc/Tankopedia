@@ -7,6 +7,10 @@ use Imbc\TankopediaBundle\Entity\Tier;
 use Imbc\TankopediaBundle\Entity\TankClass;
 use Imbc\TankopediaBundle\Entity\Nationality;
 
+/**
+ * TODO: make the getTank a generic method that could take one argument: $parameters
+ * as an array of arguments and create a method to apply the correct parameter
+ */
 class TankRepository extends EntityRepository
 {
     /**
