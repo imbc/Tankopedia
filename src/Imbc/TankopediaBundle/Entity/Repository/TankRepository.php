@@ -120,4 +120,36 @@ class TankRepository extends EntityRepository
 
         return $qb->getQuery()->getSingleResult();
     }
+
+    public function qbAutocomplete( $partial )
+    {
+        return $this->_em->createQueryBuilder()
+                    ->select( 't' )
+                    ->from( 'ImbcTankopediaBundle:Tank', 't' )
+                    ->where( 't.name LIKE :partial' )
+                    ->setParameter( 'partial', '%' . $partial . '%' )
+                    ->orderBy( 't.name', 'ASC' );
+    }
+
+    public function getAutocomplete( $partial )
+    {
+        $entities = $this->qbAutocomplete( $partial )
+                         ->getQuery()
+//                         ->getSql();
+                         ->getResult();
+
+//        return $entities;
+
+        $dataset = array();
+        foreach( $entities as $e )
+        {
+            $dataset[] = array(
+                'value'     => $e->getName(),
+                'label'     => $e->getName(),
+                'id'        => $e->getId(),
+            );
+        }
+
+        return $dataset;
+    }
 }

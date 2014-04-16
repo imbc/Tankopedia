@@ -41,3 +41,7 @@ tankopedia_class:
 tankopedia_index:
     pattern:  /
     defaults: { _controller: "ImbcTankopediaBundle:Tankopedia:index" }
+
+tankopedia_autocomplete_tanks:
+    pattern:  /autocomplete/tanks
+    defaults: { _controller: "ImbcTankopediaBundle:Tankopedia:autocomplete" }

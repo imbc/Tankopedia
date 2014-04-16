@@ -4,6 +4,7 @@ namespace Imbc\TankopediaBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class TankopediaController extends Controller
 {
@@ -22,5 +23,25 @@ class TankopediaController extends Controller
             'tiers'         => $tiers,
             'classes'       => $classes,
         ));
+    }
+
+    public function autocompleteAction( Request $request )
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository( 'ImbcTankopediaBundle:Tank' );
+        $term = $request->get( 'term' );
+
+        $tanks = $repo->getAutocomplete( $term );
+
+        ladybug_dump_die($tanks);
+
+        try
+        {
+            return new Response( json_encode( $tanks ));
+        }
+        catch( \Doctrine\Orm\NoResultException $e )
+        {
+            return $e;
+        }
     }
 }

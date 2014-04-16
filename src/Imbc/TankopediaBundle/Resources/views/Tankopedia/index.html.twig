@@ -4,6 +4,16 @@
 
 <div class="panel">
     <div class="frame">
+        <div class="header">Tanks</div>
+        <div class="content">
+            <label for="tank_id">name</label>
+            <input type="text" id="tank_id" class="autocomplete">
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="frame">
         <div class="header">Nation</div>
         <div class="content">
         {% for nationality in nationalities %}
@@ -65,5 +75,18 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
+{% block javascript %}
+    {{ parent() }}
+    <script>
+    $( document ).ready( function()
+    {
+        $( 'input.autocomplete' ).autocomplete(
+        {
+            source: "{{ path( 'tankopedia_autocomplete_tanks' ) }}",
+            minLength: 2,
+        });
+    });
+    </script>
 {% endblock %}
