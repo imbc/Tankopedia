@@ -1,13 +1,13 @@
 {% block menu %}
     {% spaceless %}
-    <a class="{{ root.class }}" href="{{ path( root.route ) }}">{{ root.label }}</a>
+    <a class="{{ root.classes }}" href="{{ path( root.route ) }}">{{ root.label }}</a>
     <div class="nav-collapse collapse">
         <ul class="nav">
         {% if root.children | length > 0 %}
             {% for category in root.children %}
             <li class="dropdown">
             <a href="{% if category.route == null %}#" data-toggle="dropdown"{% else %}{{ path( category.route ) }}"{% endif %}
-            {% if category.class != null %}class="{{ category.class }}"{% endif %}>
+            {% if category.classes != null %}class="{{ category.classes }}"{% endif %}>
             {{ category.label }}{% if category.route == null %}<b class="caret"></b>{% endif %}</a>
                 {% if category.children | length > 0 %}
                 <ul class="dropdown-menu">
@@ -25,3 +25,26 @@
     </div>
     {% endspaceless %}
 {% endblock menu %}
+
+{#{% block sub_menu %}
+    {% spaceless %}
+    <ul class="{{ root.classes.ul }}">
+        {% if root.children | length > 0 %}
+            {% for item in root.children %}
+            <li {% if item.title != null %}title="{{ item.title }}"{% endif %}>
+                <a class="{{ item.classes.a }}
+                    {% if root.children | length > 1 %}
+                        {% if loop.first %}first{% elseif loop.last %}last{% endif %}
+                    {% else %}
+                        unique
+                    {% endif %}"
+                   href="{{ path( item.route ) }}">
+                    {% if item.icon != null %}<img src="{{ asset( item.icon ) }}">{% endif %}
+                        {{ item.label }}
+                </a>
+            </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+    {% endspaceless %}
+{% endblock sub_menu %}#}

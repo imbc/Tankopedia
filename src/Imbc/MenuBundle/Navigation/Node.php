@@ -5,16 +5,20 @@ namespace Imbc\MenuBundle\Navigation;
 class Node
 {
     protected $label;
+    protected $title;
     protected $route;
     protected $classes;
     protected $children;
+    protected $icon;
 
-    function __construct( $label, $route, $classes = array(), $children = array() )
+    public function __construct( $label, $route, $classes = array(), $children = array(), $icon = null, $title = null )
     {
         $this->label = $label;
         $this->route = $route;
         $this->classes = $classes;
         $this->children = $children;
+        $this->icon = $icon;
+        $this->title = $title;
     }
 
     public function getLabel()
@@ -26,6 +30,17 @@ class Node
     {
         $this->label = $label;
 
+        return $this;
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    public function setTitle( $title )
+    {
+        $this->title = $title;
         return $this;
     }
 

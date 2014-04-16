@@ -2,7 +2,7 @@ parameters:
     imbc.menu.config:
         main:
             label:  IMBC
-            class:  brand
+            classes:  brand
             route:  landing_page_index
             items:
                 tankopedia:

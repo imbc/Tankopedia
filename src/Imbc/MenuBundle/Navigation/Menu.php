@@ -4,8 +4,7 @@ namespace Imbc\MenuBundle\Navigation;
 
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
-
+use Twig_Environment;
 use Imbc\MenuBundle\Navigation\Node;
 
 class Menu
@@ -14,40 +13,45 @@ class Menu
     protected $router;
     protected $currentRoute;
     protected $configuration;
-    protected $templating;
+    protected $environment;
+    protected $template;
 
-    public function __construct( Router $router, Request $request, EngineInterface $templating, $configuration )
+    public function __construct( Router $router, Request $request, Twig_Environment $environment, $configuration )
     {
         $this->router = $router;
         $this->currentRoute = $request->get( '_route' );
-        $this->templating = $templating;
+        $this->environment = $environment;
+        $this->template = $environment->loadTemplate( 'ImbcMenuBundle:Navigation:menu.html.twig' );
         $this->configuration = $configuration;
         $this->nodes = [];
     }
 
-    public function render( $key )
+    public function render( $key, $type = null )
     {
         if( !array_key_exists( $key, $this->configuration ))
         {
             $msg = 'Specified key does not exist in menu configuration';
             throw new \InvalidArgumentException( $msg );
         }
-        $config = $this->configuration[$key];
+        $this->nodes[$key] = $this->buildNode( $this->configuration[$key] );
 
-        $this->nodes[$key] = $this->buildNode( $config );
-
-//        ladybug_dump_die( $this->nodes['main'] );
-
-        return $this->templating->render( 'ImbcMenuBundle:Navigation:menu.html.twig', array(
-            'root' => $this->nodes['main'],
+        $block = $this->template->renderBlock( $type, array(
+            'root' => $this->nodes[$key],
         ));
+
+        /* DEBUG */
+        if( $block == '' ) $block = 'No Menu Could be displayed';
+
+        return $block;
     }
 
     public function buildNode( $config )
     {
-        $label = ( array_key_exists( 'label', $config )) ? $config['label'] : null;
-        $route = ( array_key_exists( 'route', $config )) ? $config['route'] : null;
-        $class = ( array_key_exists( 'class', $config )) ? $config['class'] : null;
+        $label =        ( array_key_exists( 'label',    $config ))      ? $config['label']      : null;
+        $route =        ( array_key_exists( 'route',    $config ))      ? $config['route']      : null;
+        $classes =      ( array_key_exists( 'classes',  $config ))      ? $config['classes']    : null;
+        $icon =         ( array_key_exists( 'icon',     $config ))      ? $config['icon']       : null;
+        $title =        ( array_key_exists( 'title',    $config ))      ? $config['title']      : null;
         $children = array();
         if( array_key_exists( 'items', $config ))
         {
@@ -57,6 +61,6 @@ class Menu
             }
         }
 
-        return new Node( $label, $route, $class, $children );
+        return new Node( $label, $route, $classes, $children, $icon, $title );
     }
 }
